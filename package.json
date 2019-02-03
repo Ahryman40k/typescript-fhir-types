@@ -1,0 +1,26 @@
+{
+  "name": "@Ahryman40k/ts-fhir-types",
+  "version": "4.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest --detectOpenHandles --forceExit --runInBand",
+    "publish-me": "npm version patch && tsc -p . && npm publish "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:swissplushospital/libraries/fhir-types.git"
+  },
+  "keywords": [],
+  "author": "Geoffrey BAUDIN <ahryman40k.gb@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.1.6"
+  },
+  "files": [
+    "lib"
+  ]
+}
