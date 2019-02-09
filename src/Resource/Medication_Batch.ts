@@ -18,13 +18,13 @@ import { Extension } from '../Resource/Extension';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,13 +32,13 @@ import { Extension } from '../Resource/Extension';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The assigned lot number of a batch of the specified product.
                  */
-                LotNumber? : String;
+                lotNumber? : string;
                 
 
                 /**
@@ -50,7 +50,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * When this specific batch of product will expire.
                  */
-                ExpirationDate? : DateTime;
+                expirationDate? : DateTime;
                 
 
                 /**
@@ -62,7 +62,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An identifier assigned to a drug at the point of manufacturing and repackaging (at the package or pallet level), sufficient to facilitate the identification, validation, authentication, and tracking and tracking of drugs.
                  */
-                SerialNumber? : String;
+                serialNumber? : string;
                 
 
                 /**

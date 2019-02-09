@@ -19,13 +19,13 @@ import { Time } from '../Scalar/Time';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,25 +33,25 @@ import { Time } from '../Scalar/Time';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Indicates which days of the week are available between the start and end Times.
                  */
-                DaysOfWeek? : Array<Code>;
+                daysOfWeek? : Code[];
                 
 
                 /**
                  * Extensions for daysOfWeek
                  */
-                _daysOfWeek? : Array<Element>;
+                _daysOfWeek? : Element[];
                 
 
                 /**
                  * The Location is open all day.
                  */
-                AllDay? : Boolean;
+                allDay? : boolean;
                 
 
                 /**
@@ -63,7 +63,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Time that the Location opens.
                  */
-                OpeningTime? : Time;
+                openingTime? : Time;
                 
 
                 /**
@@ -75,7 +75,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Time that the Location closes.
                  */
-                ClosingTime? : Time;
+                closingTime? : Time;
                 
 
                 /**

@@ -21,13 +21,13 @@ import { Timing } from '../Resource/Timing';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -35,43 +35,43 @@ import { Timing } from '../Resource/Timing';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.
                  */
-                Type? : Array<CodeableConcept>;
+                type? : CodeableConcept[];
                 
 
                 /**
                  * The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.
                  */
-                Schedule? : Array<Timing>;
+                schedule? : Timing[];
                 
 
                 /**
                  * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
                  */
-                Nutrient? : Array<NutritionOrder_Nutrient>;
+                nutrient? : NutritionOrder_Nutrient[];
                 
 
                 /**
                  * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
                  */
-                Texture? : Array<NutritionOrder_Texture>;
+                texture? : NutritionOrder_Texture[];
                 
 
                 /**
                  * The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.
                  */
-                FluidConsistencyType? : Array<CodeableConcept>;
+                fluidConsistencyType? : CodeableConcept[];
                 
 
                 /**
                  * Free text or additional instructions or information pertaining to the oral diet.
                  */
-                Instruction? : String;
+                instruction? : string;
                 
 
                 /**

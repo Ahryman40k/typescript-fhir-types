@@ -21,13 +21,13 @@ import { Money } from '../Resource/Money';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -35,31 +35,31 @@ import { Money } from '../Resource/Money';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Whether this represents partial or complete payment of the claim.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Adjustment to the payment of this transaction which is not related to adjudication of this transaction.
                  */
-                Adjustment? : Money;
+                adjustment? : Money;
                 
 
                 /**
                  * Reason for the payment adjustment.
                  */
-                AdjustmentReason? : CodeableConcept;
+                adjustmentReason? : CodeableConcept;
                 
 
                 /**
                  * Estimated payment data.
                  */
-                Date? : Date;
+                date? : Date;
                 
 
                 /**
@@ -71,13 +71,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Payable less any payment adjustment.
                  */
-                Amount? : Money;
+                amount? : Money;
                 
 
                 /**
                  * Payment identifier.
                  */
-                Identifier? : Identifier;
+                identifier? : Identifier;
                 
         }
         

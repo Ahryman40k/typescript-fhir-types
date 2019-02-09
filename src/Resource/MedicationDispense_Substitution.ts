@@ -19,13 +19,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * True if the dispenser dispensed a different drug or product from what was prescribed.
                  */
-                WasSubstituted? : Boolean;
+                wasSubstituted? : boolean;
                 
 
                 /**
@@ -51,19 +51,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A code signifying whether a different drug was dispensed from what was prescribed.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Indicates the reason for the substitution (or lack of substitution) from what was prescribed.
                  */
-                Reason? : Array<CodeableConcept>;
+                reason? : CodeableConcept[];
                 
 
                 /**
                  * The person or organization that has primary responsibility for the substitution.
                  */
-                ResponsibleParty? : Array<Reference>;
+                responsibleParty? : Reference[];
                 
         }
         

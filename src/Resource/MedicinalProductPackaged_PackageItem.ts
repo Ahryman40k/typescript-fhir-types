@@ -15,21 +15,21 @@ import { Reference } from '../Resource/Reference';
         export class MedicinalProductPackaged_PackageItem  {
 
             constructor() {
-                this.Type = new CodeableConcept();
-this.Quantity = new Quantity();
+                this.type = new CodeableConcept();
+this.quantity = new Quantity();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,79 +37,79 @@ this.Quantity = new Quantity();
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Including possibly Data Carrier Identifier.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The physical type of the container of the medicine.
                  */
-                Type : CodeableConcept;
+                type : CodeableConcept;
                 
 
                 /**
                  * The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1.
                  */
-                Quantity : Quantity;
+                quantity : Quantity;
                 
 
                 /**
                  * Material type of the package item.
                  */
-                Material? : Array<CodeableConcept>;
+                material? : CodeableConcept[];
                 
 
                 /**
                  * A possible alternate material for the packaging.
                  */
-                AlternateMaterial? : Array<CodeableConcept>;
+                alternateMaterial? : CodeableConcept[];
                 
 
                 /**
                  * A device accompanying a medicinal product.
                  */
-                Device? : Array<Reference>;
+                device? : Reference[];
                 
 
                 /**
                  * The manufactured item as contained in the packaged medicinal product.
                  */
-                ManufacturedItem? : Array<Reference>;
+                manufacturedItem? : Reference[];
                 
 
                 /**
                  * Allows containers within containers.
                  */
-                PackageItem? : Array<MedicinalProductPackaged_PackageItem>;
+                packageItem? : MedicinalProductPackaged_PackageItem[];
                 
 
                 /**
                  * Dimensions, color etc.
                  */
-                PhysicalCharacteristics? : ProdCharacteristic;
+                physicalCharacteristics? : ProdCharacteristic;
                 
 
                 /**
                  * Other codeable characteristics.
                  */
-                OtherCharacteristics? : Array<CodeableConcept>;
+                otherCharacteristics? : CodeableConcept[];
                 
 
                 /**
                  * Shelf Life and storage information.
                  */
-                ShelfLifeStorage? : Array<ProductShelfLife>;
+                shelfLifeStorage? : ProductShelfLife[];
                 
 
                 /**
                  * Manufacturer of this Package Item.
                  */
-                Manufacturer? : Array<Reference>;
+                manufacturer? : Reference[];
                 
         }
         

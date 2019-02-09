@@ -33,25 +33,25 @@ status
                 /**
                  * This is a ProcessRequest resource
                  */
-                ResourceType: string = 'ProcessRequest;'
+                resourceType: string = 'ProcessRequest;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -63,7 +63,7 @@ status
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -75,19 +75,19 @@ status
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -95,19 +95,19 @@ status
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The ProcessRequest business identifier.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The status of the resource instance.
                  */
-                Status? : Code;
+                status? : Code;
                 
 
                 /**
@@ -119,7 +119,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The type of processing action being requested, for example Reversal, Readjudication, StatusRequest, PendedRequest.
                  */
-                Action? : ProcessRequestActionKind;
+                action? : ProcessRequestActionKind;
                 
 
                 /**
@@ -131,13 +131,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The organization which is the target of the request.
                  */
-                Target? : Reference;
+                target? : Reference;
                 
 
                 /**
                  * The date when this resource was created.
                  */
-                Created? : DateTime;
+                created? : DateTime;
                 
 
                 /**
@@ -149,25 +149,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The practitioner who is responsible for the action specified in this request.
                  */
-                Provider? : Reference;
+                provider? : Reference;
                 
 
                 /**
                  * Reference of resource which is the target or subject of this action.
                  */
-                Request? : Reference;
+                request? : Reference;
                 
 
                 /**
                  * Reference of a prior response to resource which is the target or subject of this action.
                  */
-                Response? : Reference;
+                response? : Reference;
                 
 
                 /**
                  * If true remove all history excluding audit.
                  */
-                Nullify? : Boolean;
+                nullify? : boolean;
                 
 
                 /**
@@ -179,7 +179,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A reference to supply which authenticates the process.
                  */
-                Reference? : String;
+                reference? : string;
                 
 
                 /**
@@ -191,37 +191,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * List of top level items to be re-adjudicated, if none specified then the entire submission is re-adjudicated.
                  */
-                Item? : Array<ProcessRequest_Item>;
+                item? : ProcessRequest_Item[];
                 
 
                 /**
                  * Names of resource types to include.
                  */
-                Include? : Array<String>;
+                include? : String[];
                 
 
                 /**
                  * Extensions for include
                  */
-                _include? : Array<Element>;
+                _include? : Element[];
                 
 
                 /**
                  * Names of resource types to exclude.
                  */
-                Exclude? : Array<String>;
+                exclude? : String[];
                 
 
                 /**
                  * Extensions for exclude
                  */
-                _exclude? : Array<Element>;
+                _exclude? : Element[];
                 
 
                 /**
                  * A period of time during which the fulfilling resources would have been created.
                  */
-                Period? : Period;
+                period? : Period;
                 
         }
         

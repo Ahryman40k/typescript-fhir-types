@@ -21,33 +21,33 @@ import { Uri } from '../Scalar/Uri';
         export class MedicinalProductPharmaceutical  {
 
             constructor() {
-                this.AdministrableDoseForm = new CodeableConcept();
-this.RouteOfAdministration = new Array<MedicinalProductPharmaceutical_RouteOfAdministration>();
+                this.administrableDoseForm = new CodeableConcept();
+this.routeOfAdministration = new Array<MedicinalProductPharmaceutical_RouteOfAdministration>();
             }
 
             
                 /**
                  * This is a MedicinalProductPharmaceutical resource
                  */
-                ResourceType: string = 'MedicinalProductPharmaceutical;'
+                resourceType: string = 'MedicinalProductPharmaceutical;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -59,7 +59,7 @@ this.RouteOfAdministration = new Array<MedicinalProductPharmaceutical_RouteOfAdm
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -71,19 +71,19 @@ this.RouteOfAdministration = new Array<MedicinalProductPharmaceutical_RouteOfAdm
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -91,49 +91,49 @@ this.RouteOfAdministration = new Array<MedicinalProductPharmaceutical_RouteOfAdm
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * An identifier for the pharmaceutical medicinal product.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The administrable dose form, after necessary reconstitution.
                  */
-                AdministrableDoseForm : CodeableConcept;
+                administrableDoseForm : CodeableConcept;
                 
 
                 /**
                  * Todo.
                  */
-                UnitOfPresentation? : CodeableConcept;
+                unitOfPresentation? : CodeableConcept;
                 
 
                 /**
                  * Ingredient.
                  */
-                Ingredient? : Array<Reference>;
+                ingredient? : Reference[];
                 
 
                 /**
                  * Accompanying device.
                  */
-                Device? : Array<Reference>;
+                device? : Reference[];
                 
 
                 /**
                  * Characteristics e.g. a products onset of action.
                  */
-                Characteristics? : Array<MedicinalProductPharmaceutical_Characteristics>;
+                characteristics? : MedicinalProductPharmaceutical_Characteristics[];
                 
 
                 /**
                  * The path by which the pharmaceutical product is taken into or makes contact with the body.
                  */
-                RouteOfAdministration : Array<MedicinalProductPharmaceutical_RouteOfAdministration>;
+                routeOfAdministration : MedicinalProductPharmaceutical_RouteOfAdministration[];
                 
         }
         

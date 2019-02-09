@@ -19,13 +19,13 @@ import { SubstanceSpecification_OfficialName } from '../Resource/SubstanceSpecif
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { SubstanceSpecification_OfficialName } from '../Resource/SubstanceSpecif
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The actual name.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -51,43 +51,43 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Name type.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Language of the name.
                  */
-                Language? : Array<CodeableConcept>;
+                language? : CodeableConcept[];
                 
 
                 /**
                  * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
                  */
-                Domain? : Array<CodeableConcept>;
+                domain? : CodeableConcept[];
                 
 
                 /**
                  * The jurisdiction where this name applies.
                  */
-                Jurisdiction? : Array<CodeableConcept>;
+                jurisdiction? : CodeableConcept[];
                 
 
                 /**
                  * Details of the official nature of this name.
                  */
-                OfficialName? : Array<SubstanceSpecification_OfficialName>;
+                officialName? : SubstanceSpecification_OfficialName[];
                 
 
                 /**
                  * Supporting literature.
                  */
-                ReferenceSource? : Array<String>;
+                referenceSource? : String[];
                 
 
                 /**
                  * Extensions for referenceSource
                  */
-                _referenceSource? : Array<Element>;
+                _referenceSource? : Element[];
                 
         }
         

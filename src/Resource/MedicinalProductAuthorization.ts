@@ -30,25 +30,25 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * This is a MedicinalProductAuthorization resource
                  */
-                ResourceType: string = 'MedicinalProductAuthorization;'
+                resourceType: string = 'MedicinalProductAuthorization;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -60,7 +60,7 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -72,19 +72,19 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -92,49 +92,49 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Business identifier for the marketing authorization, as assigned by a regulator.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The medicinal product that is being authorized.
                  */
-                Subject? : Reference;
+                subject? : Reference;
                 
 
                 /**
                  * The country in which the marketing authorization has been granted.
                  */
-                Country? : Array<CodeableConcept>;
+                country? : CodeableConcept[];
                 
 
                 /**
                  * Jurisdiction within a country.
                  */
-                Jurisdiction? : Array<CodeableConcept>;
+                jurisdiction? : CodeableConcept[];
                 
 
                 /**
                  * The legal status of supply of the medicinal product as classified by the regulator.
                  */
-                LegalStatusOfSupply? : CodeableConcept;
+                legalStatusOfSupply? : CodeableConcept;
                 
 
                 /**
                  * The status of the marketing authorization.
                  */
-                Status? : CodeableConcept;
+                status? : CodeableConcept;
                 
 
                 /**
                  * The date at which the given status has become applicable.
                  */
-                StatusDate? : DateTime;
+                statusDate? : DateTime;
                 
 
                 /**
@@ -146,7 +146,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date when a suspended the marketing or the marketing authorization of the product is anticipated to be restored.
                  */
-                RestoreDate? : DateTime;
+                restoreDate? : DateTime;
                 
 
                 /**
@@ -158,19 +158,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The beginning of the time period in which the marketing authorization is in the specific status shall be specified A complete date consisting of day, month and year shall be specified using the ISO 8601 date format.
                  */
-                ValidityPeriod? : Period;
+                validityPeriod? : Period;
                 
 
                 /**
                  * A period of time after authorization before generic product applicatiosn can be submitted.
                  */
-                DataExclusivityPeriod? : Period;
+                dataExclusivityPeriod? : Period;
                 
 
                 /**
                  * The date when the first authorization was granted by a Medicines Regulatory Agency.
                  */
-                DateOfFirstAuthorization? : DateTime;
+                dateOfFirstAuthorization? : DateTime;
                 
 
                 /**
@@ -182,7 +182,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Date of first marketing authorization for a company's new medicinal product in any country in the World.
                  */
-                InternationalBirthDate? : DateTime;
+                internationalBirthDate? : DateTime;
                 
 
                 /**
@@ -194,31 +194,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The legal framework against which this authorization is granted.
                  */
-                LegalBasis? : CodeableConcept;
+                legalBasis? : CodeableConcept;
                 
 
                 /**
                  * Authorization in areas within a country.
                  */
-                JurisdictionalAuthorization? : Array<MedicinalProductAuthorization_JurisdictionalAuthorization>;
+                jurisdictionalAuthorization? : MedicinalProductAuthorization_JurisdictionalAuthorization[];
                 
 
                 /**
                  * Marketing Authorization Holder.
                  */
-                Holder? : Reference;
+                holder? : Reference;
                 
 
                 /**
                  * Medicines Regulatory Agency.
                  */
-                Regulator? : Reference;
+                regulator? : Reference;
                 
 
                 /**
                  * The regulatory procedure for granting or amending a marketing authorization.
                  */
-                Procedure? : MedicinalProductAuthorization_Procedure;
+                procedure? : MedicinalProductAuthorization_Procedure;
                 
         }
         

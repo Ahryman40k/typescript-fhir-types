@@ -18,13 +18,13 @@ import { Extension } from '../Resource/Extension';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,19 +32,19 @@ import { Extension } from '../Resource/Extension';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Expressions that describe applicability criteria for the priceComponent.
                  */
-                Applicability? : Array<ChargeItemDefinition_Applicability>;
+                applicability? : ChargeItemDefinition_Applicability[];
                 
 
                 /**
                  * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under developement. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
                  */
-                PriceComponent? : Array<ChargeItemDefinition_PriceComponent>;
+                priceComponent? : ChargeItemDefinition_PriceComponent[];
                 
         }
         

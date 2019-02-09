@@ -3,7 +3,7 @@
 import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 
-        export enum StructureMap_StructureModeKind {
+        export enum StructureMapStructureModeKind {
                 source,
 queried,
 target,
@@ -16,20 +16,20 @@ produced
         export class StructureMap_Structure  {
 
             constructor() {
-                this.Url = new Canonical();
+                this.url = new Canonical();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,19 +37,19 @@ produced
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The canonical URL that identifies the structure.
                  */
-                Url : Canonical;
+                url : Canonical;
                 
 
                 /**
                  * How the referenced structure is used in this mapping.
                  */
-                Mode? : StructureMap_StructureModeKind;
+                mode? : StructureMapStructureModeKind;
                 
 
                 /**
@@ -61,7 +61,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The name used for this type in the map.
                  */
-                Alias? : String;
+                alias? : string;
                 
 
                 /**
@@ -73,7 +73,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Documentation that describes how the structure is used in the mapping.
                  */
-                Documentation? : String;
+                documentation? : string;
                 
 
                 /**

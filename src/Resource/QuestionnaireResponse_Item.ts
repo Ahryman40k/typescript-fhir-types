@@ -19,13 +19,13 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The item from the Questionnaire that corresponds to this item in the QuestionnaireResponse resource.
                  */
-                LinkId? : String;
+                linkId? : string;
                 
 
                 /**
@@ -51,7 +51,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A reference to an [[[ElementDefinition]]] that provides the details for the item.
                  */
-                Definition? : Uri;
+                definition? : Uri;
                 
 
                 /**
@@ -63,7 +63,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Text that is displayed above the contents of the group or as the text of the question being answered.
                  */
-                Text? : String;
+                text? : string;
                 
 
                 /**
@@ -75,13 +75,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The respondent's answer(s) to the question.
                  */
-                Answer? : Array<QuestionnaireResponse_Answer>;
+                answer? : QuestionnaireResponse_Answer[];
                 
 
                 /**
                  * Questions or sub-groups nested beneath a question or group.
                  */
-                Item? : Array<QuestionnaireResponse_Item>;
+                item? : QuestionnaireResponse_Item[];
                 
         }
         

@@ -22,13 +22,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -36,19 +36,19 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Person who collected the specimen.
                  */
-                Collector? : Reference;
+                collector? : Reference;
                 
 
                 /**
                  * Time when specimen was collected from subject - the physiologically relevant time.
                  */
-                CollectedDateTime? : String;
+                collectedDateTime? : string;
                 
 
                 /**
@@ -60,43 +60,43 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Time when specimen was collected from subject - the physiologically relevant time.
                  */
-                CollectedPeriod? : Period;
+                collectedPeriod? : Period;
                 
 
                 /**
                  * The span of time over which the collection of a specimen occurred.
                  */
-                Duration? : Duration;
+                duration? : Duration;
                 
 
                 /**
                  * The quantity of specimen collected; for instance the volume of a blood sample, or the physical measurement of an anatomic pathology sample.
                  */
-                Quantity? : Quantity;
+                quantity? : Quantity;
                 
 
                 /**
                  * A coded value specifying the technique that is used to perform the procedure.
                  */
-                Method? : CodeableConcept;
+                method? : CodeableConcept;
                 
 
                 /**
                  * Anatomical location from which the specimen was collected (if subject is a patient). This is the target site.  This element is not used for environmental specimens.
                  */
-                BodySite? : CodeableConcept;
+                bodySite? : CodeableConcept;
                 
 
                 /**
                  * Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.
                  */
-                FastingStatusCodeableConcept? : CodeableConcept;
+                fastingStatusCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.
                  */
-                FastingStatusDuration? : Duration;
+                fastingStatusDuration? : Duration;
                 
         }
         

@@ -19,13 +19,13 @@ import { Range } from '../Resource/Range';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,49 +33,49 @@ import { Range } from '../Resource/Range';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The category or type of interval.
                  */
-                Category? : CodeableConcept;
+                category? : CodeableConcept;
                 
 
                 /**
                  * The value and associated unit of the low bound (inclusive) of the reference range.
                  */
-                Range? : Range;
+                range? : Range;
                 
 
                 /**
                  * Codes to indicate what part of the targeted reference population it applies to. For example, the normal or therapeutic range.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Codes to indicate the target population this reference range applies to.
                  */
-                AppliesTo? : Array<CodeableConcept>;
+                appliesTo? : CodeableConcept[];
                 
 
                 /**
                  * The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.
                  */
-                Age? : Range;
+                age? : Range;
                 
 
                 /**
                  * The gestational age at which this reference range is applicable, in the context of pregnancy.
                  */
-                GestationalAge? : Range;
+                gestationalAge? : Range;
                 
 
                 /**
                  * Text based condition for which the reference range is valid.
                  */
-                Condition? : String;
+                condition? : string;
                 
 
                 /**

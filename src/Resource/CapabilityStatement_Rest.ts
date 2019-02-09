@@ -9,7 +9,7 @@ import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 import { Markdown } from '../Scalar/Markdown';
 
-        export enum CapabilityStatement_RestModeKind {
+        export enum CapabilityStatementRestModeKind {
                 client,
 server
             }
@@ -27,13 +27,13 @@ server
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -41,13 +41,13 @@ server
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.
                  */
-                Mode? : CapabilityStatement_RestModeKind;
+                mode? : CapabilityStatementRestModeKind;
                 
 
                 /**
@@ -59,7 +59,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Information about the system's restful capabilities that apply across all applications, such as security.
                  */
-                Documentation? : Markdown;
+                documentation? : Markdown;
                 
 
                 /**
@@ -71,37 +71,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Information about security implementation from an interface perspective - what a client needs to know.
                  */
-                Security? : CapabilityStatement_Security;
+                security? : CapabilityStatement_Security;
                 
 
                 /**
                  * A specification of the restful capabilities of the solution for a specific resource type.
                  */
-                Resource? : Array<CapabilityStatement_Resource>;
+                resource? : CapabilityStatement_Resource[];
                 
 
                 /**
                  * A specification of restful operations supported by the system.
                  */
-                Interaction? : Array<CapabilityStatement_Interaction1>;
+                interaction? : CapabilityStatement_Interaction1[];
                 
 
                 /**
                  * Search parameters that are supported for searching all resources for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.
                  */
-                SearchParam? : Array<CapabilityStatement_SearchParam>;
+                searchParam? : CapabilityStatement_SearchParam[];
                 
 
                 /**
                  * Definition of an operation or a named query together with its parameters and their meaning and type.
                  */
-                Operation? : Array<CapabilityStatement_Operation>;
+                operation? : CapabilityStatement_Operation[];
                 
 
                 /**
                  * An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by its canonical URL .
                  */
-                Compartment? : Array<Canonical>;
+                compartment? : Canonical[];
                 
         }
         

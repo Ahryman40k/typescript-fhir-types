@@ -13,20 +13,20 @@ import { Reference } from '../Resource/Reference';
         export class List_Entry  {
 
             constructor() {
-                this.Item = new Reference();
+                this.item = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,19 +34,19 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The flag allows the system constructing the list to indicate the role and significance of the item in the list.
                  */
-                Flag? : CodeableConcept;
+                flag? : CodeableConcept;
                 
 
                 /**
                  * True if this item is marked as deleted in the list.
                  */
-                Deleted? : Boolean;
+                deleted? : boolean;
                 
 
                 /**
@@ -58,7 +58,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * When this item was added to the list.
                  */
-                Date? : DateTime;
+                date? : DateTime;
                 
 
                 /**
@@ -70,7 +70,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A reference to the actual resource from which data was derived.
                  */
-                Item : Reference;
+                item : Reference;
                 
         }
         

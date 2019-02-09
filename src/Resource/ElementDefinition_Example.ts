@@ -47,13 +47,13 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -61,13 +61,13 @@ import { UsageContext } from '../Resource/UsageContext';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Describes the purpose of this example amoung the set of examples.
                  */
-                Label? : String;
+                label? : string;
                 
 
                 /**
@@ -79,7 +79,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueBase64Binary? : String;
+                valueBase64Binary? : string;
                 
 
                 /**
@@ -91,7 +91,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueBoolean? : Boolean;
+                valueBoolean? : boolean;
                 
 
                 /**
@@ -103,7 +103,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueCanonical? : String;
+                valueCanonical? : string;
                 
 
                 /**
@@ -115,7 +115,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueCode? : String;
+                valueCode? : string;
                 
 
                 /**
@@ -127,7 +127,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDate? : String;
+                valueDate? : string;
                 
 
                 /**
@@ -139,7 +139,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDateTime? : String;
+                valueDateTime? : string;
                 
 
                 /**
@@ -151,7 +151,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDecimal? : Number;
+                valueDecimal? : number;
                 
 
                 /**
@@ -163,7 +163,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueId? : String;
+                valueId? : string;
                 
 
                 /**
@@ -175,7 +175,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueInstant? : String;
+                valueInstant? : string;
                 
 
                 /**
@@ -187,7 +187,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueInteger? : Number;
+                valueInteger? : number;
                 
 
                 /**
@@ -199,7 +199,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueMarkdown? : String;
+                valueMarkdown? : string;
                 
 
                 /**
@@ -211,7 +211,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueOid? : String;
+                valueOid? : string;
                 
 
                 /**
@@ -223,7 +223,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValuePositiveInt? : Number;
+                valuePositiveInt? : number;
                 
 
                 /**
@@ -235,7 +235,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueString? : String;
+                valueString? : string;
                 
 
                 /**
@@ -247,7 +247,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueTime? : String;
+                valueTime? : string;
                 
 
                 /**
@@ -259,7 +259,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueUnsignedInt? : Number;
+                valueUnsignedInt? : number;
                 
 
                 /**
@@ -271,7 +271,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueUri? : String;
+                valueUri? : string;
                 
 
                 /**
@@ -283,7 +283,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueUrl? : String;
+                valueUrl? : string;
                 
 
                 /**
@@ -295,7 +295,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueUuid? : String;
+                valueUuid? : string;
                 
 
                 /**
@@ -307,181 +307,181 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueAddress? : Address;
+                valueAddress? : Address;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueAge? : Age;
+                valueAge? : Age;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueAnnotation? : Annotation;
+                valueAnnotation? : Annotation;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueAttachment? : Attachment;
+                valueAttachment? : Attachment;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueCodeableConcept? : CodeableConcept;
+                valueCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueCoding? : Coding;
+                valueCoding? : Coding;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueContactPoint? : ContactPoint;
+                valueContactPoint? : ContactPoint;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueCount? : Count;
+                valueCount? : Count;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDistance? : Distance;
+                valueDistance? : Distance;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDuration? : Duration;
+                valueDuration? : Duration;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueHumanName? : HumanName;
+                valueHumanName? : HumanName;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueIdentifier? : Identifier;
+                valueIdentifier? : Identifier;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueMoney? : Money;
+                valueMoney? : Money;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValuePeriod? : Period;
+                valuePeriod? : Period;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueQuantity? : Quantity;
+                valueQuantity? : Quantity;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueRange? : Range;
+                valueRange? : Range;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueRatio? : Ratio;
+                valueRatio? : Ratio;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueReference? : Reference;
+                valueReference? : Reference;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueSampledData? : SampledData;
+                valueSampledData? : SampledData;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueSignature? : Signature;
+                valueSignature? : Signature;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueTiming? : Timing;
+                valueTiming? : Timing;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueParameterDefinition? : ParameterDefinition;
+                valueParameterDefinition? : ParameterDefinition;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDataRequirement? : DataRequirement;
+                valueDataRequirement? : DataRequirement;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueRelatedArtifact? : RelatedArtifact;
+                valueRelatedArtifact? : RelatedArtifact;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueContactDetail? : ContactDetail;
+                valueContactDetail? : ContactDetail;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueContributor? : Contributor;
+                valueContributor? : Contributor;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueTriggerDefinition? : TriggerDefinition;
+                valueTriggerDefinition? : TriggerDefinition;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueExpression? : Expression;
+                valueExpression? : Expression;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueUsageContext? : UsageContext;
+                valueUsageContext? : UsageContext;
                 
 
                 /**
                  * The actual value for the element, which must be one of the types allowed for this element.
                  */
-                ValueDosage? : Dosage;
+                valueDosage? : Dosage;
                 
         }
         

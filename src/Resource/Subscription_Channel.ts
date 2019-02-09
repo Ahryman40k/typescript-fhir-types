@@ -3,7 +3,7 @@
 import { Extension } from '../Resource/Extension';
 import { Url } from '../Scalar/Url';
 
-        export enum Subscription_ChannelTypeKind {
+        export enum SubscriptionChannelTypeKind {
                 restHook,
 websocket,
 email,
@@ -24,13 +24,13 @@ message
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -38,13 +38,13 @@ message
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The type of channel to send notifications on.
                  */
-                Type? : Subscription_ChannelTypeKind;
+                type? : SubscriptionChannelTypeKind;
                 
 
                 /**
@@ -56,7 +56,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The url that describes the actual end-point to send messages to.
                  */
-                Endpoint? : Url;
+                endpoint? : Url;
                 
 
                 /**
@@ -68,7 +68,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. If the payload is not present, then there is no payload in the notification, just a notification.
                  */
-                Payload? : String;
+                payload? : string;
                 
 
                 /**
@@ -80,13 +80,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional headers / information to send as part of the notification.
                  */
-                Header? : Array<String>;
+                header? : String[];
                 
 
                 /**
                  * Extensions for header
                  */
-                _header? : Array<Element>;
+                _header? : Element[];
                 
         }
         

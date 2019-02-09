@@ -21,13 +21,13 @@ import { SubstanceAmount_ReferenceRange } from '../Resource/SubstanceAmount_Refe
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -35,25 +35,25 @@ import { SubstanceAmount_ReferenceRange } from '../Resource/SubstanceAmount_Refe
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
                  */
-                AmountQuantity? : Quantity;
+                amountQuantity? : Quantity;
                 
 
                 /**
                  * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
                  */
-                AmountRange? : Range;
+                amountRange? : Range;
                 
 
                 /**
                  * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
                  */
-                AmountString? : String;
+                amountString? : string;
                 
 
                 /**
@@ -65,13 +65,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Most elements that require a quantitative value will also have a field called amount type. Amount type should always be specified because the actual value of the amount is often dependent on it. EXAMPLE: In capturing the actual relative amounts of substances or molecular fragments it is essential to indicate whether the amount refers to a mole ratio or weight ratio. For any given element an effort should be made to use same the amount type for all related definitional elements.
                  */
-                AmountType? : CodeableConcept;
+                amountType? : CodeableConcept;
                 
 
                 /**
                  * A textual comment on a numeric value.
                  */
-                AmountText? : String;
+                amountText? : string;
                 
 
                 /**
@@ -83,7 +83,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Reference range of possible or expected values.
                  */
-                ReferenceRange? : SubstanceAmount_ReferenceRange;
+                referenceRange? : SubstanceAmount_ReferenceRange;
                 
         }
         

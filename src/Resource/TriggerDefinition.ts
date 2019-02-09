@@ -30,19 +30,19 @@ dataAccessEnded
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
                  * The type of triggering event.
                  */
-                Type? : TriggerDefinitionTypeKind;
+                type? : TriggerDefinitionTypeKind;
                 
 
                 /**
@@ -54,7 +54,7 @@ dataAccessEnded
                 /**
                  * A formal name for the event. This may be an absolute URI that identifies the event formally (e.g. from a trigger registry), or a simple relative URI that identifies the event in a local context.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -66,19 +66,19 @@ dataAccessEnded
                 /**
                  * The timing of the event (if this is a periodic trigger).
                  */
-                TimingTiming? : Timing;
+                timingTiming? : Timing;
                 
 
                 /**
                  * The timing of the event (if this is a periodic trigger).
                  */
-                TimingReference? : Reference;
+                timingReference? : Reference;
                 
 
                 /**
                  * The timing of the event (if this is a periodic trigger).
                  */
-                TimingDate? : String;
+                timingDate? : string;
                 
 
                 /**
@@ -90,7 +90,7 @@ dataAccessEnded
                 /**
                  * The timing of the event (if this is a periodic trigger).
                  */
-                TimingDateTime? : String;
+                timingDateTime? : string;
                 
 
                 /**
@@ -102,13 +102,13 @@ dataAccessEnded
                 /**
                  * The triggering data of the event (if this is a data trigger).
                  */
-                Data? : DataRequirement;
+                data? : DataRequirement;
                 
 
                 /**
                  * A boolean-valued expression that is evaluated in the context of the container of the trigger definition and returns whether or not the trigger fires.
                  */
-                Condition? : Expression;
+                condition? : Expression;
                 
         }
         

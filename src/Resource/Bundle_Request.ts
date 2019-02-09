@@ -4,7 +4,7 @@ import { Extension } from '../Resource/Extension';
 import { Instant } from '../Scalar/Instant';
 import { Uri } from '../Scalar/Uri';
 
-        export enum Bundle_RequestMethodKind {
+        export enum BundleRequestMethodKind {
                 get,
 head,
 post,
@@ -26,13 +26,13 @@ patch
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -40,13 +40,13 @@ patch
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
                  */
-                Method? : Bundle_RequestMethodKind;
+                method? : BundleRequestMethodKind;
                 
 
                 /**
@@ -58,7 +58,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The URL for this entry, relative to the root (the address to which the request is posted).
                  */
-                Url? : Uri;
+                url? : Uri;
                 
 
                 /**
@@ -70,7 +70,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
                  */
-                IfNoneMatch? : String;
+                ifNoneMatch? : string;
                 
 
                 /**
@@ -82,7 +82,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
                  */
-                IfModifiedSince? : Instant;
+                ifModifiedSince? : Instant;
                 
 
                 /**
@@ -94,7 +94,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
                  */
-                IfMatch? : String;
+                ifMatch? : string;
                 
 
                 /**
@@ -106,7 +106,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
                  */
-                IfNoneExist? : String;
+                ifNoneExist? : string;
                 
 
                 /**

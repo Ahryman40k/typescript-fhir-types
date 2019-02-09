@@ -25,13 +25,13 @@ import { UnsignedInt } from '../Scalar/UnsignedInt';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -39,49 +39,49 @@ import { UnsignedInt } from '../Scalar/UnsignedInt';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Differentiates the kind of the asset .
                  */
-                Scope? : CodeableConcept;
+                scope? : CodeableConcept;
                 
 
                 /**
                  * Target entity type about which the term may be concerned.
                  */
-                Type? : Array<CodeableConcept>;
+                type? : CodeableConcept[];
                 
 
                 /**
                  * Associated entities.
                  */
-                TypeReference? : Array<Reference>;
+                typeReference? : Reference[];
                 
 
                 /**
                  * May be a subtype or part of an offered asset.
                  */
-                Subtype? : Array<CodeableConcept>;
+                subtype? : CodeableConcept[];
                 
 
                 /**
                  * Specifies the applicability of the term to an asset resource instance, and instances it refers to orinstances that refer to it, and/or are owned by the offeree.
                  */
-                Relationship? : Coding;
+                relationship? : Coding;
                 
 
                 /**
                  * Circumstance of the asset.
                  */
-                Context? : Array<Contract_Context>;
+                context? : Contract_Context[];
                 
 
                 /**
                  * Description of the quality and completeness of the asset that imay be a factor in its valuation.
                  */
-                Condition? : String;
+                condition? : string;
                 
 
                 /**
@@ -93,25 +93,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Type of Asset availability for use or ownership.
                  */
-                PeriodType? : Array<CodeableConcept>;
+                periodType? : CodeableConcept[];
                 
 
                 /**
                  * Asset relevant contractual time period.
                  */
-                Period? : Array<Period>;
+                period? : Period[];
                 
 
                 /**
                  * Time period of asset use.
                  */
-                UsePeriod? : Array<Period>;
+                usePeriod? : Period[];
                 
 
                 /**
                  * Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract.
                  */
-                Text? : String;
+                text? : string;
                 
 
                 /**
@@ -123,37 +123,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Id [identifier??] of the clause or question text about the asset in the referenced form or QuestionnaireResponse.
                  */
-                LinkId? : Array<String>;
+                linkId? : String[];
                 
 
                 /**
                  * Extensions for linkId
                  */
-                _linkId? : Array<Element>;
+                _linkId? : Element[];
                 
 
                 /**
                  * Response to assets.
                  */
-                Answer? : Array<Contract_Answer>;
+                answer? : Contract_Answer[];
                 
 
                 /**
                  * Security labels that protects the asset.
                  */
-                SecurityLabelNumber? : Array<UnsignedInt>;
+                securityLabelNumber? : UnsignedInt[];
                 
 
                 /**
                  * Extensions for securityLabelNumber
                  */
-                _securityLabelNumber? : Array<Element>;
+                _securityLabelNumber? : Element[];
                 
 
                 /**
                  * Contract Valued Item List.
                  */
-                ValuedItem? : Array<Contract_ValuedItem>;
+                valuedItem? : Contract_ValuedItem[];
                 
         }
         

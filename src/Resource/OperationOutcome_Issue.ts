@@ -3,13 +3,13 @@
 import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 
-        export enum OperationOutcome_IssueSeverityKind {
+        export enum OperationOutcomeIssueSeverityKind {
                 fatal,
 error,
 warning,
 information
             }
-export enum OperationOutcome_IssueCodeKind {
+export enum OperationOutcomeIssueCodeKind {
                 invalid,
 structure,
 required,
@@ -56,13 +56,13 @@ informational
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -70,13 +70,13 @@ informational
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Indicates whether the issue indicates a variation from successful processing.
                  */
-                Severity? : OperationOutcome_IssueSeverityKind;
+                severity? : OperationOutcomeIssueSeverityKind;
                 
 
                 /**
@@ -88,7 +88,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.
                  */
-                Code? : OperationOutcome_IssueCodeKind;
+                code? : OperationOutcomeIssueCodeKind;
                 
 
                 /**
@@ -100,13 +100,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional details about the error. This may be a text description of the error, or a system code that identifies the error.
                  */
-                Details? : CodeableConcept;
+                details? : CodeableConcept;
                 
 
                 /**
                  * Additional diagnostic information about the issue.  Typically, this may be a description of how a value is erroneous, or a stack dump to help trace the issue.
                  */
-                Diagnostics? : String;
+                diagnostics? : string;
                 
 
                 /**
@@ -120,25 +120,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
 For resource issues, this will be a simple XPath limited to element names, repetition indicators and the default child access that identifies one of the elements in the resource that caused this issue to be raised.  For HTTP errors, will be "http." + the parameter name.
                  */
-                Location? : Array<String>;
+                location? : String[];
                 
 
                 /**
                  * Extensions for location
                  */
-                _location? : Array<Element>;
+                _location? : Element[];
                 
 
                 /**
                  * A [simple subset of FHIRPath](fhirpath.html#simple) limited to element names, repetition indicators and the default child access that identifies one of the elements in the resource that caused this issue to be raised.
                  */
-                Expression? : Array<String>;
+                expression? : String[];
                 
 
                 /**
                  * Extensions for expression
                  */
-                _expression? : Array<Element>;
+                _expression? : Element[];
                 
         }
         

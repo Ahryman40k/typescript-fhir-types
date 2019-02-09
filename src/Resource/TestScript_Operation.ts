@@ -22,13 +22,13 @@ import { TestScript_RequestHeader } from '../Resource/TestScript_RequestHeader';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -36,19 +36,19 @@ import { TestScript_RequestHeader } from '../Resource/TestScript_RequestHeader';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Server interaction or operation type.
                  */
-                Type? : Coding;
+                type? : Coding;
                 
 
                 /**
                  * The type of the resource.  See http://build.fhir.org/resourcelist.html.
                  */
-                Resource? : Code;
+                resource? : Code;
                 
 
                 /**
@@ -60,7 +60,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The label would be used for tracking/logging purposes by test engines.
                  */
-                Label? : String;
+                label? : string;
                 
 
                 /**
@@ -72,7 +72,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The description would be used by test engines for tracking and reporting purposes.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -84,7 +84,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The mime-type to use for RESTful operation in the 'Accept' header.
                  */
-                Accept? : Code;
+                accept? : Code;
                 
 
                 /**
@@ -96,7 +96,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The mime-type to use for RESTful operation in the 'Content-Type' header.
                  */
-                ContentType? : Code;
+                contentType? : Code;
                 
 
                 /**
@@ -108,7 +108,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The server where the request message is destined for.  Must be one of the server numbers listed in TestScript.destination section.
                  */
-                Destination? : Integer;
+                destination? : Integer;
                 
 
                 /**
@@ -120,7 +120,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether or not to implicitly send the request url in encoded format. The default is true to match the standard RESTful client behavior. Set to false when communicating with a server that does not support encoded url paths.
                  */
-                EncodeRequestUrl? : Boolean;
+                encodeRequestUrl? : boolean;
                 
 
                 /**
@@ -132,7 +132,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The server where the request message originates from.  Must be one of the server numbers listed in TestScript.origin section.
                  */
-                Origin? : Integer;
+                origin? : Integer;
                 
 
                 /**
@@ -144,7 +144,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Path plus parameters after [type].  Used to set parts of the request URL explicitly.
                  */
-                Params? : String;
+                params? : string;
                 
 
                 /**
@@ -156,13 +156,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Header elements would be used to set HTTP headers.
                  */
-                RequestHeader? : Array<TestScript_RequestHeader>;
+                requestHeader? : TestScript_RequestHeader[];
                 
 
                 /**
                  * The fixture id (maybe new) to map to the request.
                  */
-                RequestId? : Id;
+                requestId? : Id;
                 
 
                 /**
@@ -174,7 +174,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The fixture id (maybe new) to map to the response.
                  */
-                ResponseId? : Id;
+                responseId? : Id;
                 
 
                 /**
@@ -186,7 +186,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The id of the fixture used as the body of a PUT or POST request.
                  */
-                SourceId? : Id;
+                sourceId? : Id;
                 
 
                 /**
@@ -198,7 +198,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Id of fixture used for extracting the [id],  [type], and [vid] for GET requests.
                  */
-                TargetId? : Id;
+                targetId? : Id;
                 
 
                 /**
@@ -210,7 +210,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Complete request URL.
                  */
-                Url? : String;
+                url? : string;
                 
 
                 /**

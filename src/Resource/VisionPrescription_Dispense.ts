@@ -8,7 +8,7 @@ import { Integer } from '../Scalar/Integer';
 import { Quantity } from '../Resource/Quantity';
 import { VisionPrescription_Prism } from '../Resource/VisionPrescription_Prism';
 
-        export enum VisionPrescription_DispenseEyeKind {
+        export enum VisionPrescriptionDispenseEyeKind {
                 right,
 left
             }
@@ -26,13 +26,13 @@ left
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -40,19 +40,19 @@ left
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifies the type of vision correction product which is required for the patient.
                  */
-                Product? : CodeableConcept;
+                product? : CodeableConcept;
                 
 
                 /**
                  * The eye for which the lens applies.
                  */
-                Eye? : VisionPrescription_DispenseEyeKind;
+                eye? : VisionPrescriptionDispenseEyeKind;
                 
 
                 /**
@@ -64,7 +64,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Lens power measured in dioptres (0.25 units).
                  */
-                Sphere? : Decimal;
+                sphere? : Decimal;
                 
 
                 /**
@@ -76,7 +76,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Power adjustment for astigmatism measured in dioptres (0.25 units).
                  */
-                Cylinder? : Decimal;
+                cylinder? : Decimal;
                 
 
                 /**
@@ -88,7 +88,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Adjustment for astigmatism measured in integer degrees.
                  */
-                Axis? : Integer;
+                axis? : Integer;
                 
 
                 /**
@@ -100,13 +100,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Allows for adjustment on two axis.
                  */
-                Prism? : Array<VisionPrescription_Prism>;
+                prism? : VisionPrescription_Prism[];
                 
 
                 /**
                  * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
                  */
-                Add? : Decimal;
+                add? : Decimal;
                 
 
                 /**
@@ -118,7 +118,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Contact lens power measured in dioptres (0.25 units).
                  */
-                Power? : Decimal;
+                power? : Decimal;
                 
 
                 /**
@@ -130,7 +130,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Back curvature measured in millimetres.
                  */
-                BackCurve? : Decimal;
+                backCurve? : Decimal;
                 
 
                 /**
@@ -142,7 +142,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Contact lens diameter measured in millimetres.
                  */
-                Diameter? : Decimal;
+                diameter? : Decimal;
                 
 
                 /**
@@ -154,13 +154,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recommended maximum wear period for the lens.
                  */
-                Duration? : Quantity;
+                duration? : Quantity;
                 
 
                 /**
                  * Special color or pattern.
                  */
-                Color? : String;
+                color? : string;
                 
 
                 /**
@@ -172,7 +172,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Brand recommendations or restrictions.
                  */
-                Brand? : String;
+                brand? : string;
                 
 
                 /**
@@ -184,7 +184,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Notes for special requirements such as coatings and lens materials.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
         }
         

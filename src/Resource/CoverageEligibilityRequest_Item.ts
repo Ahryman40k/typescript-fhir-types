@@ -23,13 +23,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,73 +37,73 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Exceptions, special conditions and supporting information pplicable for this service or product line.
                  */
-                SupportingInformationSequence? : Array<PositiveInt>;
+                supportingInformationSequence? : PositiveInt[];
                 
 
                 /**
                  * Extensions for supportingInformationSequence
                  */
-                _supportingInformationSequence? : Array<Element>;
+                _supportingInformationSequence? : Element[];
                 
 
                 /**
                  * Dental: basic, major, ortho; Vision exam, glasses, contacts; etc.
                  */
-                Category? : CodeableConcept;
+                category? : CodeableConcept;
                 
 
                 /**
                  * A code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS,USCLS,ICD10, NCPDP,DIN,ACHI,CCI).
                  */
-                Billcode? : CodeableConcept;
+                billcode? : CodeableConcept;
                 
 
                 /**
                  * Item typification or modifiers codes, e.g. for Oral whether the treatment is cosmetic or associated with TMJ, or for medical whether the treatment was outside the clinic or out of office hours.
                  */
-                Modifier? : Array<CodeableConcept>;
+                modifier? : CodeableConcept[];
                 
 
                 /**
                  * The practitioner who is responsible for the services rendered to the patient.
                  */
-                Provider? : Reference;
+                provider? : Reference;
                 
 
                 /**
                  * The number of repetitions of a service or product.
                  */
-                Quantity? : Quantity;
+                quantity? : Quantity;
                 
 
                 /**
                  * The fee for an additional service or product or charge.
                  */
-                UnitPrice? : Money;
+                unitPrice? : Money;
                 
 
                 /**
                  * Facility where the services were provided.
                  */
-                Facility? : Reference;
+                facility? : Reference;
                 
 
                 /**
                  * List of patient diagnosis for which care is sought.
                  */
-                Diagnosis? : Array<CoverageEligibilityRequest_Diagnosis>;
+                diagnosis? : CoverageEligibilityRequest_Diagnosis[];
                 
 
                 /**
                  * The plan/proposal/order describing the proposed service in detail.
                  */
-                Detail? : Array<Reference>;
+                detail? : Reference[];
                 
         }
         

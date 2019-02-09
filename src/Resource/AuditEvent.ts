@@ -35,34 +35,34 @@ majorFailure
         export class AuditEvent  {
 
             constructor() {
-                this.Type = new Coding();
-this.Agent = new Array<AuditEvent_Agent>();
-this.Source = new AuditEvent_Source();
+                this.type = new Coding();
+this.agent = new Array<AuditEvent_Agent>();
+this.source = new AuditEvent_Source();
             }
 
             
                 /**
                  * This is a AuditEvent resource
                  */
-                ResourceType: string = 'AuditEvent;'
+                resourceType: string = 'AuditEvent;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -74,7 +74,7 @@ this.Source = new AuditEvent_Source();
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -86,19 +86,19 @@ this.Source = new AuditEvent_Source();
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -106,25 +106,25 @@ this.Source = new AuditEvent_Source();
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed function.
                  */
-                Type : Coding;
+                type : Coding;
                 
 
                 /**
                  * Identifier for the category of event.
                  */
-                Subtype? : Array<Coding>;
+                subtype? : Coding[];
                 
 
                 /**
                  * Indicator for type of action performed during the event that generated the audit.
                  */
-                Action? : AuditEventActionKind;
+                action? : AuditEventActionKind;
                 
 
                 /**
@@ -136,13 +136,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The period during which the activity occurred.
                  */
-                Period? : Period;
+                period? : Period;
                 
 
                 /**
                  * The time when the event was recorded.
                  */
-                Recorded? : Instant;
+                recorded? : Instant;
                 
 
                 /**
@@ -154,7 +154,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates whether the event succeeded or failed.
                  */
-                Outcome? : AuditEventOutcomeKind;
+                outcome? : AuditEventOutcomeKind;
                 
 
                 /**
@@ -166,7 +166,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A free text description of the outcome of the event.
                  */
-                OutcomeDesc? : String;
+                outcomeDesc? : string;
                 
 
                 /**
@@ -178,25 +178,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The purposeOfUse (reason) that was used during the event being recorded.
                  */
-                PurposeOfEvent? : Array<CodeableConcept>;
+                purposeOfEvent? : CodeableConcept[];
                 
 
                 /**
                  * An actor taking an active role in the event or activity that is logged.
                  */
-                Agent : Array<AuditEvent_Agent>;
+                agent : AuditEvent_Agent[];
                 
 
                 /**
                  * The system that is reporting the event.
                  */
-                Source : AuditEvent_Source;
+                source : AuditEvent_Source;
                 
 
                 /**
                  * Specific instances of data or objects that have been accessed.
                  */
-                Entity? : Array<AuditEvent_Entity>;
+                entity? : AuditEvent_Entity[];
                 
         }
         

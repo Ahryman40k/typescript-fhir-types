@@ -40,25 +40,25 @@ query
                 /**
                  * This is a OperationDefinition resource
                  */
-                ResourceType: string = 'OperationDefinition;'
+                resourceType: string = 'OperationDefinition;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -70,7 +70,7 @@ query
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -82,19 +82,19 @@ query
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -102,13 +102,13 @@ query
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * An absolute URI that is used to identify this operation definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this operation definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the operation definition is stored on different servers.
                  */
-                Url? : Uri;
+                url? : Uri;
                 
 
                 /**
@@ -120,7 +120,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The identifier that is used to identify this version of the operation definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the operation definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
                  */
-                Version? : String;
+                version? : string;
                 
 
                 /**
@@ -132,7 +132,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A natural language name identifying the operation definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -144,7 +144,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A short, descriptive, user-friendly title for the operation definition.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -156,7 +156,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The status of this operation definition. Enables tracking the life-cycle of the content.
                  */
-                Status? : OperationDefinitionStatusKind;
+                status? : OperationDefinitionStatusKind;
                 
 
                 /**
@@ -168,7 +168,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether this is an operation or a named query.
                  */
-                Kind? : OperationDefinitionKindKind;
+                kind? : OperationDefinitionKindKind;
                 
 
                 /**
@@ -180,7 +180,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A Boolean value to indicate that this operation definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
                  */
-                Experimental? : Boolean;
+                experimental? : boolean;
                 
 
                 /**
@@ -192,7 +192,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date  (and optionally time) when the operation definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the operation definition changes.
                  */
-                Date? : DateTime;
+                date? : DateTime;
                 
 
                 /**
@@ -204,7 +204,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The name of the organization or individual that published the operation definition.
                  */
-                Publisher? : String;
+                publisher? : string;
                 
 
                 /**
@@ -216,13 +216,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Contact details to assist a user in finding and communicating with the publisher.
                  */
-                Contact? : Array<ContactDetail>;
+                contact? : ContactDetail[];
                 
 
                 /**
                  * A free text natural language description of the operation definition from a consumer's perspective.
                  */
-                Description? : Markdown;
+                description? : Markdown;
                 
 
                 /**
@@ -234,19 +234,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching for appropriate operation definition instances.
                  */
-                UseContext? : Array<UsageContext>;
+                useContext? : UsageContext[];
                 
 
                 /**
                  * A legal or geographic region in which the operation definition is intended to be used.
                  */
-                Jurisdiction? : Array<CodeableConcept>;
+                jurisdiction? : CodeableConcept[];
                 
 
                 /**
                  * Explanation of why this operation definition is needed and why it has been designed as it has.
                  */
-                Purpose? : Markdown;
+                purpose? : Markdown;
                 
 
                 /**
@@ -258,7 +258,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether the operation affects state = false (see [HTTP specification definition of idempotent](https://tools.ietf.org/html/rfc7231#section-4.2.2). Side effects such as producing audit trail entries do not count as 'changing state/content'.
                  */
-                AffectsState? : Boolean;
+                affectsState? : boolean;
                 
 
                 /**
@@ -270,7 +270,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The name used to invoke the operation.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -282,7 +282,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional information about how to use this operation or named query.
                  */
-                Comment? : Markdown;
+                comment? : Markdown;
                 
 
                 /**
@@ -294,25 +294,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates that this operation definition is a constraining profile on the base.
                  */
-                Base? : Canonical;
+                base? : Canonical;
                 
 
                 /**
                  * The types on which this operation can be executed.
                  */
-                Resource? : Array<Code>;
+                resource? : Code[];
                 
 
                 /**
                  * Extensions for resource
                  */
-                _resource? : Array<Element>;
+                _resource? : Element[];
                 
 
                 /**
                  * Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context).
                  */
-                System? : Boolean;
+                system? : boolean;
                 
 
                 /**
@@ -324,7 +324,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a specific resource id for the context).
                  */
-                Type? : Boolean;
+                type? : boolean;
                 
 
                 /**
@@ -336,7 +336,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates whether this operation can be invoked on a particular instance of one of the given types.
                  */
-                Instance? : Boolean;
+                instance? : boolean;
                 
 
                 /**
@@ -348,25 +348,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional validation information for the in parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource as a whole.
                  */
-                InputProfile? : Canonical;
+                inputProfile? : Canonical;
                 
 
                 /**
                  * Additional validation information for the out parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource.
                  */
-                OutputProfile? : Canonical;
+                outputProfile? : Canonical;
                 
 
                 /**
                  * The parameters for the operation/query.
                  */
-                Parameter? : Array<OperationDefinition_Parameter>;
+                parameter? : OperationDefinition_Parameter[];
                 
 
                 /**
                  * Defines an appropriate combination of parameters to use when invoking this operation, to help code generators when generating overloaded parameter sets for this operation.
                  */
-                Overload? : Array<OperationDefinition_Overload>;
+                overload? : OperationDefinition_Overload[];
                 
         }
         

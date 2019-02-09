@@ -19,13 +19,13 @@ import { Markdown } from '../Scalar/Markdown';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { Markdown } from '../Scalar/Markdown';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The diagram title of the group of operations.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -51,7 +51,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A longer description of the group of operations.
                  */
-                Description? : Markdown;
+                description? : Markdown;
                 
 
                 /**
@@ -63,7 +63,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Description of initial status before the process starts.
                  */
-                PreConditions? : Markdown;
+                preConditions? : Markdown;
                 
 
                 /**
@@ -75,7 +75,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Description of final status after the process ends.
                  */
-                PostConditions? : Markdown;
+                postConditions? : Markdown;
                 
 
                 /**
@@ -87,7 +87,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Each step of the process.
                  */
-                Step? : Array<ExampleScenario_Step>;
+                step? : ExampleScenario_Step[];
                 
         }
         

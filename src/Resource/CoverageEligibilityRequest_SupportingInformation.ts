@@ -12,20 +12,20 @@ import { Reference } from '../Resource/Reference';
         export class CoverageEligibilityRequest_SupportingInformation  {
 
             constructor() {
-                this.Information = new Reference();
+                this.information = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Sequence of the information element which serves to provide a link.
                  */
-                Sequence? : PositiveInt;
+                sequence? : PositiveInt;
                 
 
                 /**
@@ -51,13 +51,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.
                  */
-                Information : Reference;
+                information : Reference;
                 
 
                 /**
                  * The supporting materials are applicable for all detail intens, product/servce categories and specific billing codes.
                  */
-                AppliesToAll? : Boolean;
+                appliesToAll? : boolean;
                 
 
                 /**

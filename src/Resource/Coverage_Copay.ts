@@ -11,20 +11,20 @@ import { Quantity } from '../Resource/Quantity';
         export class Coverage_Copay  {
 
             constructor() {
-                this.Value = new Quantity();
+                this.value = new Quantity();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,19 +32,19 @@ import { Quantity } from '../Resource/Quantity';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Types of products or services such as visit, specialist visits, emergency, inpatient care, etc.
                  */
-                Type? : Coding;
+                type? : Coding;
                 
 
                 /**
                  * The amount of patient payments for various types of services/products, expressed as a percentage of the service/product cost or a fixed amount of currency.
                  */
-                Value : Quantity;
+                value : Quantity;
                 
         }
         

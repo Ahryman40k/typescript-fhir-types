@@ -4,7 +4,7 @@ import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 import { Markdown } from '../Scalar/Markdown';
 
-        export enum CapabilityStatement_DocumentModeKind {
+        export enum CapabilityStatementDocumentModeKind {
                 producer,
 consumer
             }
@@ -15,20 +15,20 @@ consumer
         export class CapabilityStatement_Document  {
 
             constructor() {
-                this.Profile = new Canonical();
+                this.profile = new Canonical();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -36,13 +36,13 @@ consumer
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Mode of this document declaration - whether an application is a producer or consumer.
                  */
-                Mode? : CapabilityStatement_DocumentModeKind;
+                mode? : CapabilityStatementDocumentModeKind;
                 
 
                 /**
@@ -54,7 +54,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A description of how the application supports or uses the specified document profile.  For example, when documents are created, what action is taken with consumed documents, etc.
                  */
-                Documentation? : Markdown;
+                documentation? : Markdown;
                 
 
                 /**
@@ -66,7 +66,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A profile on the document Bundle that constrains which resources are present, and their contents.
                  */
-                Profile : Canonical;
+                profile : Canonical;
                 
         }
         

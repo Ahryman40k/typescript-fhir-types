@@ -15,20 +15,20 @@ import { Range } from '../Resource/Range';
         export class FamilyMemberHistory_Condition  {
 
             constructor() {
-                this.Code = new CodeableConcept();
+                this.code = new CodeableConcept();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -36,43 +36,43 @@ import { Range } from '../Resource/Range';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The actual condition specified. Could be a coded condition (like MI or Diabetes) or a less specific string like 'cancer' depending on how much is known about the condition and the capabilities of the creating system.
                  */
-                Code : CodeableConcept;
+                code : CodeableConcept;
                 
 
                 /**
                  * Indicates what happened as a result of this condition.  If the condition resulted in death, deceased date is captured on the relation.
                  */
-                Outcome? : CodeableConcept;
+                outcome? : CodeableConcept;
                 
 
                 /**
                  * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
                  */
-                OnsetAge? : Age;
+                onsetAge? : Age;
                 
 
                 /**
                  * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
                  */
-                OnsetRange? : Range;
+                onsetRange? : Range;
                 
 
                 /**
                  * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
                  */
-                OnsetPeriod? : Period;
+                onsetPeriod? : Period;
                 
 
                 /**
                  * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
                  */
-                OnsetString? : String;
+                onsetString? : string;
                 
 
                 /**
@@ -84,7 +84,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An area where general notes can be placed about this specific condition.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
         }
         

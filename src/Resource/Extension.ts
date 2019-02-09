@@ -47,19 +47,19 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
                  * Source of the definition for the extension code - a logical name or a URL.
                  */
-                Url? : Uri;
+                url? : Uri;
                 
 
                 /**
@@ -71,7 +71,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueBase64Binary? : String;
+                valueBase64Binary? : string;
                 
 
                 /**
@@ -83,7 +83,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueBoolean? : Boolean;
+                valueBoolean? : boolean;
                 
 
                 /**
@@ -95,7 +95,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueCanonical? : String;
+                valueCanonical? : string;
                 
 
                 /**
@@ -107,7 +107,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueCode? : String;
+                valueCode? : string;
                 
 
                 /**
@@ -119,7 +119,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDate? : String;
+                valueDate? : string;
                 
 
                 /**
@@ -131,7 +131,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDateTime? : String;
+                valueDateTime? : string;
                 
 
                 /**
@@ -143,7 +143,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDecimal? : Number;
+                valueDecimal? : number;
                 
 
                 /**
@@ -155,7 +155,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueId? : String;
+                valueId? : string;
                 
 
                 /**
@@ -167,7 +167,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueInstant? : String;
+                valueInstant? : string;
                 
 
                 /**
@@ -179,7 +179,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueInteger? : Number;
+                valueInteger? : number;
                 
 
                 /**
@@ -191,7 +191,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueMarkdown? : String;
+                valueMarkdown? : string;
                 
 
                 /**
@@ -203,7 +203,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueOid? : String;
+                valueOid? : string;
                 
 
                 /**
@@ -215,7 +215,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValuePositiveInt? : Number;
+                valuePositiveInt? : number;
                 
 
                 /**
@@ -227,7 +227,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueString? : String;
+                valueString? : string;
                 
 
                 /**
@@ -239,7 +239,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueTime? : String;
+                valueTime? : string;
                 
 
                 /**
@@ -251,7 +251,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueUnsignedInt? : Number;
+                valueUnsignedInt? : number;
                 
 
                 /**
@@ -263,7 +263,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueUri? : String;
+                valueUri? : string;
                 
 
                 /**
@@ -275,7 +275,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueUrl? : String;
+                valueUrl? : string;
                 
 
                 /**
@@ -287,7 +287,7 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueUuid? : String;
+                valueUuid? : string;
                 
 
                 /**
@@ -299,181 +299,181 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueAddress? : Address;
+                valueAddress? : Address;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueAge? : Age;
+                valueAge? : Age;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueAnnotation? : Annotation;
+                valueAnnotation? : Annotation;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueAttachment? : Attachment;
+                valueAttachment? : Attachment;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueCodeableConcept? : CodeableConcept;
+                valueCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueCoding? : Coding;
+                valueCoding? : Coding;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueContactPoint? : ContactPoint;
+                valueContactPoint? : ContactPoint;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueCount? : Count;
+                valueCount? : Count;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDistance? : Distance;
+                valueDistance? : Distance;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDuration? : Duration;
+                valueDuration? : Duration;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueHumanName? : HumanName;
+                valueHumanName? : HumanName;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueIdentifier? : Identifier;
+                valueIdentifier? : Identifier;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueMoney? : Money;
+                valueMoney? : Money;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValuePeriod? : Period;
+                valuePeriod? : Period;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueQuantity? : Quantity;
+                valueQuantity? : Quantity;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueRange? : Range;
+                valueRange? : Range;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueRatio? : Ratio;
+                valueRatio? : Ratio;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueReference? : Reference;
+                valueReference? : Reference;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueSampledData? : SampledData;
+                valueSampledData? : SampledData;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueSignature? : Signature;
+                valueSignature? : Signature;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueTiming? : Timing;
+                valueTiming? : Timing;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueParameterDefinition? : ParameterDefinition;
+                valueParameterDefinition? : ParameterDefinition;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDataRequirement? : DataRequirement;
+                valueDataRequirement? : DataRequirement;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueRelatedArtifact? : RelatedArtifact;
+                valueRelatedArtifact? : RelatedArtifact;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueContactDetail? : ContactDetail;
+                valueContactDetail? : ContactDetail;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueContributor? : Contributor;
+                valueContributor? : Contributor;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueTriggerDefinition? : TriggerDefinition;
+                valueTriggerDefinition? : TriggerDefinition;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueExpression? : Expression;
+                valueExpression? : Expression;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueUsageContext? : UsageContext;
+                valueUsageContext? : UsageContext;
                 
 
                 /**
                  * Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
                  */
-                ValueDosage? : Dosage;
+                valueDosage? : Dosage;
                 
         }
         

@@ -48,13 +48,13 @@ import { UsageContext } from '../Resource/UsageContext';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -62,13 +62,13 @@ import { UsageContext } from '../Resource/UsageContext';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The name of the parameter (reference to the operation definition).
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -80,7 +80,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueBase64Binary? : String;
+                valueBase64Binary? : string;
                 
 
                 /**
@@ -92,7 +92,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueBoolean? : Boolean;
+                valueBoolean? : boolean;
                 
 
                 /**
@@ -104,7 +104,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueCanonical? : String;
+                valueCanonical? : string;
                 
 
                 /**
@@ -116,7 +116,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueCode? : String;
+                valueCode? : string;
                 
 
                 /**
@@ -128,7 +128,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDate? : String;
+                valueDate? : string;
                 
 
                 /**
@@ -140,7 +140,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDateTime? : String;
+                valueDateTime? : string;
                 
 
                 /**
@@ -152,7 +152,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDecimal? : Number;
+                valueDecimal? : number;
                 
 
                 /**
@@ -164,7 +164,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueId? : String;
+                valueId? : string;
                 
 
                 /**
@@ -176,7 +176,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueInstant? : String;
+                valueInstant? : string;
                 
 
                 /**
@@ -188,7 +188,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueInteger? : Number;
+                valueInteger? : number;
                 
 
                 /**
@@ -200,7 +200,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueMarkdown? : String;
+                valueMarkdown? : string;
                 
 
                 /**
@@ -212,7 +212,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueOid? : String;
+                valueOid? : string;
                 
 
                 /**
@@ -224,7 +224,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValuePositiveInt? : Number;
+                valuePositiveInt? : number;
                 
 
                 /**
@@ -236,7 +236,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueString? : String;
+                valueString? : string;
                 
 
                 /**
@@ -248,7 +248,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueTime? : String;
+                valueTime? : string;
                 
 
                 /**
@@ -260,7 +260,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueUnsignedInt? : Number;
+                valueUnsignedInt? : number;
                 
 
                 /**
@@ -272,7 +272,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueUri? : String;
+                valueUri? : string;
                 
 
                 /**
@@ -284,7 +284,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueUrl? : String;
+                valueUrl? : string;
                 
 
                 /**
@@ -296,7 +296,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueUuid? : String;
+                valueUuid? : string;
                 
 
                 /**
@@ -308,193 +308,193 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueAddress? : Address;
+                valueAddress? : Address;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueAge? : Age;
+                valueAge? : Age;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueAnnotation? : Annotation;
+                valueAnnotation? : Annotation;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueAttachment? : Attachment;
+                valueAttachment? : Attachment;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueCodeableConcept? : CodeableConcept;
+                valueCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueCoding? : Coding;
+                valueCoding? : Coding;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueContactPoint? : ContactPoint;
+                valueContactPoint? : ContactPoint;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueCount? : Count;
+                valueCount? : Count;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDistance? : Distance;
+                valueDistance? : Distance;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDuration? : Duration;
+                valueDuration? : Duration;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueHumanName? : HumanName;
+                valueHumanName? : HumanName;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueIdentifier? : Identifier;
+                valueIdentifier? : Identifier;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueMoney? : Money;
+                valueMoney? : Money;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValuePeriod? : Period;
+                valuePeriod? : Period;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueQuantity? : Quantity;
+                valueQuantity? : Quantity;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueRange? : Range;
+                valueRange? : Range;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueRatio? : Ratio;
+                valueRatio? : Ratio;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueReference? : Reference;
+                valueReference? : Reference;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueSampledData? : SampledData;
+                valueSampledData? : SampledData;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueSignature? : Signature;
+                valueSignature? : Signature;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueTiming? : Timing;
+                valueTiming? : Timing;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueParameterDefinition? : ParameterDefinition;
+                valueParameterDefinition? : ParameterDefinition;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDataRequirement? : DataRequirement;
+                valueDataRequirement? : DataRequirement;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueRelatedArtifact? : RelatedArtifact;
+                valueRelatedArtifact? : RelatedArtifact;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueContactDetail? : ContactDetail;
+                valueContactDetail? : ContactDetail;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueContributor? : Contributor;
+                valueContributor? : Contributor;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueTriggerDefinition? : TriggerDefinition;
+                valueTriggerDefinition? : TriggerDefinition;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueExpression? : Expression;
+                valueExpression? : Expression;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueUsageContext? : UsageContext;
+                valueUsageContext? : UsageContext;
                 
 
                 /**
                  * If the parameter is a data type.
                  */
-                ValueDosage? : Dosage;
+                valueDosage? : Dosage;
                 
 
                 /**
                  * If the parameter is a whole resource.
                  */
-                Resource? : ResourceList;
+                resource? : ResourceList;
                 
 
                 /**
                  * A named part of a multi-part parameter.
                  */
-                Part? : Array<Parameters_Parameter>;
+                part? : Parameters_Parameter[];
                 
         }
         

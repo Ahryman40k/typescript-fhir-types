@@ -17,20 +17,20 @@ import { SampledData } from '../Resource/SampledData';
         export class Observation_Component  {
 
             constructor() {
-                this.Code = new CodeableConcept();
+                this.code = new CodeableConcept();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -38,31 +38,31 @@ import { SampledData } from '../Resource/SampledData';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Describes what was observed. Sometimes this is called the observation "code".
                  */
-                Code : CodeableConcept;
+                code : CodeableConcept;
                 
 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueQuantity? : Quantity;
+                valueQuantity? : Quantity;
                 
 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueCodeableConcept? : CodeableConcept;
+                valueCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueString? : String;
+                valueString? : string;
                 
 
                 /**
@@ -74,7 +74,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueBoolean? : Boolean;
+                valueBoolean? : boolean;
                 
 
                 /**
@@ -86,7 +86,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueInteger? : Number;
+                valueInteger? : number;
                 
 
                 /**
@@ -98,25 +98,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueRange? : Range;
+                valueRange? : Range;
                 
 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueRatio? : Ratio;
+                valueRatio? : Ratio;
                 
 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueSampledData? : SampledData;
+                valueSampledData? : SampledData;
                 
 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueTime? : String;
+                valueTime? : string;
                 
 
                 /**
@@ -128,7 +128,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValueDateTime? : String;
+                valueDateTime? : string;
                 
 
                 /**
@@ -140,25 +140,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The information determined as a result of making the observation, if the information has a simple value.
                  */
-                ValuePeriod? : Period;
+                valuePeriod? : Period;
                 
 
                 /**
                  * Provides a reason why the expected value in the element Observation.component.value[x] is missing.
                  */
-                DataAbsentReason? : CodeableConcept;
+                dataAbsentReason? : CodeableConcept;
                 
 
                 /**
                  * A categorical assessment of an observation value.  For example, high, low, normal.
                  */
-                Interpretation? : Array<CodeableConcept>;
+                interpretation? : CodeableConcept[];
                 
 
                 /**
                  * Guidance on how to interpret the value by comparison to a normal or recommended range.
                  */
-                ReferenceRange? : Array<Observation_ReferenceRange>;
+                referenceRange? : Observation_ReferenceRange[];
                 
         }
         

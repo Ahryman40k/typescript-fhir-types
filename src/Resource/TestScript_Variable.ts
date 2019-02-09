@@ -18,13 +18,13 @@ import { Id } from '../Scalar/Id';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,13 +32,13 @@ import { Id } from '../Scalar/Id';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Descriptive name for this variable.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -50,7 +50,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A default, hard-coded, or user-defined value for this variable.
                  */
-                DefaultValue? : String;
+                defaultValue? : string;
                 
 
                 /**
@@ -62,7 +62,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A free text natural language description of the variable and its purpose.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -74,7 +74,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The FHIRPath expression to evaluate against the fixture body. When variables are defined, only one of either expression, headerField or path must be specified.
                  */
-                Expression? : String;
+                expression? : string;
                 
 
                 /**
@@ -86,7 +86,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Will be used to grab the HTTP header field value from the headers that sourceId is pointing to.
                  */
-                HeaderField? : String;
+                headerField? : string;
                 
 
                 /**
@@ -98,7 +98,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Displayable text string with hint help information to the user when entering a default value.
                  */
-                Hint? : String;
+                hint? : string;
                 
 
                 /**
@@ -110,7 +110,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * XPath or JSONPath to evaluate against the fixture body.  When variables are defined, only one of either expression, headerField or path must be specified.
                  */
-                Path? : String;
+                path? : string;
                 
 
                 /**
@@ -122,7 +122,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Fixture to evaluate the XPath/JSONPath expression or the headerField  against within this variable.
                  */
-                SourceId? : Id;
+                sourceId? : Id;
                 
 
                 /**

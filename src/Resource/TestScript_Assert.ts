@@ -6,11 +6,11 @@ import { Id } from '../Scalar/Id';
 import { TestScript_Rule2 } from '../Resource/TestScript_Rule2';
 import { TestScript_Ruleset1 } from '../Resource/TestScript_Ruleset1';
 
-        export enum TestScript_AssertDirectionKind {
+        export enum TestScriptAssertDirectionKind {
                 response,
 request
             }
-export enum TestScript_AssertOperatorKind {
+export enum TestScriptAssertOperatorKind {
                 equals,
 notEquals,
 in,
@@ -23,7 +23,7 @@ contains,
 notContains,
 eval
             }
-export enum TestScript_AssertRequestMethodKind {
+export enum TestScriptAssertRequestMethodKind {
                 delete,
 get,
 options,
@@ -31,7 +31,7 @@ patch,
 post,
 put
             }
-export enum TestScript_AssertResponseKind {
+export enum TestScriptAssertResponseKind {
                 okay,
 created,
 noContent,
@@ -59,13 +59,13 @@ unprocessable
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -73,13 +73,13 @@ unprocessable
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The label would be used for tracking/logging purposes by test engines.
                  */
-                Label? : String;
+                label? : string;
                 
 
                 /**
@@ -91,7 +91,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The description would be used by test engines for tracking and reporting purposes.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -103,7 +103,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The direction to use for the assertion.
                  */
-                Direction? : TestScript_AssertDirectionKind;
+                direction? : TestScriptAssertDirectionKind;
                 
 
                 /**
@@ -115,7 +115,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Id of the source fixture used as the contents to be evaluated by either the "source/expression" or "sourceId/path" definition.
                  */
-                CompareToSourceId? : String;
+                compareToSourceId? : string;
                 
 
                 /**
@@ -127,7 +127,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The FHIRPath expression to evaluate against the source fixture. When compareToSourceId is defined, either compareToSourceExpression or compareToSourcePath must be defined, but not both.
                  */
-                CompareToSourceExpression? : String;
+                compareToSourceExpression? : string;
                 
 
                 /**
@@ -139,7 +139,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * XPath or JSONPath expression to evaluate against the source fixture. When compareToSourceId is defined, either compareToSourceExpression or compareToSourcePath must be defined, but not both.
                  */
-                CompareToSourcePath? : String;
+                compareToSourcePath? : string;
                 
 
                 /**
@@ -151,7 +151,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The mime-type contents to compare against the request or response message 'Content-Type' header.
                  */
-                ContentType? : Code;
+                contentType? : Code;
                 
 
                 /**
@@ -163,7 +163,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The FHIRPath expression to be evaluated against the request or response message contents - HTTP headers and payload.
                  */
-                Expression? : String;
+                expression? : string;
                 
 
                 /**
@@ -175,7 +175,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The HTTP header field name e.g. 'Location'.
                  */
-                HeaderField? : String;
+                headerField? : string;
                 
 
                 /**
@@ -187,7 +187,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The ID of a fixture.  Asserts that the response contains at a minimum the fixture specified by minimumId.
                  */
-                MinimumId? : String;
+                minimumId? : string;
                 
 
                 /**
@@ -199,7 +199,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether or not the test execution performs validation on the bundle navigation links.
                  */
-                NavigationLinks? : Boolean;
+                navigationLinks? : boolean;
                 
 
                 /**
@@ -211,7 +211,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The operator type defines the conditional behavior of the assert. If not defined, the default is equals.
                  */
-                Operator? : TestScript_AssertOperatorKind;
+                operator? : TestScriptAssertOperatorKind;
                 
 
                 /**
@@ -223,7 +223,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The XPath or JSONPath expression to be evaluated against the fixture representing the response received from server.
                  */
-                Path? : String;
+                path? : string;
                 
 
                 /**
@@ -235,7 +235,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The request method or HTTP operation code to compare against that used by the client system under test.
                  */
-                RequestMethod? : TestScript_AssertRequestMethodKind;
+                requestMethod? : TestScriptAssertRequestMethodKind;
                 
 
                 /**
@@ -247,7 +247,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value to use in a comparison against the request URL path string.
                  */
-                RequestURL? : String;
+                requestURL? : string;
                 
 
                 /**
@@ -259,7 +259,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The type of the resource.  See http://build.fhir.org/resourcelist.html.
                  */
-                Resource? : Code;
+                resource? : Code;
                 
 
                 /**
@@ -271,7 +271,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * okay | created | noContent | notModified | bad | forbidden | notFound | methodNotAllowed | conflict | gone | preconditionFailed | unprocessable.
                  */
-                Response? : TestScript_AssertResponseKind;
+                response? : TestScriptAssertResponseKind;
                 
 
                 /**
@@ -283,7 +283,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the HTTP response code to be tested.
                  */
-                ResponseCode? : String;
+                responseCode? : string;
                 
 
                 /**
@@ -295,19 +295,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The TestScript.rule this assert will evaluate.
                  */
-                Rule? : TestScript_Rule2;
+                rule? : TestScript_Rule2;
                 
 
                 /**
                  * The TestScript.ruleset this assert will evaluate.
                  */
-                Ruleset? : TestScript_Ruleset1;
+                ruleset? : TestScript_Ruleset1;
                 
 
                 /**
                  * Fixture to evaluate the XPath/JSONPath expression or the headerField  against.
                  */
-                SourceId? : Id;
+                sourceId? : Id;
                 
 
                 /**
@@ -319,7 +319,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The ID of the Profile to validate against.
                  */
-                ValidateProfileId? : Id;
+                validateProfileId? : Id;
                 
 
                 /**
@@ -331,7 +331,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value to compare to.
                  */
-                Value? : String;
+                value? : string;
                 
 
                 /**
@@ -343,7 +343,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether or not the test execution will produce a warning only on error for this assert.
                  */
-                WarningOnly? : Boolean;
+                warningOnly? : boolean;
                 
 
                 /**

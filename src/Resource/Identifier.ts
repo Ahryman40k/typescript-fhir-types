@@ -27,19 +27,19 @@ old
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
                  * The purpose of this identifier.
                  */
-                Use? : IdentifierUseKind;
+                use? : IdentifierUseKind;
                 
 
                 /**
@@ -51,13 +51,13 @@ old
                 /**
                  * A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Establishes the namespace for the value - that is, a URL that describes a set values that are unique.
                  */
-                System? : Uri;
+                system? : Uri;
                 
 
                 /**
@@ -69,7 +69,7 @@ old
                 /**
                  * The portion of the identifier typically relevant to the user and which is unique within the context of the system.
                  */
-                Value? : String;
+                value? : string;
                 
 
                 /**
@@ -81,13 +81,13 @@ old
                 /**
                  * Time period during which identifier is/was valid for use.
                  */
-                Period? : Period;
+                period? : Period;
                 
 
                 /**
                  * Organization that issued/manages the identifier.
                  */
-                Assigner? : Reference;
+                assigner? : Reference;
                 
         }
         

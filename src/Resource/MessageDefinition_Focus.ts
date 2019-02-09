@@ -20,13 +20,13 @@ import { UnsignedInt } from '../Scalar/UnsignedInt';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,13 +34,13 @@ import { UnsignedInt } from '../Scalar/UnsignedInt';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The kind of resource that must be the focus for this message.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -52,13 +52,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A profile that reflects constraints for the focal resource (and potentially for related resources).
                  */
-                Profile? : Canonical;
+                profile? : Canonical;
                 
 
                 /**
                  * Identifies the minimum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
                  */
-                Min? : UnsignedInt;
+                min? : UnsignedInt;
                 
 
                 /**
@@ -70,7 +70,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Identifies the maximum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
                  */
-                Max? : String;
+                max? : string;
                 
 
                 /**

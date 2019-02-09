@@ -13,20 +13,20 @@ import { Reference } from '../Resource/Reference';
         export class ImmunizationRecommendation_Recommendation  {
 
             constructor() {
-                this.ForecastStatus = new CodeableConcept();
+                this.forecastStatus = new CodeableConcept();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,49 +34,49 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Vaccine(s) or vaccine group that pertain to the recommendation.
                  */
-                VaccineCode? : Array<CodeableConcept>;
+                vaccineCode? : CodeableConcept[];
                 
 
                 /**
                  * The targeted disease for the recommendation.
                  */
-                TargetDisease? : CodeableConcept;
+                targetDisease? : CodeableConcept;
                 
 
                 /**
                  * Vaccine(s) which should not be used to fulfill the recommendation.
                  */
-                ContraindicatedVaccineCode? : Array<CodeableConcept>;
+                contraindicatedVaccineCode? : CodeableConcept[];
                 
 
                 /**
                  * Indicates the patient status with respect to the path to immunity for the target disease.
                  */
-                ForecastStatus : CodeableConcept;
+                forecastStatus : CodeableConcept;
                 
 
                 /**
                  * The reason for the assigned forecast status.
                  */
-                ForecastReason? : Array<CodeableConcept>;
+                forecastReason? : CodeableConcept[];
                 
 
                 /**
                  * Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
                  */
-                DateCriterion? : Array<ImmunizationRecommendation_DateCriterion>;
+                dateCriterion? : ImmunizationRecommendation_DateCriterion[];
                 
 
                 /**
                  * Contains the description about the protocol under which the vaccine was administered.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -88,7 +88,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * One possible path to achieve presumed immunity against a disease - within the context of an authority.
                  */
-                Series? : String;
+                series? : string;
                 
 
                 /**
@@ -100,7 +100,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Nominal position of the recommended dose in a series (e.g. dose 2 is the next recommended dose).
                  */
-                DoseNumberPositiveInt? : Number;
+                doseNumberPositiveInt? : number;
                 
 
                 /**
@@ -112,7 +112,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Nominal position of the recommended dose in a series (e.g. dose 2 is the next recommended dose).
                  */
-                DoseNumberString? : String;
+                doseNumberString? : string;
                 
 
                 /**
@@ -124,7 +124,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recommended number of doses to achieve immunity.
                  */
-                SeriesDosesPositiveInt? : Number;
+                seriesDosesPositiveInt? : number;
                 
 
                 /**
@@ -136,7 +136,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recommended number of doses to achieve immunity.
                  */
-                SeriesDosesString? : String;
+                seriesDosesString? : string;
                 
 
                 /**
@@ -148,13 +148,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Immunization event history and/or evaluation that supports the status and recommendation.
                  */
-                SupportingImmunization? : Array<Reference>;
+                supportingImmunization? : Reference[];
                 
 
                 /**
                  * Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.
                  */
-                SupportingPatientInformation? : Array<Reference>;
+                supportingPatientInformation? : Reference[];
                 
         }
         

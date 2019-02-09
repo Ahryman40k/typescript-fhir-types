@@ -28,13 +28,13 @@ import { Timing } from '../Resource/Timing';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -42,13 +42,13 @@ import { Timing } from '../Resource/Timing';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A user-visible prefix for the action.
                  */
-                Prefix? : String;
+                prefix? : string;
                 
 
                 /**
@@ -60,7 +60,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The title of the action displayed to a user.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -72,7 +72,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A short description of the action used to provide a summary to display to the user.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -84,7 +84,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that might not be capable of interpreting it dynamically.
                  */
-                TextEquivalent? : String;
+                textEquivalent? : string;
                 
 
                 /**
@@ -96,7 +96,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates how quickly the action should be addressed with respect to other actions.
                  */
-                Priority? : Code;
+                priority? : Code;
                 
 
                 /**
@@ -108,31 +108,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A code that provides meaning for the action or action group. For example, a section may have a LOINC code for a the section of a documentation template.
                  */
-                Code? : Array<CodeableConcept>;
+                code? : CodeableConcept[];
                 
 
                 /**
                  * Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.
                  */
-                Documentation? : Array<RelatedArtifact>;
+                documentation? : RelatedArtifact[];
                 
 
                 /**
                  * An expression that describes applicability criteria, or start/stop conditions for the action.
                  */
-                Condition? : Array<RequestGroup_Condition>;
+                condition? : RequestGroup_Condition[];
                 
 
                 /**
                  * A relationship to another action such as "before" or "30-60 minutes after start of".
                  */
-                RelatedAction? : Array<RequestGroup_RelatedAction>;
+                relatedAction? : RequestGroup_RelatedAction[];
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingDateTime? : String;
+                timingDateTime? : string;
                 
 
                 /**
@@ -144,49 +144,49 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingAge? : Age;
+                timingAge? : Age;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingPeriod? : Period;
+                timingPeriod? : Period;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingDuration? : Duration;
+                timingDuration? : Duration;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingRange? : Range;
+                timingRange? : Range;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingTiming? : Timing;
+                timingTiming? : Timing;
                 
 
                 /**
                  * The participant that should perform or be responsible for this action.
                  */
-                Participant? : Array<Reference>;
+                participant? : Reference[];
                 
 
                 /**
                  * The type of action to perform (create, update, remove).
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Defines the grouping behavior for the action and its children.
                  */
-                GroupingBehavior? : Code;
+                groupingBehavior? : Code;
                 
 
                 /**
@@ -198,7 +198,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines the selection behavior for the action and its children.
                  */
-                SelectionBehavior? : Code;
+                selectionBehavior? : Code;
                 
 
                 /**
@@ -210,7 +210,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines the requiredness behavior for the action.
                  */
-                RequiredBehavior? : Code;
+                requiredBehavior? : Code;
                 
 
                 /**
@@ -222,7 +222,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines whether the action should usually be preselected.
                  */
-                PrecheckBehavior? : Code;
+                precheckBehavior? : Code;
                 
 
                 /**
@@ -234,7 +234,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines whether the action can be selected multiple times.
                  */
-                CardinalityBehavior? : Code;
+                cardinalityBehavior? : Code;
                 
 
                 /**
@@ -246,13 +246,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The resource that is the target of the action (e.g. CommunicationRequest).
                  */
-                Resource? : Reference;
+                resource? : Reference;
                 
 
                 /**
                  * Sub actions.
                  */
-                Action? : Array<RequestGroup_Action>;
+                action? : RequestGroup_Action[];
                 
         }
         

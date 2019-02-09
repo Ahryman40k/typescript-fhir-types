@@ -4,7 +4,7 @@ import { Extension } from '../Resource/Extension';
 import { Period } from '../Resource/Period';
 import { Reference } from '../Resource/Reference';
 
-        export enum Encounter_LocationStatusKind {
+        export enum EncounterLocationStatusKind {
                 planned,
 active,
 reserved,
@@ -17,20 +17,20 @@ completed
         export class Encounter_Location  {
 
             constructor() {
-                this.Location = new Reference();
+                this.location = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -38,19 +38,19 @@ completed
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The location where the encounter takes place.
                  */
-                Location : Reference;
+                location : Reference;
                 
 
                 /**
                  * The status of the participants' presence at the specified location during the period specified. If the participant is is no longer at the location, then the period will have an end date/time.
                  */
-                Status? : Encounter_LocationStatusKind;
+                status? : EncounterLocationStatusKind;
                 
 
                 /**
@@ -62,7 +62,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Time period during which the patient was present at the location.
                  */
-                Period? : Period;
+                period? : Period;
                 
         }
         

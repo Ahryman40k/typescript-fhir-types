@@ -20,13 +20,13 @@ import { ValueSet_Designation } from '../Resource/ValueSet_Designation';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,13 +34,13 @@ import { ValueSet_Designation } from '../Resource/ValueSet_Designation';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * An absolute URI which is the code system in which the code for this item in the expansion is defined.
                  */
-                System? : Uri;
+                system? : Uri;
                 
 
                 /**
@@ -52,7 +52,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If true, this entry is included in the expansion for navigational purposes, and the user cannot select the code directly as a proper value.
                  */
-                Abstract? : Boolean;
+                abstract? : boolean;
                 
 
                 /**
@@ -64,7 +64,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If the concept is inactive in the code system that defines it. Inactive codes are those that are no longer to be used, but are maintained by the code system for understanding legacy data. It might not be known or specified whether an concept is inactive (and it may depend on the context of use).
                  */
-                Inactive? : Boolean;
+                inactive? : boolean;
                 
 
                 /**
@@ -76,7 +76,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The version of the code system from this code was taken. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.
                  */
-                Version? : String;
+                version? : string;
                 
 
                 /**
@@ -88,7 +88,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -100,7 +100,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recommended display for this item in the expansion.
                  */
-                Display? : String;
+                display? : string;
                 
 
                 /**
@@ -112,13 +112,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional representations for this item - other languages, aliases, specialized purposes, used for particular purposes, etc. These are relevant when the conditions of the expansion do not fix to a single correct representation.
                  */
-                Designation? : Array<ValueSet_Designation>;
+                designation? : ValueSet_Designation[];
                 
 
                 /**
                  * Other codes and entries contained under this entry in the hierarchy.
                  */
-                Contains? : Array<ValueSet_Contains>;
+                contains? : ValueSet_Contains[];
                 
         }
         

@@ -23,13 +23,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,13 +37,13 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A service line number.
                  */
-                Sequence? : PositiveInt;
+                sequence? : PositiveInt;
                 
 
                 /**
@@ -55,49 +55,49 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The type of revenue or cost center providing the product and/or service.
                  */
-                Revenue? : CodeableConcept;
+                revenue? : CodeableConcept;
                 
 
                 /**
                  * Health Care Service Type Codes to identify the classification of service or benefits.
                  */
-                Category? : CodeableConcept;
+                category? : CodeableConcept;
                 
 
                 /**
                  * A code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS,USCLS,ICD10, NCPDP,DIN,ACHI,CCI).
                  */
-                Billcode? : CodeableConcept;
+                billcode? : CodeableConcept;
                 
 
                 /**
                  * Item typification or modifiers codes, e.g. for Oral whether the treatment is cosmetic or associated with TMJ, or for medical whether the treatment was outside the clinic or out of office hours.
                  */
-                Modifier? : Array<CodeableConcept>;
+                modifier? : CodeableConcept[];
                 
 
                 /**
                  * For programs which require reson codes for the inclusion, covering, of this billed item under the program or sub-program.
                  */
-                ProgramCode? : Array<CodeableConcept>;
+                programCode? : CodeableConcept[];
                 
 
                 /**
                  * The number of repetitions of a service or product.
                  */
-                Quantity? : Quantity;
+                quantity? : Quantity;
                 
 
                 /**
                  * The fee for an addittional service or product or charge.
                  */
-                UnitPrice? : Money;
+                unitPrice? : Money;
                 
 
                 /**
                  * A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
                  */
-                Factor? : Decimal;
+                factor? : Decimal;
                 
 
                 /**
@@ -109,13 +109,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.
                  */
-                Net? : Money;
+                net? : Money;
                 
 
                 /**
                  * List of Unique Device Identifiers associated with this line item.
                  */
-                Udi? : Array<Reference>;
+                udi? : Reference[];
                 
         }
         

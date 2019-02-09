@@ -18,12 +18,12 @@ import { RelatedArtifact } from '../Resource/RelatedArtifact';
 import { Timing } from '../Resource/Timing';
 import { TriggerDefinition } from '../Resource/TriggerDefinition';
 
-        export enum PlanDefinition_ActionGroupingBehaviorKind {
+        export enum PlanDefinitionActionGroupingBehaviorKind {
                 visualGroup,
 logicalGroup,
 sentenceGroup
             }
-export enum PlanDefinition_ActionSelectionBehaviorKind {
+export enum PlanDefinitionActionSelectionBehaviorKind {
                 any,
 all,
 allOrNone,
@@ -31,16 +31,16 @@ exactlyOne,
 atMostOne,
 oneOrMore
             }
-export enum PlanDefinition_ActionRequiredBehaviorKind {
+export enum PlanDefinitionActionRequiredBehaviorKind {
                 must,
 could,
 mustUnlessDocumented
             }
-export enum PlanDefinition_ActionPrecheckBehaviorKind {
+export enum PlanDefinitionActionPrecheckBehaviorKind {
                 yes,
 no
             }
-export enum PlanDefinition_ActionCardinalityBehaviorKind {
+export enum PlanDefinitionActionCardinalityBehaviorKind {
                 single,
 multiple
             }
@@ -58,13 +58,13 @@ multiple
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -72,13 +72,13 @@ multiple
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A user-visible prefix for the action.
                  */
-                Prefix? : String;
+                prefix? : string;
                 
 
                 /**
@@ -90,7 +90,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The title of the action displayed to a user.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -102,7 +102,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A brief description of the action used to provide a summary to display to the user.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -114,7 +114,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that might not be capable of interpreting it dynamically.
                  */
-                TextEquivalent? : String;
+                textEquivalent? : string;
                 
 
                 /**
@@ -126,7 +126,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates how quickly the action should be addressed with respect to other actions.
                  */
-                Priority? : Code;
+                priority? : Code;
                 
 
                 /**
@@ -138,67 +138,67 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A code that provides meaning for the action or action group. For example, a section may have a LOINC code for the section of a documentation template.
                  */
-                Code? : Array<CodeableConcept>;
+                code? : CodeableConcept[];
                 
 
                 /**
                  * A description of why this action is necessary or appropriate.
                  */
-                Reason? : Array<CodeableConcept>;
+                reason? : CodeableConcept[];
                 
 
                 /**
                  * Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.
                  */
-                Documentation? : Array<RelatedArtifact>;
+                documentation? : RelatedArtifact[];
                 
 
                 /**
                  * Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition.
                  */
-                GoalId? : Array<Id>;
+                goalId? : Id[];
                 
 
                 /**
                  * Extensions for goalId
                  */
-                _goalId? : Array<Element>;
+                _goalId? : Element[];
                 
 
                 /**
                  * A description of when the action should be triggered.
                  */
-                Trigger? : Array<TriggerDefinition>;
+                trigger? : TriggerDefinition[];
                 
 
                 /**
                  * An expression that describes applicability criteria or start/stop conditions for the action.
                  */
-                Condition? : Array<PlanDefinition_Condition>;
+                condition? : PlanDefinition_Condition[];
                 
 
                 /**
                  * Defines input data requirements for the action.
                  */
-                Input? : Array<DataRequirement>;
+                input? : DataRequirement[];
                 
 
                 /**
                  * Defines the outputs of the action, if any.
                  */
-                Output? : Array<DataRequirement>;
+                output? : DataRequirement[];
                 
 
                 /**
                  * A relationship to another action such as "before" or "30-60 minutes after start of".
                  */
-                RelatedAction? : Array<PlanDefinition_RelatedAction>;
+                relatedAction? : PlanDefinition_RelatedAction[];
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingDateTime? : String;
+                timingDateTime? : string;
                 
 
                 /**
@@ -210,49 +210,49 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingAge? : Age;
+                timingAge? : Age;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingPeriod? : Period;
+                timingPeriod? : Period;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingDuration? : Duration;
+                timingDuration? : Duration;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingRange? : Range;
+                timingRange? : Range;
                 
 
                 /**
                  * An optional value describing when the action should be performed.
                  */
-                TimingTiming? : Timing;
+                timingTiming? : Timing;
                 
 
                 /**
                  * Indicates who should participate in performing the action described.
                  */
-                Participant? : Array<PlanDefinition_Participant>;
+                participant? : PlanDefinition_Participant[];
                 
 
                 /**
                  * The type of action to perform (create, update, remove).
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Defines the grouping behavior for the action and its children.
                  */
-                GroupingBehavior? : PlanDefinition_ActionGroupingBehaviorKind;
+                groupingBehavior? : PlanDefinitionActionGroupingBehaviorKind;
                 
 
                 /**
@@ -264,7 +264,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines the selection behavior for the action and its children.
                  */
-                SelectionBehavior? : PlanDefinition_ActionSelectionBehaviorKind;
+                selectionBehavior? : PlanDefinitionActionSelectionBehaviorKind;
                 
 
                 /**
@@ -276,7 +276,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines the required behavior for the action.
                  */
-                RequiredBehavior? : PlanDefinition_ActionRequiredBehaviorKind;
+                requiredBehavior? : PlanDefinitionActionRequiredBehaviorKind;
                 
 
                 /**
@@ -288,7 +288,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines whether the action should usually be preselected.
                  */
-                PrecheckBehavior? : PlanDefinition_ActionPrecheckBehaviorKind;
+                precheckBehavior? : PlanDefinitionActionPrecheckBehaviorKind;
                 
 
                 /**
@@ -300,7 +300,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Defines whether the action can be selected multiple times.
                  */
-                CardinalityBehavior? : PlanDefinition_ActionCardinalityBehaviorKind;
+                cardinalityBehavior? : PlanDefinitionActionCardinalityBehaviorKind;
                 
 
                 /**
@@ -312,25 +312,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A reference to an ActivityDefinition that describes the action to be taken in detail, or a PlanDefinition that describes a series of actions to be taken.
                  */
-                Definition? : Canonical;
+                definition? : Canonical;
                 
 
                 /**
                  * A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.
                  */
-                Transform? : Canonical;
+                transform? : Canonical;
                 
 
                 /**
                  * Customizations that should be applied to the statically defined resource. For example, if the dosage of a medication must be computed based on the patient's weight, a customization would be used to specify an expression that calculated the weight, and the path on the resource that would contain the result.
                  */
-                DynamicValue? : Array<PlanDefinition_DynamicValue>;
+                dynamicValue? : PlanDefinition_DynamicValue[];
                 
 
                 /**
                  * Sub actions that are contained within the action. The behavior of this action determines the functionality of the sub-actions. For example, a selection behavior of at-most-one indicates that of the sub-actions, at most one may be chosen as part of realizing the action definition.
                  */
-                Action? : Array<PlanDefinition_Action>;
+                action? : PlanDefinition_Action[];
                 
         }
         

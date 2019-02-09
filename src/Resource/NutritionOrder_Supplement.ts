@@ -20,13 +20,13 @@ import { Timing } from '../Resource/Timing';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,19 +34,19 @@ import { Timing } from '../Resource/Timing';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * The product or brand name of the nutritional supplement such as "Acme Protein Shake".
                  */
-                ProductName? : String;
+                productName? : string;
                 
 
                 /**
@@ -58,19 +58,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.
                  */
-                Schedule? : Array<Timing>;
+                schedule? : Timing[];
                 
 
                 /**
                  * The amount of the nutritional supplement to be given.
                  */
-                Quantity? : Quantity;
+                quantity? : Quantity;
                 
 
                 /**
                  * Free text or additional instructions or information pertaining to the oral supplement.
                  */
-                Instruction? : String;
+                instruction? : string;
                 
 
                 /**

@@ -20,13 +20,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,37 +34,37 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Reference to the primary source.
                  */
-                Organization? : Reference;
+                organization? : Reference;
                 
 
                 /**
                  * Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).
                  */
-                Type? : Array<CodeableConcept>;
+                type? : CodeableConcept[];
                 
 
                 /**
                  * Method for communicating with the primary source (manual; API; Push).
                  */
-                ValidationProcess? : Array<CodeableConcept>;
+                validationProcess? : CodeableConcept[];
                 
 
                 /**
                  * Status of the validation of the target against the primary source (successful; failed; unknown).
                  */
-                ValidationStatus? : CodeableConcept;
+                validationStatus? : CodeableConcept;
                 
 
                 /**
                  * When the target was validated against the primary source.
                  */
-                ValidationDate? : DateTime;
+                validationDate? : DateTime;
                 
 
                 /**
@@ -76,13 +76,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Ability of the primary source to push updates/alerts (yes; no; undetermined).
                  */
-                CanPushUpdates? : CodeableConcept;
+                canPushUpdates? : CodeableConcept;
                 
 
                 /**
                  * Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).
                  */
-                PushTypeAvailable? : Array<CodeableConcept>;
+                pushTypeAvailable? : CodeableConcept[];
                 
         }
         

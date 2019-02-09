@@ -34,7 +34,7 @@ import { Timing } from '../Resource/Timing';
 import { TriggerDefinition } from '../Resource/TriggerDefinition';
 import { UsageContext } from '../Resource/UsageContext';
 
-        export enum StructureMap_SourceListModeKind {
+        export enum StructureMapSourceListModeKind {
                 first,
 notFirst,
 last,
@@ -55,13 +55,13 @@ onlyOne
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -69,13 +69,13 @@ onlyOne
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Type or variable this rule applies to.
                  */
-                Context? : Id;
+                context? : Id;
                 
 
                 /**
@@ -87,7 +87,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
                  */
-                Min? : Integer;
+                min? : Integer;
                 
 
                 /**
@@ -99,7 +99,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
                  */
-                Max? : String;
+                max? : string;
                 
 
                 /**
@@ -111,7 +111,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
                  */
-                Type? : String;
+                type? : string;
                 
 
                 /**
@@ -123,7 +123,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueBase64Binary? : String;
+                defaultValueBase64Binary? : string;
                 
 
                 /**
@@ -135,7 +135,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueBoolean? : Boolean;
+                defaultValueBoolean? : boolean;
                 
 
                 /**
@@ -147,7 +147,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueCanonical? : String;
+                defaultValueCanonical? : string;
                 
 
                 /**
@@ -159,7 +159,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueCode? : String;
+                defaultValueCode? : string;
                 
 
                 /**
@@ -171,7 +171,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDate? : String;
+                defaultValueDate? : string;
                 
 
                 /**
@@ -183,7 +183,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDateTime? : String;
+                defaultValueDateTime? : string;
                 
 
                 /**
@@ -195,7 +195,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDecimal? : Number;
+                defaultValueDecimal? : number;
                 
 
                 /**
@@ -207,7 +207,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueId? : String;
+                defaultValueId? : string;
                 
 
                 /**
@@ -219,7 +219,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueInstant? : String;
+                defaultValueInstant? : string;
                 
 
                 /**
@@ -231,7 +231,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueInteger? : Number;
+                defaultValueInteger? : number;
                 
 
                 /**
@@ -243,7 +243,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueMarkdown? : String;
+                defaultValueMarkdown? : string;
                 
 
                 /**
@@ -255,7 +255,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueOid? : String;
+                defaultValueOid? : string;
                 
 
                 /**
@@ -267,7 +267,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValuePositiveInt? : Number;
+                defaultValuePositiveInt? : number;
                 
 
                 /**
@@ -279,7 +279,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueString? : String;
+                defaultValueString? : string;
                 
 
                 /**
@@ -291,7 +291,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueTime? : String;
+                defaultValueTime? : string;
                 
 
                 /**
@@ -303,7 +303,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueUnsignedInt? : Number;
+                defaultValueUnsignedInt? : number;
                 
 
                 /**
@@ -315,7 +315,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueUri? : String;
+                defaultValueUri? : string;
                 
 
                 /**
@@ -327,7 +327,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueUrl? : String;
+                defaultValueUrl? : string;
                 
 
                 /**
@@ -339,7 +339,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueUuid? : String;
+                defaultValueUuid? : string;
                 
 
                 /**
@@ -351,187 +351,187 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueAddress? : Address;
+                defaultValueAddress? : Address;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueAge? : Age;
+                defaultValueAge? : Age;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueAnnotation? : Annotation;
+                defaultValueAnnotation? : Annotation;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueAttachment? : Attachment;
+                defaultValueAttachment? : Attachment;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueCodeableConcept? : CodeableConcept;
+                defaultValueCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueCoding? : Coding;
+                defaultValueCoding? : Coding;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueContactPoint? : ContactPoint;
+                defaultValueContactPoint? : ContactPoint;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueCount? : Count;
+                defaultValueCount? : Count;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDistance? : Distance;
+                defaultValueDistance? : Distance;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDuration? : Duration;
+                defaultValueDuration? : Duration;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueHumanName? : HumanName;
+                defaultValueHumanName? : HumanName;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueIdentifier? : Identifier;
+                defaultValueIdentifier? : Identifier;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueMoney? : Money;
+                defaultValueMoney? : Money;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValuePeriod? : Period;
+                defaultValuePeriod? : Period;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueQuantity? : Quantity;
+                defaultValueQuantity? : Quantity;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueRange? : Range;
+                defaultValueRange? : Range;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueRatio? : Ratio;
+                defaultValueRatio? : Ratio;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueReference? : Reference;
+                defaultValueReference? : Reference;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueSampledData? : SampledData;
+                defaultValueSampledData? : SampledData;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueSignature? : Signature;
+                defaultValueSignature? : Signature;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueTiming? : Timing;
+                defaultValueTiming? : Timing;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueParameterDefinition? : ParameterDefinition;
+                defaultValueParameterDefinition? : ParameterDefinition;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDataRequirement? : DataRequirement;
+                defaultValueDataRequirement? : DataRequirement;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueRelatedArtifact? : RelatedArtifact;
+                defaultValueRelatedArtifact? : RelatedArtifact;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueContactDetail? : ContactDetail;
+                defaultValueContactDetail? : ContactDetail;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueContributor? : Contributor;
+                defaultValueContributor? : Contributor;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueTriggerDefinition? : TriggerDefinition;
+                defaultValueTriggerDefinition? : TriggerDefinition;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueExpression? : Expression;
+                defaultValueExpression? : Expression;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueUsageContext? : UsageContext;
+                defaultValueUsageContext? : UsageContext;
                 
 
                 /**
                  * A value to use if there is no existing value in the source object.
                  */
-                DefaultValueDosage? : Dosage;
+                defaultValueDosage? : Dosage;
                 
 
                 /**
                  * Optional field for this source.
                  */
-                Element? : String;
+                element? : string;
                 
 
                 /**
@@ -543,7 +543,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * How to handle the list mode for this element.
                  */
-                ListMode? : StructureMap_SourceListModeKind;
+                listMode? : StructureMapSourceListModeKind;
                 
 
                 /**
@@ -555,7 +555,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Named context for field, if a field is specified.
                  */
-                Variable? : Id;
+                variable? : Id;
                 
 
                 /**
@@ -567,7 +567,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * FHIRPath expression  - must be true or the rule does not apply.
                  */
-                Condition? : String;
+                condition? : string;
                 
 
                 /**
@@ -579,7 +579,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
                  */
-                Check? : String;
+                check? : string;
                 
 
                 /**
@@ -591,7 +591,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A FHIRPath expression which specifies a message to put in the transform log when content matching the source rule is found.
                  */
-                LogMessage? : String;
+                logMessage? : string;
                 
 
                 /**

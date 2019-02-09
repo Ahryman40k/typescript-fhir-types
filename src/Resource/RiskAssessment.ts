@@ -22,32 +22,32 @@ import { Uri } from '../Scalar/Uri';
         export class RiskAssessment  {
 
             constructor() {
-                this.Subject = new Reference();
+                this.subject = new Reference();
             }
 
             
                 /**
                  * This is a RiskAssessment resource
                  */
-                ResourceType: string = 'RiskAssessment;'
+                resourceType: string = 'RiskAssessment;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -59,7 +59,7 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -71,19 +71,19 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -91,31 +91,31 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Business identifier assigned to the risk assessment.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * A reference to the request that is fulfilled by this risk assessment.
                  */
-                BasedOn? : Reference;
+                basedOn? : Reference;
                 
 
                 /**
                  * A reference to a resource that this risk assessment is part of, such as a Procedure.
                  */
-                Parent? : Reference;
+                parent? : Reference;
                 
 
                 /**
                  * The status of the RiskAssessment, using the same statuses as an Observation.
                  */
-                Status? : Code;
+                status? : Code;
                 
 
                 /**
@@ -127,31 +127,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The algorithm, process or mechanism used to evaluate the risk.
                  */
-                Method? : CodeableConcept;
+                method? : CodeableConcept;
                 
 
                 /**
                  * The type of the risk assessment performed.
                  */
-                Code? : CodeableConcept;
+                code? : CodeableConcept;
                 
 
                 /**
                  * The patient or group the risk assessment applies to.
                  */
-                Subject : Reference;
+                subject : Reference;
                 
 
                 /**
                  * The encounter where the assessment was performed.
                  */
-                Context? : Reference;
+                context? : Reference;
                 
 
                 /**
                  * The date (and possibly time) the risk assessment was performed.
                  */
-                OccurrenceDateTime? : String;
+                occurrenceDateTime? : string;
                 
 
                 /**
@@ -163,49 +163,49 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date (and possibly time) the risk assessment was performed.
                  */
-                OccurrencePeriod? : Period;
+                occurrencePeriod? : Period;
                 
 
                 /**
                  * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
                  */
-                Condition? : Reference;
+                condition? : Reference;
                 
 
                 /**
                  * The provider or software application that performed the assessment.
                  */
-                Performer? : Reference;
+                performer? : Reference;
                 
 
                 /**
                  * The reason the risk assessment was performed.
                  */
-                ReasonCode? : Array<CodeableConcept>;
+                reasonCode? : CodeableConcept[];
                 
 
                 /**
                  * Resources supporting the reason the risk assessment was performed.
                  */
-                ReasonReference? : Array<Reference>;
+                reasonReference? : Reference[];
                 
 
                 /**
                  * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
                  */
-                Basis? : Array<Reference>;
+                basis? : Reference[];
                 
 
                 /**
                  * Describes the expected outcome for the subject.
                  */
-                Prediction? : Array<RiskAssessment_Prediction>;
+                prediction? : RiskAssessment_Prediction[];
                 
 
                 /**
                  * A description of the steps that might be taken to reduce the identified risk(s).
                  */
-                Mitigation? : String;
+                mitigation? : string;
                 
 
                 /**
@@ -217,7 +217,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional comments about the risk assessment.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
         }
         

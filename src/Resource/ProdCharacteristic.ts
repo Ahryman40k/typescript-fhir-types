@@ -20,13 +20,13 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,49 +34,49 @@ import { Quantity } from '../Resource/Quantity';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Where applicable, the height can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
                  */
-                Height? : Quantity;
+                height? : Quantity;
                 
 
                 /**
                  * Where applicable, the width can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
                  */
-                Width? : Quantity;
+                width? : Quantity;
                 
 
                 /**
                  * Where applicable, the depth can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
                  */
-                Depth? : Quantity;
+                depth? : Quantity;
                 
 
                 /**
                  * Where applicable, the weight can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
                  */
-                Weight? : Quantity;
+                weight? : Quantity;
                 
 
                 /**
                  * Where applicable, the nominal volume can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
                  */
-                NominalVolume? : Quantity;
+                nominalVolume? : Quantity;
                 
 
                 /**
                  * Where applicable, the external diameter can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
                  */
-                ExternalDiameter? : Quantity;
+                externalDiameter? : Quantity;
                 
 
                 /**
                  * Where applicable, the shape can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
                  */
-                Shape? : String;
+                shape? : string;
                 
 
                 /**
@@ -88,37 +88,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Where applicable, the color can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
                  */
-                Color? : Array<String>;
+                color? : String[];
                 
 
                 /**
                  * Extensions for color
                  */
-                _color? : Array<Element>;
+                _color? : Element[];
                 
 
                 /**
                  * Where applicable, the imprint can be specified as text.
                  */
-                Imprint? : Array<String>;
+                imprint? : String[];
                 
 
                 /**
                  * Extensions for imprint
                  */
-                _imprint? : Array<Element>;
+                _imprint? : Element[];
                 
 
                 /**
                  * Where applicable, the image can be provided The format of the image attachment shall be specified by regional implementations.
                  */
-                Image? : Array<Attachment>;
+                image? : Attachment[];
                 
 
                 /**
                  * Where applicable, the scoring can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
                  */
-                Scoring? : CodeableConcept;
+                scoring? : CodeableConcept;
                 
         }
         

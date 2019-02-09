@@ -1,5 +1,5 @@
 {
-  "name": "@Ahryman40k/ts-fhir-types",
+  "name": "@ahryman40k/ts-fhir-types",
   "version": "4.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -12,10 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:swissplushospital/libraries/fhir-types.git"
+    "url": "git@github.com:Ahryman40k/typescript-fhir-types.git"
   },
   "keywords": [],
-  "author": "Geoffrey BAUDIN <ahryman40k.gb@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.1.6"

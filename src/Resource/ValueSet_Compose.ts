@@ -12,20 +12,20 @@ import { ValueSet_Include } from '../Resource/ValueSet_Include';
         export class ValueSet_Compose  {
 
             constructor() {
-                this.Include = new Array<ValueSet_Include>();
+                this.include = new Array<ValueSet_Include>();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { ValueSet_Include } from '../Resource/ValueSet_Include';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * If a locked date is defined, then the Content Logical Definition must be evaluated using the current version as of the locked date for referenced code system(s) and value set instances where ValueSet.compose.include.version is not defined.
                  */
-                LockedDate? : Date;
+                lockedDate? : Date;
                 
 
                 /**
@@ -51,7 +51,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether inactive codes - codes that are not approved for current use - are in the value set. If inactive = true, inactive codes are to be included in the expansion, if inactive = false, the inactive codes will not be included in the expansion. If absent, the behavior is determined by the implementation, or by the applicable $expand parameters (but generally, inactive codes would be expected to be included).
                  */
-                Inactive? : Boolean;
+                inactive? : boolean;
                 
 
                 /**
@@ -63,13 +63,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Include one or more codes from a code system or other value set(s).
                  */
-                Include : Array<ValueSet_Include>;
+                include : ValueSet_Include[];
                 
 
                 /**
                  * Exclude one or more codes from the value set based on code system filters and/or other value sets.
                  */
-                Exclude? : Array<ValueSet_Include>;
+                exclude? : ValueSet_Include[];
                 
         }
         

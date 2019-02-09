@@ -11,20 +11,20 @@ import { Extension } from '../Resource/Extension';
         export class Coverage_Class  {
 
             constructor() {
-                this.Type = new Coding();
+                this.type = new Coding();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,19 +32,19 @@ import { Extension } from '../Resource/Extension';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The type of classification for which an insurer-specific class tag or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan.
                  */
-                Type : Coding;
+                type : Coding;
                 
 
                 /**
                  * For example, the Group or Plan number.
                  */
-                Value? : String;
+                value? : string;
                 
 
                 /**
@@ -56,7 +56,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A short description for the class.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**

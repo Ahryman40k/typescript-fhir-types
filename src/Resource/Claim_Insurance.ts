@@ -13,20 +13,20 @@ import { Reference } from '../Resource/Reference';
         export class Claim_Insurance  {
 
             constructor() {
-                this.Coverage = new Reference();
+                this.coverage = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,13 +34,13 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Sequence of coverage which serves to provide a link and convey coordination of benefit order.
                  */
-                Sequence? : PositiveInt;
+                sequence? : PositiveInt;
                 
 
                 /**
@@ -52,7 +52,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A flag to indicate that this Coverage is the focus for adjudication. The Coverage against which the claim is to be adjudicated.
                  */
-                Focal? : Boolean;
+                focal? : boolean;
                 
 
                 /**
@@ -64,19 +64,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The business identifier for the instance: claim number, pre-determination or pre-authorization number.
                  */
-                Identifier? : Identifier;
+                identifier? : Identifier;
                 
 
                 /**
                  * Reference to the program or plan identification, underwriter or payor.
                  */
-                Coverage : Reference;
+                coverage : Reference;
                 
 
                 /**
                  * The contract number of a business agreement which describes the terms and conditions.
                  */
-                BusinessArrangement? : String;
+                businessArrangement? : string;
                 
 
                 /**
@@ -88,19 +88,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A list of references from the Insurer to which these services pertain.
                  */
-                PreAuthRef? : Array<String>;
+                preAuthRef? : String[];
                 
 
                 /**
                  * Extensions for preAuthRef
                  */
-                _preAuthRef? : Array<Element>;
+                _preAuthRef? : Element[];
                 
 
                 /**
                  * The Coverages adjudication details.
                  */
-                ClaimResponse? : Reference;
+                claimResponse? : Reference;
                 
         }
         

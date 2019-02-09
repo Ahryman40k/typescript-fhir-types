@@ -52,25 +52,25 @@ supplement
                 /**
                  * This is a CodeSystem resource
                  */
-                ResourceType: string = 'CodeSystem;'
+                resourceType: string = 'CodeSystem;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -82,7 +82,7 @@ supplement
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -94,19 +94,19 @@ supplement
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -114,13 +114,13 @@ supplement
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * An absolute URI that is used to identify this code system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this code system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the code system is stored on different servers. This is used in [Coding](datatypes.html#Coding).system.
                  */
-                Url? : Uri;
+                url? : Uri;
                 
 
                 /**
@@ -132,13 +132,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A formal identifier that is used to identify this code system when it is represented in other formats, or referenced in a specification, model, design or an instance. (business identifier).
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The identifier that is used to identify this version of the code system when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the code system author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. This is used in [Coding](datatypes.html#Coding).version.
                  */
-                Version? : String;
+                version? : string;
                 
 
                 /**
@@ -150,7 +150,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A natural language name identifying the code system. This name should be usable as an identifier for the module by machine processing applications such as code generation.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -162,7 +162,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A short, descriptive, user-friendly title for the code system.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -174,7 +174,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The status of this code system. Enables tracking the life-cycle of the content.
                  */
-                Status? : CodeSystemStatusKind;
+                status? : CodeSystemStatusKind;
                 
 
                 /**
@@ -186,7 +186,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A Boolean value to indicate that this code system is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
                  */
-                Experimental? : Boolean;
+                experimental? : boolean;
                 
 
                 /**
@@ -198,7 +198,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date  (and optionally time) when the code system was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the code system changes.
                  */
-                Date? : DateTime;
+                date? : DateTime;
                 
 
                 /**
@@ -210,7 +210,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The name of the organization or individual that published the code system.
                  */
-                Publisher? : String;
+                publisher? : string;
                 
 
                 /**
@@ -222,13 +222,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Contact details to assist a user in finding and communicating with the publisher.
                  */
-                Contact? : Array<ContactDetail>;
+                contact? : ContactDetail[];
                 
 
                 /**
                  * A free text natural language description of the code system from a consumer's perspective.
                  */
-                Description? : Markdown;
+                description? : Markdown;
                 
 
                 /**
@@ -240,19 +240,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching for appropriate code system instances.
                  */
-                UseContext? : Array<UsageContext>;
+                useContext? : UsageContext[];
                 
 
                 /**
                  * A legal or geographic region in which the code system is intended to be used.
                  */
-                Jurisdiction? : Array<CodeableConcept>;
+                jurisdiction? : CodeableConcept[];
                 
 
                 /**
                  * Explanation of why this code system is needed and why it has been designed as it has.
                  */
-                Purpose? : Markdown;
+                purpose? : Markdown;
                 
 
                 /**
@@ -264,7 +264,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.
                  */
-                Copyright? : Markdown;
+                copyright? : Markdown;
                 
 
                 /**
@@ -276,7 +276,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If code comparison is case sensitive when codes within this system are compared to each other.
                  */
-                CaseSensitive? : Boolean;
+                caseSensitive? : boolean;
                 
 
                 /**
@@ -288,13 +288,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Canonical URL of value set that contains the entire code system.
                  */
-                ValueSet? : Canonical;
+                valueSet? : Canonical;
                 
 
                 /**
                  * The meaning of the hierarchy of concepts as represnted in this resource.
                  */
-                HierarchyMeaning? : CodeSystemHierarchyMeaningKind;
+                hierarchyMeaning? : CodeSystemHierarchyMeaningKind;
                 
 
                 /**
@@ -306,7 +306,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The code system defines a compositional (post-coordination) grammar.
                  */
-                Compositional? : Boolean;
+                compositional? : boolean;
                 
 
                 /**
@@ -318,7 +318,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.
                  */
-                VersionNeeded? : Boolean;
+                versionNeeded? : boolean;
                 
 
                 /**
@@ -330,7 +330,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance.
                  */
-                Content? : CodeSystemContentKind;
+                content? : CodeSystemContentKind;
                 
 
                 /**
@@ -342,13 +342,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * References the code system that this code system supplement is adding designations and properties to.
                  */
-                Supplements? : Canonical;
+                supplements? : Canonical;
                 
 
                 /**
                  * The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
                  */
-                Count? : UnsignedInt;
+                count? : UnsignedInt;
                 
 
                 /**
@@ -360,19 +360,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A filter that can be used in a value set compose statement when selecting concepts using a filter.
                  */
-                Filter? : Array<CodeSystem_Filter>;
+                filter? : CodeSystem_Filter[];
                 
 
                 /**
                  * A property defines an additional slot through which additional information can be provided about a concept.
                  */
-                Property? : Array<CodeSystem_Property>;
+                property? : CodeSystem_Property[];
                 
 
                 /**
                  * Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meaning of the hierarchical relationships are.
                  */
-                Concept? : Array<CodeSystem_Concept>;
+                concept? : CodeSystem_Concept[];
                 
         }
         

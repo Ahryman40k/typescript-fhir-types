@@ -3,7 +3,7 @@
 import { Extension } from '../Resource/Extension';
 import { Period } from '../Resource/Period';
 
-        export enum NamingSystem_UniqueIdTypeKind {
+        export enum NamingSystemUniqueIdTypeKind {
                 oid,
 uuid,
 uri,
@@ -23,13 +23,13 @@ other
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,13 +37,13 @@ other
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifies the unique identifier scheme used for this particular identifier.
                  */
-                Type? : NamingSystem_UniqueIdTypeKind;
+                type? : NamingSystemUniqueIdTypeKind;
                 
 
                 /**
@@ -55,7 +55,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The string that should be sent over the wire to identify the code system or identifier system.
                  */
-                Value? : String;
+                value? : string;
                 
 
                 /**
@@ -67,7 +67,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates whether this identifier is the "preferred" identifier of this type.
                  */
-                Preferred? : Boolean;
+                preferred? : boolean;
                 
 
                 /**
@@ -79,7 +79,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Notes about the past or intended usage of this identifier.
                  */
-                Comment? : String;
+                comment? : string;
                 
 
                 /**
@@ -91,7 +91,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Identifies the period of time over which this identifier is considered appropriate to refer to the naming system.  Outside of this window, the identifier might be non-deterministic.
                  */
-                Period? : Period;
+                period? : Period;
                 
         }
         

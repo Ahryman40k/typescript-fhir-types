@@ -13,32 +13,32 @@ import { Quantity } from '../Resource/Quantity';
         export class SampledData  {
 
             constructor() {
-                this.Origin = new Quantity();
+                this.origin = new Quantity();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
                  * The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
                  */
-                Origin : Quantity;
+                origin : Quantity;
                 
 
                 /**
                  * The length of time between sampling times, measured in milliseconds.
                  */
-                Period? : Decimal;
+                period? : Decimal;
                 
 
                 /**
@@ -50,7 +50,7 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * A correction factor that is applied to the sampled data points before they are added to the origin.
                  */
-                Factor? : Decimal;
+                factor? : Decimal;
                 
 
                 /**
@@ -62,7 +62,7 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
                  */
-                LowerLimit? : Decimal;
+                lowerLimit? : Decimal;
                 
 
                 /**
@@ -74,7 +74,7 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
                  */
-                UpperLimit? : Decimal;
+                upperLimit? : Decimal;
                 
 
                 /**
@@ -86,7 +86,7 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * The number of sample points at each time point. If this value is greater than one, then the dimensions will be interlaced - all the sample points for a point in time will be recorded at once.
                  */
-                Dimensions? : PositiveInt;
+                dimensions? : PositiveInt;
                 
 
                 /**
@@ -98,7 +98,7 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * A series of data points which are decimal values separated by a single space (character u20). The special values "E" (error), "L" (below detection limit) and "U" (above detection limit) can also be used in place of a decimal value.
                  */
-                Data? : String;
+                data? : string;
                 
 
                 /**

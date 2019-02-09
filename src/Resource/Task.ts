@@ -57,25 +57,25 @@ option
                 /**
                  * This is a Task resource
                  */
-                ResourceType: string = 'Task;'
+                resourceType: string = 'Task;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -87,7 +87,7 @@ option
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -99,19 +99,19 @@ option
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -119,25 +119,25 @@ option
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The business identifier for this task.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
                  */
-                InstantiatesCanonical? : Canonical;
+                instantiatesCanonical? : Canonical;
                 
 
                 /**
                  * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
                  */
-                InstantiatesUri? : Uri;
+                instantiatesUri? : Uri;
                 
 
                 /**
@@ -149,25 +149,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
                  */
-                BasedOn? : Array<Reference>;
+                basedOn? : Reference[];
                 
 
                 /**
                  * An identifier that links together multiple tasks and other requests that were created in the same context.
                  */
-                GroupIdentifier? : Identifier;
+                groupIdentifier? : Identifier;
                 
 
                 /**
                  * Task that this particular task is part of.
                  */
-                PartOf? : Array<Reference>;
+                partOf? : Reference[];
                 
 
                 /**
                  * The current status of the task.
                  */
-                Status? : TaskStatusKind;
+                status? : TaskStatusKind;
                 
 
                 /**
@@ -179,19 +179,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An explanation as to why this task is held, failed, was refused, etc.
                  */
-                StatusReason? : CodeableConcept;
+                statusReason? : CodeableConcept;
                 
 
                 /**
                  * Contains business-specific nuances of the business state.
                  */
-                BusinessStatus? : CodeableConcept;
+                businessStatus? : CodeableConcept;
                 
 
                 /**
                  * Indicates the "level" of actionability associated with the Task, i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task, etc.
                  */
-                Intent? : TaskIntentKind;
+                intent? : TaskIntentKind;
                 
 
                 /**
@@ -203,7 +203,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates how quickly the Task should be addressed with respect to other requests.
                  */
-                Priority? : Code;
+                priority? : Code;
                 
 
                 /**
@@ -215,13 +215,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A name or code (or both) briefly describing what the task involves.
                  */
-                Code? : CodeableConcept;
+                code? : CodeableConcept;
                 
 
                 /**
                  * A free-text description of what is to be performed.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -233,31 +233,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The request being actioned or the resource being manipulated by this task.
                  */
-                Focus? : Reference;
+                focus? : Reference;
                 
 
                 /**
                  * The entity who benefits from the performance of the service specified in the task (e.g., the patient).
                  */
-                For? : Reference;
+                for? : Reference;
                 
 
                 /**
                  * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
                  */
-                Context? : Reference;
+                context? : Reference;
                 
 
                 /**
                  * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
                  */
-                ExecutionPeriod? : Period;
+                executionPeriod? : Period;
                 
 
                 /**
                  * The date and time this task was created.
                  */
-                AuthoredOn? : DateTime;
+                authoredOn? : DateTime;
                 
 
                 /**
@@ -269,7 +269,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date and time of last modification to this task.
                  */
-                LastModified? : DateTime;
+                lastModified? : DateTime;
                 
 
                 /**
@@ -281,73 +281,73 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The creator of the task.
                  */
-                Requester? : Reference;
+                requester? : Reference;
                 
 
                 /**
                  * The type of participant that can execute the task.
                  */
-                PerformerType? : Array<CodeableConcept>;
+                performerType? : CodeableConcept[];
                 
 
                 /**
                  * Individual organization or Device currently responsible for task execution.
                  */
-                Owner? : Reference;
+                owner? : Reference;
                 
 
                 /**
                  * The principal physical location where the this task is performed.
                  */
-                Location? : Reference;
+                location? : Reference;
                 
 
                 /**
                  * A description or code indicating why this task needs to be performed.
                  */
-                ReasonCode? : CodeableConcept;
+                reasonCode? : CodeableConcept;
                 
 
                 /**
                  * A resource reference indicating why this task needs to be performed.
                  */
-                ReasonReference? : Reference;
+                reasonReference? : Reference;
                 
 
                 /**
                  * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
                  */
-                Insurance? : Array<Reference>;
+                insurance? : Reference[];
                 
 
                 /**
                  * Free-text information captured about the task as it progresses.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
 
                 /**
                  * Links to Provenance records for past versions of this Task that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the task.
                  */
-                RelevantHistory? : Array<Reference>;
+                relevantHistory? : Reference[];
                 
 
                 /**
                  * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
                  */
-                Restriction? : Task_Restriction;
+                restriction? : Task_Restriction;
                 
 
                 /**
                  * Additional information that may be needed in the execution of the task.
                  */
-                Input? : Array<Task_Input>;
+                input? : Task_Input[];
                 
 
                 /**
                  * Outputs produced by the Task.
                  */
-                Output? : Array<Task_Output>;
+                output? : Task_Output[];
                 
         }
         

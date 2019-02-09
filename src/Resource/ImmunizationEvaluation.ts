@@ -20,35 +20,35 @@ import { Uri } from '../Scalar/Uri';
         export class ImmunizationEvaluation  {
 
             constructor() {
-                this.Patient = new Reference();
-this.TargetDisease = new CodeableConcept();
-this.ImmunizationEvent = new Reference();
-this.DoseStatus = new CodeableConcept();
+                this.patient = new Reference();
+this.targetDisease = new CodeableConcept();
+this.immunizationEvent = new Reference();
+this.doseStatus = new CodeableConcept();
             }
 
             
                 /**
                  * This is a ImmunizationEvaluation resource
                  */
-                ResourceType: string = 'ImmunizationEvaluation;'
+                resourceType: string = 'ImmunizationEvaluation;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -60,7 +60,7 @@ this.DoseStatus = new CodeableConcept();
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -72,19 +72,19 @@ this.DoseStatus = new CodeableConcept();
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -92,19 +92,19 @@ this.DoseStatus = new CodeableConcept();
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A unique identifier assigned to this immunization evaluation record.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * Indicates the current status of the evaluation of the vaccination administration event.
                  */
-                Status? : Code;
+                status? : Code;
                 
 
                 /**
@@ -116,13 +116,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The individual for whom the evaluation is being done.
                  */
-                Patient : Reference;
+                patient : Reference;
                 
 
                 /**
                  * The date the evaluation of the vaccine administration event was performed.
                  */
-                Date? : DateTime;
+                date? : DateTime;
                 
 
                 /**
@@ -134,37 +134,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates the authority who published the protocol (e.g. ACIP).
                  */
-                Authority? : Reference;
+                authority? : Reference;
                 
 
                 /**
                  * The vaccine preventable disease the dose is being evaluated against.
                  */
-                TargetDisease : CodeableConcept;
+                targetDisease : CodeableConcept;
                 
 
                 /**
                  * The vaccine administration event being evaluated.
                  */
-                ImmunizationEvent : Reference;
+                immunizationEvent : Reference;
                 
 
                 /**
                  * Indicates if the dose is valid or not valid with respect to the published recommendations.
                  */
-                DoseStatus : CodeableConcept;
+                doseStatus : CodeableConcept;
                 
 
                 /**
                  * Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
                  */
-                DoseStatusReason? : Array<CodeableConcept>;
+                doseStatusReason? : CodeableConcept[];
                 
 
                 /**
                  * Additional information about the evaluation.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -176,7 +176,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * One possible path to achieve presumed immunity against a disease - within the context of an authority.
                  */
-                Series? : String;
+                series? : string;
                 
 
                 /**
@@ -188,7 +188,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Nominal position in a series.
                  */
-                DoseNumberPositiveInt? : Number;
+                doseNumberPositiveInt? : number;
                 
 
                 /**
@@ -200,7 +200,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Nominal position in a series.
                  */
-                DoseNumberString? : String;
+                doseNumberString? : string;
                 
 
                 /**
@@ -212,7 +212,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recommended number of doses to achieve immunity.
                  */
-                SeriesDosesPositiveInt? : Number;
+                seriesDosesPositiveInt? : number;
                 
 
                 /**
@@ -224,7 +224,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recommended number of doses to achieve immunity.
                  */
-                SeriesDosesString? : String;
+                seriesDosesString? : string;
                 
 
                 /**

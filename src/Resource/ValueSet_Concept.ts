@@ -19,13 +19,13 @@ import { ValueSet_Designation } from '../Resource/ValueSet_Designation';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { ValueSet_Designation } from '../Resource/ValueSet_Designation';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Specifies a code for the concept to be included or excluded.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -51,7 +51,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The text to display to the user for this concept in the context of this valueset. If no display is provided, then applications using the value set use the display specified for the code by the system.
                  */
-                Display? : String;
+                display? : string;
                 
 
                 /**
@@ -63,7 +63,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.
                  */
-                Designation? : Array<ValueSet_Designation>;
+                designation? : ValueSet_Designation[];
                 
         }
         

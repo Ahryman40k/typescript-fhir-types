@@ -19,13 +19,13 @@ import { Url } from '../Scalar/Url';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { Url } from '../Scalar/Url';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Human-readable name for the source system.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -51,7 +51,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * May include configuration or other information useful in debugging.
                  */
-                Software? : String;
+                software? : string;
                 
 
                 /**
@@ -63,7 +63,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Can convey versions of multiple systems in situations where a message passes through multiple hands.
                  */
-                Version? : String;
+                version? : string;
                 
 
                 /**
@@ -75,13 +75,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
                  */
-                Contact? : ContactPoint;
+                contact? : ContactPoint;
                 
 
                 /**
                  * Identifies the routing target to send acknowledgements to.
                  */
-                Endpoint? : Url;
+                endpoint? : Url;
                 
 
                 /**

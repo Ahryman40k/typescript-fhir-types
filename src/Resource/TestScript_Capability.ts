@@ -13,20 +13,20 @@ import { Uri } from '../Scalar/Uri';
         export class TestScript_Capability  {
 
             constructor() {
-                this.Capabilities = new Canonical();
+                this.capabilities = new Canonical();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,13 +34,13 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Whether or not the test execution will require the given capabilities of the server in order for this test script to execute.
                  */
-                Required? : Boolean;
+                required? : boolean;
                 
 
                 /**
@@ -52,7 +52,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Whether or not the test execution will validate the given capabilities of the server in order for this test script to execute.
                  */
-                Validated? : Boolean;
+                validated? : boolean;
                 
 
                 /**
@@ -64,7 +64,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Description of the capabilities that this test script is requiring the server to support.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -76,19 +76,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Which origin server these requirements apply to.
                  */
-                Origin? : Array<Integer>;
+                origin? : Integer[];
                 
 
                 /**
                  * Extensions for origin
                  */
-                _origin? : Array<Element>;
+                _origin? : Element[];
                 
 
                 /**
                  * Which server these requirements apply to.
                  */
-                Destination? : Integer;
+                destination? : Integer;
                 
 
                 /**
@@ -100,19 +100,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Links to the FHIR specification that describes this interaction and the resources involved in more detail.
                  */
-                Link? : Array<Uri>;
+                link? : Uri[];
                 
 
                 /**
                  * Extensions for link
                  */
-                _link? : Array<Element>;
+                _link? : Element[];
                 
 
                 /**
                  * Minimum capabilities required of server for test script to execute successfully.   If server does not meet at a minimum the referenced capability statement, then all tests in this script are skipped.
                  */
-                Capabilities : Canonical;
+                capabilities : Canonical;
                 
         }
         

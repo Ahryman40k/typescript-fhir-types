@@ -23,13 +23,13 @@ import { Timing } from '../Resource/Timing';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,13 +37,13 @@ import { Timing } from '../Resource/Timing';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Indicates the order in which the dosage instructions should be applied or interpreted.
                  */
-                Sequence? : Integer;
+                sequence? : Integer;
                 
 
                 /**
@@ -55,7 +55,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Free text dosage instructions e.g. SIG.
                  */
-                Text? : String;
+                text? : string;
                 
 
                 /**
@@ -67,13 +67,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Supplemental instructions to the patient on how to take the medication  (e.g. "with meals" or"take half to one hour before food") or warnings for the patient about the medication (e.g. "may cause drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
                  */
-                AdditionalInstruction? : Array<CodeableConcept>;
+                additionalInstruction? : CodeableConcept[];
                 
 
                 /**
                  * Instructions in terms that are understood by the patient or consumer.
                  */
-                PatientInstruction? : String;
+                patientInstruction? : string;
                 
 
                 /**
@@ -85,13 +85,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * When medication should be administered.
                  */
-                Timing? : Timing;
+                timing? : Timing;
                 
 
                 /**
                  * Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).
                  */
-                AsNeededBoolean? : Boolean;
+                asNeededBoolean? : boolean;
                 
 
                 /**
@@ -103,49 +103,49 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).
                  */
-                AsNeededCodeableConcept? : CodeableConcept;
+                asNeededCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * Body site to administer to.
                  */
-                Site? : CodeableConcept;
+                site? : CodeableConcept;
                 
 
                 /**
                  * How drug should enter body.
                  */
-                Route? : CodeableConcept;
+                route? : CodeableConcept;
                 
 
                 /**
                  * Technique for administering medication.
                  */
-                Method? : CodeableConcept;
+                method? : CodeableConcept;
                 
 
                 /**
                  * The amount of medication administered.
                  */
-                DoseAndRate? : Array<Dosage_DoseAndRate>;
+                doseAndRate? : Dosage_DoseAndRate[];
                 
 
                 /**
                  * Upper limit on medication per unit of time.
                  */
-                MaxDosePerPeriod? : Ratio;
+                maxDosePerPeriod? : Ratio;
                 
 
                 /**
                  * Upper limit on medication per administration.
                  */
-                MaxDosePerAdministration? : Quantity;
+                maxDosePerAdministration? : Quantity;
                 
 
                 /**
                  * Upper limit on medication per lifetime of the patient.
                  */
-                MaxDosePerLifetime? : Quantity;
+                maxDosePerLifetime? : Quantity;
                 
         }
         

@@ -15,33 +15,33 @@ import { Reference } from '../Resource/Reference';
         export class Signature  {
 
             constructor() {
-                this.Type = new Array<Coding>();
-this.Who = new Reference();
+                this.type = new Array<Coding>();
+this.who = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
                  * An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
                  */
-                Type : Array<Coding>;
+                type : Coding[];
                 
 
                 /**
                  * When the digital signature was signed.
                  */
-                When? : Instant;
+                when? : Instant;
                 
 
                 /**
@@ -53,19 +53,19 @@ this.Who = new Reference();
                 /**
                  * A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).
                  */
-                Who : Reference;
+                who : Reference;
                 
 
                 /**
                  * A reference to an application-usable description of the identity that is represented by the signature.
                  */
-                OnBehalfOf? : Reference;
+                onBehalfOf? : Reference;
                 
 
                 /**
                  * A mime type that indicates the technical format of the target resources signed by the signature.
                  */
-                TargetFormat? : Code;
+                targetFormat? : Code;
                 
 
                 /**
@@ -77,7 +77,7 @@ this.Who = new Reference();
                 /**
                  * A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.
                  */
-                SigFormat? : Code;
+                sigFormat? : Code;
                 
 
                 /**
@@ -89,7 +89,7 @@ this.Who = new Reference();
                 /**
                  * The base64 encoding of the Signature content. When signature is not recorded electronically this element would be empty.
                  */
-                Data? : Base64Binary;
+                data? : Base64Binary;
                 
 
                 /**

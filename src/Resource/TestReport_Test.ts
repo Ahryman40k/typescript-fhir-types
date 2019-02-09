@@ -11,20 +11,20 @@ import { TestReport_Action1 } from '../Resource/TestReport_Action1';
         export class TestReport_Test  {
 
             constructor() {
-                this.Action = new Array<TestReport_Action1>();
+                this.action = new Array<TestReport_Action1>();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,13 +32,13 @@ import { TestReport_Action1 } from '../Resource/TestReport_Action1';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The name of this test used for tracking/logging purposes by test engines.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -50,7 +50,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A short description of the test used by test engines for tracking and reporting purposes.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -62,7 +62,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Action would contain either an operation or an assertion.
                  */
-                Action : Array<TestReport_Action1>;
+                action : TestReport_Action1[];
                 
         }
         

@@ -26,13 +26,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -40,13 +40,13 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A service line number.
                  */
-                Sequence? : PositiveInt;
+                sequence? : PositiveInt;
                 
 
                 /**
@@ -58,85 +58,85 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * CareTeam applicable for this service or product line.
                  */
-                CareTeamSequence? : Array<PositiveInt>;
+                careTeamSequence? : PositiveInt[];
                 
 
                 /**
                  * Extensions for careTeamSequence
                  */
-                _careTeamSequence? : Array<Element>;
+                _careTeamSequence? : Element[];
                 
 
                 /**
                  * Diagnosis applicable for this service or product line.
                  */
-                DiagnosisSequence? : Array<PositiveInt>;
+                diagnosisSequence? : PositiveInt[];
                 
 
                 /**
                  * Extensions for diagnosisSequence
                  */
-                _diagnosisSequence? : Array<Element>;
+                _diagnosisSequence? : Element[];
                 
 
                 /**
                  * Procedures applicable for this service or product line.
                  */
-                ProcedureSequence? : Array<PositiveInt>;
+                procedureSequence? : PositiveInt[];
                 
 
                 /**
                  * Extensions for procedureSequence
                  */
-                _procedureSequence? : Array<Element>;
+                _procedureSequence? : Element[];
                 
 
                 /**
                  * Exceptions, special conditions and supporting information applicable for this service or product line.
                  */
-                InformationSequence? : Array<PositiveInt>;
+                informationSequence? : PositiveInt[];
                 
 
                 /**
                  * Extensions for informationSequence
                  */
-                _informationSequence? : Array<Element>;
+                _informationSequence? : Element[];
                 
 
                 /**
                  * The type of revenue or cost center providing the product and/or service.
                  */
-                Revenue? : CodeableConcept;
+                revenue? : CodeableConcept;
                 
 
                 /**
                  * Health Care Service Type Codes  to identify the classification of service or benefits.
                  */
-                Category? : CodeableConcept;
+                category? : CodeableConcept;
                 
 
                 /**
                  * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS,USCLS,ICD10, NCPDP,DIN,RxNorm,ACHI,CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
                  */
-                Billcode? : CodeableConcept;
+                billcode? : CodeableConcept;
                 
 
                 /**
                  * Item typification or modifiers codes, e.g. for Oral whether the treatment is cosmetic or associated with TMJ, or for medical whether the treatment was outside the clinic or out of office hours.
                  */
-                Modifier? : Array<CodeableConcept>;
+                modifier? : CodeableConcept[];
                 
 
                 /**
                  * For programs which require reason codes for the inclusion or covering of this billed item under the program or sub-program.
                  */
-                ProgramCode? : Array<CodeableConcept>;
+                programCode? : CodeableConcept[];
                 
 
                 /**
                  * The date or dates when the service or product was supplied, performed or completed.
                  */
-                ServicedDate? : String;
+                servicedDate? : string;
                 
 
                 /**
@@ -148,43 +148,43 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date or dates when the service or product was supplied, performed or completed.
                  */
-                ServicedPeriod? : Period;
+                servicedPeriod? : Period;
                 
 
                 /**
                  * Where the service was provided.
                  */
-                LocationCodeableConcept? : CodeableConcept;
+                locationCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * Where the service was provided.
                  */
-                LocationAddress? : Address;
+                locationAddress? : Address;
                 
 
                 /**
                  * Where the service was provided.
                  */
-                LocationReference? : Reference;
+                locationReference? : Reference;
                 
 
                 /**
                  * The number of repetitions of a service or product.
                  */
-                Quantity? : Quantity;
+                quantity? : Quantity;
                 
 
                 /**
                  * If the item is a node then this is the fee for the product or service, otherwise this is the total of the fees for the children of the group.
                  */
-                UnitPrice? : Money;
+                unitPrice? : Money;
                 
 
                 /**
                  * A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
                  */
-                Factor? : Decimal;
+                factor? : Decimal;
                 
 
                 /**
@@ -196,37 +196,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.
                  */
-                Net? : Money;
+                net? : Money;
                 
 
                 /**
                  * List of Unique Device Identifiers associated with this line item.
                  */
-                Udi? : Array<Reference>;
+                udi? : Reference[];
                 
 
                 /**
                  * Physical service site on the patient (limb, tooth, etc.).
                  */
-                BodySite? : CodeableConcept;
+                bodySite? : CodeableConcept;
                 
 
                 /**
                  * A region or surface of the site, e.g. limb region or tooth surface(s).
                  */
-                SubSite? : Array<CodeableConcept>;
+                subSite? : CodeableConcept[];
                 
 
                 /**
                  * A billed item may include goods or services provided in multiple encounters.
                  */
-                Encounter? : Array<Reference>;
+                encounter? : Reference[];
                 
 
                 /**
                  * Second tier of goods and services.
                  */
-                Detail? : Array<Claim_Detail>;
+                detail? : Claim_Detail[];
                 
         }
         

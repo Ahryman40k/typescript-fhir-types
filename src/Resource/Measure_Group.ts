@@ -20,13 +20,13 @@ import { Measure_Stratifier } from '../Resource/Measure_Stratifier';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,19 +34,19 @@ import { Measure_Stratifier } from '../Resource/Measure_Stratifier';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Indicates a meaning for the group. This can be as simple as a unique identifier, or it can establish meaning in a broader context by drawing from a terminology, allowing groups to be correlated across measures.
                  */
-                Code? : CodeableConcept;
+                code? : CodeableConcept;
                 
 
                 /**
                  * The human readable description of this population group.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -58,13 +58,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A population criteria for the measure.
                  */
-                Population? : Array<Measure_Population>;
+                population? : Measure_Population[];
                 
 
                 /**
                  * The stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
                  */
-                Stratifier? : Array<Measure_Stratifier>;
+                stratifier? : Measure_Stratifier[];
                 
         }
         

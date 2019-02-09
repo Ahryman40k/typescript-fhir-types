@@ -7,7 +7,7 @@ import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 import { Period } from '../Resource/Period';
 
-        export enum Consent_ProvisionTypeKind {
+        export enum ConsentProvisionTypeKind {
                 deny,
 permit
             }
@@ -25,13 +25,13 @@ permit
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -39,13 +39,13 @@ permit
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.
                  */
-                Type? : Consent_ProvisionTypeKind;
+                type? : ConsentProvisionTypeKind;
                 
 
                 /**
@@ -57,61 +57,61 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The timeframe in this rule is valid.
                  */
-                Period? : Period;
+                period? : Period;
                 
 
                 /**
                  * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
                  */
-                Actor? : Array<Consent_Actor>;
+                actor? : Consent_Actor[];
                 
 
                 /**
                  * Actions controlled by this Rule.
                  */
-                Action? : Array<CodeableConcept>;
+                action? : CodeableConcept[];
                 
 
                 /**
                  * A security label, comprised of 0..* security label fields (Privacy tags), which define which resources are controlled by this exception.
                  */
-                SecurityLabel? : Array<Coding>;
+                securityLabel? : Coding[];
                 
 
                 /**
                  * The context of the activities a user is taking - why the user is accessing the data - that are controlled by this rule.
                  */
-                Purpose? : Array<Coding>;
+                purpose? : Coding[];
                 
 
                 /**
                  * The class of information covered by this rule. The type can be a FHIR resource type, a profile on a type, or a CDA document, or some other type that indicates what sort of information the consent relates to.
                  */
-                Class? : Array<Coding>;
+                class? : Coding[];
                 
 
                 /**
                  * If this code is found in an instance, then the rule applies.
                  */
-                Code? : Array<CodeableConcept>;
+                code? : CodeableConcept[];
                 
 
                 /**
                  * Clinical or Operational Relevant period of time that bounds the data controlled by this rule.
                  */
-                DataPeriod? : Period;
+                dataPeriod? : Period;
                 
 
                 /**
                  * The resources controlled by this rule if specific resources are referenced.
                  */
-                Data? : Array<Consent_Data>;
+                data? : Consent_Data[];
                 
 
                 /**
                  * Rules which provide exceptions to the base rule or subrules.
                  */
-                Provision? : Array<Consent_Provision>;
+                provision? : Consent_Provision[];
                 
         }
         

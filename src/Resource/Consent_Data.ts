@@ -3,7 +3,7 @@
 import { Extension } from '../Resource/Extension';
 import { Reference } from '../Resource/Reference';
 
-        export enum Consent_DataMeaningKind {
+        export enum ConsentDataMeaningKind {
                 instance,
 related,
 dependents,
@@ -16,20 +16,20 @@ authoredby
         export class Consent_Data  {
 
             constructor() {
-                this.Reference = new Reference();
+                this.reference = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,13 +37,13 @@ authoredby
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * How the resource reference is interpreted when testing consent restrictions.
                  */
-                Meaning? : Consent_DataMeaningKind;
+                meaning? : ConsentDataMeaningKind;
                 
 
                 /**
@@ -55,7 +55,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A reference to a specific resource that defines which resources are covered by this consent.
                  */
-                Reference : Reference;
+                reference : Reference;
                 
         }
         

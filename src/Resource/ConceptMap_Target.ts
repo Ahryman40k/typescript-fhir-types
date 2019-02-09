@@ -4,7 +4,7 @@ import { ConceptMap_DependsOn } from '../Resource/ConceptMap_DependsOn';
 import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 
-        export enum ConceptMap_TargetEquivalenceKind {
+        export enum ConceptMapTargetEquivalenceKind {
                 relatedto,
 equivalent,
 equal,
@@ -30,13 +30,13 @@ disjoint
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -44,13 +44,13 @@ disjoint
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identity (code or path) or the element/item that the map refers to.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -62,7 +62,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The display for the code. The display is only provided to help editors when editing the concept map.
                  */
-                Display? : String;
+                display? : string;
                 
 
                 /**
@@ -74,7 +74,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The equivalence between the source and target concepts (counting for the dependencies and products). The equivalence is read from target to source (e.g. the target is 'wider' than the source).
                  */
-                Equivalence? : ConceptMap_TargetEquivalenceKind;
+                equivalence? : ConceptMapTargetEquivalenceKind;
                 
 
                 /**
@@ -86,7 +86,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A description of status/issues in mapping that conveys additional information not represented in  the structured data.
                  */
-                Comment? : String;
+                comment? : string;
                 
 
                 /**
@@ -98,13 +98,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
                  */
-                DependsOn? : Array<ConceptMap_DependsOn>;
+                dependsOn? : ConceptMap_DependsOn[];
                 
 
                 /**
                  * A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the equivalence cannot be relied on.
                  */
-                Product? : Array<ConceptMap_DependsOn>;
+                product? : ConceptMap_DependsOn[];
                 
         }
         

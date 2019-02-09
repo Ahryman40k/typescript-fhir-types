@@ -21,13 +21,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -35,19 +35,19 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Id for container. There may be multiple; a manufacturer's bar code, lab assigned identifier, etc. The container ID may differ from the specimen id in some circumstances.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * Textual description of the container.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -59,31 +59,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The type of container associated with the specimen (e.g. slide, aliquot, etc.).
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * The capacity (volume or other measure) the container may contain.
                  */
-                Capacity? : Quantity;
+                capacity? : Quantity;
                 
 
                 /**
                  * The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type.
                  */
-                SpecimenQuantity? : Quantity;
+                specimenQuantity? : Quantity;
                 
 
                 /**
                  * Introduced substance to preserve, maintain or enhance the specimen. Examples: Formalin, Citrate, EDTA.
                  */
-                AdditiveCodeableConcept? : CodeableConcept;
+                additiveCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * Introduced substance to preserve, maintain or enhance the specimen. Examples: Formalin, Citrate, EDTA.
                  */
-                AdditiveReference? : Reference;
+                additiveReference? : Reference;
                 
         }
         

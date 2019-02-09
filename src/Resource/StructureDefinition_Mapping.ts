@@ -19,13 +19,13 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,13 +33,13 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * An Internal id that is used to identify this mapping set when specific mappings are made.
                  */
-                Identity? : Id;
+                identity? : Id;
                 
 
                 /**
@@ -51,7 +51,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An absolute URI that identifies the specification that this mapping is expressed to.
                  */
-                Uri? : Uri;
+                uri? : Uri;
                 
 
                 /**
@@ -63,7 +63,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A name for the specification that is being mapped to.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -75,7 +75,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.
                  */
-                Comment? : String;
+                comment? : string;
                 
 
                 /**

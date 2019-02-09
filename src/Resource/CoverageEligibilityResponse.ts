@@ -41,25 +41,25 @@ partial
                 /**
                  * This is a CoverageEligibilityResponse resource
                  */
-                ResourceType: string = 'CoverageEligibilityResponse;'
+                resourceType: string = 'CoverageEligibilityResponse;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -71,7 +71,7 @@ partial
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -83,19 +83,19 @@ partial
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -103,19 +103,19 @@ partial
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The Response business identifier.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The status of the resource instance.
                  */
-                Status? : Code;
+                status? : Code;
                 
 
                 /**
@@ -127,25 +127,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for th patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
                  */
-                Purpose? : CoverageEligibilityResponsePurposeKind[];
+                purpose? : CoverageEligibilityResponsePurposeKind[];
                 
 
                 /**
                  * Extensions for purpose
                  */
-                _purpose? : Array<Element>;
+                _purpose? : Element[];
                 
 
                 /**
                  * Patient Resource.
                  */
-                Patient? : Reference;
+                patient? : Reference;
                 
 
                 /**
                  * The date or dates when the enclosed suite of services are proposed and for which coverage details are requested.
                  */
-                ServicedDate? : String;
+                servicedDate? : string;
                 
 
                 /**
@@ -157,13 +157,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date or dates when the enclosed suite of services are proposed and for which coverage details are requested.
                  */
-                ServicedPeriod? : Period;
+                servicedPeriod? : Period;
                 
 
                 /**
                  * The date when the enclosed suite of services were performed or completed.
                  */
-                Created? : DateTime;
+                created? : DateTime;
                 
 
                 /**
@@ -175,19 +175,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The provider who is responsible for the services rendered to the patient.
                  */
-                RequestProvider? : Reference;
+                requestProvider? : Reference;
                 
 
                 /**
                  * Original request resource reference.
                  */
-                Request? : Reference;
+                request? : Reference;
                 
 
                 /**
                  * Transaction status: error, complete.
                  */
-                Outcome? : CoverageEligibilityResponseOutcomeKind;
+                outcome? : CoverageEligibilityResponseOutcomeKind;
                 
 
                 /**
@@ -199,7 +199,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A description of the status of the adjudication.
                  */
-                Disposition? : String;
+                disposition? : string;
                 
 
                 /**
@@ -211,19 +211,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The Insurer who produced this adjudicated response.
                  */
-                Insurer? : Reference;
+                insurer? : Reference;
                 
 
                 /**
                  * The insurer may provide both the details for the requested coverage as well as details for additional coverages known to the insurer.
                  */
-                Insurance? : Array<CoverageEligibilityResponse_Insurance>;
+                insurance? : CoverageEligibilityResponse_Insurance[];
                 
 
                 /**
                  * A reference from the Insurer to which these services pertain.
                  */
-                PreAuthRef? : String;
+                preAuthRef? : string;
                 
 
                 /**
@@ -235,13 +235,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The form to be used for printing the content.
                  */
-                Form? : CodeableConcept;
+                form? : CodeableConcept;
                 
 
                 /**
                  * Mutually exclusive with Services Provided (Item).
                  */
-                Error? : Array<CoverageEligibilityResponse_Error>;
+                error? : CoverageEligibilityResponse_Error[];
                 
         }
         

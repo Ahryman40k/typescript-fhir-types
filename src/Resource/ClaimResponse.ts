@@ -35,25 +35,25 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * This is a ClaimResponse resource
                  */
-                ResourceType: string = 'ClaimResponse;'
+                resourceType: string = 'ClaimResponse;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -65,7 +65,7 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -77,19 +77,19 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -97,19 +97,19 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The response business identifier.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The status of the resource instance.
                  */
-                Status? : Code;
+                status? : Code;
                 
 
                 /**
@@ -121,19 +121,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The category of claim, e.g, oral, pharmacy, vision, institutional, professional.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * A finer grained suite of claim subtype codes which may convey Inpatient vs Outpatient and/or a specialty service. In the US the CMS Bill Type.
                  */
-                SubType? : CodeableConcept;
+                subType? : CodeableConcept;
                 
 
                 /**
                  * A claim, a list of completed goods and services; a preauthorization, a list or proposed goods and services; or a predetermination, a set of goods and services being considered, for which insurer adjudication is sought.
                  */
-                Use? : Code;
+                use? : Code;
                 
 
                 /**
@@ -145,13 +145,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Patient Resource.
                  */
-                Patient? : Reference;
+                patient? : Reference;
                 
 
                 /**
                  * The date when this resource was created.
                  */
-                Created? : DateTime;
+                created? : DateTime;
                 
 
                 /**
@@ -163,25 +163,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The Insurer who produced this adjudicated response.
                  */
-                Insurer? : Reference;
+                insurer? : Reference;
                 
 
                 /**
                  * The practitioner who is responsible for the services rendered to the patient.
                  */
-                RequestProvider? : Reference;
+                requestProvider? : Reference;
                 
 
                 /**
                  * Original request resource reference.
                  */
-                Request? : Reference;
+                request? : Reference;
                 
 
                 /**
                  * Transaction: error, complete, partial processing.
                  */
-                Outcome? : Code;
+                outcome? : Code;
                 
 
                 /**
@@ -193,7 +193,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A description of the status of the adjudication.
                  */
-                Disposition? : String;
+                disposition? : string;
                 
 
                 /**
@@ -205,7 +205,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A list of references from the Insurer to which these services pertain.
                  */
-                PreAuthRef? : String;
+                preAuthRef? : string;
                 
 
                 /**
@@ -217,67 +217,67 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Party to be reimbursed: Subscriber, provider, other.
                  */
-                PayeeType? : CodeableConcept;
+                payeeType? : CodeableConcept;
                 
 
                 /**
                  * The first-tier service adjudications for submitted services.
                  */
-                Item? : Array<ClaimResponse_Item>;
+                item? : ClaimResponse_Item[];
                 
 
                 /**
                  * The first-tier service adjudications for payor added services.
                  */
-                AddItem? : Array<ClaimResponse_AddItem>;
+                addItem? : ClaimResponse_AddItem[];
                 
 
                 /**
                  * Mutually exclusive with Services Provided (Item).
                  */
-                Error? : Array<ClaimResponse_Error>;
+                error? : ClaimResponse_Error[];
                 
 
                 /**
                  * Totals for amounts submitted, co-pays, benefits payable etc.
                  */
-                Total? : Array<ClaimResponse_Total>;
+                total? : ClaimResponse_Total[];
                 
 
                 /**
                  * Payment details for the claim if the claim has been paid.
                  */
-                Payment? : ClaimResponse_Payment;
+                payment? : ClaimResponse_Payment;
                 
 
                 /**
                  * Status of funds reservation (For provider, for Patient, None).
                  */
-                Reserved? : Coding;
+                reserved? : Coding;
                 
 
                 /**
                  * The form to be used for printing the content.
                  */
-                Form? : CodeableConcept;
+                form? : CodeableConcept;
                 
 
                 /**
                  * Note text.
                  */
-                ProcessNote? : Array<ClaimResponse_ProcessNote>;
+                processNote? : ClaimResponse_ProcessNote[];
                 
 
                 /**
                  * Request for additional supporting or authorizing information, such as: documents, images or resources.
                  */
-                CommunicationRequest? : Array<Reference>;
+                communicationRequest? : Reference[];
                 
 
                 /**
                  * Financial instrument by which payment information for health care.
                  */
-                Insurance? : Array<ClaimResponse_Insurance>;
+                insurance? : ClaimResponse_Insurance[];
                 
         }
         

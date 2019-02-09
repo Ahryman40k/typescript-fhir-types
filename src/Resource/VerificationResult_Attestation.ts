@@ -20,13 +20,13 @@ import { Reference } from '../Resource/Reference';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,31 +34,31 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The individual attesting to information.
                  */
-                Source? : Reference;
+                source? : Reference;
                 
 
                 /**
                  * The organization attesting to information.
                  */
-                Organization? : Reference;
+                organization? : Reference;
                 
 
                 /**
                  * Who is providing the attested information (owner; authorized representative; authorized intermediary; non-authorized source).
                  */
-                Method? : CodeableConcept;
+                method? : CodeableConcept;
                 
 
                 /**
                  * The date the information was attested to.
                  */
-                Date? : Date;
+                date? : Date;
                 
 
                 /**
@@ -70,7 +70,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A digital identity certificate associated with the attestation source.
                  */
-                SourceIdentityCertificate? : String;
+                sourceIdentityCertificate? : string;
                 
 
                 /**
@@ -82,7 +82,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
                  */
-                ProxyIdentityCertificate? : String;
+                proxyIdentityCertificate? : string;
                 
 
                 /**
@@ -94,7 +94,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
                  */
-                SignedProxyRightString? : String;
+                signedProxyRightString? : string;
                 
 
                 /**
@@ -106,7 +106,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
                  */
-                SignedProxyRightUri? : String;
+                signedProxyRightUri? : string;
                 
 
                 /**
@@ -118,7 +118,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Signed assertion by the attestation source that they have attested to the information.
                  */
-                SignedSourceAttestationString? : String;
+                signedSourceAttestationString? : string;
                 
 
                 /**
@@ -130,7 +130,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Signed assertion by the attestation source that they have attested to the information.
                  */
-                SignedSourceAttestationUri? : String;
+                signedSourceAttestationUri? : string;
                 
 
                 /**

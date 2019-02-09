@@ -29,25 +29,25 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * This is a Organization resource
                  */
-                ResourceType: string = 'Organization;'
+                resourceType: string = 'Organization;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -59,7 +59,7 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -71,19 +71,19 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -91,19 +91,19 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifier for the organization that is used to identify the organization across multiple disparate systems.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * Whether the organization's record is still in active use.
                  */
-                Active? : Boolean;
+                active? : boolean;
                 
 
                 /**
@@ -115,13 +115,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The kind(s) of organization that this is.
                  */
-                Type? : Array<CodeableConcept>;
+                type? : CodeableConcept[];
                 
 
                 /**
                  * A name associated with the organization.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -133,43 +133,43 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A list of alternate names that the organization is known as, or was known as in the past.
                  */
-                Alias? : Array<String>;
+                alias? : String[];
                 
 
                 /**
                  * Extensions for alias
                  */
-                _alias? : Array<Element>;
+                _alias? : Element[];
                 
 
                 /**
                  * A contact detail for the organization.
                  */
-                Telecom? : Array<ContactPoint>;
+                telecom? : ContactPoint[];
                 
 
                 /**
                  * An address for the organization.
                  */
-                Address? : Array<Address>;
+                address? : Address[];
                 
 
                 /**
                  * The organization of which this organization forms a part.
                  */
-                PartOf? : Reference;
+                partOf? : Reference;
                 
 
                 /**
                  * Contact for the organization for a certain purpose.
                  */
-                Contact? : Array<Organization_Contact>;
+                contact? : Organization_Contact[];
                 
 
                 /**
                  * Technical endpoints providing access to services operated for the organization.
                  */
-                Endpoint? : Array<Reference>;
+                endpoint? : Reference[];
                 
         }
         

@@ -20,13 +20,13 @@ import { SubstanceAmount } from '../Resource/SubstanceAmount';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,25 +34,25 @@ import { SubstanceAmount } from '../Resource/SubstanceAmount';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The role of the moiety should be specified if there is a specific role the moiety is playing.
                  */
-                Role? : CodeableConcept;
+                role? : CodeableConcept;
                 
 
                 /**
                  * The unique identifier assigned to the substance representing the moiety based on the ISO 11238 substance controlled vocabulary.
                  */
-                Identifier? : Identifier;
+                identifier? : Identifier;
                 
 
                 /**
                  * The name of the moiety shall be provided.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -64,19 +64,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Stereochemistry shall be captured as described in 4.7.1.
                  */
-                Stereochemistry? : CodeableConcept;
+                stereochemistry? : CodeableConcept;
                 
 
                 /**
                  * Optical activity shall be captured as described in 4.7.2.
                  */
-                OpticalActivity? : CodeableConcept;
+                opticalActivity? : CodeableConcept;
                 
 
                 /**
                  * Molecular formula shall be captured as described in 4.7.3.
                  */
-                MolecularFormula? : String;
+                molecularFormula? : string;
                 
 
                 /**
@@ -88,7 +88,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
                  */
-                Amount? : SubstanceAmount;
+                amount? : SubstanceAmount;
                 
         }
         

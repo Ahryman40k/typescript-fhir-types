@@ -11,20 +11,20 @@ import { Reference } from '../Resource/Reference';
         export class Procedure_Performer  {
 
             constructor() {
-                this.Actor = new Reference();
+                this.actor = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,25 +32,25 @@ import { Reference } from '../Resource/Reference';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaethetist, endoscopist.
                  */
-                Function? : CodeableConcept;
+                function? : CodeableConcept;
                 
 
                 /**
                  * The practitioner who was involved in the procedure.
                  */
-                Actor : Reference;
+                actor : Reference;
                 
 
                 /**
                  * The organization the device or practitioner was acting on behalf of.
                  */
-                OnBehalfOf? : Reference;
+                onBehalfOf? : Reference;
                 
         }
         

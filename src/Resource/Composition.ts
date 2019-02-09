@@ -29,33 +29,33 @@ enteredInError
         export class Composition  {
 
             constructor() {
-                this.Type = new CodeableConcept();
-this.Author = new Array<Reference>();
+                this.type = new CodeableConcept();
+this.author = new Array<Reference>();
             }
 
             
                 /**
                  * This is a Composition resource
                  */
-                ResourceType: string = 'Composition;'
+                resourceType: string = 'Composition;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -67,7 +67,7 @@ this.Author = new Array<Reference>();
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -79,19 +79,19 @@ this.Author = new Array<Reference>();
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -99,19 +99,19 @@ this.Author = new Array<Reference>();
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A version-independent identifier for the Composition. This identifier stays constant as the composition is changed over time.
                  */
-                Identifier? : Identifier;
+                identifier? : Identifier;
                 
 
                 /**
                  * The workflow/clinical status of this composition. The status is a marker for the clinical standing of the document.
                  */
-                Status? : CompositionStatusKind;
+                status? : CompositionStatusKind;
                 
 
                 /**
@@ -123,31 +123,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Specifies the particular kind of composition (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the composition.
                  */
-                Type : CodeableConcept;
+                type : CodeableConcept;
                 
 
                 /**
                  * A categorization for the type of the composition - helps for indexing and searching. This may be implied by or derived from the code specified in the Composition Type.
                  */
-                Category? : Array<CodeableConcept>;
+                category? : CodeableConcept[];
                 
 
                 /**
                  * Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).
                  */
-                Subject? : Reference;
+                subject? : Reference;
                 
 
                 /**
                  * Describes the clinical encounter or type of care this documentation is associated with.
                  */
-                Encounter? : Reference;
+                encounter? : Reference;
                 
 
                 /**
                  * The composition editing time, when the composition was last logically changed by the author.
                  */
-                Date? : DateTime;
+                date? : DateTime;
                 
 
                 /**
@@ -159,13 +159,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Identifies who is responsible for the information in the composition, not necessarily who typed it in.
                  */
-                Author : Array<Reference>;
+                author : Reference[];
                 
 
                 /**
                  * Official human-readable label for the composition.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -177,7 +177,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The code specifying the level of confidentiality of the Composition.
                  */
-                Confidentiality? : Code;
+                confidentiality? : Code;
                 
 
                 /**
@@ -189,31 +189,31 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A participant who has attested to the accuracy of the composition/document.
                  */
-                Attester? : Array<Composition_Attester>;
+                attester? : Composition_Attester[];
                 
 
                 /**
                  * Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document information.
                  */
-                Custodian? : Reference;
+                custodian? : Reference;
                 
 
                 /**
                  * Relationships that this composition has with other compositions or documents that already exist.
                  */
-                RelatesTo? : Array<Composition_RelatesTo>;
+                relatesTo? : Composition_RelatesTo[];
                 
 
                 /**
                  * The clinical service, such as a colonoscopy or an appendectomy, being documented.
                  */
-                Event? : Array<Composition_Event>;
+                event? : Composition_Event[];
                 
 
                 /**
                  * The root of the sections that make up the composition.
                  */
-                Section? : Array<Composition_Section>;
+                section? : Composition_Section[];
                 
         }
         

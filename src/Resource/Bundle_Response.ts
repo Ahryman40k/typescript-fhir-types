@@ -20,13 +20,13 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,13 +34,13 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.
                  */
-                Status? : String;
+                status? : string;
                 
 
                 /**
@@ -52,7 +52,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The location header created by processing this operation, populated if the operation returns a location.
                  */
-                Location? : Uri;
+                location? : Uri;
                 
 
                 /**
@@ -64,7 +64,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http.html#versioning) and [Managing Resource Contention](http.html#concurrency)).
                  */
-                Etag? : String;
+                etag? : string;
                 
 
                 /**
@@ -76,7 +76,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date/time that the resource was modified on the server.
                  */
-                LastModified? : Instant;
+                lastModified? : Instant;
                 
 
                 /**
@@ -88,7 +88,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An OperationOutcome containing hints and warnings produced as part of processing this entry in a batch or transaction.
                  */
-                Outcome? : ResourceList;
+                outcome? : ResourceList;
                 
         }
         

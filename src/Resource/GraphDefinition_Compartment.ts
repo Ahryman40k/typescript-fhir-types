@@ -3,11 +3,11 @@
 import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 
-        export enum GraphDefinition_CompartmentUseKind {
+        export enum GraphDefinitionCompartmentUseKind {
                 condition,
 requirement
             }
-export enum GraphDefinition_CompartmentRuleKind {
+export enum GraphDefinitionCompartmentRuleKind {
                 identical,
 matching,
 different,
@@ -27,13 +27,13 @@ custom
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -41,13 +41,13 @@ custom
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Defines how the compartment rule is used - whether it it is used to test whether resources are subject to the rule, or whether it is a rule that must be followed.
                  */
-                Use? : GraphDefinition_CompartmentUseKind;
+                use? : GraphDefinitionCompartmentUseKind;
                 
 
                 /**
@@ -59,7 +59,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Identifies the compartment.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -71,7 +71,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * identical | matching | different | no-rule | custom.
                  */
-                Rule? : GraphDefinition_CompartmentRuleKind;
+                rule? : GraphDefinitionCompartmentRuleKind;
                 
 
                 /**
@@ -83,7 +83,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Custom rule, as a FHIRPath expression.
                  */
-                Expression? : String;
+                expression? : string;
                 
 
                 /**
@@ -95,7 +95,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Documentation for FHIRPath expression.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**

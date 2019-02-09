@@ -31,32 +31,32 @@ unknown
         export class MedicationAdministration  {
 
             constructor() {
-                this.Subject = new Reference();
+                this.subject = new Reference();
             }
 
             
                 /**
                  * This is a MedicationAdministration resource
                  */
-                ResourceType: string = 'MedicationAdministration;'
+                resourceType: string = 'MedicationAdministration;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -68,7 +68,7 @@ unknown
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -80,19 +80,19 @@ unknown
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -100,37 +100,37 @@ unknown
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * External identifier - FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event. This identifier is particularly important when these records require updates.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.
                  */
-                Instantiates? : Array<Uri>;
+                instantiates? : Uri[];
                 
 
                 /**
                  * Extensions for instantiates
                  */
-                _instantiates? : Array<Element>;
+                _instantiates? : Element[];
                 
 
                 /**
                  * A larger event of which this particular event is a component or step.
                  */
-                PartOf? : Array<Reference>;
+                partOf? : Reference[];
                 
 
                 /**
                  * Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions, it is possible for an administration to be started but not completed or it may be paused while some other process is under way.
                  */
-                Status? : MedicationAdministrationStatusKind;
+                status? : MedicationAdministrationStatusKind;
                 
 
                 /**
@@ -142,43 +142,43 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Indicates where the medication is expected to be consumed or administered.
                  */
-                Category? : CodeableConcept;
+                category? : CodeableConcept;
                 
 
                 /**
                  * Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
                  */
-                MedicationCodeableConcept? : CodeableConcept;
+                medicationCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.
                  */
-                MedicationReference? : Reference;
+                medicationReference? : Reference;
                 
 
                 /**
                  * The person or animal or group receiving the medication.
                  */
-                Subject : Reference;
+                subject : Reference;
                 
 
                 /**
                  * The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.
                  */
-                Context? : Reference;
+                context? : Reference;
                 
 
                 /**
                  * Additional information (for example, patient height and weight) that supports the administration of the medication.
                  */
-                SupportingInformation? : Array<Reference>;
+                supportingInformation? : Reference[];
                 
 
                 /**
                  * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
                  */
-                EffectiveDateTime? : String;
+                effectiveDateTime? : string;
                 
 
                 /**
@@ -190,61 +190,61 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
                  */
-                EffectivePeriod? : Period;
+                effectivePeriod? : Period;
                 
 
                 /**
                  * Indicates who or what performed the medication administration and how they were involved.
                  */
-                Performer? : Array<MedicationAdministration_Performer>;
+                performer? : MedicationAdministration_Performer[];
                 
 
                 /**
                  * A code indicating why the administration was not performed.
                  */
-                StatusReason? : Array<CodeableConcept>;
+                statusReason? : CodeableConcept[];
                 
 
                 /**
                  * A code indicating why the medication was given.
                  */
-                ReasonCode? : Array<CodeableConcept>;
+                reasonCode? : CodeableConcept[];
                 
 
                 /**
                  * Condition or observation that supports why the medication was administered.
                  */
-                ReasonReference? : Array<Reference>;
+                reasonReference? : Reference[];
                 
 
                 /**
                  * The original request, instruction or authority to perform the administration.
                  */
-                Request? : Reference;
+                request? : Reference;
                 
 
                 /**
                  * The device used in administering the medication to the patient.  For example, a particular infusion pump.
                  */
-                Device? : Array<Reference>;
+                device? : Reference[];
                 
 
                 /**
                  * Extra information about the medication administration that is not conveyed by the other attributes.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
 
                 /**
                  * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
                  */
-                Dosage? : MedicationAdministration_Dosage;
+                dosage? : MedicationAdministration_Dosage;
                 
 
                 /**
                  * A summary of the events of interest that have occurred, such as when the administration was verified.
                  */
-                EventHistory? : Array<Reference>;
+                eventHistory? : Reference[];
                 
         }
         

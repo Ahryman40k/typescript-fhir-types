@@ -20,13 +20,13 @@ import { MedicinalProductClinicals_TherapeuticIndication } from '../Resource/Med
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,43 +34,43 @@ import { MedicinalProductClinicals_TherapeuticIndication } from '../Resource/Med
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The disease, symptom or procedure for the contraindication.
                  */
-                Disease? : CodeableConcept;
+                disease? : CodeableConcept;
                 
 
                 /**
                  * The status of the disease or symptom for the contraindication.
                  */
-                DiseaseStatus? : CodeableConcept;
+                diseaseStatus? : CodeableConcept;
                 
 
                 /**
                  * A comorbidity (concurrent condition) or coinfection.
                  */
-                Comorbidity? : Array<CodeableConcept>;
+                comorbidity? : CodeableConcept[];
                 
 
                 /**
                  * Information about the use of the medicinal product in relation to other therapies as part of the indication.
                  */
-                TherapeuticIndication? : Array<MedicinalProductClinicals_TherapeuticIndication>;
+                therapeuticIndication? : MedicinalProductClinicals_TherapeuticIndication[];
                 
 
                 /**
                  * Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.
                  */
-                OtherTherapy? : Array<MedicinalProductClinicals_OtherTherapy>;
+                otherTherapy? : MedicinalProductClinicals_OtherTherapy[];
                 
 
                 /**
                  * The population group to which this applies.
                  */
-                Population? : Array<MedicinalProductClinicals_Population>;
+                population? : MedicinalProductClinicals_Population[];
                 
         }
         

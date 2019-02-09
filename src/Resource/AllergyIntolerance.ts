@@ -50,32 +50,32 @@ unableToAssess
         export class AllergyIntolerance  {
 
             constructor() {
-                this.Patient = new Reference();
+                this.patient = new Reference();
             }
 
             
                 /**
                  * This is a AllergyIntolerance resource
                  */
-                ResourceType: string = 'AllergyIntolerance;'
+                resourceType: string = 'AllergyIntolerance;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -87,7 +87,7 @@ unableToAssess
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -99,19 +99,19 @@ unableToAssess
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -119,19 +119,19 @@ unableToAssess
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Business identifiers assigned to this AllergyIntolerance by the performer or other systems which remain constant as the resource is updated and propagates from server to server.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * The clinical status of the allergy or intolerance.
                  */
-                ClinicalStatus? : AllergyIntoleranceClinicalStatusKind;
+                clinicalStatus? : AllergyIntoleranceClinicalStatusKind;
                 
 
                 /**
@@ -143,7 +143,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).
                  */
-                VerificationStatus? : AllergyIntoleranceVerificationStatusKind;
+                verificationStatus? : AllergyIntoleranceVerificationStatusKind;
                 
 
                 /**
@@ -155,7 +155,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Identification of the underlying physiological mechanism for the reaction risk.
                  */
-                Type? : AllergyIntoleranceTypeKind;
+                type? : AllergyIntoleranceTypeKind;
                 
 
                 /**
@@ -167,19 +167,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Category of the identified substance.
                  */
-                Category? : AllergyIntoleranceCategoryKind[];
+                category? : AllergyIntoleranceCategoryKind[];
                 
 
                 /**
                  * Extensions for category
                  */
-                _category? : Array<Element>;
+                _category? : Element[];
                 
 
                 /**
                  * Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.
                  */
-                Criticality? : AllergyIntoleranceCriticalityKind;
+                criticality? : AllergyIntoleranceCriticalityKind;
                 
 
                 /**
@@ -191,25 +191,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Code for an allergy or intolerance statement (either a positive or a negated/excluded statement).  This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., "Latex"), an allergy or intolerance condition (e.g., "Latex allergy"), or a negated/excluded code for a specific substance or class (e.g., "No latex allergy") or a general or categorical negated statement (e.g.,  "No known allergy", "No known drug allergies").  Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.  If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substance.
                  */
-                Code? : CodeableConcept;
+                code? : CodeableConcept;
                 
 
                 /**
                  * The patient who has the allergy or intolerance.
                  */
-                Patient : Reference;
+                patient : Reference;
                 
 
                 /**
                  * The encounter when the allergy or intolerance was asserted.
                  */
-                Encounter? : Reference;
+                encounter? : Reference;
                 
 
                 /**
                  * Estimated or actual date,  date-time, or age when allergy or intolerance was identified.
                  */
-                OnsetDateTime? : String;
+                onsetDateTime? : string;
                 
 
                 /**
@@ -221,25 +221,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Estimated or actual date,  date-time, or age when allergy or intolerance was identified.
                  */
-                OnsetAge? : Age;
+                onsetAge? : Age;
                 
 
                 /**
                  * Estimated or actual date,  date-time, or age when allergy or intolerance was identified.
                  */
-                OnsetPeriod? : Period;
+                onsetPeriod? : Period;
                 
 
                 /**
                  * Estimated or actual date,  date-time, or age when allergy or intolerance was identified.
                  */
-                OnsetRange? : Range;
+                onsetRange? : Range;
                 
 
                 /**
                  * Estimated or actual date,  date-time, or age when allergy or intolerance was identified.
                  */
-                OnsetString? : String;
+                onsetString? : string;
                 
 
                 /**
@@ -251,7 +251,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The recordedDate represents when this particular AllergyIntolerance record was created in the system, which is often a system-generated date.
                  */
-                RecordedDate? : DateTime;
+                recordedDate? : DateTime;
                 
 
                 /**
@@ -263,19 +263,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Individual who recorded the record and takes responsibility for its content.
                  */
-                Recorder? : Reference;
+                recorder? : Reference;
                 
 
                 /**
                  * The source of the information about the allergy that is recorded.
                  */
-                Asserter? : Reference;
+                asserter? : Reference;
                 
 
                 /**
                  * Represents the date and/or time of the last known occurrence of a reaction event.
                  */
-                LastOccurrence? : DateTime;
+                lastOccurrence? : DateTime;
                 
 
                 /**
@@ -287,13 +287,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
 
                 /**
                  * Details about each adverse reaction event linked to exposure to the identified substance.
                  */
-                Reaction? : Array<AllergyIntolerance_Reaction>;
+                reaction? : AllergyIntolerance_Reaction[];
                 
         }
         

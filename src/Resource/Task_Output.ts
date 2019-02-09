@@ -40,20 +40,20 @@ import { UsageContext } from '../Resource/UsageContext';
         export class Task_Output  {
 
             constructor() {
-                this.Type = new CodeableConcept();
+                this.type = new CodeableConcept();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -61,19 +61,19 @@ import { UsageContext } from '../Resource/UsageContext';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The name of the Output parameter.
                  */
-                Type : CodeableConcept;
+                type : CodeableConcept;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueBase64Binary? : String;
+                valueBase64Binary? : string;
                 
 
                 /**
@@ -85,7 +85,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueBoolean? : Boolean;
+                valueBoolean? : boolean;
                 
 
                 /**
@@ -97,7 +97,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueCanonical? : String;
+                valueCanonical? : string;
                 
 
                 /**
@@ -109,7 +109,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueCode? : String;
+                valueCode? : string;
                 
 
                 /**
@@ -121,7 +121,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDate? : String;
+                valueDate? : string;
                 
 
                 /**
@@ -133,7 +133,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDateTime? : String;
+                valueDateTime? : string;
                 
 
                 /**
@@ -145,7 +145,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDecimal? : Number;
+                valueDecimal? : number;
                 
 
                 /**
@@ -157,7 +157,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueId? : String;
+                valueId? : string;
                 
 
                 /**
@@ -169,7 +169,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueInstant? : String;
+                valueInstant? : string;
                 
 
                 /**
@@ -181,7 +181,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueInteger? : Number;
+                valueInteger? : number;
                 
 
                 /**
@@ -193,7 +193,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueMarkdown? : String;
+                valueMarkdown? : string;
                 
 
                 /**
@@ -205,7 +205,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueOid? : String;
+                valueOid? : string;
                 
 
                 /**
@@ -217,7 +217,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValuePositiveInt? : Number;
+                valuePositiveInt? : number;
                 
 
                 /**
@@ -229,7 +229,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueString? : String;
+                valueString? : string;
                 
 
                 /**
@@ -241,7 +241,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueTime? : String;
+                valueTime? : string;
                 
 
                 /**
@@ -253,7 +253,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueUnsignedInt? : Number;
+                valueUnsignedInt? : number;
                 
 
                 /**
@@ -265,7 +265,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueUri? : String;
+                valueUri? : string;
                 
 
                 /**
@@ -277,7 +277,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueUrl? : String;
+                valueUrl? : string;
                 
 
                 /**
@@ -289,7 +289,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueUuid? : String;
+                valueUuid? : string;
                 
 
                 /**
@@ -301,181 +301,181 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueAddress? : Address;
+                valueAddress? : Address;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueAge? : Age;
+                valueAge? : Age;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueAnnotation? : Annotation;
+                valueAnnotation? : Annotation;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueAttachment? : Attachment;
+                valueAttachment? : Attachment;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueCodeableConcept? : CodeableConcept;
+                valueCodeableConcept? : CodeableConcept;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueCoding? : Coding;
+                valueCoding? : Coding;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueContactPoint? : ContactPoint;
+                valueContactPoint? : ContactPoint;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueCount? : Count;
+                valueCount? : Count;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDistance? : Distance;
+                valueDistance? : Distance;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDuration? : Duration;
+                valueDuration? : Duration;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueHumanName? : HumanName;
+                valueHumanName? : HumanName;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueIdentifier? : Identifier;
+                valueIdentifier? : Identifier;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueMoney? : Money;
+                valueMoney? : Money;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValuePeriod? : Period;
+                valuePeriod? : Period;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueQuantity? : Quantity;
+                valueQuantity? : Quantity;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueRange? : Range;
+                valueRange? : Range;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueRatio? : Ratio;
+                valueRatio? : Ratio;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueReference? : Reference;
+                valueReference? : Reference;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueSampledData? : SampledData;
+                valueSampledData? : SampledData;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueSignature? : Signature;
+                valueSignature? : Signature;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueTiming? : Timing;
+                valueTiming? : Timing;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueParameterDefinition? : ParameterDefinition;
+                valueParameterDefinition? : ParameterDefinition;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDataRequirement? : DataRequirement;
+                valueDataRequirement? : DataRequirement;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueRelatedArtifact? : RelatedArtifact;
+                valueRelatedArtifact? : RelatedArtifact;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueContactDetail? : ContactDetail;
+                valueContactDetail? : ContactDetail;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueContributor? : Contributor;
+                valueContributor? : Contributor;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueTriggerDefinition? : TriggerDefinition;
+                valueTriggerDefinition? : TriggerDefinition;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueExpression? : Expression;
+                valueExpression? : Expression;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueUsageContext? : UsageContext;
+                valueUsageContext? : UsageContext;
                 
 
                 /**
                  * The value of the Output parameter as a basic type.
                  */
-                ValueDosage? : Dosage;
+                valueDosage? : Dosage;
                 
         }
         

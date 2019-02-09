@@ -21,13 +21,13 @@ import { Quantity } from '../Resource/Quantity';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -35,55 +35,55 @@ import { Quantity } from '../Resource/Quantity';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The disease, symptom or procedure that is the indication for treatment.
                  */
-                DiseaseSymptomProcedure? : CodeableConcept;
+                diseaseSymptomProcedure? : CodeableConcept;
                 
 
                 /**
                  * The status of the disease or symptom for which the indication applies.
                  */
-                DiseaseStatus? : CodeableConcept;
+                diseaseStatus? : CodeableConcept;
                 
 
                 /**
                  * Comorbidity (concurrent condition) or co-infection as part of the indication.
                  */
-                Comorbidity? : Array<CodeableConcept>;
+                comorbidity? : CodeableConcept[];
                 
 
                 /**
                  * The intended effect, aim or strategy to be achieved by the indication.
                  */
-                IntendedEffect? : CodeableConcept;
+                intendedEffect? : CodeableConcept;
                 
 
                 /**
                  * Timing or duration information as part of the indication.
                  */
-                Duration? : Quantity;
+                duration? : Quantity;
                 
 
                 /**
                  * Information about the use of the medicinal product in relation to other therapies as part of the indication.
                  */
-                UndesirableEffects? : Array<MedicinalProductClinicals_UndesirableEffects>;
+                undesirableEffects? : MedicinalProductClinicals_UndesirableEffects[];
                 
 
                 /**
                  * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
                  */
-                OtherTherapy? : Array<MedicinalProductClinicals_OtherTherapy>;
+                otherTherapy? : MedicinalProductClinicals_OtherTherapy[];
                 
 
                 /**
                  * The population group to which this applies.
                  */
-                Population? : Array<MedicinalProductClinicals_Population>;
+                population? : MedicinalProductClinicals_Population[];
                 
         }
         

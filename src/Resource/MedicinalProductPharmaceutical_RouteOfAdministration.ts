@@ -14,20 +14,20 @@ import { Ratio } from '../Resource/Ratio';
         export class MedicinalProductPharmaceutical_RouteOfAdministration  {
 
             constructor() {
-                this.Code = new CodeableConcept();
+                this.code = new CodeableConcept();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -35,49 +35,49 @@ import { Ratio } from '../Resource/Ratio';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Coded expression for the route.
                  */
-                Code : CodeableConcept;
+                code : CodeableConcept;
                 
 
                 /**
                  * The first dose (dose quantity) administered in humans can be specified, for a product under investigation, using a numerical value and its unit of measurement.
                  */
-                FirstDose? : Quantity;
+                firstDose? : Quantity;
                 
 
                 /**
                  * The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.
                  */
-                MaxSingleDose? : Quantity;
+                maxSingleDose? : Quantity;
                 
 
                 /**
                  * The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation.
                  */
-                MaxDosePerDay? : Quantity;
+                maxDosePerDay? : Quantity;
                 
 
                 /**
                  * The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation.
                  */
-                MaxDosePerTreatmentPeriod? : Ratio;
+                maxDosePerTreatmentPeriod? : Ratio;
                 
 
                 /**
                  * The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation.
                  */
-                MaxTreatmentPeriod? : Duration;
+                maxTreatmentPeriod? : Duration;
                 
 
                 /**
                  * A species for which this route applies.
                  */
-                TargetSpecies? : Array<MedicinalProductPharmaceutical_TargetSpecies>;
+                targetSpecies? : MedicinalProductPharmaceutical_TargetSpecies[];
                 
         }
         

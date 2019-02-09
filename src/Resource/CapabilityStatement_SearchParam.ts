@@ -4,7 +4,7 @@ import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 import { Markdown } from '../Scalar/Markdown';
 
-        export enum CapabilityStatement_SearchParamTypeKind {
+        export enum CapabilityStatementSearchParamTypeKind {
                 number,
 date,
 string,
@@ -29,13 +29,13 @@ special
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -43,13 +43,13 @@ special
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The name of the search parameter used in the interface.
                  */
-                Name? : String;
+                name? : string;
                 
 
                 /**
@@ -61,13 +61,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to [[[SearchParameter.url]]]). This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.
                  */
-                Definition? : Canonical;
+                definition? : Canonical;
                 
 
                 /**
                  * The type of value a search parameter refers to, and how the content is interpreted.
                  */
-                Type? : CapabilityStatement_SearchParamTypeKind;
+                type? : CapabilityStatementSearchParamTypeKind;
                 
 
                 /**
@@ -79,7 +79,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.
                  */
-                Documentation? : Markdown;
+                documentation? : Markdown;
                 
 
                 /**

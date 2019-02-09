@@ -4,7 +4,7 @@ import { Element } from '../Resource/Element';
 import { Extension } from '../Resource/Extension';
 import { Uri } from '../Scalar/Uri';
 
-        export enum CodeSystem_PropertyTypeKind {
+        export enum CodeSystemPropertyTypeKind {
                 code,
 coding,
 string,
@@ -27,13 +27,13 @@ decimal
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -41,13 +41,13 @@ decimal
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -59,7 +59,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Reference to the formal meaning of the property. One possible source of meaning is the [Concept Properties](codesystem-concept-properties.html) code system.
                  */
-                Uri? : Uri;
+                uri? : Uri;
                 
 
                 /**
@@ -71,7 +71,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A description of the property- why it is defined, and how its value might be used.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -83,7 +83,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The type of the property value. Properties of type "code" contain a code defined by the code system (e.g. a reference to another defined concept).
                  */
-                Type? : CodeSystem_PropertyTypeKind;
+                type? : CodeSystemPropertyTypeKind;
                 
 
                 /**

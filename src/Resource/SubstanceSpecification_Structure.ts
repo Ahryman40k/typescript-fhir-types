@@ -22,13 +22,13 @@ import { SubstanceSpecification_StructuralRepresentation } from '../Resource/Sub
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -36,25 +36,25 @@ import { SubstanceSpecification_StructuralRepresentation } from '../Resource/Sub
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Stereochemistry type.
                  */
-                Stereochemistry? : CodeableConcept;
+                stereochemistry? : CodeableConcept;
                 
 
                 /**
                  * Optical activity type.
                  */
-                OpticalActivity? : CodeableConcept;
+                opticalActivity? : CodeableConcept;
                 
 
                 /**
                  * Molecular formula.
                  */
-                MolecularFormula? : String;
+                molecularFormula? : string;
                 
 
                 /**
@@ -66,7 +66,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical. and each moiety separated by a dot.
                  */
-                MolecularFormulaByMoiety? : String;
+                molecularFormulaByMoiety? : string;
                 
 
                 /**
@@ -78,25 +78,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
                  */
-                Isotope? : Array<SubstanceSpecification_Isotope>;
+                isotope? : SubstanceSpecification_Isotope[];
                 
 
                 /**
                  * The molecular weight or weight range (for proteins, polymers or nucleic acids).
                  */
-                MolecularWeight? : SubstanceSpecification_MolecularWeight;
+                molecularWeight? : SubstanceSpecification_MolecularWeight;
                 
 
                 /**
                  * Supporting literature.
                  */
-                ReferenceSource? : Array<Reference>;
+                referenceSource? : Reference[];
                 
 
                 /**
                  * Molectular structural representation.
                  */
-                StructuralRepresentation? : Array<SubstanceSpecification_StructuralRepresentation>;
+                structuralRepresentation? : SubstanceSpecification_StructuralRepresentation[];
                 
         }
         

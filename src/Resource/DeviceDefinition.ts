@@ -37,25 +37,25 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * This is a DeviceDefinition resource
                  */
-                ResourceType: string = 'DeviceDefinition;'
+                resourceType: string = 'DeviceDefinition;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -67,7 +67,7 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -79,19 +79,19 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -99,25 +99,25 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Unique instance identifiers assigned to a device by the software, manufacturers, other organizations or owners. For example: handle ID.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
                  */
-                UdiDeviceIdentifier? : Array<DeviceDefinition_UdiDeviceIdentifier>;
+                udiDeviceIdentifier? : DeviceDefinition_UdiDeviceIdentifier[];
                 
 
                 /**
                  * A name of the manufacturer.
                  */
-                ManufacturerString? : String;
+                manufacturerString? : string;
                 
 
                 /**
@@ -129,19 +129,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A name of the manufacturer.
                  */
-                ManufacturerReference? : Reference;
+                manufacturerReference? : Reference;
                 
 
                 /**
                  * A name given to the device to identify it.
                  */
-                DeviceName? : Array<DeviceDefinition_DeviceName>;
+                deviceName? : DeviceDefinition_DeviceName[];
                 
 
                 /**
                  * The model number for the device.
                  */
-                ModelNumber? : String;
+                modelNumber? : string;
                 
 
                 /**
@@ -153,79 +153,79 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * What kind of device or device system this is.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
                  */
-                Specialization? : Array<DeviceDefinition_Specialization>;
+                specialization? : DeviceDefinition_Specialization[];
                 
 
                 /**
                  * The actual design of the device or software version running on the device.
                  */
-                Version? : Array<String>;
+                version? : String[];
                 
 
                 /**
                  * Extensions for version
                  */
-                _version? : Array<Element>;
+                _version? : Element[];
                 
 
                 /**
                  * Safety characteristics of the device.
                  */
-                Safety? : Array<CodeableConcept>;
+                safety? : CodeableConcept[];
                 
 
                 /**
                  * Shelf Life and storage information.
                  */
-                ShelfLifeStorage? : Array<ProductShelfLife>;
+                shelfLifeStorage? : ProductShelfLife[];
                 
 
                 /**
                  * Dimensions, color etc.
                  */
-                PhysicalCharacteristics? : ProdCharacteristic;
+                physicalCharacteristics? : ProdCharacteristic;
                 
 
                 /**
                  * Language code for the human-readable text strings produced by the device (all supported).
                  */
-                LanguageCode? : Array<CodeableConcept>;
+                languageCode? : CodeableConcept[];
                 
 
                 /**
                  * Device capabilities.
                  */
-                Capability? : Array<DeviceDefinition_Capability>;
+                capability? : DeviceDefinition_Capability[];
                 
 
                 /**
                  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
                  */
-                Property? : Array<DeviceDefinition_Property>;
+                property? : DeviceDefinition_Property[];
                 
 
                 /**
                  * An organization that is responsible for the provision and ongoing maintenance of the device.
                  */
-                Owner? : Reference;
+                owner? : Reference;
                 
 
                 /**
                  * Contact details for an organization or a particular human that is responsible for the device.
                  */
-                Contact? : Array<ContactPoint>;
+                contact? : ContactPoint[];
                 
 
                 /**
                  * A network address on which the device may be contacted directly.
                  */
-                Url? : Uri;
+                url? : Uri;
                 
 
                 /**
@@ -237,7 +237,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Access to on-line information about the device.
                  */
-                OnlineInformation? : Uri;
+                onlineInformation? : Uri;
                 
 
                 /**
@@ -249,25 +249,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Descriptive information, usage information or implantation information that is not captured in an existing element.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
 
                 /**
                  * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
                  */
-                Quantity? : Quantity;
+                quantity? : Quantity;
                 
 
                 /**
                  * The parent device it can be part of.
                  */
-                ParentDevice? : Reference;
+                parentDevice? : Reference;
                 
 
                 /**
                  * A substance used to create the material(s) of which the device is made.
                  */
-                Material? : Array<DeviceDefinition_Material>;
+                material? : DeviceDefinition_Material[];
                 
         }
         

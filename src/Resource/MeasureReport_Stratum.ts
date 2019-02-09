@@ -12,20 +12,20 @@ import { Quantity } from '../Resource/Quantity';
         export class MeasureReport_Stratum  {
 
             constructor() {
-                this.Value = new CodeableConcept();
+                this.value = new CodeableConcept();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,25 +33,25 @@ import { Quantity } from '../Resource/Quantity';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The value for this stratum, expressed as a CodeableConcept. When defining stratifiers on complex values, the value must be rendered such that the value for each stratum within the stratifier is unique.
                  */
-                Value : CodeableConcept;
+                value : CodeableConcept;
                 
 
                 /**
                  * The populations that make up the stratum, one for each type of population appropriate to the measure.
                  */
-                Population? : Array<MeasureReport_Population1>;
+                population? : MeasureReport_Population1[];
                 
 
                 /**
                  * The measure score for this stratum, calculated as appropriate for the measure type and scoring method, and based on only the members of this stratum.
                  */
-                MeasureScore? : Quantity;
+                measureScore? : Quantity;
                 
         }
         

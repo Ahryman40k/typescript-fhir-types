@@ -20,13 +20,13 @@ import { Timing_Repeat } from '../Resource/Timing_Repeat';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -34,31 +34,31 @@ import { Timing_Repeat } from '../Resource/Timing_Repeat';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifies specific times when the event occurs.
                  */
-                Event? : Array<DateTime>;
+                event? : DateTime[];
                 
 
                 /**
                  * Extensions for event
                  */
-                _event? : Array<Element>;
+                _event? : Element[];
                 
 
                 /**
                  * A set of rules that describe when the event is scheduled.
                  */
-                Repeat? : Timing_Repeat;
+                repeat? : Timing_Repeat;
                 
 
                 /**
                  * A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).
                  */
-                Code? : CodeableConcept;
+                code? : CodeableConcept;
                 
         }
         

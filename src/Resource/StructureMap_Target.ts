@@ -4,17 +4,17 @@ import { Extension } from '../Resource/Extension';
 import { Id } from '../Scalar/Id';
 import { StructureMap_Parameter } from '../Resource/StructureMap_Parameter';
 
-        export enum StructureMap_TargetListModeKind {
+        export enum StructureMapTargetListModeKind {
                 first,
 share,
 last,
 collate
             }
-export enum StructureMap_TargetContextTypeKind {
+export enum StructureMapTargetContextTypeKind {
                 type,
 variable
             }
-export enum StructureMap_TargetTransformKind {
+export enum StructureMapTargetTransformKind {
                 create,
 copy,
 truncate,
@@ -47,13 +47,13 @@ cp
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -61,13 +61,13 @@ cp
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Type or variable this rule applies to.
                  */
-                Context? : Id;
+                context? : Id;
                 
 
                 /**
@@ -79,7 +79,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * How to interpret the context.
                  */
-                ContextType? : StructureMap_TargetContextTypeKind;
+                contextType? : StructureMapTargetContextTypeKind;
                 
 
                 /**
@@ -91,7 +91,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Field to create in the context.
                  */
-                Element? : String;
+                element? : string;
                 
 
                 /**
@@ -103,7 +103,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Named context for field, if desired, and a field is specified.
                  */
-                Variable? : Id;
+                variable? : Id;
                 
 
                 /**
@@ -115,19 +115,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If field is a list, how to manage the list.
                  */
-                ListMode? : StructureMap_TargetListModeKind[];
+                listMode? : StructureMapTargetListModeKind[];
                 
 
                 /**
                  * Extensions for listMode
                  */
-                _listMode? : Array<Element>;
+                _listMode? : Element[];
                 
 
                 /**
                  * Internal rule reference for shared list items.
                  */
-                ListRuleId? : Id;
+                listRuleId? : Id;
                 
 
                 /**
@@ -139,7 +139,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * How the data is copied / created.
                  */
-                Transform? : StructureMap_TargetTransformKind;
+                transform? : StructureMapTargetTransformKind;
                 
 
                 /**
@@ -151,7 +151,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Parameters to the transform.
                  */
-                Parameter? : Array<StructureMap_Parameter>;
+                parameter? : StructureMap_Parameter[];
                 
         }
         

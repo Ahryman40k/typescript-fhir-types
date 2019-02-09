@@ -25,32 +25,32 @@ import { Uri } from '../Scalar/Uri';
         export class Media  {
 
             constructor() {
-                this.Content = new Attachment();
+                this.content = new Attachment();
             }
 
             
                 /**
                  * This is a Media resource
                  */
-                ResourceType: string = 'Media;'
+                resourceType: string = 'Media;'
                 
 
                 /**
                  * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
                  */
-                Id? : Id;
+                id? : Id;
                 
 
                 /**
                  * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
                  */
-                Meta? : Meta;
+                meta? : Meta;
                 
 
                 /**
                  * A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.
                  */
-                ImplicitRules? : Uri;
+                implicitRules? : Uri;
                 
 
                 /**
@@ -62,7 +62,7 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * The base language in which the resource is written.
                  */
-                Language? : Code;
+                language? : Code;
                 
 
                 /**
@@ -74,19 +74,19 @@ import { Uri } from '../Scalar/Uri';
                 /**
                  * A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
                  */
-                Text? : Narrative;
+                text? : Narrative;
                 
 
                 /**
                  * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                  */
-                Contained? : Array<ResourceList>;
+                contained? : ResourceList[];
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -94,31 +94,31 @@ import { Uri } from '../Scalar/Uri';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Identifiers associated with the image - these may include identifiers for the image itself, identifiers for the context of its collection (e.g. series ids) and context ids such as accession numbers or other workflow identifiers.
                  */
-                Identifier? : Array<Identifier>;
+                identifier? : Identifier[];
                 
 
                 /**
                  * A procedure that is fulfilled in whole or in part by the creation of this media.
                  */
-                BasedOn? : Array<Reference>;
+                basedOn? : Reference[];
                 
 
                 /**
                  * A larger event of which this particular event is a component or step.
                  */
-                PartOf? : Array<Reference>;
+                partOf? : Reference[];
                 
 
                 /**
                  * The current state of the {{title}}.
                  */
-                Status? : Code;
+                status? : Code;
                 
 
                 /**
@@ -130,37 +130,37 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A code that classifies whether the media is an image, video or audio recording or some other media category.
                  */
-                Type? : CodeableConcept;
+                type? : CodeableConcept;
                 
 
                 /**
                  * Details of the type of the media - usually, how it was acquired (what type of device). If images sourced from a DICOM system, are wrapped in a Media resource, then this is the modality.
                  */
-                Modality? : CodeableConcept;
+                modality? : CodeableConcept;
                 
 
                 /**
                  * The name of the imaging view e.g. Lateral or Antero-posterior (AP).
                  */
-                View? : CodeableConcept;
+                view? : CodeableConcept;
                 
 
                 /**
                  * Who/What this Media is a record of.
                  */
-                Subject? : Reference;
+                subject? : Reference;
                 
 
                 /**
                  * The encounter or episode of care that establishes the context for this media.
                  */
-                Context? : Reference;
+                context? : Reference;
                 
 
                 /**
                  * The date and time(s) at which the media was collected.
                  */
-                CreatedDateTime? : String;
+                createdDateTime? : string;
                 
 
                 /**
@@ -172,13 +172,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The date and time(s) at which the media was collected.
                  */
-                CreatedPeriod? : Period;
+                createdPeriod? : Period;
                 
 
                 /**
                  * The date and time this version of the media was made available to providers, typically after having been reviewed.
                  */
-                Issued? : Instant;
+                issued? : Instant;
                 
 
                 /**
@@ -190,25 +190,25 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The person who administered the collection of the image.
                  */
-                Operator? : Reference;
+                operator? : Reference;
                 
 
                 /**
                  * Describes why the event occurred in coded or textual form.
                  */
-                ReasonCode? : Array<CodeableConcept>;
+                reasonCode? : CodeableConcept[];
                 
 
                 /**
                  * Indicates the site on the subject's body where the observation was made (i.e. the target site).
                  */
-                BodySite? : CodeableConcept;
+                bodySite? : CodeableConcept;
                 
 
                 /**
                  * The name of the device / manufacturer of the device  that was used to make the recording.
                  */
-                DeviceName? : String;
+                deviceName? : string;
                 
 
                 /**
@@ -220,13 +220,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The device used to collect the media.
                  */
-                Device? : Reference;
+                device? : Reference;
                 
 
                 /**
                  * Height of the image in pixels (photo/video).
                  */
-                Height? : PositiveInt;
+                height? : PositiveInt;
                 
 
                 /**
@@ -238,7 +238,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Width of the image in pixels (photo/video).
                  */
-                Width? : PositiveInt;
+                width? : PositiveInt;
                 
 
                 /**
@@ -250,7 +250,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.
                  */
-                Frames? : PositiveInt;
+                frames? : PositiveInt;
                 
 
                 /**
@@ -262,7 +262,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The duration of the recording in seconds - for audio and video.
                  */
-                Duration? : Decimal;
+                duration? : Decimal;
                 
 
                 /**
@@ -274,13 +274,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The actual content of the media - inline or by direct reference to the media source file.
                  */
-                Content : Attachment;
+                content : Attachment;
                 
 
                 /**
                  * Comments made about the media by the performer, subject or other participants.
                  */
-                Note? : Array<Annotation>;
+                note? : Annotation[];
                 
         }
         

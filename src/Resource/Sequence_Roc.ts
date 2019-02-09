@@ -19,13 +19,13 @@ import { Integer } from '../Scalar/Integer';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,91 +33,91 @@ import { Integer } from '../Scalar/Integer';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Invidual data point representing the GQ (genotype quality) score threshold.
                  */
-                Score? : Array<Integer>;
+                score? : Integer[];
                 
 
                 /**
                  * Extensions for score
                  */
-                _score? : Array<Element>;
+                _score? : Element[];
                 
 
                 /**
                  * The number of true positives if the GQ score threshold was set to "score" field value.
                  */
-                NumTP? : Array<Integer>;
+                numTP? : Integer[];
                 
 
                 /**
                  * Extensions for numTP
                  */
-                _numTP? : Array<Element>;
+                _numTP? : Element[];
                 
 
                 /**
                  * The number of false positives if the GQ score threshold was set to "score" field value.
                  */
-                NumFP? : Array<Integer>;
+                numFP? : Integer[];
                 
 
                 /**
                  * Extensions for numFP
                  */
-                _numFP? : Array<Element>;
+                _numFP? : Element[];
                 
 
                 /**
                  * The number of false negatives if the GQ score threshold was set to "score" field value.
                  */
-                NumFN? : Array<Integer>;
+                numFN? : Integer[];
                 
 
                 /**
                  * Extensions for numFN
                  */
-                _numFN? : Array<Element>;
+                _numFN? : Element[];
                 
 
                 /**
                  * Calculated precision if the GQ score threshold was set to "score" field value.
                  */
-                Precision? : Array<Decimal>;
+                precision? : Decimal[];
                 
 
                 /**
                  * Extensions for precision
                  */
-                _precision? : Array<Element>;
+                _precision? : Element[];
                 
 
                 /**
                  * Calculated sensitivity if the GQ score threshold was set to "score" field value.
                  */
-                Sensitivity? : Array<Decimal>;
+                sensitivity? : Decimal[];
                 
 
                 /**
                  * Extensions for sensitivity
                  */
-                _sensitivity? : Array<Element>;
+                _sensitivity? : Element[];
                 
 
                 /**
                  * Calculated fScore if the GQ score threshold was set to "score" field value.
                  */
-                FMeasure? : Array<Decimal>;
+                fMeasure? : Decimal[];
                 
 
                 /**
                  * Extensions for fMeasure
                  */
-                _fMeasure? : Array<Element>;
+                _fMeasure? : Element[];
                 
         }
         

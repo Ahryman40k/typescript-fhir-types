@@ -3,7 +3,7 @@
 import { Extension } from '../Resource/Extension';
 import { Reference } from '../Resource/Reference';
 
-        export enum Linkage_ItemTypeKind {
+        export enum LinkageItemTypeKind {
                 source,
 alternate,
 historical
@@ -15,20 +15,20 @@ historical
         export class Linkage_Item  {
 
             constructor() {
-                this.Resource = new Reference();
+                this.resource = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -36,13 +36,13 @@ historical
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
                  */
-                Type? : Linkage_ItemTypeKind;
+                type? : LinkageItemTypeKind;
                 
 
                 /**
@@ -54,7 +54,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The resource instance being linked as part of the group.
                  */
-                Resource : Reference;
+                resource : Reference;
                 
         }
         

@@ -12,20 +12,20 @@ import { Url } from '../Scalar/Url';
         export class ImplementationGuide_Resource1  {
 
             constructor() {
-                this.Reference = new Reference();
+                this.reference = new Reference();
             }
 
             
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -33,19 +33,19 @@ import { Url } from '../Scalar/Url';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * Where this resource is found.
                  */
-                Reference : Reference;
+                reference : Reference;
                 
 
                 /**
                  * If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.
                  */
-                ExampleBoolean? : Boolean;
+                exampleBoolean? : boolean;
                 
 
                 /**
@@ -57,7 +57,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.
                  */
-                ExampleCanonical? : String;
+                exampleCanonical? : string;
                 
 
                 /**
@@ -69,7 +69,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The relative path for primary page for this resource within the IG.
                  */
-                RelativePath? : Url;
+                relativePath? : Url;
                 
 
                 /**

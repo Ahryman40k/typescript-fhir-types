@@ -29,19 +29,19 @@ composedOf
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
                  * The type of relationship to the related artifact.
                  */
-                Type? : RelatedArtifactTypeKind;
+                type? : RelatedArtifactTypeKind;
                 
 
                 /**
@@ -53,7 +53,7 @@ composedOf
                 /**
                  * A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
                  */
-                Display? : String;
+                display? : string;
                 
 
                 /**
@@ -65,7 +65,7 @@ composedOf
                 /**
                  * A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.
                  */
-                Citation? : String;
+                citation? : string;
                 
 
                 /**
@@ -77,7 +77,7 @@ composedOf
                 /**
                  * A url for the artifact that can be followed to access the actual content.
                  */
-                Url? : Url;
+                url? : Url;
                 
 
                 /**
@@ -89,13 +89,13 @@ composedOf
                 /**
                  * The document being referenced, represented as an attachment. This is exclusive with the resource element.
                  */
-                Document? : Attachment;
+                document? : Attachment;
                 
 
                 /**
                  * The related resource, such as a library, value set, profile, or other knowledge resource.
                  */
-                Resource? : Canonical;
+                resource? : Canonical;
                 
         }
         

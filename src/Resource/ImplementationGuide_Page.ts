@@ -3,7 +3,7 @@
 import { Extension } from '../Resource/Extension';
 import { Reference } from '../Resource/Reference';
 
-        export enum ImplementationGuide_PageGenerationKind {
+        export enum ImplementationGuidePageGenerationKind {
                 html,
 markdown,
 xml,
@@ -23,13 +23,13 @@ generated
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -37,13 +37,13 @@ generated
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The source address for the page.
                  */
-                NameUrl? : String;
+                nameUrl? : string;
                 
 
                 /**
@@ -55,13 +55,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * The source address for the page.
                  */
-                NameReference? : Reference;
+                nameReference? : Reference;
                 
 
                 /**
                  * A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.
                  */
-                Title? : String;
+                title? : string;
                 
 
                 /**
@@ -73,7 +73,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A code that indicates how the page is generated.
                  */
-                Generation? : ImplementationGuide_PageGenerationKind;
+                generation? : ImplementationGuidePageGenerationKind;
                 
 
                 /**
@@ -85,7 +85,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * Nested Pages/Sections under this page.
                  */
-                Page? : Array<ImplementationGuide_Page>;
+                page? : ImplementationGuide_Page[];
                 
         }
         

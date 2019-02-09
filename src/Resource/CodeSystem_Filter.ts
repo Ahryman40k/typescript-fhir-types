@@ -18,13 +18,13 @@ import { Extension } from '../Resource/Extension';
                 /**
                  * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
                  */
-                Id? : String;
+                id? : string;
                 
 
                 /**
                  * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
                  */
-                Extension? : Array<Extension>;
+                extension? : Extension[];
                 
 
                 /**
@@ -32,13 +32,13 @@ import { Extension } from '../Resource/Extension';
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                  */
-                ModifierExtension? : Array<Extension>;
+                modifierExtension? : Extension[];
                 
 
                 /**
                  * The code that identifies this filter when it is used as a filter in [[[ValueSet]]].compose.include.filter.
                  */
-                Code? : Code;
+                code? : Code;
                 
 
                 /**
@@ -50,7 +50,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A description of how or why the filter is used.
                  */
-                Description? : String;
+                description? : string;
                 
 
                 /**
@@ -62,19 +62,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                 /**
                  * A list of operators that can be used with the filter.
                  */
-                Operator? : Array<Code>;
+                operator? : Code[];
                 
 
                 /**
                  * Extensions for operator
                  */
-                _operator? : Array<Element>;
+                _operator? : Element[];
                 
 
                 /**
                  * A description of what the value for the filter should be.
                  */
-                Value? : String;
+                value? : string;
                 
 
                 /**
