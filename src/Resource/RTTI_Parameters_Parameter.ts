@@ -483,7 +483,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         /**
          * If the parameter is a whole resource.
          */
-        resource?: IResourceList;
+        // resource?: IResourceList;
 
 
         /**
@@ -571,7 +571,7 @@ export const RTTI_Parameters_Parameter: t.Type<IParameters_Parameter> = t.recurs
                 valueExpression: RTTI_Expression,
                 valueUsageContext: RTTI_UsageContext,
                 valueDosage: RTTI_Dosage,
-                resource: RTTI_ResourceList,
+                // resource: RTTI_ResourceList,
                 part: t.array(RTTI_Parameters_Parameter)
         })
 

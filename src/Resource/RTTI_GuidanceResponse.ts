@@ -82,7 +82,7 @@ const GuidanceResponseStatusKindKeys = t.keyof({
                     /**
                      * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
                      */
-                    contained? : IResourceList[];
+                    // contained? : IResourceList[];
                     
 
                     /**
@@ -244,7 +244,7 @@ _implicitRules: RTTI_Element,
 language: t.string,
 _language: RTTI_Element,
 text: RTTI_Narrative,
-contained: t.array(RTTI_ResourceList),
+// contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 requestIdentifier: RTTI_Identifier,

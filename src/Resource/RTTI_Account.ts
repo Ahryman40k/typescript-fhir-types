@@ -81,7 +81,7 @@ export interface IAccount {
     /**
      * These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
      */
-    contained?: IResourceList[];
+    // contained?: IResourceList[];
 
 
     /**
@@ -201,7 +201,7 @@ export const RTTI_Account: t.Type<IAccount> = t.recursion('IAccount', () =>
             language: t.string,
             _language: RTTI_Element,
             text: RTTI_Narrative,
-            contained: t.array(RTTI_ResourceList),
+            // contained: t.array(RTTI_ResourceList),
             extension: t.array(RTTI_Extension),
             modifierExtension: t.array(RTTI_Extension),
             identifier: t.array(RTTI_Identifier),

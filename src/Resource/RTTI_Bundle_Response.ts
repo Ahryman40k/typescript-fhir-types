@@ -81,7 +81,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         /**
          * An OperationOutcome containing hints and warnings produced as part of processing this entry in a batch or transaction.
          */
-        outcome?: IResourceList;
+        // outcome?: IResourceList;
 
 }
 
@@ -101,7 +101,7 @@ export const RTTI_Bundle_Response: t.Type<IBundle_Response> = t.recursion('IBund
                 _etag: RTTI_Element,
                 lastModified: t.string,
                 _lastModified: RTTI_Element,
-                outcome: RTTI_ResourceList
+                // outcome: RTTI_ResourceList
         })
 
 );

@@ -57,7 +57,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
         /**
          * The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.
          */
-        resource?: IResourceList;
+        // resource?: IResourceList;
 
 
         /**
@@ -90,7 +90,7 @@ export const RTTI_Bundle_Entry: t.Type<IBundle_Entry> = t.recursion('IBundle_Ent
                 link: t.array(RTTI_Bundle_Link),
                 fullUrl: t.string,
                 _fullUrl: RTTI_Element,
-                resource: RTTI_ResourceList,
+                // resource: RTTI_ResourceList,
                 search: RTTI_Bundle_Search,
                 request: RTTI_Bundle_Request,
                 response: RTTI_Bundle_Response

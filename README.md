@@ -118,3 +118,10 @@ const  obs: IObservation = <IObservation> schemaValidationResult.value;
 FHIR resources are also provided as interface, so you can inherit and implement your own object implementation. 
 
 Please don't hesitate to give me advice and feedback !
+
+# Remarks
+
+**Please be carefull:** Until now I encounter an issue with io-ts union. So I remove any references to Resources type union. It means some attributes like contained property have been removed from model. 
+Help me to solve that issue ! So I can reactivate back.
+---
+
