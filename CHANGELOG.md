@@ -2,6 +2,9 @@
 - Implement FHIR Resources with io-ts
 - You can now validate your json and strongly type data.  
 
+**known limitation**
+Currently an issue occurs with io-ts union that prevent the use caontained property of FHIR Resources. So for now there are deactivated.
+
 # 4.0.1
 - Fix: properties are now lowercase as FHIR spec 
 - Fix: Enum generation 
