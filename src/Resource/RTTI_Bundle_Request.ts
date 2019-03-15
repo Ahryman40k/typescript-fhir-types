@@ -1,7 +1,7 @@
 
 import * as t from 'io-ts';
-import {RTTI_Extension} from './RTTI_Extension';
-import {RTTI_Element} from './RTTI_Element';
+import {RTTI_Extension, IExtension} from './RTTI_Extension';
+import {RTTI_Element, IElement} from './RTTI_Element';
 
 export enum Bundle_RequestMethodKind {
                 get = 'get',
@@ -21,12 +21,107 @@ const Bundle_RequestMethodKindKeys = t.keyof({
             });
 
 
-        const mandatory = t.type({
-           
-        });
+            export interface IBundle_Request {
+                
+                
+                    /**
+                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+                     */
+                    id? : string;
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+                     */
+                    extension? : IExtension[];
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+                     */
+                    modifierExtension? : IExtension[];
+                    
+
+                    /**
+                     * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
+                     */
+                    method? : Bundle_RequestMethodKind;
+                    
+
+                    /**
+                     * Extensions for method
+                     */
+                    _method? : IElement;
+                    
+
+                    /**
+                     * The URL for this entry, relative to the root (the address to which the request is posted).
+                     */
+                    url? : string;
+                    
+
+                    /**
+                     * Extensions for url
+                     */
+                    _url? : IElement;
+                    
+
+                    /**
+                     * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
+                     */
+                    ifNoneMatch? : string;
+                    
+
+                    /**
+                     * Extensions for ifNoneMatch
+                     */
+                    _ifNoneMatch? : IElement;
+                    
+
+                    /**
+                     * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
+                     */
+                    ifModifiedSince? : string;
+                    
+
+                    /**
+                     * Extensions for ifModifiedSince
+                     */
+                    _ifModifiedSince? : IElement;
+                    
+
+                    /**
+                     * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
+                     */
+                    ifMatch? : string;
+                    
+
+                    /**
+                     * Extensions for ifMatch
+                     */
+                    _ifMatch? : IElement;
+                    
+
+                    /**
+                     * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
+                     */
+                    ifNoneExist? : string;
+                    
+
+                    /**
+                     * Extensions for ifNoneExist
+                     */
+                    _ifNoneExist? : IElement;
+                    
+            }
         
 
-        const partial = t.partial({
+
+        export const RTTI_Bundle_Request: t.Type<IBundle_Request> = t.recursion( 'IBundle_Request', () =>
+                
+        t.partial({
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
@@ -42,12 +137,9 @@ ifMatch: t.string,
 _ifMatch: RTTI_Element,
 ifNoneExist: t.string,
 _ifNoneExist: RTTI_Element
-        });
+        })
+        
+        );
         
 
-        export var RTTI_Bundle_Request:any = t.intersection([mandatory, partial]);
-        
-
-export type IBundle_Request = t.TypeOf<typeof RTTI_Bundle_Request>;
-        
         

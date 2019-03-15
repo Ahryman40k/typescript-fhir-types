@@ -1,19 +1,102 @@
 
 import * as t from 'io-ts';
-import {RTTI_Extension} from './RTTI_Extension';
-import {RTTI_Element} from './RTTI_Element';
-import {RTTI_ExampleScenario_Version} from './RTTI_ExampleScenario_Version';
-import {RTTI_ExampleScenario_ContainedInstance} from './RTTI_ExampleScenario_ContainedInstance';
+import {RTTI_Extension, IExtension} from './RTTI_Extension';
+import {RTTI_Element, IElement} from './RTTI_Element';
+import {RTTI_ExampleScenario_Version, IExampleScenario_Version} from './RTTI_ExampleScenario_Version';
+import {RTTI_ExampleScenario_ContainedInstance, IExampleScenario_ContainedInstance} from './RTTI_ExampleScenario_ContainedInstance';
 
 
 
 
-        const mandatory = t.type({
-           
-        });
+            export interface IExampleScenario_Instance {
+                
+                
+                    /**
+                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+                     */
+                    id? : string;
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+                     */
+                    extension? : IExtension[];
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+                     */
+                    modifierExtension? : IExtension[];
+                    
+
+                    /**
+                     * The id of the resource for referencing.
+                     */
+                    resourceId? : string;
+                    
+
+                    /**
+                     * Extensions for resourceId
+                     */
+                    _resourceId? : IElement;
+                    
+
+                    /**
+                     * The type of the resource.
+                     */
+                    resourceType? : string;
+                    
+
+                    /**
+                     * Extensions for resourceType
+                     */
+                    _resourceType? : IElement;
+                    
+
+                    /**
+                     * A short name for the resource instance.
+                     */
+                    name? : string;
+                    
+
+                    /**
+                     * Extensions for name
+                     */
+                    _name? : IElement;
+                    
+
+                    /**
+                     * Human-friendly description of the resource instance.
+                     */
+                    description? : string;
+                    
+
+                    /**
+                     * Extensions for description
+                     */
+                    _description? : IElement;
+                    
+
+                    /**
+                     * A specific version of the resource.
+                     */
+                    version? : IExampleScenario_Version[];
+                    
+
+                    /**
+                     * Resources contained in the instance (e.g. the observations contained in a bundle).
+                     */
+                    containedInstance? : IExampleScenario_ContainedInstance[];
+                    
+            }
         
 
-        const partial = t.partial({
+
+        export const RTTI_ExampleScenario_Instance: t.Type<IExampleScenario_Instance> = t.recursion( 'IExampleScenario_Instance', () =>
+                
+        t.partial({
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
@@ -27,12 +110,9 @@ description: t.string,
 _description: RTTI_Element,
 version: t.array(RTTI_ExampleScenario_Version),
 containedInstance: t.array(RTTI_ExampleScenario_ContainedInstance)
-        });
+        })
+        
+        );
         
 
-        export var RTTI_ExampleScenario_Instance:any = t.intersection([mandatory, partial]);
-        
-
-export type IExampleScenario_Instance = t.TypeOf<typeof RTTI_ExampleScenario_Instance>;
-        
         

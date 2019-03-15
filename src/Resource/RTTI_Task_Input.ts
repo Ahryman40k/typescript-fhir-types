@@ -1,47 +1,489 @@
 
 import * as t from 'io-ts';
-import {RTTI_Extension} from './RTTI_Extension';
-import {RTTI_CodeableConcept} from './RTTI_CodeableConcept';
-import {RTTI_Element} from './RTTI_Element';
-import {RTTI_Address} from './RTTI_Address';
-import {RTTI_Age} from './RTTI_Age';
-import {RTTI_Annotation} from './RTTI_Annotation';
-import {RTTI_Attachment} from './RTTI_Attachment';
-import {RTTI_Coding} from './RTTI_Coding';
-import {RTTI_ContactPoint} from './RTTI_ContactPoint';
-import {RTTI_Count} from './RTTI_Count';
-import {RTTI_Distance} from './RTTI_Distance';
-import {RTTI_Duration} from './RTTI_Duration';
-import {RTTI_HumanName} from './RTTI_HumanName';
-import {RTTI_Identifier} from './RTTI_Identifier';
-import {RTTI_Money} from './RTTI_Money';
-import {RTTI_Period} from './RTTI_Period';
-import {RTTI_Quantity} from './RTTI_Quantity';
-import {RTTI_Range} from './RTTI_Range';
-import {RTTI_Ratio} from './RTTI_Ratio';
-import {RTTI_Reference} from './RTTI_Reference';
-import {RTTI_SampledData} from './RTTI_SampledData';
-import {RTTI_Signature} from './RTTI_Signature';
-import {RTTI_Timing} from './RTTI_Timing';
-import {RTTI_ParameterDefinition} from './RTTI_ParameterDefinition';
-import {RTTI_DataRequirement} from './RTTI_DataRequirement';
-import {RTTI_RelatedArtifact} from './RTTI_RelatedArtifact';
-import {RTTI_ContactDetail} from './RTTI_ContactDetail';
-import {RTTI_Contributor} from './RTTI_Contributor';
-import {RTTI_TriggerDefinition} from './RTTI_TriggerDefinition';
-import {RTTI_Expression} from './RTTI_Expression';
-import {RTTI_UsageContext} from './RTTI_UsageContext';
-import {RTTI_Dosage} from './RTTI_Dosage';
+import {RTTI_Extension, IExtension} from './RTTI_Extension';
+import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
+import {RTTI_Element, IElement} from './RTTI_Element';
+import {RTTI_Address, IAddress} from './RTTI_Address';
+import {RTTI_Age, IAge} from './RTTI_Age';
+import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
+import {RTTI_Attachment, IAttachment} from './RTTI_Attachment';
+import {RTTI_Coding, ICoding} from './RTTI_Coding';
+import {RTTI_ContactPoint, IContactPoint} from './RTTI_ContactPoint';
+import {RTTI_Count, ICount} from './RTTI_Count';
+import {RTTI_Distance, IDistance} from './RTTI_Distance';
+import {RTTI_Duration, IDuration} from './RTTI_Duration';
+import {RTTI_HumanName, IHumanName} from './RTTI_HumanName';
+import {RTTI_Identifier, IIdentifier} from './RTTI_Identifier';
+import {RTTI_Money, IMoney} from './RTTI_Money';
+import {RTTI_Period, IPeriod} from './RTTI_Period';
+import {RTTI_Quantity, IQuantity} from './RTTI_Quantity';
+import {RTTI_Range, IRange} from './RTTI_Range';
+import {RTTI_Ratio, IRatio} from './RTTI_Ratio';
+import {RTTI_Reference, IReference} from './RTTI_Reference';
+import {RTTI_SampledData, ISampledData} from './RTTI_SampledData';
+import {RTTI_Signature, ISignature} from './RTTI_Signature';
+import {RTTI_Timing, ITiming} from './RTTI_Timing';
+import {RTTI_ParameterDefinition, IParameterDefinition} from './RTTI_ParameterDefinition';
+import {RTTI_DataRequirement, IDataRequirement} from './RTTI_DataRequirement';
+import {RTTI_RelatedArtifact, IRelatedArtifact} from './RTTI_RelatedArtifact';
+import {RTTI_ContactDetail, IContactDetail} from './RTTI_ContactDetail';
+import {RTTI_Contributor, IContributor} from './RTTI_Contributor';
+import {RTTI_TriggerDefinition, ITriggerDefinition} from './RTTI_TriggerDefinition';
+import {RTTI_Expression, IExpression} from './RTTI_Expression';
+import {RTTI_UsageContext, IUsageContext} from './RTTI_UsageContext';
+import {RTTI_Dosage, IDosage} from './RTTI_Dosage';
 
 
 
 
-        const mandatory = t.type({
-           type: RTTI_CodeableConcept
-        });
+            export interface ITask_Input {
+                
+                    /**
+                     * A code or description indicating how the input is intended to be used as part of the task execution.
+                     */
+                    type : ICodeableConcept;
+                    
+                
+                    /**
+                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+                     */
+                    id? : string;
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+                     */
+                    extension? : IExtension[];
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+                     */
+                    modifierExtension? : IExtension[];
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueBase64Binary? : string;
+                    
+
+                    /**
+                     * Extensions for valueBase64Binary
+                     */
+                    _valueBase64Binary? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueBoolean? : boolean;
+                    
+
+                    /**
+                     * Extensions for valueBoolean
+                     */
+                    _valueBoolean? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueCanonical? : string;
+                    
+
+                    /**
+                     * Extensions for valueCanonical
+                     */
+                    _valueCanonical? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueCode? : string;
+                    
+
+                    /**
+                     * Extensions for valueCode
+                     */
+                    _valueCode? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDate? : string;
+                    
+
+                    /**
+                     * Extensions for valueDate
+                     */
+                    _valueDate? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDateTime? : string;
+                    
+
+                    /**
+                     * Extensions for valueDateTime
+                     */
+                    _valueDateTime? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDecimal? : number;
+                    
+
+                    /**
+                     * Extensions for valueDecimal
+                     */
+                    _valueDecimal? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueId? : string;
+                    
+
+                    /**
+                     * Extensions for valueId
+                     */
+                    _valueId? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueInstant? : string;
+                    
+
+                    /**
+                     * Extensions for valueInstant
+                     */
+                    _valueInstant? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueInteger? : number;
+                    
+
+                    /**
+                     * Extensions for valueInteger
+                     */
+                    _valueInteger? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueMarkdown? : string;
+                    
+
+                    /**
+                     * Extensions for valueMarkdown
+                     */
+                    _valueMarkdown? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueOid? : string;
+                    
+
+                    /**
+                     * Extensions for valueOid
+                     */
+                    _valueOid? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valuePositiveInt? : number;
+                    
+
+                    /**
+                     * Extensions for valuePositiveInt
+                     */
+                    _valuePositiveInt? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueString? : string;
+                    
+
+                    /**
+                     * Extensions for valueString
+                     */
+                    _valueString? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueTime? : string;
+                    
+
+                    /**
+                     * Extensions for valueTime
+                     */
+                    _valueTime? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueUnsignedInt? : number;
+                    
+
+                    /**
+                     * Extensions for valueUnsignedInt
+                     */
+                    _valueUnsignedInt? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueUri? : string;
+                    
+
+                    /**
+                     * Extensions for valueUri
+                     */
+                    _valueUri? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueUrl? : string;
+                    
+
+                    /**
+                     * Extensions for valueUrl
+                     */
+                    _valueUrl? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueUuid? : string;
+                    
+
+                    /**
+                     * Extensions for valueUuid
+                     */
+                    _valueUuid? : IElement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueAddress? : IAddress;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueAge? : IAge;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueAnnotation? : IAnnotation;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueAttachment? : IAttachment;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueCodeableConcept? : ICodeableConcept;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueCoding? : ICoding;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueContactPoint? : IContactPoint;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueCount? : ICount;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDistance? : IDistance;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDuration? : IDuration;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueHumanName? : IHumanName;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueIdentifier? : IIdentifier;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueMoney? : IMoney;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valuePeriod? : IPeriod;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueQuantity? : IQuantity;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueRange? : IRange;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueRatio? : IRatio;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueReference? : IReference;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueSampledData? : ISampledData;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueSignature? : ISignature;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueTiming? : ITiming;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueParameterDefinition? : IParameterDefinition;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDataRequirement? : IDataRequirement;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueRelatedArtifact? : IRelatedArtifact;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueContactDetail? : IContactDetail;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueContributor? : IContributor;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueTriggerDefinition? : ITriggerDefinition;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueExpression? : IExpression;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueUsageContext? : IUsageContext;
+                    
+
+                    /**
+                     * The value of the input parameter as a basic type.
+                     */
+                    valueDosage? : IDosage;
+                    
+            }
         
 
-        const partial = t.partial({
+
+        export const RTTI_Task_Input: t.Type<ITask_Input> = t.recursion( 'ITask_Input', () =>
+            t.intersection([
+                
+        t.type({
+           type: RTTI_CodeableConcept
+        })
+        ,
+                
+        t.partial({
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
@@ -113,12 +555,10 @@ valueTriggerDefinition: RTTI_TriggerDefinition,
 valueExpression: RTTI_Expression,
 valueUsageContext: RTTI_UsageContext,
 valueDosage: RTTI_Dosage
-        });
+        })
+        
+            ])
+        );
         
 
-        export var RTTI_Task_Input:any = t.intersection([mandatory, partial]);
-        
-
-export type ITask_Input = t.TypeOf<typeof RTTI_Task_Input>;
-        
         

@@ -7,7 +7,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
-    "test": "jest --detectOpenHandles --forceExit --runInBand",
+    "test": "jest",
     "publish-me": "npm version patch && tsc -p . && npm publish "
   },
   "repository": {
@@ -17,7 +17,10 @@
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^3.1.6"
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
   },
   "files": [
     "lib"

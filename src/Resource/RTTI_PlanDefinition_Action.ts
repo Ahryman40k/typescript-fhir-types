@@ -1,21 +1,21 @@
 
 import * as t from 'io-ts';
-import {RTTI_Extension} from './RTTI_Extension';
-import {RTTI_Element} from './RTTI_Element';
-import {RTTI_CodeableConcept} from './RTTI_CodeableConcept';
-import {RTTI_RelatedArtifact} from './RTTI_RelatedArtifact';
+import {RTTI_Extension, IExtension} from './RTTI_Extension';
+import {RTTI_Element, IElement} from './RTTI_Element';
+import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
+import {RTTI_RelatedArtifact, IRelatedArtifact} from './RTTI_RelatedArtifact';
 
-import {RTTI_TriggerDefinition} from './RTTI_TriggerDefinition';
-import {RTTI_PlanDefinition_Condition} from './RTTI_PlanDefinition_Condition';
-import {RTTI_DataRequirement} from './RTTI_DataRequirement';
-import {RTTI_PlanDefinition_RelatedAction} from './RTTI_PlanDefinition_RelatedAction';
-import {RTTI_Age} from './RTTI_Age';
-import {RTTI_Period} from './RTTI_Period';
-import {RTTI_Duration} from './RTTI_Duration';
-import {RTTI_Range} from './RTTI_Range';
-import {RTTI_Timing} from './RTTI_Timing';
-import {RTTI_PlanDefinition_Participant} from './RTTI_PlanDefinition_Participant';
-import {RTTI_PlanDefinition_DynamicValue} from './RTTI_PlanDefinition_DynamicValue';
+import {RTTI_TriggerDefinition, ITriggerDefinition} from './RTTI_TriggerDefinition';
+import {RTTI_PlanDefinition_Condition, IPlanDefinition_Condition} from './RTTI_PlanDefinition_Condition';
+import {RTTI_DataRequirement, IDataRequirement} from './RTTI_DataRequirement';
+import {RTTI_PlanDefinition_RelatedAction, IPlanDefinition_RelatedAction} from './RTTI_PlanDefinition_RelatedAction';
+import {RTTI_Age, IAge} from './RTTI_Age';
+import {RTTI_Period, IPeriod} from './RTTI_Period';
+import {RTTI_Duration, IDuration} from './RTTI_Duration';
+import {RTTI_Range, IRange} from './RTTI_Range';
+import {RTTI_Timing, ITiming} from './RTTI_Timing';
+import {RTTI_PlanDefinition_Participant, IPlanDefinition_Participant} from './RTTI_PlanDefinition_Participant';
+import {RTTI_PlanDefinition_DynamicValue, IPlanDefinition_DynamicValue} from './RTTI_PlanDefinition_DynamicValue';
 
 export enum PlanDefinition_ActionGroupingBehaviorKind {
                 visualGroup = 'visualGroup',
@@ -71,12 +71,293 @@ const PlanDefinition_ActionCardinalityBehaviorKindKeys = t.keyof({
             });
 
 
-        const mandatory = t.type({
-           
-        });
+            export interface IPlanDefinition_Action {
+                
+                
+                    /**
+                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+                     */
+                    id? : string;
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+                     */
+                    extension? : IExtension[];
+                    
+
+                    /**
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
+                     */
+                    modifierExtension? : IExtension[];
+                    
+
+                    /**
+                     * A user-visible prefix for the action.
+                     */
+                    prefix? : string;
+                    
+
+                    /**
+                     * Extensions for prefix
+                     */
+                    _prefix? : IElement;
+                    
+
+                    /**
+                     * The title of the action displayed to a user.
+                     */
+                    title? : string;
+                    
+
+                    /**
+                     * Extensions for title
+                     */
+                    _title? : IElement;
+                    
+
+                    /**
+                     * A brief description of the action used to provide a summary to display to the user.
+                     */
+                    description? : string;
+                    
+
+                    /**
+                     * Extensions for description
+                     */
+                    _description? : IElement;
+                    
+
+                    /**
+                     * A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that might not be capable of interpreting it dynamically.
+                     */
+                    textEquivalent? : string;
+                    
+
+                    /**
+                     * Extensions for textEquivalent
+                     */
+                    _textEquivalent? : IElement;
+                    
+
+                    /**
+                     * Indicates how quickly the action should be addressed with respect to other actions.
+                     */
+                    priority? : string;
+                    
+
+                    /**
+                     * Extensions for priority
+                     */
+                    _priority? : IElement;
+                    
+
+                    /**
+                     * A code that provides meaning for the action or action group. For example, a section may have a LOINC code for the section of a documentation template.
+                     */
+                    code? : ICodeableConcept[];
+                    
+
+                    /**
+                     * A description of why this action is necessary or appropriate.
+                     */
+                    reason? : ICodeableConcept[];
+                    
+
+                    /**
+                     * Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.
+                     */
+                    documentation? : IRelatedArtifact[];
+                    
+
+                    /**
+                     * Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition.
+                     */
+                    goalId? : string[];
+                    
+
+                    /**
+                     * Extensions for goalId
+                     */
+                    _goalId? : IElement[];
+                    
+
+                    /**
+                     * A description of when the action should be triggered.
+                     */
+                    trigger? : ITriggerDefinition[];
+                    
+
+                    /**
+                     * An expression that describes applicability criteria or start/stop conditions for the action.
+                     */
+                    condition? : IPlanDefinition_Condition[];
+                    
+
+                    /**
+                     * Defines input data requirements for the action.
+                     */
+                    input? : IDataRequirement[];
+                    
+
+                    /**
+                     * Defines the outputs of the action, if any.
+                     */
+                    output? : IDataRequirement[];
+                    
+
+                    /**
+                     * A relationship to another action such as "before" or "30-60 minutes after start of".
+                     */
+                    relatedAction? : IPlanDefinition_RelatedAction[];
+                    
+
+                    /**
+                     * An optional value describing when the action should be performed.
+                     */
+                    timingDateTime? : string;
+                    
+
+                    /**
+                     * Extensions for timingDateTime
+                     */
+                    _timingDateTime? : IElement;
+                    
+
+                    /**
+                     * An optional value describing when the action should be performed.
+                     */
+                    timingAge? : IAge;
+                    
+
+                    /**
+                     * An optional value describing when the action should be performed.
+                     */
+                    timingPeriod? : IPeriod;
+                    
+
+                    /**
+                     * An optional value describing when the action should be performed.
+                     */
+                    timingDuration? : IDuration;
+                    
+
+                    /**
+                     * An optional value describing when the action should be performed.
+                     */
+                    timingRange? : IRange;
+                    
+
+                    /**
+                     * An optional value describing when the action should be performed.
+                     */
+                    timingTiming? : ITiming;
+                    
+
+                    /**
+                     * Indicates who should participate in performing the action described.
+                     */
+                    participant? : IPlanDefinition_Participant[];
+                    
+
+                    /**
+                     * The type of action to perform (create, update, remove).
+                     */
+                    type? : ICodeableConcept;
+                    
+
+                    /**
+                     * Defines the grouping behavior for the action and its children.
+                     */
+                    groupingBehavior? : PlanDefinition_ActionGroupingBehaviorKind;
+                    
+
+                    /**
+                     * Extensions for groupingBehavior
+                     */
+                    _groupingBehavior? : IElement;
+                    
+
+                    /**
+                     * Defines the selection behavior for the action and its children.
+                     */
+                    selectionBehavior? : PlanDefinition_ActionSelectionBehaviorKind;
+                    
+
+                    /**
+                     * Extensions for selectionBehavior
+                     */
+                    _selectionBehavior? : IElement;
+                    
+
+                    /**
+                     * Defines the required behavior for the action.
+                     */
+                    requiredBehavior? : PlanDefinition_ActionRequiredBehaviorKind;
+                    
+
+                    /**
+                     * Extensions for requiredBehavior
+                     */
+                    _requiredBehavior? : IElement;
+                    
+
+                    /**
+                     * Defines whether the action should usually be preselected.
+                     */
+                    precheckBehavior? : PlanDefinition_ActionPrecheckBehaviorKind;
+                    
+
+                    /**
+                     * Extensions for precheckBehavior
+                     */
+                    _precheckBehavior? : IElement;
+                    
+
+                    /**
+                     * Defines whether the action can be selected multiple times.
+                     */
+                    cardinalityBehavior? : PlanDefinition_ActionCardinalityBehaviorKind;
+                    
+
+                    /**
+                     * Extensions for cardinalityBehavior
+                     */
+                    _cardinalityBehavior? : IElement;
+                    
+
+                    /**
+                     * A reference to an ActivityDefinition that describes the action to be taken in detail, or a PlanDefinition that describes a series of actions to be taken.
+                     */
+                    definition? : string;
+                    
+
+                    /**
+                     * A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input.
+                     */
+                    transform? : string;
+                    
+
+                    /**
+                     * Customizations that should be applied to the statically defined resource. For example, if the dosage of a medication must be computed based on the patient's weight, a customization would be used to specify an expression that calculated the weight, and the path on the resource that would contain the result.
+                     */
+                    dynamicValue? : IPlanDefinition_DynamicValue[];
+                    
+
+                    /**
+                     * Sub actions that are contained within the action. The behavior of this action determines the functionality of the sub-actions. For example, a selection behavior of at-most-one indicates that of the sub-actions, at most one may be chosen as part of realizing the action definition.
+                     */
+                    action? : IPlanDefinition_Action[];
+                    
+            }
         
 
-        const partial = t.partial({
+
+        export const RTTI_PlanDefinition_Action: t.Type<IPlanDefinition_Action> = t.recursion( 'IPlanDefinition_Action', () =>
+                
+        t.partial({
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
@@ -123,12 +404,9 @@ definition: t.string,
 transform: t.string,
 dynamicValue: t.array(RTTI_PlanDefinition_DynamicValue),
 action: t.array(RTTI_PlanDefinition_Action)
-        });
+        })
+        
+        );
         
 
-        export var RTTI_PlanDefinition_Action:any = t.intersection([mandatory, partial]);
-        
-
-export type IPlanDefinition_Action = t.TypeOf<typeof RTTI_PlanDefinition_Action>;
-        
         
