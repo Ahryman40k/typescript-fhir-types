@@ -1,5 +1,5 @@
 
-import { RTTI_Account_Guarantor } from "../Resource/RTTI_Account_Guarantor";
+import { RTTI_Account_Guarantor } from "../R4/Resource/RTTI_Account_Guarantor";
 
 describe('Account Guarantor', () => {
   test('should decode a valid object', () => {

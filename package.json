@@ -26,6 +26,7 @@
     "lib"
   ],
   "dependencies": {
-    "io-ts": "^1.8.2"
+    "io-ts": "^1.8.2",
+    "w3c-validate": "0.0.2"
   }
 }

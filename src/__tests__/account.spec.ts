@@ -1,4 +1,4 @@
-import { RTTI_Account } from "../Resource/RTTI_Account";
+import { RTTI_Account } from "../R4/Resource/RTTI_Account";
 import * as account_example from './samples/account-example.json';
 import * as account_example_with_guarantor from './samples/account-example-with-guarantor.json';
 

@@ -1,4 +1,4 @@
-import { RTTI_Account_Coverage } from "../Resource/RTTI_Account_Coverage";
+import { RTTI_Account_Coverage } from "../R4/Resource/RTTI_Account_Coverage";
 
 describe('Account Coverage', () => {
   test('should decode a valid object', () => {
