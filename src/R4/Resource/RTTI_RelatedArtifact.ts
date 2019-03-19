@@ -3,6 +3,10 @@ import * as t from 'io-ts';
 import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Element, IElement } from './RTTI_Element';
 import { RTTI_Attachment, IAttachment } from './RTTI_Attachment';
+import { createEnumType } from '../../EnumType';
+
+
+
 
 export enum RelatedArtifactTypeKind {
         documentation = 'documentation',
@@ -14,6 +18,7 @@ export enum RelatedArtifactTypeKind {
         dependsOn = 'depends-on',
         composedOf = 'composed-of'
 }
+/*
 const RelatedArtifactTypeKindKeys = t.keyof({
         [RelatedArtifactTypeKind.documentation]: null,
         [RelatedArtifactTypeKind.justification]: null,
@@ -24,6 +29,8 @@ const RelatedArtifactTypeKindKeys = t.keyof({
         [RelatedArtifactTypeKind.dependsOn]: null,
         [RelatedArtifactTypeKind.composedOf]: null
 });
+*/
+
 
 
 export interface IRelatedArtifact {
@@ -109,7 +116,7 @@ export const RTTI_RelatedArtifact: t.Type<IRelatedArtifact> = t.recursion('IRela
         t.partial({
                 id: t.string,
                 extension: t.array(RTTI_Extension),
-                type: RelatedArtifactTypeKindKeys,
+                type: createEnumType<RelatedArtifactTypeKind>(RelatedArtifactTypeKind, 'RelatedArtifactTypeKind'),
                 _type: RTTI_Element,
                 display: t.string,
                 _display: RTTI_Element,

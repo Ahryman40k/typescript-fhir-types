@@ -13,32 +13,33 @@ import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_Range, IRange } from './RTTI_Range';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
 import { RTTI_AllergyIntolerance_Reaction, IAllergyIntolerance_Reaction } from './RTTI_AllergyIntolerance_Reaction';
+import { createEnumType } from '../../EnumType';
 
 export enum AllergyIntoleranceCategoryKind {
-    food = 'food',
-    medication = 'medication',
-    environment = 'environment',
-    biologic = 'biologic'
-}
+                food = 'food',
+medication = 'medication',
+environment = 'environment',
+biologic = 'biologic'
+            }
 export enum AllergyIntoleranceClinicalStatusKind {
-    active = 'active',
-    inactive = 'inactive',
-    resolved = 'resolved'
-}
+                active = 'active',
+inactive = 'inactive',
+resolved = 'resolved'
+            }
 export enum AllergyIntoleranceVerificationStatusKind {
-    unconfirmed = 'unconfirmed',
-    confirmed = 'confirmed',
-    refuted = 'refuted',
-    enteredInError = 'enteredInError'
-}
+                unconfirmed = 'unconfirmed',
+confirmed = 'confirmed',
+refuted = 'refuted',
+enteredInError = 'entered-in-error'
+            }
 export enum AllergyIntoleranceTypeKind {
-    allergy = 'allergy',
-    intolerance = 'intolerance'
-}
+                allergy = 'allergy',
+intolerance = 'intolerance'
+            }
 export enum AllergyIntoleranceCriticalityKind {
     low = 'low',
     high = 'high',
-    unableToAssess = 'unableToAssess'
+    unableToAssess = 'unable-to-assess'
 }
 const AllergyIntoleranceCategoryKindKeys = t.keyof({
     [AllergyIntoleranceCategoryKind.food]: null,
@@ -338,13 +339,13 @@ export const RTTI_AllergyIntolerance: t.Type<IAllergyIntolerance> = t.recursion(
             identifier: t.array(RTTI_Identifier),
             clinicalStatus: AllergyIntoleranceClinicalStatusKindKeys,
             _clinicalStatus: RTTI_Element,
-            verificationStatus: AllergyIntoleranceVerificationStatusKindKeys,
+            verificationStatus: createEnumType<AllergyIntoleranceVerificationStatusKind>(AllergyIntoleranceVerificationStatusKind,'AllergyIntoleranceVerificationStatusKind'),
             _verificationStatus: RTTI_Element,
             type: AllergyIntoleranceTypeKindKeys,
             _type: RTTI_Element,
             category: t.array(AllergyIntoleranceCategoryKindKeys),
             _category: t.array(RTTI_Element),
-            criticality: AllergyIntoleranceCriticalityKindKeys,
+            criticality: createEnumType<AllergyIntoleranceCriticalityKind>(AllergyIntoleranceCriticalityKind, 'AllergyIntoleranceCriticalityKind'),
             _criticality: RTTI_Element,
             code: RTTI_CodeableConcept,
             encounter: RTTI_Reference,

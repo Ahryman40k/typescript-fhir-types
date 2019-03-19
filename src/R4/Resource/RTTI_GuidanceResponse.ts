@@ -10,14 +10,15 @@ import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_Reference, IReference} from './RTTI_Reference';
 import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
 import {RTTI_DataRequirement, IDataRequirement} from './RTTI_DataRequirement';
+import { createEnumType } from '../../EnumType'
 
 export enum GuidanceResponseStatusKind {
                 success = 'success',
-dataRequested = 'dataRequested',
-dataRequired = 'dataRequired',
-inProgress = 'inProgress',
+dataRequested = 'data-requested',
+dataRequired = 'data-required',
+inProgress = 'in-progress',
 failure = 'failure',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
 const GuidanceResponseStatusKindKeys = t.keyof({
                 [GuidanceResponseStatusKind.success]: null,
@@ -254,7 +255,7 @@ _moduleUri: RTTI_Element,
 moduleCanonical: t.string,
 _moduleCanonical: RTTI_Element,
 moduleCodeableConcept: RTTI_CodeableConcept,
-status: GuidanceResponseStatusKindKeys,
+status: createEnumType<GuidanceResponseStatusKind>(GuidanceResponseStatusKind, 'GuidanceResponseStatusKind'),
 _status: RTTI_Element,
 subject: RTTI_Reference,
 context: RTTI_Reference,

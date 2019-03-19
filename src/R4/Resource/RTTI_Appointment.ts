@@ -10,6 +10,7 @@ import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_Appointment_Participant, IAppointment_Participant } from './RTTI_Appointment_Participant';
 import { RTTI_Period, IPeriod } from './RTTI_Period';
+import { createEnumType } from '../../EnumType'
 
 export enum AppointmentStatusKind {
     proposed = 'proposed',
@@ -19,9 +20,10 @@ export enum AppointmentStatusKind {
     fulfilled = 'fulfilled',
     cancelled = 'cancelled',
     noshow = 'noshow',
-    enteredInError = 'enteredInError',
-    checkedIn = 'checkedIn'
+    enteredInError = 'entered-in-error',
+    checkedIn = 'checked-in'
 }
+/*
 const AppointmentStatusKindKeys = t.keyof({
     [AppointmentStatusKind.proposed]: null,
     [AppointmentStatusKind.pending]: null,
@@ -32,7 +34,7 @@ const AppointmentStatusKindKeys = t.keyof({
     [AppointmentStatusKind.noshow]: null,
     [AppointmentStatusKind.enteredInError]: null,
     [AppointmentStatusKind.checkedIn]: null
-});
+});*/
 
 
 export interface IAppointment {
@@ -298,7 +300,7 @@ export const RTTI_Appointment: t.Type<IAppointment> = t.recursion('IAppointment'
             extension: t.array(RTTI_Extension),
             modifierExtension: t.array(RTTI_Extension),
             identifier: t.array(RTTI_Identifier),
-            status: AppointmentStatusKindKeys,
+            status: createEnumType<AppointmentStatusKind>(AppointmentStatusKind, 'AppointmentStatusKind'),
             _status: RTTI_Element,
             serviceCategory: t.array(RTTI_CodeableConcept),
             serviceType: t.array(RTTI_CodeableConcept),

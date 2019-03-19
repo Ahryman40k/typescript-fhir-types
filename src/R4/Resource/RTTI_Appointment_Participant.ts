@@ -5,18 +5,19 @@ import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_Element, IElement } from './RTTI_Element';
 import { RTTI_Period, IPeriod } from './RTTI_Period';
+import { createEnumType } from '../../EnumType';
 
 export enum Appointment_ParticipantRequiredKind {
     required = 'required',
     optional = 'optional',
-    informationOnly = 'informationOnly'
+    informationOnly = 'information-only'
 }
 export enum Appointment_ParticipantStatusKind {
     accepted = 'accepted',
     declined = 'declined',
     tentative = 'tentative',
-    needsAction = 'needsAction'
-}
+    needsAction = 'needs-action'
+}/*
 const Appointment_ParticipantRequiredKindKeys = t.keyof({
     [Appointment_ParticipantRequiredKind.required]: null,
     [Appointment_ParticipantRequiredKind.optional]: null,
@@ -28,7 +29,7 @@ const Appointment_ParticipantStatusKindKeys = t.keyof({
     [Appointment_ParticipantStatusKind.tentative]: null,
     [Appointment_ParticipantStatusKind.needsAction]: null
 });
-
+*/
 
 export interface IAppointment_Participant {
 
@@ -106,9 +107,9 @@ export const RTTI_Appointment_Participant: t.Type<IAppointment_Participant> = t.
         modifierExtension: t.array(RTTI_Extension),
         type: t.array(RTTI_CodeableConcept),
         actor: RTTI_Reference,
-        required: Appointment_ParticipantRequiredKindKeys,
+        required: createEnumType<Appointment_ParticipantRequiredKind>(Appointment_ParticipantRequiredKind,'Appointment_ParticipantRequiredKind'),
         _required: RTTI_Element,
-        status: Appointment_ParticipantStatusKindKeys,
+        status: createEnumType<Appointment_ParticipantStatusKind>(Appointment_ParticipantStatusKind, 'Appointment_ParticipantStatusKind'),
         _status: RTTI_Element,
         period: RTTI_Period
     })

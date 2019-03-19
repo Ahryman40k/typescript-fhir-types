@@ -10,17 +10,19 @@ import { RTTI_Timing, ITiming } from './RTTI_Timing';
 import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_Quantity, IQuantity } from './RTTI_Quantity';
 
+import { createEnumType } from '../../EnumType'
+
 export enum CarePlan_DetailStatusKind {
-        notStarted = 'notStarted',
+        notStarted = 'not-started',
         scheduled = 'scheduled',
-        inProgress = 'inProgress',
-        onHold = 'onHold',
+        inProgress = 'in-progress',
+        onHold = 'on-hold',
         completed = 'completed',
         cancelled = 'cancelled',
         stopped = 'stopped',
         unknown = 'unknown',
-        enteredInError = 'enteredInError'
-}
+        enteredInError = 'entered-in-error'
+}/*
 const CarePlan_DetailStatusKindKeys = t.keyof({
         [CarePlan_DetailStatusKind.notStarted]: null,
         [CarePlan_DetailStatusKind.scheduled]: null,
@@ -32,7 +34,7 @@ const CarePlan_DetailStatusKindKeys = t.keyof({
         [CarePlan_DetailStatusKind.unknown]: null,
         [CarePlan_DetailStatusKind.enteredInError]: null
 });
-
+*/
 
 export interface ICarePlan_Detail {
 
@@ -231,7 +233,7 @@ export const RTTI_CarePlan_Detail: t.Type<ICarePlan_Detail> = t.recursion('ICare
                 reasonCode: t.array(RTTI_CodeableConcept),
                 reasonReference: t.array(RTTI_Reference),
                 goal: t.array(RTTI_Reference),
-                status: CarePlan_DetailStatusKindKeys,
+                status: createEnumType<CarePlan_DetailStatusKind>(CarePlan_DetailStatusKind, 'CarePlan_DetailStatusKind'),
                 _status: RTTI_Element,
                 statusReason: RTTI_CodeableConcept,
                 doNotPerform: t.boolean,

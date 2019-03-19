@@ -10,17 +10,13 @@ import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_DocumentManifest_Agent, IDocumentManifest_Agent } from './RTTI_DocumentManifest_Agent';
 import { RTTI_DocumentManifest_Related, IDocumentManifest_Related } from './RTTI_DocumentManifest_Related';
+import { createEnumType } from '../../EnumType'
 
 export enum DocumentManifestStatusKind {
-    current = 'current',
-    superseded = 'superseded',
-    enteredInError = 'enteredInError'
-}
-const DocumentManifestStatusKindKeys = t.keyof({
-    [DocumentManifestStatusKind.current]: null,
-    [DocumentManifestStatusKind.superseded]: null,
-    [DocumentManifestStatusKind.enteredInError]: null
-});
+                current = 'current',
+superseded = 'superseded',
+enteredInError = 'entered-in-error'
+            }
 
 
 export interface IDocumentManifest {
@@ -214,7 +210,7 @@ export const RTTI_DocumentManifest: t.Type<IDocumentManifest> = t.recursion('IDo
             modifierExtension: t.array(RTTI_Extension),
             masterIdentifier: RTTI_Identifier,
             identifier: t.array(RTTI_Identifier),
-            status: DocumentManifestStatusKindKeys,
+            status: createEnumType<DocumentManifestStatusKind>(DocumentManifestStatusKind, 'DocumentManifestStatusKind'),
             _status: RTTI_Element,
             type: RTTI_CodeableConcept,
             subject: RTTI_Reference,

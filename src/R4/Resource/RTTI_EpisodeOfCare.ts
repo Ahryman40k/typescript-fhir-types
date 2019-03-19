@@ -11,6 +11,7 @@ import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_EpisodeOfCare_Diagnosis, IEpisodeOfCare_Diagnosis} from './RTTI_EpisodeOfCare_Diagnosis';
 import {RTTI_Reference, IReference} from './RTTI_Reference';
 import {RTTI_Period, IPeriod} from './RTTI_Period';
+import { createEnumType } from '../../EnumType'
 
 export enum EpisodeOfCareStatusKind {
                 planned = 'planned',
@@ -19,7 +20,7 @@ active = 'active',
 onhold = 'onhold',
 finished = 'finished',
 cancelled = 'cancelled',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
 const EpisodeOfCareStatusKindKeys = t.keyof({
                 [EpisodeOfCareStatusKind.planned]: null,
@@ -204,7 +205,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: EpisodeOfCareStatusKindKeys,
+status: createEnumType<EpisodeOfCareStatusKind>(EpisodeOfCareStatusKind, 'EpisodeOfCareStatusKind'),
 _status: RTTI_Element,
 statusHistory: t.array(RTTI_EpisodeOfCare_StatusHistory),
 type: t.array(RTTI_CodeableConcept),

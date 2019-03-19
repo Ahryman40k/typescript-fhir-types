@@ -3,13 +3,14 @@ import * as t from 'io-ts';
 import {RTTI_Extension, IExtension} from './RTTI_Extension';
 import {RTTI_Element, IElement} from './RTTI_Element';
 import {RTTI_Reference, IReference} from './RTTI_Reference';
+import { createEnumType } from '../../EnumType'
 
 export enum EntryDefinition_RelatedEntryRelationtypeKind {
-                hasInput = 'hasInput',
-hasOutput = 'hasOutput',
+                hasInput = 'has-input',
+hasOutput = 'has-output',
 uses = 'uses',
 triggers = 'triggers',
-isReplacedBy = 'isReplacedBy'
+isReplacedBy = 'is-replaced-by'
             }
 const EntryDefinition_RelatedEntryRelationtypeKindKeys = t.keyof({
                 [EntryDefinition_RelatedEntryRelationtypeKind.hasInput]: null,
@@ -75,7 +76,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
-relationtype: EntryDefinition_RelatedEntryRelationtypeKindKeys,
+relationtype: createEnumType<EntryDefinition_RelatedEntryRelationtypeKind>(EntryDefinition_RelatedEntryRelationtypeKind, 'EntryDefinition_RelatedEntryRelationtypeKind'),
 _relationtype: RTTI_Element
         })
         

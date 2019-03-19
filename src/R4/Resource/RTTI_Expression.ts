@@ -2,18 +2,13 @@
 import * as t from 'io-ts';
 import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Element, IElement } from './RTTI_Element';
+import { createEnumType } from '../../EnumType';
 
 export enum ExpressionLanguageKind {
-        textCql = 'text/Cql',
-        textFhirpath = 'text/Fhirpath',
-        applicationXFhirQuery = 'application/X-Fhir-Query'
-}
-const ExpressionLanguageKindKeys = t.keyof({
-        [ExpressionLanguageKind.textCql]: null,
-        [ExpressionLanguageKind.textFhirpath]: null,
-        [ExpressionLanguageKind.applicationXFhirQuery]: null
-});
-
+                textCql = 'text/cql',
+textFhirpath = 'text/fhirpath',
+applicationXFhirQuery = 'application/x-fhir-query'
+            }
 
 export interface IExpression {
 
@@ -102,7 +97,7 @@ export const RTTI_Expression: t.Type<IExpression> = t.recursion('IExpression', (
                 _description: RTTI_Element,
                 name: t.string,
                 _name: RTTI_Element,
-                language: ExpressionLanguageKindKeys,
+                language: createEnumType<ExpressionLanguageKind>(ExpressionLanguageKind, 'ExpressionLanguageKind'),
                 _language: RTTI_Element,
                 expression: t.string,
                 _expression: RTTI_Element,

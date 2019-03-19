@@ -12,14 +12,14 @@ import {RTTI_ContactPoint, IContactPoint} from './RTTI_ContactPoint';
 import {RTTI_Period, IPeriod} from './RTTI_Period';
 import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 
-
+import { createEnumType } from '../../EnumType'
 
 export enum EndpointStatusKind {
                 active = 'active',
 suspended = 'suspended',
 error = 'error',
 off = 'off',
-enteredInError = 'enteredInError',
+enteredInError = 'entered-in-error',
 test = 'test'
             }
 const EndpointStatusKindKeys = t.keyof({
@@ -223,7 +223,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: EndpointStatusKindKeys,
+status: createEnumType<EndpointStatusKind>(EndpointStatusKind, 'EndpointStatusKind'),
 _status: RTTI_Element,
 name: t.string,
 _name: RTTI_Element,

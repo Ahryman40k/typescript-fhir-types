@@ -11,12 +11,13 @@ import {RTTI_Reference, IReference} from './RTTI_Reference';
 import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
 import {RTTI_ImagingStudy_Series, IImagingStudy_Series} from './RTTI_ImagingStudy_Series';
+import { createEnumType } from '../../EnumType'
 
 export enum ImagingStudyStatusKind {
                 registered = 'registered',
 available = 'available',
 cancelled = 'cancelled',
-enteredInError = 'enteredInError',
+enteredInError = 'entered-in-error',
 unknown = 'unknown'
             }
 const ImagingStudyStatusKindKeys = t.keyof({
@@ -272,7 +273,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: ImagingStudyStatusKindKeys,
+status: createEnumType<ImagingStudyStatusKind>(ImagingStudyStatusKind, 'ImagingStudyStatusKind'),
 _status: RTTI_Element,
 modality: t.array(RTTI_Coding),
 context: RTTI_Reference,

@@ -14,11 +14,8 @@ describe('ActivityDefinition DynamicValue', () => {
   
   })
 
+  
   test('should not decode a missing mandatory property', () => {
-    const result = RTTI_PlanDefinition_DynamicValue.decode( {
-      "path": "dispenseRequest.numberOfRepeatsAllowed",
-    });
-    expect(result._tag).toBe('Left')
-    
+    // only own partial values    
   }) 
 })

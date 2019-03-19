@@ -11,21 +11,15 @@ import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_Account_Coverage, IAccount_Coverage } from './RTTI_Account_Coverage';
 import { RTTI_Account_Guarantor, IAccount_Guarantor } from './RTTI_Account_Guarantor';
+import { createEnumType } from '../../EnumType';
 
 export enum AccountStatusKind {
-    active = 'active',
-    inactive = 'inactive',
-    enteredInError = 'enteredInError',
-    onHold = 'onHold',
-    unknown = 'unknown'
-}
-const AccountStatusKindKeys = t.keyof({
-    [AccountStatusKind.active]: null,
-    [AccountStatusKind.inactive]: null,
-    [AccountStatusKind.enteredInError]: null,
-    [AccountStatusKind.onHold]: null,
-    [AccountStatusKind.unknown]: null
-});
+                active = 'active',
+inactive = 'inactive',
+enteredInError = 'entered-in-error',
+onHold = 'on-hold',
+unknown = 'unknown'
+            }
 
 
 export interface IAccount {
@@ -205,7 +199,7 @@ export const RTTI_Account: t.Type<IAccount> = t.recursion('IAccount', () =>
             extension: t.array(RTTI_Extension),
             modifierExtension: t.array(RTTI_Extension),
             identifier: t.array(RTTI_Identifier),
-            status: AccountStatusKindKeys,
+            status: createEnumType<AccountStatusKind>(AccountStatusKind, 'AccountStatusKind'),
             _status: RTTI_Element,
             type: RTTI_CodeableConcept,
             name: t.string,

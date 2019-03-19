@@ -23,12 +23,13 @@ import {RTTI_ExplanationOfBenefit_Total, IExplanationOfBenefit_Total} from './RT
 import {RTTI_ExplanationOfBenefit_Payment, IExplanationOfBenefit_Payment} from './RTTI_ExplanationOfBenefit_Payment';
 import {RTTI_ExplanationOfBenefit_ProcessNote, IExplanationOfBenefit_ProcessNote} from './RTTI_ExplanationOfBenefit_ProcessNote';
 import {RTTI_ExplanationOfBenefit_BenefitBalance, IExplanationOfBenefit_BenefitBalance} from './RTTI_ExplanationOfBenefit_BenefitBalance';
+import { createEnumType } from '../../EnumType'
 
 export enum ExplanationOfBenefitStatusKind {
                 active = 'active',
 cancelled = 'cancelled',
 draft = 'draft',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
 const ExplanationOfBenefitStatusKindKeys = t.keyof({
                 [ExplanationOfBenefitStatusKind.active]: null,
@@ -377,7 +378,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: ExplanationOfBenefitStatusKindKeys,
+status: createEnumType<ExplanationOfBenefitStatusKind>(ExplanationOfBenefitStatusKind, 'ExplanationOfBenefitStatusKind'),
 _status: RTTI_Element,
 type: RTTI_CodeableConcept,
 subType: RTTI_CodeableConcept,

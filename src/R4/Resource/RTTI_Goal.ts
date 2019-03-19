@@ -10,20 +10,21 @@ import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_Reference, IReference} from './RTTI_Reference';
 import {RTTI_Goal_Target, IGoal_Target} from './RTTI_Goal_Target';
 import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
+import { createEnumType } from '../../EnumType'
 
 export enum GoalStatusKind {
                 proposed = 'proposed',
 accepted = 'accepted',
 planned = 'planned',
-inProgress = 'inProgress',
-onTarget = 'onTarget',
-aheadOfTarget = 'aheadOfTarget',
-behindTarget = 'behindTarget',
+inProgress = 'in-progress',
+onTarget = 'on-target',
+aheadOfTarget = 'ahead-of-target',
+behindTarget = 'behind-target',
 sustaining = 'sustaining',
 achieved = 'achieved',
-onHold = 'onHold',
+onHold = 'on-hold',
 cancelled = 'cancelled',
-enteredInError = 'enteredInError',
+enteredInError = 'entered-in-error',
 rejected = 'rejected'
             }
 const GoalStatusKindKeys = t.keyof({
@@ -258,7 +259,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: GoalStatusKindKeys,
+status: createEnumType<GoalStatusKind>(GoalStatusKind, 'GoalStatusKind'),
 _status: RTTI_Element,
 category: t.array(RTTI_CodeableConcept),
 priority: RTTI_CodeableConcept,

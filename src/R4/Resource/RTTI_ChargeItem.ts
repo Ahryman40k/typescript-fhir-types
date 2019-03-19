@@ -15,25 +15,17 @@ import { RTTI_ChargeItem_Performer, IChargeItem_Performer } from './RTTI_ChargeI
 import { RTTI_Quantity, IQuantity } from './RTTI_Quantity';
 import { RTTI_Money, IMoney } from './RTTI_Money';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { createEnumType } from '../../EnumType'
 
 export enum ChargeItemStatusKind {
-    planned = 'planned',
-    billable = 'billable',
-    notBillable = 'notBillable',
-    aborted = 'aborted',
-    billed = 'billed',
-    enteredInError = 'enteredInError',
-    unknown = 'unknown'
-}
-const ChargeItemStatusKindKeys = t.keyof({
-    [ChargeItemStatusKind.planned]: null,
-    [ChargeItemStatusKind.billable]: null,
-    [ChargeItemStatusKind.notBillable]: null,
-    [ChargeItemStatusKind.aborted]: null,
-    [ChargeItemStatusKind.billed]: null,
-    [ChargeItemStatusKind.enteredInError]: null,
-    [ChargeItemStatusKind.unknown]: null
-});
+                planned = 'planned',
+billable = 'billable',
+notBillable = 'not-billable',
+aborted = 'aborted',
+billed = 'billed',
+enteredInError = 'entered-in-error',
+unknown = 'unknown'
+            }
 
 
 export interface IChargeItem {
@@ -337,7 +329,7 @@ export const RTTI_ChargeItem: t.Type<IChargeItem> = t.recursion('IChargeItem', (
             identifier: t.array(RTTI_Identifier),
             definition: t.array(t.string),
             _definition: t.array(RTTI_Element),
-            status: ChargeItemStatusKindKeys,
+            status: createEnumType<ChargeItemStatusKind>(ChargeItemStatusKind, 'ChargeItemStatusKind'),
             _status: RTTI_Element,
             partOf: t.array(RTTI_Reference),
             context: RTTI_Reference,

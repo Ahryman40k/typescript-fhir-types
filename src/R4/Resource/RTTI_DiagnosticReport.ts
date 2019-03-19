@@ -11,6 +11,7 @@ import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_Period, IPeriod} from './RTTI_Period';
 import {RTTI_DiagnosticReport_Media, IDiagnosticReport_Media} from './RTTI_DiagnosticReport_Media';
 import {RTTI_Attachment, IAttachment} from './RTTI_Attachment';
+import { createEnumType } from '../../EnumType'
 
 export enum DiagnosticReportStatusKind {
                 registered = 'registered',
@@ -21,21 +22,9 @@ amended = 'amended',
 corrected = 'corrected',
 appended = 'appended',
 cancelled = 'cancelled',
-enteredInError = 'enteredInError',
+enteredInError = 'entered-in-error',
 unknown = 'unknown'
             }
-const DiagnosticReportStatusKindKeys = t.keyof({
-                [DiagnosticReportStatusKind.registered]: null,
-[DiagnosticReportStatusKind.partial]: null,
-[DiagnosticReportStatusKind.preliminary]: null,
-[DiagnosticReportStatusKind.final]: null,
-[DiagnosticReportStatusKind.amended]: null,
-[DiagnosticReportStatusKind.corrected]: null,
-[DiagnosticReportStatusKind.appended]: null,
-[DiagnosticReportStatusKind.cancelled]: null,
-[DiagnosticReportStatusKind.enteredInError]: null,
-[DiagnosticReportStatusKind.unknown]: null
-            });
 
 
             export interface IDiagnosticReport {
@@ -271,7 +260,7 @@ extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
 basedOn: t.array(RTTI_Reference),
-status: DiagnosticReportStatusKindKeys,
+status: createEnumType<DiagnosticReportStatusKind>(DiagnosticReportStatusKind, 'DiagnosticReportStatusKind'),
 _status: RTTI_Element,
 category: RTTI_CodeableConcept,
 subject: RTTI_Reference,

@@ -12,9 +12,10 @@ import {RTTI_Period, IPeriod} from './RTTI_Period';
 import {RTTI_CoverageEligibilityRequest_SupportingInformation, ICoverageEligibilityRequest_SupportingInformation} from './RTTI_CoverageEligibilityRequest_SupportingInformation';
 import {RTTI_CoverageEligibilityRequest_Insurance, ICoverageEligibilityRequest_Insurance} from './RTTI_CoverageEligibilityRequest_Insurance';
 import {RTTI_CoverageEligibilityRequest_Item, ICoverageEligibilityRequest_Item} from './RTTI_CoverageEligibilityRequest_Item';
+import { createEnumType } from '../../EnumType'
 
 export enum CoverageEligibilityRequestPurposeKind {
-                authRequirements = 'authRequirements',
+                authRequirements = 'auth-requirements',
 benefits = 'benefits',
 discovery = 'discovery',
 validation = 'validation'
@@ -237,7 +238,7 @@ identifier: t.array(RTTI_Identifier),
 status: t.string,
 _status: RTTI_Element,
 priority: RTTI_CodeableConcept,
-purpose: t.array(CoverageEligibilityRequestPurposeKindKeys),
+purpose: t.array(createEnumType<CoverageEligibilityRequestPurposeKind>(CoverageEligibilityRequestPurposeKind, 'CoverageEligibilityRequestPurposeKind')),
 _purpose: t.array(RTTI_Element),
 patient: RTTI_Reference,
 servicedDate: t.string,

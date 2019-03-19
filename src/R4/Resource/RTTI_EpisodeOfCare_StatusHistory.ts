@@ -3,6 +3,7 @@ import * as t from 'io-ts';
 import {RTTI_Extension, IExtension} from './RTTI_Extension';
 import {RTTI_Element, IElement} from './RTTI_Element';
 import {RTTI_Period, IPeriod} from './RTTI_Period';
+import { createEnumType } from '../../EnumType'
 
 export enum EpisodeOfCare_StatusHistoryStatusKind {
                 planned = 'planned',
@@ -11,7 +12,7 @@ active = 'active',
 onhold = 'onhold',
 finished = 'finished',
 cancelled = 'cancelled',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
 const EpisodeOfCare_StatusHistoryStatusKindKeys = t.keyof({
                 [EpisodeOfCare_StatusHistoryStatusKind.planned]: null,
@@ -79,7 +80,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
-status: EpisodeOfCare_StatusHistoryStatusKindKeys,
+status: createEnumType<EpisodeOfCare_StatusHistoryStatusKind>(EpisodeOfCare_StatusHistoryStatusKind, 'EpisodeOfCare_StatusHistoryStatusKind'),
 _status: RTTI_Element
         })
         

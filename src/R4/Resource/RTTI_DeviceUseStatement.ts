@@ -11,23 +11,16 @@ import {RTTI_Timing, ITiming} from './RTTI_Timing';
 import {RTTI_Period, IPeriod} from './RTTI_Period';
 import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
+import { createEnumType } from '../../EnumType'
 
 export enum DeviceUseStatementStatusKind {
                 active = 'active',
 completed = 'completed',
-enteredInError = 'enteredInError',
+enteredInError = 'entered-in-error',
 intended = 'intended',
 stopped = 'stopped',
-onHold = 'onHold'
+onHold = 'on-hold'
             }
-const DeviceUseStatementStatusKindKeys = t.keyof({
-                [DeviceUseStatementStatusKind.active]: null,
-[DeviceUseStatementStatusKind.completed]: null,
-[DeviceUseStatementStatusKind.enteredInError]: null,
-[DeviceUseStatementStatusKind.intended]: null,
-[DeviceUseStatementStatusKind.stopped]: null,
-[DeviceUseStatementStatusKind.onHold]: null
-            });
 
 
             export interface IDeviceUseStatement {
@@ -234,7 +227,7 @@ extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
 basedOn: t.array(RTTI_Reference),
-status: DeviceUseStatementStatusKindKeys,
+status: createEnumType<DeviceUseStatementStatusKind>(DeviceUseStatementStatusKind, 'DeviceUseStatementStatusKind'),
 _status: RTTI_Element,
 derivedFrom: t.array(RTTI_Reference),
 timingTiming: RTTI_Timing,

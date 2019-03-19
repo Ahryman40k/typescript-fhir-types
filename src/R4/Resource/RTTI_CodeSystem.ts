@@ -12,6 +12,7 @@ import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_CodeSystem_Filter, ICodeSystem_Filter } from './RTTI_CodeSystem_Filter';
 import { RTTI_CodeSystem_Property, ICodeSystem_Property } from './RTTI_CodeSystem_Property';
 import { RTTI_CodeSystem_Concept, ICodeSystem_Concept } from './RTTI_CodeSystem_Concept';
+import { createEnumType } from '../../EnumType'
 
 export enum CodeSystemStatusKind {
     draft = 'draft',
@@ -20,11 +21,11 @@ export enum CodeSystemStatusKind {
     unknown = 'unknown'
 }
 export enum CodeSystemHierarchyMeaningKind {
-    groupedBy = 'groupedBy',
-    isA = 'isA',
-    partOf = 'partOf',
-    classifiedWith = 'classifiedWith'
-}
+                groupedBy = 'grouped-by',
+isA = 'is-a',
+partOf = 'part-of',
+classifiedWith = 'classified-with'
+            }
 export enum CodeSystemContentKind {
     notPresent = 'notPresent',
     example = 'example',
@@ -432,7 +433,7 @@ export const RTTI_CodeSystem: t.Type<ICodeSystem> = t.recursion('ICodeSystem', (
             caseSensitive: t.boolean,
             _caseSensitive: RTTI_Element,
             valueSet: t.string,
-            hierarchyMeaning: CodeSystemHierarchyMeaningKindKeys,
+            hierarchyMeaning: createEnumType<CodeSystemHierarchyMeaningKind>(CodeSystemHierarchyMeaningKind, 'CodeSystemHierarchyMeaningKind'),
             _hierarchyMeaning: RTTI_Element,
             compositional: t.boolean,
             _compositional: RTTI_Element,

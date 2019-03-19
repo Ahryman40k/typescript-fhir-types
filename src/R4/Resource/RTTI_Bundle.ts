@@ -6,18 +6,19 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_Bundle_Link, IBundle_Link } from './RTTI_Bundle_Link';
 import { RTTI_Bundle_Entry, IBundle_Entry } from './RTTI_Bundle_Entry';
 import { RTTI_Signature, ISignature } from './RTTI_Signature';
+import { createEnumType } from '../../EnumType'
 
 export enum BundleTypeKind {
     document = 'document',
     message = 'message',
     transaction = 'transaction',
-    transactionResponse = 'transactionResponse',
+    transactionResponse = 'transaction-response',
     batch = 'batch',
-    batchResponse = 'batchResponse',
+    batchResponse = 'batch-response',
     history = 'history',
     searchset = 'searchset',
     collection = 'collection'
-}
+}/*
 const BundleTypeKindKeys = t.keyof({
     [BundleTypeKind.document]: null,
     [BundleTypeKind.message]: null,
@@ -28,7 +29,7 @@ const BundleTypeKindKeys = t.keyof({
     [BundleTypeKind.history]: null,
     [BundleTypeKind.searchset]: null,
     [BundleTypeKind.collection]: null
-});
+});*/
 
 
 export interface IBundle {
@@ -154,7 +155,7 @@ export const RTTI_Bundle: t.Type<IBundle> = t.recursion('IBundle', () =>
             language: t.string,
             _language: RTTI_Element,
             identifier: RTTI_Identifier,
-            type: BundleTypeKindKeys,
+            type: createEnumType<BundleTypeKind>(BundleTypeKind,'BundleTypeKind'),
             _type: RTTI_Element,
             timestamp: t.string,
             _timestamp: RTTI_Element,

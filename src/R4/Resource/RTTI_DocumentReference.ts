@@ -12,17 +12,13 @@ import {RTTI_DocumentReference_Agent, IDocumentReference_Agent} from './RTTI_Doc
 import {RTTI_DocumentReference_RelatesTo, IDocumentReference_RelatesTo} from './RTTI_DocumentReference_RelatesTo';
 import {RTTI_DocumentReference_Content, IDocumentReference_Content} from './RTTI_DocumentReference_Content';
 import {RTTI_DocumentReference_Context, IDocumentReference_Context} from './RTTI_DocumentReference_Context';
+import { createEnumType } from '../../EnumType'
 
 export enum DocumentReferenceStatusKind {
                 current = 'current',
 superseded = 'superseded',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
-const DocumentReferenceStatusKindKeys = t.keyof({
-                [DocumentReferenceStatusKind.current]: null,
-[DocumentReferenceStatusKind.superseded]: null,
-[DocumentReferenceStatusKind.enteredInError]: null
-            });
 
 
             export interface IDocumentReference {
@@ -240,7 +236,7 @@ extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 masterIdentifier: RTTI_Identifier,
 identifier: t.array(RTTI_Identifier),
-status: DocumentReferenceStatusKindKeys,
+status: createEnumType<DocumentReferenceStatusKind>(DocumentReferenceStatusKind, 'DocumentReferenceStatusKind'),
 _status: RTTI_Element,
 docStatus: t.string,
 _docStatus: RTTI_Element,

@@ -17,16 +17,17 @@ import {RTTI_Duration, IDuration} from './RTTI_Duration';
 import {RTTI_Encounter_Diagnosis, IEncounter_Diagnosis} from './RTTI_Encounter_Diagnosis';
 import {RTTI_Encounter_Hospitalization, IEncounter_Hospitalization} from './RTTI_Encounter_Hospitalization';
 import {RTTI_Encounter_Location, IEncounter_Location} from './RTTI_Encounter_Location';
+import { createEnumType } from '../../EnumType'
 
 export enum EncounterStatusKind {
                 planned = 'planned',
 arrived = 'arrived',
 triaged = 'triaged',
-inProgress = 'inProgress',
+inProgress = 'in-progress',
 onleave = 'onleave',
 finished = 'finished',
 cancelled = 'cancelled',
-enteredInError = 'enteredInError',
+enteredInError = 'entered-in-error',
 unknown = 'unknown'
             }
 const EncounterStatusKindKeys = t.keyof({
@@ -274,7 +275,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: EncounterStatusKindKeys,
+status: createEnumType<EncounterStatusKind>(EncounterStatusKind, 'EncounterStatusKind'),
 _status: RTTI_Element,
 statusHistory: t.array(RTTI_Encounter_StatusHistory),
 classHistory: t.array(RTTI_Encounter_ClassHistory),

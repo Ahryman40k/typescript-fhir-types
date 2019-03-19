@@ -12,21 +12,15 @@ import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_CareTeam_Participant, ICareTeam_Participant } from './RTTI_CareTeam_Participant';
 import { RTTI_ContactPoint, IContactPoint } from './RTTI_ContactPoint';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { createEnumType } from '../../EnumType'
 
 export enum CareTeamStatusKind {
-    proposed = 'proposed',
-    active = 'active',
-    suspended = 'suspended',
-    inactive = 'inactive',
-    enteredInError = 'enteredInError'
-}
-const CareTeamStatusKindKeys = t.keyof({
-    [CareTeamStatusKind.proposed]: null,
-    [CareTeamStatusKind.active]: null,
-    [CareTeamStatusKind.suspended]: null,
-    [CareTeamStatusKind.inactive]: null,
-    [CareTeamStatusKind.enteredInError]: null
-});
+                proposed = 'proposed',
+active = 'active',
+suspended = 'suspended',
+inactive = 'inactive',
+enteredInError = 'entered-in-error'
+            }
 
 
 export interface ICareTeam {
@@ -212,7 +206,7 @@ export const RTTI_CareTeam: t.Type<ICareTeam> = t.recursion('ICareTeam', () =>
             extension: t.array(RTTI_Extension),
             modifierExtension: t.array(RTTI_Extension),
             identifier: t.array(RTTI_Identifier),
-            status: CareTeamStatusKindKeys,
+            status: createEnumType<CareTeamStatusKind>(CareTeamStatusKind, 'CareTeamStatusKind'),
             _status: RTTI_Element,
             category: t.array(RTTI_CodeableConcept),
             name: t.string,

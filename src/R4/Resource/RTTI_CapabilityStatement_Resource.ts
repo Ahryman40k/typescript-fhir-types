@@ -7,6 +7,8 @@ import { RTTI_CapabilityStatement_Interaction, ICapabilityStatement_Interaction 
 import { RTTI_CapabilityStatement_SearchParam, ICapabilityStatement_SearchParam } from './RTTI_CapabilityStatement_SearchParam';
 import { RTTI_CapabilityStatement_Operation, ICapabilityStatement_Operation } from './RTTI_CapabilityStatement_Operation';
 
+import { createEnumType } from '../../EnumType'
+
 export enum CapabilityStatement_ResourceReferencePolicyKind {
         literal = 'literal',
         logical = 'logical',
@@ -15,21 +17,21 @@ export enum CapabilityStatement_ResourceReferencePolicyKind {
         local = 'local'
 }
 export enum CapabilityStatement_ResourceVersioningKind {
-        noVersion = 'noVersion',
+        noVersion = 'no-version',
         versioned = 'versioned',
-        versionedUpdate = 'versionedUpdate'
+        versionedUpdate = 'versioned-update'
 }
 export enum CapabilityStatement_ResourceConditionalReadKind {
-        notSupported = 'notSupported',
-        modifiedSince = 'modifiedSince',
-        notMatch = 'notMatch',
-        fullSupport = 'fullSupport'
+        notSupported = 'not-supported',
+        modifiedSince = 'modified-since',
+        notMatch = 'not-match',
+        fullSupport = 'full-support'
 }
 export enum CapabilityStatement_ResourceConditionalDeleteKind {
-        notSupported = 'notSupported',
+        notSupported = 'not-supported',
         single = 'single',
         multiple = 'multiple'
-}
+}/*
 const CapabilityStatement_ResourceReferencePolicyKindKeys = t.keyof({
         [CapabilityStatement_ResourceReferencePolicyKind.literal]: null,
         [CapabilityStatement_ResourceReferencePolicyKind.logical]: null,
@@ -53,7 +55,7 @@ const CapabilityStatement_ResourceConditionalDeleteKindKeys = t.keyof({
         [CapabilityStatement_ResourceConditionalDeleteKind.single]: null,
         [CapabilityStatement_ResourceConditionalDeleteKind.multiple]: null
 });
-
+*/
 
 export interface ICapabilityStatement_Resource {
 
@@ -268,7 +270,7 @@ export const RTTI_CapabilityStatement_Resource: t.Type<ICapabilityStatement_Reso
                 documentation: t.string,
                 _documentation: RTTI_Element,
                 interaction: t.array(RTTI_CapabilityStatement_Interaction),
-                versioning: CapabilityStatement_ResourceVersioningKindKeys,
+                versioning: createEnumType<CapabilityStatement_ResourceVersioningKind>(CapabilityStatement_ResourceVersioningKind, 'CapabilityStatement_ResourceVersioningKind'),
                 _versioning: RTTI_Element,
                 readHistory: t.boolean,
                 _readHistory: RTTI_Element,
@@ -276,13 +278,13 @@ export const RTTI_CapabilityStatement_Resource: t.Type<ICapabilityStatement_Reso
                 _updateCreate: RTTI_Element,
                 conditionalCreate: t.boolean,
                 _conditionalCreate: RTTI_Element,
-                conditionalRead: CapabilityStatement_ResourceConditionalReadKindKeys,
+                conditionalRead: createEnumType<CapabilityStatement_ResourceConditionalReadKind>(CapabilityStatement_ResourceConditionalReadKind, 'CapabilityStatement_ResourceConditionalReadKind'),
                 _conditionalRead: RTTI_Element,
                 conditionalUpdate: t.boolean,
                 _conditionalUpdate: RTTI_Element,
-                conditionalDelete: CapabilityStatement_ResourceConditionalDeleteKindKeys,
+                conditionalDelete: createEnumType<CapabilityStatement_ResourceConditionalDeleteKind>(CapabilityStatement_ResourceConditionalDeleteKind, 'CapabilityStatement_ResourceConditionalDeleteKind'),
                 _conditionalDelete: RTTI_Element,
-                referencePolicy: t.array(CapabilityStatement_ResourceReferencePolicyKindKeys),
+                referencePolicy: t.array( createEnumType<CapabilityStatement_ResourceReferencePolicyKind>(CapabilityStatement_ResourceReferencePolicyKind, 'CapabilityStatement_ResourceReferencePolicyKind')),
                 _referencePolicy: t.array(RTTI_Element),
                 searchInclude: t.array(t.string),
                 _searchInclude: t.array(RTTI_Element),

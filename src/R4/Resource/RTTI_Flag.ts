@@ -9,11 +9,12 @@ import {RTTI_Identifier, IIdentifier} from './RTTI_Identifier';
 import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
 import {RTTI_Reference, IReference} from './RTTI_Reference';
 import {RTTI_Period, IPeriod} from './RTTI_Period';
+import { createEnumType } from '../../EnumType'
 
 export enum FlagStatusKind {
                 active = 'active',
 inactive = 'inactive',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
 const FlagStatusKindKeys = t.keyof({
                 [FlagStatusKind.active]: null,
@@ -171,7 +172,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: t.array(RTTI_Identifier),
-status: FlagStatusKindKeys,
+status: createEnumType<FlagStatusKind>(FlagStatusKind, 'FlagStatusKind'),
 _status: RTTI_Element,
 category: t.array(RTTI_CodeableConcept),
 period: RTTI_Period,

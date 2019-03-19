@@ -15,12 +15,13 @@ import {RTTI_Age, IAge} from './RTTI_Age';
 import {RTTI_Range, IRange} from './RTTI_Range';
 import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
 import {RTTI_FamilyMemberHistory_Condition, IFamilyMemberHistory_Condition} from './RTTI_FamilyMemberHistory_Condition';
+import { createEnumType } from '../../EnumType'
 
 export enum FamilyMemberHistoryStatusKind {
                 partial = 'partial',
 completed = 'completed',
-enteredInError = 'enteredInError',
-healthUnknown = 'healthUnknown'
+enteredInError = 'entered-in-error',
+healthUnknown = 'health-unknown'
             }
 const FamilyMemberHistoryStatusKindKeys = t.keyof({
                 [FamilyMemberHistoryStatusKind.partial]: null,
@@ -350,7 +351,7 @@ identifier: t.array(RTTI_Identifier),
 instantiatesCanonical: t.array(t.string),
 instantiatesUri: t.array(t.string),
 _instantiatesUri: t.array(RTTI_Element),
-status: FamilyMemberHistoryStatusKindKeys,
+status: createEnumType<FamilyMemberHistoryStatusKind>(FamilyMemberHistoryStatusKind, 'FamilyMemberHistoryStatusKind'),
 _status: RTTI_Element,
 dataAbsentReason: RTTI_CodeableConcept,
 date: t.string,

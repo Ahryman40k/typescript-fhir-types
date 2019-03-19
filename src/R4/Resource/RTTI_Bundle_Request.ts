@@ -1,145 +1,144 @@
 
 import * as t from 'io-ts';
-import {RTTI_Extension, IExtension} from './RTTI_Extension';
-import {RTTI_Element, IElement} from './RTTI_Element';
+import { RTTI_Extension, IExtension } from './RTTI_Extension';
+import { RTTI_Element, IElement } from './RTTI_Element';
 
 export enum Bundle_RequestMethodKind {
-                get = 'get',
-head = 'head',
-post = 'post',
-put = 'put',
-delete = 'delete',
-patch = 'patch'
-            }
+        GET = 'GET',
+        HEAD = 'HEAD',
+        POST = 'POST',
+        PUT = 'PUT',
+        DELETE = 'DELETE',
+        PATCH = 'PATCH'
+}
 const Bundle_RequestMethodKindKeys = t.keyof({
-                [Bundle_RequestMethodKind.get]: null,
-[Bundle_RequestMethodKind.head]: null,
-[Bundle_RequestMethodKind.post]: null,
-[Bundle_RequestMethodKind.put]: null,
-[Bundle_RequestMethodKind.delete]: null,
-[Bundle_RequestMethodKind.patch]: null
-            });
+        [Bundle_RequestMethodKind.GET]: null,
+        [Bundle_RequestMethodKind.HEAD]: null,
+        [Bundle_RequestMethodKind.POST]: null,
+        [Bundle_RequestMethodKind.PUT]: null,
+        [Bundle_RequestMethodKind.DELETE]: null,
+        [Bundle_RequestMethodKind.PATCH]: null
+});
 
 
-            export interface IBundle_Request {
-                
-                
-                    /**
-                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
-                     */
-                    id? : string;
-                    
+export interface IBundle_Request {
 
-                    /**
-                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
-                     */
-                    extension? : IExtension[];
-                    
 
-                    /**
-                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+        /**
+         * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+         */
+        id?: string;
+
+
+        /**
+         * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+         */
+        extension?: IExtension[];
+
+
+        /**
+         * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
-                     */
-                    modifierExtension? : IExtension[];
-                    
-
-                    /**
-                     * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
-                     */
-                    method? : Bundle_RequestMethodKind;
-                    
-
-                    /**
-                     * Extensions for method
-                     */
-                    _method? : IElement;
-                    
-
-                    /**
-                     * The URL for this entry, relative to the root (the address to which the request is posted).
-                     */
-                    url? : string;
-                    
-
-                    /**
-                     * Extensions for url
-                     */
-                    _url? : IElement;
-                    
-
-                    /**
-                     * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
-                     */
-                    ifNoneMatch? : string;
-                    
-
-                    /**
-                     * Extensions for ifNoneMatch
-                     */
-                    _ifNoneMatch? : IElement;
-                    
-
-                    /**
-                     * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
-                     */
-                    ifModifiedSince? : string;
-                    
-
-                    /**
-                     * Extensions for ifModifiedSince
-                     */
-                    _ifModifiedSince? : IElement;
-                    
-
-                    /**
-                     * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
-                     */
-                    ifMatch? : string;
-                    
-
-                    /**
-                     * Extensions for ifMatch
-                     */
-                    _ifMatch? : IElement;
-                    
-
-                    /**
-                     * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
-                     */
-                    ifNoneExist? : string;
-                    
-
-                    /**
-                     * Extensions for ifNoneExist
-                     */
-                    _ifNoneExist? : IElement;
-                    
-            }
-        
+         */
+        modifierExtension?: IExtension[];
 
 
-        export const RTTI_Bundle_Request: t.Type<IBundle_Request> = t.recursion( 'IBundle_Request', () =>
-                
+        /**
+         * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
+         */
+        method?: Bundle_RequestMethodKind;
+
+
+        /**
+         * Extensions for method
+         */
+        _method?: IElement;
+
+
+        /**
+         * The URL for this entry, relative to the root (the address to which the request is posted).
+         */
+        url?: string;
+
+
+        /**
+         * Extensions for url
+         */
+        _url?: IElement;
+
+
+        /**
+         * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
+         */
+        ifNoneMatch?: string;
+
+
+        /**
+         * Extensions for ifNoneMatch
+         */
+        _ifNoneMatch?: IElement;
+
+
+        /**
+         * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
+         */
+        ifModifiedSince?: string;
+
+
+        /**
+         * Extensions for ifModifiedSince
+         */
+        _ifModifiedSince?: IElement;
+
+
+        /**
+         * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
+         */
+        ifMatch?: string;
+
+
+        /**
+         * Extensions for ifMatch
+         */
+        _ifMatch?: IElement;
+
+
+        /**
+         * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
+         */
+        ifNoneExist?: string;
+
+
+        /**
+         * Extensions for ifNoneExist
+         */
+        _ifNoneExist?: IElement;
+
+}
+
+
+
+export const RTTI_Bundle_Request: t.Type<IBundle_Request> = t.recursion('IBundle_Request', () =>
+
         t.partial({
-            id: t.string,
-extension: t.array(RTTI_Extension),
-modifierExtension: t.array(RTTI_Extension),
-method: Bundle_RequestMethodKindKeys,
-_method: RTTI_Element,
-url: t.string,
-_url: RTTI_Element,
-ifNoneMatch: t.string,
-_ifNoneMatch: RTTI_Element,
-ifModifiedSince: t.string,
-_ifModifiedSince: RTTI_Element,
-ifMatch: t.string,
-_ifMatch: RTTI_Element,
-ifNoneExist: t.string,
-_ifNoneExist: RTTI_Element
+                id: t.string,
+                extension: t.array(RTTI_Extension),
+                modifierExtension: t.array(RTTI_Extension),
+                method: Bundle_RequestMethodKindKeys,
+                _method: RTTI_Element,
+                url: t.string,
+                _url: RTTI_Element,
+                ifNoneMatch: t.string,
+                _ifNoneMatch: RTTI_Element,
+                ifModifiedSince: t.string,
+                _ifModifiedSince: RTTI_Element,
+                ifMatch: t.string,
+                _ifMatch: RTTI_Element,
+                ifNoneExist: t.string,
+                _ifNoneExist: RTTI_Element
         })
-        
-        );
-        
 
-        
+);
+
+

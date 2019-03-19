@@ -12,12 +12,13 @@ import {RTTI_Composition_Attester, IComposition_Attester} from './RTTI_Compositi
 import {RTTI_Composition_RelatesTo, IComposition_RelatesTo} from './RTTI_Composition_RelatesTo';
 import {RTTI_Composition_Event, IComposition_Event} from './RTTI_Composition_Event';
 import {RTTI_Composition_Section, IComposition_Section} from './RTTI_Composition_Section';
+import { createEnumType } from '../../EnumType'
 
 export enum CompositionStatusKind {
                 preliminary = 'preliminary',
 final = 'final',
 amended = 'amended',
-enteredInError = 'enteredInError'
+enteredInError = 'entered-in-error'
             }
 const CompositionStatusKindKeys = t.keyof({
                 [CompositionStatusKind.preliminary]: null,
@@ -236,7 +237,7 @@ contained: t.array(RTTI_ResourceList),
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
 identifier: RTTI_Identifier,
-status: CompositionStatusKindKeys,
+status: createEnumType<CompositionStatusKind>(CompositionStatusKind, 'CompositionStatusKind'),
 _status: RTTI_Element,
 category: t.array(RTTI_CodeableConcept),
 subject: RTTI_Reference,

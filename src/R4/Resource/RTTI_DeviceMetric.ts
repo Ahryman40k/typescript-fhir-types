@@ -10,51 +10,30 @@ import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_Timing, ITiming } from './RTTI_Timing';
 import { RTTI_DeviceMetric_Calibration, IDeviceMetric_Calibration } from './RTTI_DeviceMetric_Calibration';
+import { createEnumType } from '../../EnumType'
 
 export enum DeviceMetricOperationalStatusKind {
-    on = 'on',
-    off = 'off',
-    standby = 'standby',
-    enteredInError = 'enteredInError'
-}
+                on = 'on',
+off = 'off',
+standby = 'standby',
+enteredInError = 'entered-in-error'
+            }
 export enum DeviceMetricColorKind {
-    black = 'black',
-    red = 'red',
-    green = 'green',
-    yellow = 'yellow',
-    blue = 'blue',
-    magenta = 'magenta',
-    cyan = 'cyan',
-    white = 'white'
-}
+                black = 'black',
+red = 'red',
+green = 'green',
+yellow = 'yellow',
+blue = 'blue',
+magenta = 'magenta',
+cyan = 'cyan',
+white = 'white'
+            }
 export enum DeviceMetricCategoryKind {
-    measurement = 'measurement',
-    setting = 'setting',
-    calculation = 'calculation',
-    unspecified = 'unspecified'
-}
-const DeviceMetricOperationalStatusKindKeys = t.keyof({
-    [DeviceMetricOperationalStatusKind.on]: null,
-    [DeviceMetricOperationalStatusKind.off]: null,
-    [DeviceMetricOperationalStatusKind.standby]: null,
-    [DeviceMetricOperationalStatusKind.enteredInError]: null
-});
-const DeviceMetricColorKindKeys = t.keyof({
-    [DeviceMetricColorKind.black]: null,
-    [DeviceMetricColorKind.red]: null,
-    [DeviceMetricColorKind.green]: null,
-    [DeviceMetricColorKind.yellow]: null,
-    [DeviceMetricColorKind.blue]: null,
-    [DeviceMetricColorKind.magenta]: null,
-    [DeviceMetricColorKind.cyan]: null,
-    [DeviceMetricColorKind.white]: null
-});
-const DeviceMetricCategoryKindKeys = t.keyof({
-    [DeviceMetricCategoryKind.measurement]: null,
-    [DeviceMetricCategoryKind.setting]: null,
-    [DeviceMetricCategoryKind.calculation]: null,
-    [DeviceMetricCategoryKind.unspecified]: null
-});
+                measurement = 'measurement',
+setting = 'setting',
+calculation = 'calculation',
+unspecified = 'unspecified'
+            }
 
 
 export interface IDeviceMetric {
@@ -232,14 +211,14 @@ export const RTTI_DeviceMetric: t.Type<IDeviceMetric> = t.recursion('IDeviceMetr
             unit: RTTI_CodeableConcept,
             source: RTTI_Reference,
             parent: RTTI_Reference,
-            operationalStatus: DeviceMetricOperationalStatusKindKeys,
-            _operationalStatus: RTTI_Element,
-            color: DeviceMetricColorKindKeys,
-            _color: RTTI_Element,
-            category: DeviceMetricCategoryKindKeys,
-            _category: RTTI_Element,
-            measurementPeriod: RTTI_Timing,
-            calibration: t.array(RTTI_DeviceMetric_Calibration)
+operationalStatus: createEnumType<DeviceMetricOperationalStatusKind>(DeviceMetricOperationalStatusKind, 'DeviceMetricOperationalStatusKind'),
+_operationalStatus: RTTI_Element,
+color: createEnumType<DeviceMetricColorKind>(DeviceMetricColorKind, 'DeviceMetricColorKind'),
+_color: RTTI_Element,
+category: createEnumType<DeviceMetricCategoryKind>(DeviceMetricCategoryKind, 'DeviceMetricCategoryKind'),
+_category: RTTI_Element,
+measurementPeriod: RTTI_Timing,
+calibration: t.array(RTTI_DeviceMetric_Calibration)
         })
 
     ])

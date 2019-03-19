@@ -15,12 +15,12 @@ import { RTTI_ActivityDefinition } from '../R4/Resource/RTTI_ActivityDefinition'
 describe('ActivityDefinition', () => {
 
 // All wrong @see: https://github.com/Ahryman40k/typescript-fhir-types/issues/5
-  /*
+
   test('should decode activitydefinition-administer-zika-virus-exposure-assessment.json', () => {
     const result = RTTI_ActivityDefinition.decode(zika_virus);
     expect(result._tag).toBe('Right');
   })
-
+  
   test('should decode activitydefinition-example.json', () => {
     const result = RTTI_ActivityDefinition.decode(example);
     expect(result._tag).toBe('Right');
@@ -55,7 +55,7 @@ describe('ActivityDefinition', () => {
     const result = RTTI_ActivityDefinition.decode(servicerequest);
     expect(result._tag).toBe('Right');
   })
-*/
+
   test('should decode activitydefinition-supplyrequest-example.json', () => {
     const result = RTTI_ActivityDefinition.decode(supplyrequest);
     expect(result._tag).toBe('Right');
