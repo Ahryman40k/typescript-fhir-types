@@ -16,7 +16,7 @@ install:
     - npm install codecov -g
 
 after_success:
-  - codecov --token=$CODECOV_TOKEN"
+  - codecov --token=$CODECOV_TOKEN
 
 jobs:
   include:
