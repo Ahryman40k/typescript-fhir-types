@@ -13,6 +13,10 @@ cache:
 
 install:
     - npm install
+    - npm install codecov -g
+
+after_success:
+  - codecov --token=$CODECOV_TOKEN"
 
 jobs:
   include:
@@ -20,6 +24,7 @@ jobs:
       script:
           - echo "Running tests against $(node -v) ..."
           - npm run test
+          
     - stage: deploy
       script: echo "Deploying to npm ..." && npm run publish-me
       deploy:
