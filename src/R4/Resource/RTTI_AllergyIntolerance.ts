@@ -16,26 +16,26 @@ import { RTTI_AllergyIntolerance_Reaction, IAllergyIntolerance_Reaction } from '
 import { createEnumType } from '../../EnumType';
 
 export enum AllergyIntoleranceCategoryKind {
-                food = 'food',
-medication = 'medication',
-environment = 'environment',
-biologic = 'biologic'
-            }
+    food = 'food',
+    medication = 'medication',
+    environment = 'environment',
+    biologic = 'biologic'
+}
 export enum AllergyIntoleranceClinicalStatusKind {
-                active = 'active',
-inactive = 'inactive',
-resolved = 'resolved'
-            }
+    active = 'active',
+    inactive = 'inactive',
+    resolved = 'resolved'
+}
 export enum AllergyIntoleranceVerificationStatusKind {
-                unconfirmed = 'unconfirmed',
-confirmed = 'confirmed',
-refuted = 'refuted',
-enteredInError = 'entered-in-error'
-            }
+    unconfirmed = 'unconfirmed',
+    confirmed = 'confirmed',
+    refuted = 'refuted',
+    enteredInError = 'entered-in-error'
+}
 export enum AllergyIntoleranceTypeKind {
-                allergy = 'allergy',
-intolerance = 'intolerance'
-            }
+    allergy = 'allergy',
+    intolerance = 'intolerance'
+}
 export enum AllergyIntoleranceCriticalityKind {
     low = 'low',
     high = 'high',
@@ -339,7 +339,7 @@ export const RTTI_AllergyIntolerance: t.Type<IAllergyIntolerance> = t.recursion(
             identifier: t.array(RTTI_Identifier),
             clinicalStatus: AllergyIntoleranceClinicalStatusKindKeys,
             _clinicalStatus: RTTI_Element,
-            verificationStatus: createEnumType<AllergyIntoleranceVerificationStatusKind>(AllergyIntoleranceVerificationStatusKind,'AllergyIntoleranceVerificationStatusKind'),
+            verificationStatus: createEnumType<AllergyIntoleranceVerificationStatusKind>(AllergyIntoleranceVerificationStatusKind, 'AllergyIntoleranceVerificationStatusKind'),
             _verificationStatus: RTTI_Element,
             type: AllergyIntoleranceTypeKindKeys,
             _type: RTTI_Element,
