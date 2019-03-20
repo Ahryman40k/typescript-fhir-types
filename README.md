@@ -2,7 +2,11 @@
 # typescript-fhir-model
 Typescript / Javascript object model for FHIR standard
 Model follows FHIR R4 specifications.
-  
+
+[![npm version](https://badge.fury.io/js/%40ahryman40k%2Fts-fhir-types.svg)](https://badge.fury.io/js/%40ahryman40k%2Fts-fhir-types)
+[![Known Vulnerabilities](https://snyk.io/test/github/Ahryman40k/typescript-fhir-types/badge.svg)](https://snyk.io/test/github/Ahryman40k/typescript-fhir-types) 
+[![Project dependencies overview(Beta)](https://david-dm.org/ahryman40k/typescript-fhir-types.svg)]() 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Definitions are io-ts based interfaces. See [io-ts github project](https://github.com/gcanti/io-ts) for further details. This means you can check your types at runtime.
   

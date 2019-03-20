@@ -15,7 +15,7 @@
     "url": "git@github.com:Ahryman40k/typescript-fhir-types.git"
   },
   "keywords": [],
-  "license": "ISC",
+  "license": "GPLv3",
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "jest": "^24.5.0",
