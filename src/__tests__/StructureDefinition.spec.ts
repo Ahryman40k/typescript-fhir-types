@@ -1,4 +1,4 @@
-import * as account_profile from './samples/account.profile.json';
+import * as account_profile from './samples/structuredefinition/account.profile.json';
 import { RTTI_StructureDefinition } from '../R4/Resource/RTTI_StructureDefinition';
 
 describe('StructureDefinition', () => {

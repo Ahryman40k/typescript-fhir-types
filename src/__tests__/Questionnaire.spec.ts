@@ -1,5 +1,5 @@
-import * as account_questionnaire from './samples/account-questionnaire.json';
-import * as activityDefinition_questionnaire from './samples/activitydefinition-questionnaire.json';
+import * as account_questionnaire from './samples/questionnaire/account-questionnaire.json';
+import * as activityDefinition_questionnaire from './samples/questionnaire/activitydefinition-questionnaire.json';
 
 import { RTTI_Questionnaire } from "../R4/Resource/RTTI_Questionnaire";
 
