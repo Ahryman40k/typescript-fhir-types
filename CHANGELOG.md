@@ -1,3 +1,10 @@
+# 4.0.5
+- Fix check issue with enums
+
+#4.0.4
+
+#4.0.3
+
 # 4.0.2
 - Implement FHIR Resources with io-ts
 - You can now validate your json and strongly type data.  
