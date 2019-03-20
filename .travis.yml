@@ -1,5 +1,28 @@
 language: node_js
 node_js:
-  - "stable"
+  - "11"
 
-script: echo "Running tests against $(node -v) ..." && npm run test
+stages:
+  - test
+  - name: deploy
+    if: branch = master
+
+cache:
+  directories:
+    - "node_modules"
+
+install:
+    - npm install
+
+jobs:
+  include:
+    - stage: test
+      script:
+          - echo "Running tests against $(node -v) ..."
+          - npm run test
+    - stage: deploy
+      script: echo "Deploying to npm ..." && npm run publish-me
+      deploy:
+        email: ahryman40k.gb@gmail.com
+        provider: npm
+        api_key: $NPM_API_KEY
