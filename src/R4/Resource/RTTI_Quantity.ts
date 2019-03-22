@@ -2,19 +2,21 @@
 import * as t from 'io-ts';
 import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Element, IElement } from './RTTI_Element';
+import { createEnumType } from '../../EnumType';
 
 export enum QuantityComparatorKind {
-        lower = 'lower',
-        lowerOrEqual = 'lowerOrEqual',
-        greaterOrEqual = 'greaterOrEqual',
-        greater = 'greater'
+        lower = '<',
+        lowerOrEqual = '<=',
+        greaterOrEqual = '>=',
+        greater = '>'
 }
+/*
 const QuantityComparatorKindKeys = t.keyof({
         [QuantityComparatorKind.lower]: null,
         [QuantityComparatorKind.lowerOrEqual]: null,
         [QuantityComparatorKind.greaterOrEqual]: null,
         [QuantityComparatorKind.greater]: null
-});
+});*/
 
 
 export interface IQuantity {
@@ -102,7 +104,7 @@ export const RTTI_Quantity: t.Type<IQuantity> = t.recursion('IQuantity', () =>
                 extension: t.array(RTTI_Extension),
                 value: t.number,
                 _value: RTTI_Element,
-                comparator: QuantityComparatorKindKeys,
+                comparator: createEnumType<QuantityComparatorKind>(QuantityComparatorKind, 'QuantityComparatorKind'),
                 _comparator: RTTI_Element,
                 unit: t.string,
                 _unit: RTTI_Element,

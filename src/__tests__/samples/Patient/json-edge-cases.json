@@ -163,7 +163,6 @@
           ]
         },
         "_given": [
-          null,
           {
             "id": "a3",
             "extension": [
@@ -172,8 +171,7 @@
                 "valueCode": "MID"
               }
             ]
-          },
-          null
+          }
         ],
         "given": [
           "Bénédicte",

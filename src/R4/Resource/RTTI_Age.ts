@@ -2,20 +2,22 @@
 import * as t from 'io-ts';
 import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Element, IElement } from './RTTI_Element';
+import { createEnumType } from '../../EnumType';
 
 export enum AgeComparatorKind {
-        lower = 'lower',
-        lowerOrEqual = 'lowerOrEqual',
-        greaterOrEqual = 'greaterOrEqual',
-        greater = 'greater'
+        lower = '<',
+        lowerOrEqual = '<=',
+        greaterOrEqual = '>=',
+        greater = '>'
 }
+/*
 const AgeComparatorKindKeys = t.keyof({
         [AgeComparatorKind.lower]: null,
         [AgeComparatorKind.lowerOrEqual]: null,
         [AgeComparatorKind.greaterOrEqual]: null,
         [AgeComparatorKind.greater]: null
 });
-
+*/
 
 export interface IAge {
 
@@ -102,7 +104,7 @@ export const RTTI_Age: t.Type<IAge> = t.recursion('IAge', () =>
                 extension: t.array(RTTI_Extension),
                 value: t.number,
                 _value: RTTI_Element,
-                comparator: AgeComparatorKindKeys,
+                comparator: createEnumType<AgeComparatorKind>(AgeComparatorKind,'AgeComparatorKind'),
                 _comparator: RTTI_Element,
                 unit: t.string,
                 _unit: RTTI_Element,

@@ -43,7 +43,7 @@
       },
       "valueQuantity": {
         "value": 18,
-        "comparator": "\u003e",
+        "comparator": ">",
         "unit": "yrs",
         "system": "http://unitsofmeasure.org",
         "code": "a"

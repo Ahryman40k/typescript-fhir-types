@@ -13,16 +13,17 @@ import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_MedicationAdministration_Performer, IMedicationAdministration_Performer } from './RTTI_MedicationAdministration_Performer';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
 import { RTTI_MedicationAdministration_Dosage, IMedicationAdministration_Dosage } from './RTTI_MedicationAdministration_Dosage';
+import { createEnumType } from '../../EnumType';
 
 export enum MedicationAdministrationStatusKind {
-    inProgress = 'inProgress',
-    notDone = 'notDone',
-    onHold = 'onHold',
+    inProgress = 'in-progress',
+    notDone = 'not-done',
+    onHold = 'on-hold',
     completed = 'completed',
-    enteredInError = 'enteredInError',
+    enteredInError = 'entered-in-error',
     stopped = 'stopped',
     unknown = 'unknown'
-}
+}/*
 const MedicationAdministrationStatusKindKeys = t.keyof({
     [MedicationAdministrationStatusKind.inProgress]: null,
     [MedicationAdministrationStatusKind.notDone]: null,
@@ -32,7 +33,7 @@ const MedicationAdministrationStatusKindKeys = t.keyof({
     [MedicationAdministrationStatusKind.stopped]: null,
     [MedicationAdministrationStatusKind.unknown]: null
 });
-
+*/
 
 export interface IMedicationAdministration {
 
@@ -275,7 +276,7 @@ export const RTTI_MedicationAdministration: t.Type<IMedicationAdministration> = 
             instantiates: t.array(t.string),
             _instantiates: t.array(RTTI_Element),
             partOf: t.array(RTTI_Reference),
-            status: MedicationAdministrationStatusKindKeys,
+            status: createEnumType<MedicationAdministrationStatusKind>(MedicationAdministrationStatusKind, 'MedicationAdministrationStatusKind'),
             _status: RTTI_Element,
             category: RTTI_CodeableConcept,
             medicationCodeableConcept: RTTI_CodeableConcept,
