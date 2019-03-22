@@ -154,7 +154,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     /**
      * The clinical status of the allergy or intolerance.
      */
-    clinicalStatus?: AllergyIntoleranceClinicalStatusKind;
+    clinicalStatus?: ICodeableConcept;
 
 
     /**
@@ -166,7 +166,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     /**
      * Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).
      */
-    verificationStatus?: AllergyIntoleranceVerificationStatusKind;
+    verificationStatus?: ICodeableConcept;
 
 
     /**
@@ -337,9 +337,9 @@ export const RTTI_AllergyIntolerance: t.Type<IAllergyIntolerance> = t.recursion(
             extension: t.array(RTTI_Extension),
             modifierExtension: t.array(RTTI_Extension),
             identifier: t.array(RTTI_Identifier),
-            clinicalStatus: AllergyIntoleranceClinicalStatusKindKeys,
+            clinicalStatus: RTTI_CodeableConcept,
             _clinicalStatus: RTTI_Element,
-            verificationStatus: createEnumType<AllergyIntoleranceVerificationStatusKind>(AllergyIntoleranceVerificationStatusKind, 'AllergyIntoleranceVerificationStatusKind'),
+            verificationStatus: RTTI_CodeableConcept,
             _verificationStatus: RTTI_Element,
             type: AllergyIntoleranceTypeKindKeys,
             _type: RTTI_Element,

@@ -13,11 +13,11 @@ import { RTTI_AuditEvent_Source, IAuditEvent_Source } from './RTTI_AuditEvent_So
 import { RTTI_AuditEvent_Entity, IAuditEvent_Entity } from './RTTI_AuditEvent_Entity';
 
 export enum AuditEventActionKind {
-    c = 'c',
-    r = 'r',
-    u = 'u',
-    d = 'd',
-    e = 'e'
+    c = 'C',
+    r = 'R',
+    u = 'U',
+    d = 'D',
+    e = 'E'
 }
 export enum AuditEventOutcomeKind {
     Success = '0',
