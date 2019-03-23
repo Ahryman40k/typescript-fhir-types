@@ -3,6 +3,7 @@ import * as t from 'io-ts';
 import {RTTI_Extension, IExtension} from './RTTI_Extension';
 import {RTTI_Element, IElement} from './RTTI_Element';
 import {RTTI_ConceptMap_DependsOn, IConceptMap_DependsOn} from './RTTI_ConceptMap_DependsOn';
+import { createEnumType } from '../../EnumType'
 
 export enum ConceptMap_TargetEquivalenceKind {
                 relatedto = 'relatedto',
@@ -16,18 +17,6 @@ inexact = 'inexact',
 unmatched = 'unmatched',
 disjoint = 'disjoint'
             }
-const ConceptMap_TargetEquivalenceKindKeys = t.keyof({
-                [ConceptMap_TargetEquivalenceKind.relatedto]: null,
-[ConceptMap_TargetEquivalenceKind.equivalent]: null,
-[ConceptMap_TargetEquivalenceKind.equal]: null,
-[ConceptMap_TargetEquivalenceKind.wider]: null,
-[ConceptMap_TargetEquivalenceKind.subsumes]: null,
-[ConceptMap_TargetEquivalenceKind.narrower]: null,
-[ConceptMap_TargetEquivalenceKind.specializes]: null,
-[ConceptMap_TargetEquivalenceKind.inexact]: null,
-[ConceptMap_TargetEquivalenceKind.unmatched]: null,
-[ConceptMap_TargetEquivalenceKind.disjoint]: null
-            });
 
 
             export interface IConceptMap_Target {
@@ -46,7 +35,7 @@ const ConceptMap_TargetEquivalenceKindKeys = t.keyof({
                     
 
                     /**
-                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
@@ -126,7 +115,7 @@ code: t.string,
 _code: RTTI_Element,
 display: t.string,
 _display: RTTI_Element,
-equivalence: ConceptMap_TargetEquivalenceKindKeys,
+equivalence: createEnumType<ConceptMap_TargetEquivalenceKind>(ConceptMap_TargetEquivalenceKind, 'ConceptMap_TargetEquivalenceKind'),
 _equivalence: RTTI_Element,
 comment: t.string,
 _comment: RTTI_Element,

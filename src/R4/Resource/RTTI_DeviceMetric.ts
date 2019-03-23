@@ -13,27 +13,27 @@ import { RTTI_DeviceMetric_Calibration, IDeviceMetric_Calibration } from './RTTI
 import { createEnumType } from '../../EnumType'
 
 export enum DeviceMetricOperationalStatusKind {
-                on = 'on',
-off = 'off',
-standby = 'standby',
-enteredInError = 'entered-in-error'
-            }
+    on = 'on',
+    off = 'off',
+    standby = 'standby',
+    enteredInError = 'entered-in-error'
+}
 export enum DeviceMetricColorKind {
-                black = 'black',
-red = 'red',
-green = 'green',
-yellow = 'yellow',
-blue = 'blue',
-magenta = 'magenta',
-cyan = 'cyan',
-white = 'white'
-            }
+    black = 'black',
+    red = 'red',
+    green = 'green',
+    yellow = 'yellow',
+    blue = 'blue',
+    magenta = 'magenta',
+    cyan = 'cyan',
+    white = 'white'
+}
 export enum DeviceMetricCategoryKind {
-                measurement = 'measurement',
-setting = 'setting',
-calculation = 'calculation',
-unspecified = 'unspecified'
-            }
+    measurement = 'measurement',
+    setting = 'setting',
+    calculation = 'calculation',
+    unspecified = 'unspecified'
+}
 
 
 export interface IDeviceMetric {
@@ -211,14 +211,14 @@ export const RTTI_DeviceMetric: t.Type<IDeviceMetric> = t.recursion('IDeviceMetr
             unit: RTTI_CodeableConcept,
             source: RTTI_Reference,
             parent: RTTI_Reference,
-operationalStatus: createEnumType<DeviceMetricOperationalStatusKind>(DeviceMetricOperationalStatusKind, 'DeviceMetricOperationalStatusKind'),
-_operationalStatus: RTTI_Element,
-color: createEnumType<DeviceMetricColorKind>(DeviceMetricColorKind, 'DeviceMetricColorKind'),
-_color: RTTI_Element,
-category: createEnumType<DeviceMetricCategoryKind>(DeviceMetricCategoryKind, 'DeviceMetricCategoryKind'),
-_category: RTTI_Element,
-measurementPeriod: RTTI_Timing,
-calibration: t.array(RTTI_DeviceMetric_Calibration)
+            operationalStatus: createEnumType<DeviceMetricOperationalStatusKind>(DeviceMetricOperationalStatusKind, 'DeviceMetricOperationalStatusKind'),
+            _operationalStatus: RTTI_Element,
+            color: createEnumType<DeviceMetricColorKind>(DeviceMetricColorKind, 'DeviceMetricColorKind'),
+            _color: RTTI_Element,
+            category: createEnumType<DeviceMetricCategoryKind>(DeviceMetricCategoryKind, 'DeviceMetricCategoryKind'),
+            _category: RTTI_Element,
+            measurementPeriod: RTTI_Timing,
+            calibration: t.array(RTTI_DeviceMetric_Calibration)
         })
 
     ])

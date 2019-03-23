@@ -96,7 +96,7 @@ unknown = 'unknown'
                     
 
                     /**
-                     * May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+                     * May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
@@ -130,19 +130,19 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                     /**
                      * A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.
                      */
-                    category? : ICodeableConcept;
+                    category? : ICodeableConcept[];
                     
 
                     /**
-                     * The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources.
+                     * The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.
                      */
                     subject? : IReference;
                     
 
                     /**
-                     * The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport per is about.
+                     * The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.
                      */
-                    context? : IReference;
+                    encounter? : IReference;
                     
 
                     /**
@@ -262,9 +262,9 @@ identifier: t.array(RTTI_Identifier),
 basedOn: t.array(RTTI_Reference),
 status: createEnumType<DiagnosticReportStatusKind>(DiagnosticReportStatusKind, 'DiagnosticReportStatusKind'),
 _status: RTTI_Element,
-category: RTTI_CodeableConcept,
+category: t.array(RTTI_CodeableConcept),
 subject: RTTI_Reference,
-context: RTTI_Reference,
+encounter: RTTI_Reference,
 effectiveDateTime: t.string,
 _effectiveDateTime: RTTI_Element,
 effectivePeriod: RTTI_Period,

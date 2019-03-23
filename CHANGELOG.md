@@ -1,9 +1,14 @@
+# 4.0.6
+- Add 2911 tests case
+- Fix some enums 
+- Updating R4 definition with new objects
+
 # 4.0.5
-- Fix check issue with enums
+- Fix some enums (not enought)
 
 #4.0.4
-
-#4.0.3
+- solve union issue with io-ts
+- Add scalars that check value against regexp
 
 # 4.0.2
 - Implement FHIR Resources with io-ts

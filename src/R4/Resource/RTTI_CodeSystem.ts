@@ -21,18 +21,18 @@ export enum CodeSystemStatusKind {
     unknown = 'unknown'
 }
 export enum CodeSystemHierarchyMeaningKind {
-                groupedBy = 'grouped-by',
-isA = 'is-a',
-partOf = 'part-of',
-classifiedWith = 'classified-with'
-            }
+    groupedBy = 'grouped-by',
+    isA = 'is-a',
+    partOf = 'part-of',
+    classifiedWith = 'classified-with'
+}
 export enum CodeSystemContentKind {
-    notPresent = 'notPresent',
+    notPresent = 'not-present',
     example = 'example',
     fragment = 'fragment',
     complete = 'complete',
     supplement = 'supplement'
-}
+}/*
 const CodeSystemStatusKindKeys = t.keyof({
     [CodeSystemStatusKind.draft]: null,
     [CodeSystemStatusKind.active]: null,
@@ -52,7 +52,7 @@ const CodeSystemContentKindKeys = t.keyof({
     [CodeSystemContentKind.complete]: null,
     [CodeSystemContentKind.supplement]: null
 });
-
+*/
 
 export interface ICodeSystem {
 
@@ -413,7 +413,7 @@ export const RTTI_CodeSystem: t.Type<ICodeSystem> = t.recursion('ICodeSystem', (
             _name: RTTI_Element,
             title: t.string,
             _title: RTTI_Element,
-            status: CodeSystemStatusKindKeys,
+            status: createEnumType<CodeSystemStatusKind>(CodeSystemStatusKind, 'CodeSystemStatusKind'),
             _status: RTTI_Element,
             experimental: t.boolean,
             _experimental: RTTI_Element,
@@ -439,7 +439,7 @@ export const RTTI_CodeSystem: t.Type<ICodeSystem> = t.recursion('ICodeSystem', (
             _compositional: RTTI_Element,
             versionNeeded: t.boolean,
             _versionNeeded: RTTI_Element,
-            content: CodeSystemContentKindKeys,
+            content: createEnumType<CodeSystemContentKind>( CodeSystemContentKind, 'CodeSystemContentKind'),
             _content: RTTI_Element,
             supplements: t.string,
             count: t.number,

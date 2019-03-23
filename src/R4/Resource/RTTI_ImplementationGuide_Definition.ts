@@ -1,11 +1,12 @@
 
 import * as t from 'io-ts';
 import {RTTI_Extension, IExtension} from './RTTI_Extension';
-import {RTTI_ImplementationGuide_Package, IImplementationGuide_Package} from './RTTI_ImplementationGuide_Package';
+import {RTTI_ImplementationGuide_Grouping, IImplementationGuide_Grouping} from './RTTI_ImplementationGuide_Grouping';
 import {RTTI_ImplementationGuide_Resource, IImplementationGuide_Resource} from './RTTI_ImplementationGuide_Resource';
 import {RTTI_ImplementationGuide_Page, IImplementationGuide_Page} from './RTTI_ImplementationGuide_Page';
 import {RTTI_ImplementationGuide_Parameter, IImplementationGuide_Parameter} from './RTTI_ImplementationGuide_Parameter';
 import {RTTI_ImplementationGuide_Template, IImplementationGuide_Template} from './RTTI_ImplementationGuide_Template';
+import { createEnumType } from '../../EnumType'
 
 
 
@@ -31,7 +32,7 @@ import {RTTI_ImplementationGuide_Template, IImplementationGuide_Template} from '
                     
 
                     /**
-                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
@@ -41,7 +42,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                     /**
                      * A logical group of resources. Logical groups can be used when building pages.
                      */
-                    package? : IImplementationGuide_Package[];
+                    grouping? : IImplementationGuide_Grouping[];
                     
 
                     /**
@@ -77,7 +78,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
             id: t.string,
 extension: t.array(RTTI_Extension),
 modifierExtension: t.array(RTTI_Extension),
-package: t.array(RTTI_ImplementationGuide_Package),
+grouping: t.array(RTTI_ImplementationGuide_Grouping),
 page: RTTI_ImplementationGuide_Page,
 parameter: t.array(RTTI_ImplementationGuide_Parameter),
 template: t.array(RTTI_ImplementationGuide_Template)

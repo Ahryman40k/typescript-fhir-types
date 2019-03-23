@@ -5,10 +5,10 @@ import { RTTI_Element, IElement } from './RTTI_Element';
 import { createEnumType } from '../../EnumType';
 
 export enum ExpressionLanguageKind {
-                textCql = 'text/cql',
-textFhirpath = 'text/fhirpath',
-applicationXFhirQuery = 'application/x-fhir-query'
-            }
+        textCql = 'text/cql',
+        textFhirpath = 'text/fhirpath',
+        applicationXFhirQuery = 'application/x-fhir-query'
+}
 
 export interface IExpression {
 

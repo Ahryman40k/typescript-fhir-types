@@ -4,6 +4,7 @@ import {RTTI_Extension, IExtension} from './RTTI_Extension';
 import {RTTI_Element, IElement} from './RTTI_Element';
 import {RTTI_ConceptMap_Element, IConceptMap_Element} from './RTTI_ConceptMap_Element';
 import {RTTI_ConceptMap_Unmapped, IConceptMap_Unmapped} from './RTTI_ConceptMap_Unmapped';
+import { createEnumType } from '../../EnumType'
 
 
 
@@ -29,7 +30,7 @@ import {RTTI_ConceptMap_Unmapped, IConceptMap_Unmapped} from './RTTI_ConceptMap_
                     
 
                     /**
-                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
@@ -85,7 +86,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
                     
 
                     /**
-                     * What to do when there is no mapping for the source concept. "Unmapped" does not include codes that are unamatched, and the unmapped element is ignored in a code is specified to have equivalence = unmatched.
+                     * What to do when there is no mapping for the source concept. "Unmapped" does not include codes that are unmatched, and the unmapped element is ignored in a code is specified to have equivalence = unmatched.
                      */
                     unmapped? : IConceptMap_Unmapped;
                     
