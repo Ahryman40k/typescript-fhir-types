@@ -1,3 +1,6 @@
+# 4.0.8
+- Fix missing interfaces in export
+
 # 4.0.6
 - Add 2911 tests case
 - Fix some enums 
