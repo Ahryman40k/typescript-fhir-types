@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "11"
+
+stages:
+  - test
+
+cache:
+  directories:
+    - "node_modules"
+
+install:
+    - npm install
+    - npm install codecov -g
+
+after_success:
+  - codecov --token=$CODECOV_TOKEN
+
+jobs:
+  include:
+    - stage: test
+      script:
+          - echo "Running tests against $(node -v) ..."
+          - npm run test

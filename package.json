@@ -1,0 +1,36 @@
+{
+  "name": "@ahryman40k/ts-fhir-types",
+  "version": "4.0.10",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rimraf lib/*",
+    "publish-me": "npm run clean && npm version patch && tsc -p . && npm publish",
+    "publish-coverage": "codecov --token=50ac9b8a-5b64-40a3-bac5-721272f90c71"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Ahryman40k/typescript-fhir-types.git"
+  },
+  "keywords": [],
+  "license": "GPLv3",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "codecov": "^3.2.0",
+    "jest": "^24.5.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "io-ts": "^1.8.2",
+    "w3c-validate": "0.0.2"
+  }
+}
