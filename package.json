@@ -8,7 +8,7 @@
     "prepare": "npm run build",
     "build": "tsc",
     "test": "jest",
-    "clean": "rimraf lib",
+    "clean": "rimraf lib/*",
     "publish-me": "npm run clean && npm version patch && tsc -p . && npm publish",
     "publish-coverage": "codecov --token=50ac9b8a-5b64-40a3-bac5-721272f90c71"
   },
