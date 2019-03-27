@@ -1,3 +1,10 @@
+# 4.0.11
+- Reactivate scalars in all objects
+- Update all objects according last R4 definition 
+
+# 4.0.10
+- Delete build folder before publish 
+
 # 4.0.8
 - Fix missing interfaces in export
 

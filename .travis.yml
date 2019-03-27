@@ -4,8 +4,6 @@ node_js:
 
 stages:
   - test
-  - name: deploy
-    if: branch = master
 
 cache:
   directories:
@@ -24,10 +22,3 @@ jobs:
       script:
           - echo "Running tests against $(node -v) ..."
           - npm run test
-          
-    - stage: deploy
-      script: echo "Deploying to npm ..." && npm run publish-me
-      deploy:
-        email: ahryman40k.gb@gmail.com
-        provider: npm
-        api_key: $NPM_API_KEY

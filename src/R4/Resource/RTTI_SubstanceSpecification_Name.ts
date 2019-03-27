@@ -1,141 +1,116 @@
-
 import * as t from 'io-ts';
-import {RTTI_Extension, IExtension} from './RTTI_Extension';
-import {RTTI_Element, IElement} from './RTTI_Element';
-import {RTTI_CodeableConcept, ICodeableConcept} from './RTTI_CodeableConcept';
-import {RTTI_SubstanceSpecification_Official, ISubstanceSpecification_Official} from './RTTI_SubstanceSpecification_Official';
-import {RTTI_Reference, IReference} from './RTTI_Reference';
-import { createEnumType } from '../../EnumType'
+import { RTTI_Extension, IExtension } from './RTTI_Extension';
+import { RTTI_Element, IElement } from './RTTI_Element';
+import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
+import {
+	RTTI_SubstanceSpecification_Official,
+	ISubstanceSpecification_Official
+} from './RTTI_SubstanceSpecification_Official';
+import { RTTI_Reference, IReference } from './RTTI_Reference';
 
+export interface ISubstanceSpecification_Name {
+	/**
+	 * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+	 */
+	id?: string;
 
+	/**
+	 * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+	 */
+	extension?: IExtension[];
 
-
-            export interface ISubstanceSpecification_Name {
-                
-                
-                    /**
-                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
-                     */
-                    id? : string;
-                    
-
-                    /**
-                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
-                     */
-                    extension? : IExtension[];
-                    
-
-                    /**
+	/**
                      * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
-                    modifierExtension? : IExtension[];
-                    
+	modifierExtension?: IExtension[];
 
-                    /**
-                     * The actual name.
-                     */
-                    name? : string;
-                    
+	/**
+	 * The actual name.
+	 */
+	name?: string;
 
-                    /**
-                     * Extensions for name
-                     */
-                    _name? : IElement;
-                    
+	/**
+	 * Extensions for name
+	 */
+	_name?: IElement;
 
-                    /**
-                     * Name type.
-                     */
-                    type? : ICodeableConcept;
-                    
+	/**
+	 * Name type.
+	 */
+	type?: ICodeableConcept;
 
-                    /**
-                     * The status of the name.
-                     */
-                    status? : ICodeableConcept;
-                    
+	/**
+	 * The status of the name.
+	 */
+	status?: ICodeableConcept;
 
-                    /**
-                     * If this is the preferred name for this substance.
-                     */
-                    preferred? : boolean;
-                    
+	/**
+	 * If this is the preferred name for this substance.
+	 */
+	preferred?: boolean;
 
-                    /**
-                     * Extensions for preferred
-                     */
-                    _preferred? : IElement;
-                    
+	/**
+	 * Extensions for preferred
+	 */
+	_preferred?: IElement;
 
-                    /**
-                     * Language of the name.
-                     */
-                    language? : ICodeableConcept[];
-                    
+	/**
+	 * Language of the name.
+	 */
+	language?: ICodeableConcept[];
 
-                    /**
-                     * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
-                     */
-                    domain? : ICodeableConcept[];
-                    
+	/**
+	 * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
+	 */
+	domain?: ICodeableConcept[];
 
-                    /**
-                     * The jurisdiction where this name applies.
-                     */
-                    jurisdiction? : ICodeableConcept[];
-                    
+	/**
+	 * The jurisdiction where this name applies.
+	 */
+	jurisdiction?: ICodeableConcept[];
 
-                    /**
-                     * A synonym of this name.
-                     */
-                    synonym? : ISubstanceSpecification_Name[];
-                    
+	/**
+	 * A synonym of this name.
+	 */
+	synonym?: ISubstanceSpecification_Name[];
 
-                    /**
-                     * A translation for this name.
-                     */
-                    translation? : ISubstanceSpecification_Name[];
-                    
+	/**
+	 * A translation for this name.
+	 */
+	translation?: ISubstanceSpecification_Name[];
 
-                    /**
-                     * Details of the official nature of this name.
-                     */
-                    official? : ISubstanceSpecification_Official[];
-                    
+	/**
+	 * Details of the official nature of this name.
+	 */
+	official?: ISubstanceSpecification_Official[];
 
-                    /**
-                     * Supporting literature.
-                     */
-                    source? : IReference[];
-                    
-            }
-        
+	/**
+	 * Supporting literature.
+	 */
+	source?: IReference[];
+}
 
-
-        export const RTTI_SubstanceSpecification_Name: t.Type<ISubstanceSpecification_Name> = t.recursion( 'ISubstanceSpecification_Name', () =>
-                
-        t.partial({
-            id: t.string,
-extension: t.array(RTTI_Extension),
-modifierExtension: t.array(RTTI_Extension),
-name: t.string,
-_name: RTTI_Element,
-type: RTTI_CodeableConcept,
-status: RTTI_CodeableConcept,
-preferred: t.boolean,
-_preferred: RTTI_Element,
-language: t.array(RTTI_CodeableConcept),
-domain: t.array(RTTI_CodeableConcept),
-jurisdiction: t.array(RTTI_CodeableConcept),
-synonym: t.array(RTTI_SubstanceSpecification_Name),
-translation: t.array(RTTI_SubstanceSpecification_Name),
-official: t.array(RTTI_SubstanceSpecification_Official),
-source: t.array(RTTI_Reference)
-        })
-        
-        );
-        
-
-        
+export const RTTI_SubstanceSpecification_Name: t.Type<
+	ISubstanceSpecification_Name
+> = t.recursion('ISubstanceSpecification_Name', () =>
+	t.partial({
+		id: t.string,
+		extension: t.array(RTTI_Extension),
+		modifierExtension: t.array(RTTI_Extension),
+		name: t.string,
+		_name: RTTI_Element,
+		type: RTTI_CodeableConcept,
+		status: RTTI_CodeableConcept,
+		preferred: t.boolean,
+		_preferred: RTTI_Element,
+		language: t.array(RTTI_CodeableConcept),
+		domain: t.array(RTTI_CodeableConcept),
+		jurisdiction: t.array(RTTI_CodeableConcept),
+		synonym: t.array(RTTI_SubstanceSpecification_Name),
+		translation: t.array(RTTI_SubstanceSpecification_Name),
+		official: t.array(RTTI_SubstanceSpecification_Official),
+		source: t.array(RTTI_Reference)
+	})
+);

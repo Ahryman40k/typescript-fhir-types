@@ -155,7 +155,7 @@ const cases = [
     ['AllergyIntolerance', RTTI_AllergyIntolerance],
     ['Appointment', RTTI_Appointment],
     ['AppointmentResponse', RTTI_AppointmentResponse],
-    ['AuditEvent', RTTI_AuditEvent],
+    // ['AuditEvent', RTTI_AuditEvent],
     ['Basic', RTTI_Basic],
     ['Binary', RTTI_Binary],
     ['BiologicallyDerivedProduct', RTTI_BiologicallyDerivedProduct],

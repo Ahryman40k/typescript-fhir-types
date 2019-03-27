@@ -43,7 +43,6 @@ import { RTTI_Encounter, IEncounter } from '../Resource/RTTI_Encounter';
 import { RTTI_Endpoint, IEndpoint } from '../Resource/RTTI_Endpoint';
 import { RTTI_EnrollmentRequest, IEnrollmentRequest } from '../Resource/RTTI_EnrollmentRequest';
 import { RTTI_EnrollmentResponse, IEnrollmentResponse } from '../Resource/RTTI_EnrollmentResponse';
-import { RTTI_EntryDefinition, IEntryDefinition } from '../Resource/RTTI_EntryDefinition';
 import { RTTI_EpisodeOfCare, IEpisodeOfCare } from '../Resource/RTTI_EpisodeOfCare';
 import { RTTI_EventDefinition, IEventDefinition } from '../Resource/RTTI_EventDefinition';
 import { RTTI_ExampleScenario, IExampleScenario } from '../Resource/RTTI_ExampleScenario';
@@ -62,7 +61,6 @@ import { RTTI_ImmunizationRecommendation, IImmunizationRecommendation } from '..
 import { RTTI_ImplementationGuide, IImplementationGuide } from '../Resource/RTTI_ImplementationGuide';
 import { RTTI_InsurancePlan, IInsurancePlan } from '../Resource/RTTI_InsurancePlan';
 import { RTTI_Invoice, IInvoice } from '../Resource/RTTI_Invoice';
-import { RTTI_ItemInstance, IItemInstance } from '../Resource/RTTI_ItemInstance';
 import { RTTI_Library, ILibrary } from '../Resource/RTTI_Library';
 import { RTTI_Linkage, ILinkage } from '../Resource/RTTI_Linkage';
 import { RTTI_List, IList } from '../Resource/RTTI_List';
@@ -78,9 +76,7 @@ import { RTTI_MedicationRequest, IMedicationRequest } from '../Resource/RTTI_Med
 import { RTTI_MedicationStatement, IMedicationStatement } from '../Resource/RTTI_MedicationStatement';
 import { RTTI_MedicinalProduct, IMedicinalProduct } from '../Resource/RTTI_MedicinalProduct';
 import { RTTI_MedicinalProductAuthorization, IMedicinalProductAuthorization } from '../Resource/RTTI_MedicinalProductAuthorization';
-import { RTTI_MedicinalProductClinicals, IMedicinalProductClinicals } from '../Resource/RTTI_MedicinalProductClinicals';
 import { RTTI_MedicinalProductContraindication, IMedicinalProductContraindication } from '../Resource/RTTI_MedicinalProductContraindication';
-import { RTTI_MedicinalProductDeviceSpec, IMedicinalProductDeviceSpec } from '../Resource/RTTI_MedicinalProductDeviceSpec';
 import { RTTI_MedicinalProductIndication, IMedicinalProductIndication } from '../Resource/RTTI_MedicinalProductIndication';
 import { RTTI_MedicinalProductIngredient, IMedicinalProductIngredient } from '../Resource/RTTI_MedicinalProductIngredient';
 import { RTTI_MedicinalProductInteraction, IMedicinalProductInteraction } from '../Resource/RTTI_MedicinalProductInteraction';
@@ -107,8 +103,6 @@ import { RTTI_PlanDefinition, IPlanDefinition } from '../Resource/RTTI_PlanDefin
 import { RTTI_Practitioner, IPractitioner } from '../Resource/RTTI_Practitioner';
 import { RTTI_PractitionerRole, IPractitionerRole } from '../Resource/RTTI_PractitionerRole';
 import { RTTI_Procedure, IProcedure } from '../Resource/RTTI_Procedure';
-import { RTTI_ProcessRequest, IProcessRequest } from '../Resource/RTTI_ProcessRequest';
-import { RTTI_ProcessResponse, IProcessResponse } from '../Resource/RTTI_ProcessResponse';
 import { RTTI_Provenance, IProvenance } from '../Resource/RTTI_Provenance';
 import { RTTI_Questionnaire, IQuestionnaire } from '../Resource/RTTI_Questionnaire';
 import { RTTI_QuestionnaireResponse, IQuestionnaireResponse } from '../Resource/RTTI_QuestionnaireResponse';
@@ -119,7 +113,6 @@ import { RTTI_ResearchSubject, IResearchSubject } from '../Resource/RTTI_Researc
 import { RTTI_RiskAssessment, IRiskAssessment } from '../Resource/RTTI_RiskAssessment';
 import { RTTI_Schedule, ISchedule } from '../Resource/RTTI_Schedule';
 import { RTTI_SearchParameter, ISearchParameter } from '../Resource/RTTI_SearchParameter';
-import { RTTI_Sequence, ISequence } from '../Resource/RTTI_Sequence';
 import { RTTI_ServiceRequest, IServiceRequest } from '../Resource/RTTI_ServiceRequest';
 import { RTTI_Slot, ISlot } from '../Resource/RTTI_Slot';
 import { RTTI_Specimen, ISpecimen } from '../Resource/RTTI_Specimen';
@@ -137,7 +130,6 @@ import { RTTI_Task, ITask } from '../Resource/RTTI_Task';
 import { RTTI_TerminologyCapabilities, ITerminologyCapabilities } from '../Resource/RTTI_TerminologyCapabilities';
 import { RTTI_TestReport, ITestReport } from '../Resource/RTTI_TestReport';
 import { RTTI_TestScript, ITestScript } from '../Resource/RTTI_TestScript';
-import { RTTI_UserSession, IUserSession } from '../Resource/RTTI_UserSession';
 import { RTTI_ValueSet, IValueSet } from '../Resource/RTTI_ValueSet';
 import { RTTI_VerificationResult, IVerificationResult } from '../Resource/RTTI_VerificationResult';
 import { RTTI_VisionPrescription, IVisionPrescription } from '../Resource/RTTI_VisionPrescription';
@@ -191,7 +183,6 @@ export type IResourceList =
     IEndpoint |
     IEnrollmentRequest |
     IEnrollmentResponse |
-    IEntryDefinition |
     IEpisodeOfCare |
     IEventDefinition |
     IExampleScenario |
@@ -210,7 +201,6 @@ export type IResourceList =
     IImplementationGuide |
     IInsurancePlan |
     IInvoice |
-    IItemInstance |
     ILibrary |
     ILinkage |
     IList |
@@ -226,9 +216,7 @@ export type IResourceList =
     IMedicationStatement |
     IMedicinalProduct |
     IMedicinalProductAuthorization |
-    IMedicinalProductClinicals |
     IMedicinalProductContraindication |
-    IMedicinalProductDeviceSpec |
     IMedicinalProductIndication |
     IMedicinalProductIngredient |
     IMedicinalProductInteraction |
@@ -255,8 +243,6 @@ export type IResourceList =
     IPractitioner |
     IPractitionerRole |
     IProcedure |
-    IProcessRequest |
-    IProcessResponse |
     IProvenance |
     IQuestionnaire |
     IQuestionnaireResponse |
@@ -267,7 +253,6 @@ export type IResourceList =
     IRiskAssessment |
     ISchedule |
     ISearchParameter |
-    ISequence |
     IServiceRequest |
     ISlot |
     ISpecimen |
@@ -285,7 +270,6 @@ export type IResourceList =
     ITerminologyCapabilities |
     ITestReport |
     ITestScript |
-    IUserSession |
     IValueSet |
     IVerificationResult |
     IVisionPrescription;
@@ -337,7 +321,6 @@ export const RTTI_ResourceList: t.Type<IResourceList> = t.recursion('IResourceLi
         RTTI_Endpoint,
         RTTI_EnrollmentRequest,
         RTTI_EnrollmentResponse,
-        RTTI_EntryDefinition,
         RTTI_EpisodeOfCare,
         RTTI_EventDefinition,
         RTTI_ExampleScenario,
@@ -356,7 +339,6 @@ export const RTTI_ResourceList: t.Type<IResourceList> = t.recursion('IResourceLi
         RTTI_ImplementationGuide,
         RTTI_InsurancePlan,
         RTTI_Invoice,
-        RTTI_ItemInstance,
         RTTI_Library,
         RTTI_Linkage,
         RTTI_List,
@@ -372,9 +354,7 @@ export const RTTI_ResourceList: t.Type<IResourceList> = t.recursion('IResourceLi
         RTTI_MedicationStatement,
         RTTI_MedicinalProduct,
         RTTI_MedicinalProductAuthorization,
-        RTTI_MedicinalProductClinicals,
         RTTI_MedicinalProductContraindication,
-        RTTI_MedicinalProductDeviceSpec,
         RTTI_MedicinalProductIndication,
         RTTI_MedicinalProductIngredient,
         RTTI_MedicinalProductInteraction,
@@ -401,8 +381,6 @@ export const RTTI_ResourceList: t.Type<IResourceList> = t.recursion('IResourceLi
         RTTI_Practitioner,
         RTTI_PractitionerRole,
         RTTI_Procedure,
-        RTTI_ProcessRequest,
-        RTTI_ProcessResponse,
         RTTI_Provenance,
         RTTI_Questionnaire,
         RTTI_QuestionnaireResponse,
@@ -413,7 +391,6 @@ export const RTTI_ResourceList: t.Type<IResourceList> = t.recursion('IResourceLi
         RTTI_RiskAssessment,
         RTTI_Schedule,
         RTTI_SearchParameter,
-        RTTI_Sequence,
         RTTI_ServiceRequest,
         RTTI_Slot,
         RTTI_Specimen,
@@ -431,7 +408,6 @@ export const RTTI_ResourceList: t.Type<IResourceList> = t.recursion('IResourceLi
         RTTI_TerminologyCapabilities,
         RTTI_TestReport,
         RTTI_TestScript,
-        RTTI_UserSession,
         RTTI_ValueSet,
         RTTI_VerificationResult,
         RTTI_VisionPrescription

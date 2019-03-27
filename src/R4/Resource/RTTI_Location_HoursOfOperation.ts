@@ -1,103 +1,82 @@
-
 import * as t from 'io-ts';
-import {RTTI_Extension, IExtension} from './RTTI_Extension';
+import { RTTI_Extension, IExtension } from './RTTI_Extension';
+import { RTTI_code} from '../Scalar/RTTI_code';
+import { RTTI_Element, IElement } from './RTTI_Element';
+import { RTTI_time } from '../Scalar/RTTI_time';
 
-import {RTTI_Element, IElement} from './RTTI_Element';
+export interface ILocation_HoursOfOperation {
+	/**
+	 * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
+	 */
+	id?: string;
 
+	/**
+	 * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+	 */
+	extension?: IExtension[];
 
-
-
-            export interface ILocation_HoursOfOperation {
-                
-                
-                    /**
-                     * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
-                     */
-                    id? : string;
-                    
-
-                    /**
-                     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
-                     */
-                    extension? : IExtension[];
-                    
-
-                    /**
-                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+	/**
+                     * May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
-                    modifierExtension? : IExtension[];
-                    
+	modifierExtension?: IExtension[];
 
-                    /**
-                     * Indicates which days of the week are available between the start and end Times.
-                     */
-                    daysOfWeek? : string[];
-                    
+	/**
+	 * Indicates which days of the week are available between the start and end Times.
+	 */
+	daysOfWeek?: string[];
 
-                    /**
-                     * Extensions for daysOfWeek
-                     */
-                    _daysOfWeek? : IElement[];
-                    
+	/**
+	 * Extensions for daysOfWeek
+	 */
+	_daysOfWeek?: IElement[];
 
-                    /**
-                     * The Location is open all day.
-                     */
-                    allDay? : boolean;
-                    
+	/**
+	 * The Location is open all day.
+	 */
+	allDay?: boolean;
 
-                    /**
-                     * Extensions for allDay
-                     */
-                    _allDay? : IElement;
-                    
+	/**
+	 * Extensions for allDay
+	 */
+	_allDay?: IElement;
 
-                    /**
-                     * Time that the Location opens.
-                     */
-                    openingTime? : string;
-                    
+	/**
+	 * Time that the Location opens.
+	 */
+	openingTime?: string;
 
-                    /**
-                     * Extensions for openingTime
-                     */
-                    _openingTime? : IElement;
-                    
+	/**
+	 * Extensions for openingTime
+	 */
+	_openingTime?: IElement;
 
-                    /**
-                     * Time that the Location closes.
-                     */
-                    closingTime? : string;
-                    
+	/**
+	 * Time that the Location closes.
+	 */
+	closingTime?: string;
 
-                    /**
-                     * Extensions for closingTime
-                     */
-                    _closingTime? : IElement;
-                    
-            }
-        
+	/**
+	 * Extensions for closingTime
+	 */
+	_closingTime?: IElement;
+}
 
-
-        export const RTTI_Location_HoursOfOperation: t.Type<ILocation_HoursOfOperation> = t.recursion( 'ILocation_HoursOfOperation', () =>
-                
-        t.partial({
-            id: t.string,
-extension: t.array(RTTI_Extension),
-modifierExtension: t.array(RTTI_Extension),
-daysOfWeek: t.array(t.string),
-_daysOfWeek: t.array(RTTI_Element),
-allDay: t.boolean,
-_allDay: RTTI_Element,
-openingTime: t.string,
-_openingTime: RTTI_Element,
-closingTime: t.string,
-_closingTime: RTTI_Element
-        })
-        
-        );
-        
-
-        
+export const RTTI_Location_HoursOfOperation: t.Type<
+	ILocation_HoursOfOperation
+> = t.recursion('ILocation_HoursOfOperation', () =>
+	t.partial({
+		id: t.string,
+		extension: t.array(RTTI_Extension),
+		modifierExtension: t.array(RTTI_Extension),
+		daysOfWeek: t.array(RTTI_code),
+		_daysOfWeek: t.array(RTTI_Element),
+		allDay: t.boolean,
+		_allDay: RTTI_Element,
+		openingTime: RTTI_time,
+		_openingTime: RTTI_Element,
+		closingTime: RTTI_time,
+		_closingTime: RTTI_Element
+	})
+);
