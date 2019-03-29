@@ -21,10 +21,8 @@ or
 yarn install @ahryman40k/ts-fhir-types
 ```
 
-you can also run tests with
-```
-npm test
-```  
+## articles
+[A medium article: Handle FHIR objects with Typescript](https://medium.com/@ahryman40k.gb/handle-fhir-objects-in-typescript-and-javascript-7110f5a0686f)
 
 ## Examples
 
@@ -59,16 +57,6 @@ let imagine you server or your application is receiving a FHIR Resource like an 
       "reference":"Patient/f001",
       "display":"P. van de Heuvel"
    },
-   "effectivePeriod":{
-      "start":"2013-04-02T09:30:10+01:00"
-   },
-   "issued":"2013-04-03T15:30:10+01:00",
-   "performer":[
-      {
-         "reference":"Practitioner/f005",
-         "display":"A. Langeveld"
-      }
-   ],
    "valueQuantity":{
       "value":6.3,
       "unit":"mmol/l",
@@ -110,6 +98,7 @@ There is 2 points:
 * You would like to have strongly typed types (__typescript__)
 * You would validate data returned from server and test their validity against FHIR standard
   
+ 
 
 ```javascript
 // Import requested objects
