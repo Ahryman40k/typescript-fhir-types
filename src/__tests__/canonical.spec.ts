@@ -1,6 +1,6 @@
 import { R4 } from '../index';
 
-const T = R4.scalars.RTTI_canonical;
+const T = R4.RTTI_canonical;
 const value = "http://snomed.info/sct";
         
 describe('Scalar canonocal', () => {
