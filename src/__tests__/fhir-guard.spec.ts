@@ -33,7 +33,7 @@ class MyTestClass {
 describe('Guard', () => {
 
     test("Should evaluate function to check Resource", () => {
-        expect( decode(RTTI_Expression, expression ) ).toBe(expression)
+        expect( RTTI_Expression.decode( expression ) ).toBe(expression)
     });
 
     test("Should evaluate verify  to test property", () => {

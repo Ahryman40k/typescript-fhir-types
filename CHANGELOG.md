@@ -1,3 +1,9 @@
+# 4.0.16
+  - enums weren't exported ^^''
+
+# 4.0.15 
+ - Remove namespaces behind R4
+
 # 4.0.11
 - Reactivate scalars in all objects
 - Update all objects according last R4 definition 
