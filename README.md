@@ -105,9 +105,9 @@ There is 2 points:
 import { R4 } from  '@Ahryman40k/ts-fhir-types';
 
 // validation succeeded
-const  validationResult = R4.resources.RTTI_Observation.decode(/*json response*/) // => Right if good, Left if not
+const  validationResult = R4.RTTI_Observation.decode(/*json response*/) // => Right if good, Left if not
 ThrowReporter.report( validationResult);
-const  obs: R4.resources.IObservation = <R4.resources.IObservation> schemaValidationResult.value;
+const  obs: R4.resources.IObservation = <R4.IObservation> schemaValidationResult.value;
 ```
 
 FHIR resources are also provided as interface, so you can inherit and implement your own object implementation. 

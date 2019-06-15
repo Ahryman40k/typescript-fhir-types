@@ -1,6 +1,6 @@
 import { R4 } from '../index';
 
-const T = R4.scalars.RTTI_xhtml;
+const T = R4.RTTI_xhtml;
 const invalid_value =  `
 <!DOCTYPE html>
   <html lang="en">
