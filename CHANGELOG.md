@@ -1,3 +1,6 @@
+# 4.0.23
+    - Expose IResource and IDomainResource interfaces
+
 # 4.0.16
   - enums weren't exported ^^''
 
