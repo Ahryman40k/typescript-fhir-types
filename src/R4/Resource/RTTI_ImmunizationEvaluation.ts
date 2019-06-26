@@ -11,8 +11,9 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_dateTime } from '../Scalar/RTTI_dateTime';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
+import { IDomainResource } from './IDomainResource';
 
-export interface IImmunizationEvaluation {
+export interface IImmunizationEvaluation extends IDomainResource {
 	/**
 	 * This is a ImmunizationEvaluation resource
 	 */

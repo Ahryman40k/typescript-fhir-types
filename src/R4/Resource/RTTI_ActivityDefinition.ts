@@ -39,8 +39,9 @@ export enum ActivityDefinitionStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IActivityDefinition {
+export interface IActivityDefinition extends IDomainResource {
 	/**
 	 * This is a ActivityDefinition resource
 	 */

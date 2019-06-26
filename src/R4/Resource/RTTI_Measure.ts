@@ -30,8 +30,9 @@ export enum MeasureStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMeasure {
+export interface IMeasure extends IDomainResource {
 	/**
 	 * This is a Measure resource
 	 */

@@ -45,8 +45,9 @@ import {
 	RTTI_ClaimResponse_Error,
 	IClaimResponse_Error
 } from './RTTI_ClaimResponse_Error';
+import { IDomainResource } from './IDomainResource';
 
-export interface IClaimResponse {
+export interface IClaimResponse extends IDomainResource {
 	/**
 	 * This is a ClaimResponse resource
 	 */

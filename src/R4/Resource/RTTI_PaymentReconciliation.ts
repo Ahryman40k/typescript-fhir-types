@@ -29,8 +29,9 @@ export enum PaymentReconciliationOutcomeKind {
 	_partial = 'partial'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IPaymentReconciliation {
+export interface IPaymentReconciliation extends IDomainResource {
 	/**
 	 * This is a PaymentReconciliation resource
 	 */

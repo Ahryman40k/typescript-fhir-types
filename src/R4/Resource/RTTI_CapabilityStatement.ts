@@ -68,8 +68,9 @@ export enum CapabilityStatementFhirVersionKind {
 	_400 = '4.0.0'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICapabilityStatement {
+export interface ICapabilityStatement extends IDomainResource {
 	/**
 	 * This is a CapabilityStatement resource
 	 */

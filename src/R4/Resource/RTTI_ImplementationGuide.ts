@@ -406,8 +406,9 @@ export enum ImplementationGuideLicenseKind {
 	_zpl21 = 'ZPL-2.1'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IImplementationGuide {
+export interface IImplementationGuide extends IDomainResource {
 	/**
 	 * This is a ImplementationGuide resource
 	 */

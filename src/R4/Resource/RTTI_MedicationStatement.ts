@@ -14,8 +14,9 @@ import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_dateTime } from '../Scalar/RTTI_dateTime';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
 import { RTTI_Dosage, IDosage } from './RTTI_Dosage';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicationStatement {
+export interface IMedicationStatement extends IDomainResource {
 	/**
 	 * This is a MedicationStatement resource
 	 */

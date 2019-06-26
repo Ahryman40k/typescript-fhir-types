@@ -11,8 +11,9 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Attachment, IAttachment } from './RTTI_Attachment';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
+import { IDomainResource } from './IDomainResource';
 
-export interface IBodyStructure {
+export interface IBodyStructure  extends IDomainResource {
 	/**
 	 * This is a BodyStructure resource
 	 */

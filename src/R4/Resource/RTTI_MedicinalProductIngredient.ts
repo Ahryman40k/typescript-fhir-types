@@ -18,8 +18,9 @@ import {
 	RTTI_MedicinalProductIngredient_Substance,
 	IMedicinalProductIngredient_Substance
 } from './RTTI_MedicinalProductIngredient_Substance';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductIngredient {
+export interface IMedicinalProductIngredient extends IDomainResource {
 	/**
 	 * This is a MedicinalProductIngredient resource
 	 */

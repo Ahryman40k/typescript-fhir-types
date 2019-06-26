@@ -11,8 +11,9 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_instant } from '../Scalar/RTTI_instant';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
+import { IDomainResource } from './IDomainResource';
 
-export interface IAppointmentResponse {
+export interface IAppointmentResponse  extends IDomainResource {
 	/**
 	 * This is a AppointmentResponse resource
 	 */

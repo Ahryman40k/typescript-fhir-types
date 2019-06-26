@@ -25,8 +25,9 @@ export enum GroupTypeKind {
 	_substance = 'substance'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IGroup {
+export interface IGroup extends IDomainResource {
 	/**
 	 * This is a Group resource
 	 */

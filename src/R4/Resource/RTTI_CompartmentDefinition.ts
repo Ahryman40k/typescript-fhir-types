@@ -29,8 +29,9 @@ export enum CompartmentDefinitionCodeKind {
 	_device = 'Device'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICompartmentDefinition {
+export interface ICompartmentDefinition extends IDomainResource {
 	/**
 	 * This is a CompartmentDefinition resource
 	 */

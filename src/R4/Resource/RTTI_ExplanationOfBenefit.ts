@@ -82,8 +82,9 @@ export enum ExplanationOfBenefitStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IExplanationOfBenefit {
+export interface IExplanationOfBenefit extends IDomainResource {
 	/**
 	 * This is a ExplanationOfBenefit resource
 	 */

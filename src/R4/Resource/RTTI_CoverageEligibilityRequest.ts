@@ -31,8 +31,9 @@ export enum CoverageEligibilityRequestPurposeKind {
 	_validation = 'validation'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICoverageEligibilityRequest {
+export interface ICoverageEligibilityRequest extends IDomainResource {
 	/**
 	 * This is a CoverageEligibilityRequest resource
 	 */

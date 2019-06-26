@@ -17,8 +17,9 @@ import {
 	RTTI_SubstancePolymer_Repeat,
 	ISubstancePolymer_Repeat
 } from './RTTI_SubstancePolymer_Repeat';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstancePolymer {
+export interface ISubstancePolymer extends IDomainResource {
 	/**
 	 * This is a SubstancePolymer resource
 	 */

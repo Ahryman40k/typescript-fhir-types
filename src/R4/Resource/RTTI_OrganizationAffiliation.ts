@@ -12,8 +12,9 @@ import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_ContactPoint, IContactPoint } from './RTTI_ContactPoint';
+import { IDomainResource } from './IDomainResource';
 
-export interface IOrganizationAffiliation {
+export interface IOrganizationAffiliation extends IDomainResource {
 	/**
 	 * This is a OrganizationAffiliation resource
 	 */

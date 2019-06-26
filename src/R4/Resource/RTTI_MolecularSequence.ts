@@ -37,8 +37,9 @@ export enum MolecularSequenceTypeKind {
 	_rna = 'rna'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMolecularSequence {
+export interface IMolecularSequence extends IDomainResource {
 	/**
 	 * This is a MolecularSequence resource
 	 */

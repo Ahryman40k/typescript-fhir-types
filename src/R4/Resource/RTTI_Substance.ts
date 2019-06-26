@@ -23,8 +23,9 @@ export enum SubstanceStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstance {
+export interface ISubstance extends IDomainResource {
 	/**
 	 * This is a Substance resource
 	 */

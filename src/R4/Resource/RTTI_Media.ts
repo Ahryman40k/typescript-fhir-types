@@ -16,8 +16,9 @@ import { RTTI_positiveInt } from '../Scalar/RTTI_positiveInt';
 import { RTTI_decimal } from '../Scalar/RTTI_decimal';
 import { RTTI_Attachment, IAttachment } from './RTTI_Attachment';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedia {
+export interface IMedia extends IDomainResource {
 	/**
 	 * This is a Media resource
 	 */

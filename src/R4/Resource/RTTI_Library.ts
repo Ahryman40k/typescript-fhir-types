@@ -30,8 +30,9 @@ export enum LibraryStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ILibrary {
+export interface ILibrary extends IDomainResource {
 	/**
 	 * This is a Library resource
 	 */

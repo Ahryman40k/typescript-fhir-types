@@ -22,8 +22,9 @@ export enum GuidanceResponseStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IGuidanceResponse {
+export interface IGuidanceResponse extends IDomainResource {
 	/**
 	 * This is a GuidanceResponse resource
 	 */

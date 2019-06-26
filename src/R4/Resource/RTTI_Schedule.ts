@@ -11,8 +11,9 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_Period, IPeriod } from './RTTI_Period';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISchedule {
+export interface ISchedule extends IDomainResource {
 	/**
 	 * This is a Schedule resource
 	 */

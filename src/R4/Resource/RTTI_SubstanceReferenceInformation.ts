@@ -23,8 +23,9 @@ import {
 	RTTI_SubstanceReferenceInformation_Target,
 	ISubstanceReferenceInformation_Target
 } from './RTTI_SubstanceReferenceInformation_Target';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstanceReferenceInformation {
+export interface ISubstanceReferenceInformation extends IDomainResource {
 	/**
 	 * This is a SubstanceReferenceInformation resource
 	 */

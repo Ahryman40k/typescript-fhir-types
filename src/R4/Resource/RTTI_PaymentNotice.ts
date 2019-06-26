@@ -13,8 +13,9 @@ import { RTTI_dateTime } from '../Scalar/RTTI_dateTime';
 import { RTTI_date } from '../Scalar/RTTI_date';
 import { RTTI_Money, IMoney } from './RTTI_Money';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
+import { IDomainResource } from './IDomainResource';
 
-export interface IPaymentNotice {
+export interface IPaymentNotice extends IDomainResource {
 	/**
 	 * This is a PaymentNotice resource
 	 */

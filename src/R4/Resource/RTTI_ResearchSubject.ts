@@ -26,8 +26,9 @@ export enum ResearchSubjectStatusKind {
 	_withdrawn = 'withdrawn'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IResearchSubject {
+export interface IResearchSubject extends IDomainResource {
 	/**
 	 * This is a ResearchSubject resource
 	 */

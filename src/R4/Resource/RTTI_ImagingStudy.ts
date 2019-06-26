@@ -26,8 +26,9 @@ export enum ImagingStudyStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IImagingStudy {
+export interface IImagingStudy extends IDomainResource {
 	/**
 	 * This is a ImagingStudy resource
 	 */

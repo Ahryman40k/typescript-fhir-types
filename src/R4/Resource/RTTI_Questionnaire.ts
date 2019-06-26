@@ -28,8 +28,9 @@ export enum QuestionnaireStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IQuestionnaire {
+export interface IQuestionnaire extends IDomainResource {
 	/**
 	 * This is a Questionnaire resource
 	 */

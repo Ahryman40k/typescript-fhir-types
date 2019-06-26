@@ -41,8 +41,9 @@ export enum MessageDefinitionResponseRequiredKind {
 	_onSuccess = 'on-success'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMessageDefinition {
+export interface IMessageDefinition extends IDomainResource {
 	/**
 	 * This is a MessageDefinition resource
 	 */

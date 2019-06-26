@@ -34,8 +34,9 @@ export enum InvoiceStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IInvoice {
+export interface IInvoice extends IDomainResource {
 	/**
 	 * This is a Invoice resource
 	 */

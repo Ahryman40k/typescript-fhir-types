@@ -9,8 +9,9 @@ import { RTTI_ResourceList, IResourceList } from '../Union/RTTI_ResourceList';
 import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_Linkage_Item, ILinkage_Item } from './RTTI_Linkage_Item';
+import { IDomainResource } from './IDomainResource';
 
-export interface ILinkage {
+export interface ILinkage extends IDomainResource {
 	/**
 	 * This is a Linkage resource
 	 */

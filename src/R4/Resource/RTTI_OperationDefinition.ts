@@ -32,8 +32,9 @@ export enum OperationDefinitionKindKind {
 	_query = 'query'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IOperationDefinition {
+export interface IOperationDefinition extends IDomainResource {
 	/**
 	 * This is a OperationDefinition resource
 	 */

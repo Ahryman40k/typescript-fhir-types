@@ -20,8 +20,9 @@ export enum AdverseEventActualityKind {
 	_potential = 'potential'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IAdverseEvent {
+export interface IAdverseEvent  extends IDomainResource {
 	/**
 	 * This is a AdverseEvent resource
 	 */

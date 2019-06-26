@@ -25,8 +25,9 @@ import {
 	RTTI_HealthcareService_NotAvailable,
 	IHealthcareService_NotAvailable
 } from './RTTI_HealthcareService_NotAvailable';
+import { IDomainResource } from './IDomainResource';
 
-export interface IHealthcareService {
+export interface IHealthcareService extends IDomainResource {
 	/**
 	 * This is a HealthcareService resource
 	 */

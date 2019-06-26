@@ -32,8 +32,9 @@ export enum ChargeItemStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IChargeItem {
+export interface IChargeItem extends IDomainResource {
 	/**
 	 * This is a ChargeItem resource
 	 */

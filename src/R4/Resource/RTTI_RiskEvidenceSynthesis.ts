@@ -37,8 +37,9 @@ export enum RiskEvidenceSynthesisStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IRiskEvidenceSynthesis {
+export interface IRiskEvidenceSynthesis extends IDomainResource {
 	/**
 	 * This is a RiskEvidenceSynthesis resource
 	 */

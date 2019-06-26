@@ -24,8 +24,9 @@ export enum GraphDefinitionStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IGraphDefinition {
+export interface IGraphDefinition extends IDomainResource {
 	/**
 	 * This is a GraphDefinition resource
 	 */

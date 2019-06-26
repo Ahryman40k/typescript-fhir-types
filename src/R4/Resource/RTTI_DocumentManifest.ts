@@ -22,7 +22,9 @@ export enum DocumentManifestStatusKind {
 }
 import { createEnumType } from '../../EnumType';
 
-export interface IDocumentManifest {
+import { IDomainResource } from './IDomainResource';
+
+export interface IDocumentManifest extends IDomainResource {
 	/**
 	 * This is a DocumentManifest resource
 	 */

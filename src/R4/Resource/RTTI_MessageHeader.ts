@@ -23,8 +23,9 @@ import {
 	IMessageHeader_Response
 } from './RTTI_MessageHeader_Response';
 import { RTTI_canonical } from '../Scalar/RTTI_canonical';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMessageHeader {
+export interface IMessageHeader extends IDomainResource {
 	/**
 	 * This is a MessageHeader resource
 	 */

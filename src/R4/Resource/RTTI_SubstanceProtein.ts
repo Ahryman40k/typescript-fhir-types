@@ -14,8 +14,9 @@ import {
 	RTTI_SubstanceProtein_Subunit,
 	ISubstanceProtein_Subunit
 } from './RTTI_SubstanceProtein_Subunit';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstanceProtein {
+export interface ISubstanceProtein extends IDomainResource {
 	/**
 	 * This is a SubstanceProtein resource
 	 */

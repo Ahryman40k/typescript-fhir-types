@@ -25,8 +25,9 @@ export enum GoalLifecycleStatusKind {
 	_rejected = 'rejected'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IGoal {
+export interface IGoal extends IDomainResource {
 	/**
 	 * This is a Goal resource
 	 */

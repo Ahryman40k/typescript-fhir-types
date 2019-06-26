@@ -8,8 +8,9 @@ import {
 	RTTI_Parameters_Parameter,
 	IParameters_Parameter
 } from './RTTI_Parameters_Parameter';
+import { IDomainResource } from './IDomainResource';
 
-export interface IParameters {
+export interface IParameters extends IDomainResource {
 	/**
 	 * This is a Parameters resource
 	 */

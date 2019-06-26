@@ -17,8 +17,9 @@ import {
 	ICommunication_Payload
 } from './RTTI_Communication_Payload';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICommunication {
+export interface ICommunication extends IDomainResource {
 	/**
 	 * This is a Communication resource
 	 */

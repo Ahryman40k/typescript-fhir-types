@@ -34,8 +34,9 @@ export enum CompositionStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IComposition {
+export interface IComposition extends IDomainResource {
 	/**
 	 * This is a Composition resource
 	 */

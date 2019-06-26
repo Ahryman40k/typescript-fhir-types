@@ -30,8 +30,9 @@ export enum ConsentStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IConsent {
+export interface IConsent  extends IDomainResource {
 	/**
 	 * This is a Consent resource
 	 */

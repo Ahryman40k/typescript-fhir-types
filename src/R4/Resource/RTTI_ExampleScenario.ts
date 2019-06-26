@@ -33,8 +33,9 @@ export enum ExampleScenarioStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IExampleScenario {
+export interface IExampleScenario extends IDomainResource {
 	/**
 	 * This is a ExampleScenario resource
 	 */

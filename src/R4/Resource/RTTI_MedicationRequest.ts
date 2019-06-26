@@ -22,8 +22,9 @@ import {
 	RTTI_MedicationRequest_Substitution,
 	IMedicationRequest_Substitution
 } from './RTTI_MedicationRequest_Substitution';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicationRequest {
+export interface IMedicationRequest extends IDomainResource {
 	/**
 	 * This is a MedicationRequest resource
 	 */

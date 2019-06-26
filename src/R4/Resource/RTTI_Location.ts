@@ -32,8 +32,9 @@ export enum LocationModeKind {
 	_kind = 'kind'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ILocation {
+export interface ILocation extends IDomainResource {
 	/**
 	 * This is a Location resource
 	 */

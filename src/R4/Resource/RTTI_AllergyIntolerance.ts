@@ -35,8 +35,9 @@ export enum AllergyIntoleranceCriticalityKind {
 	_unableToAssess = 'unable-to-assess'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IAllergyIntolerance {
+export interface IAllergyIntolerance  extends IDomainResource {
 	/**
 	 * This is a AllergyIntolerance resource
 	 */

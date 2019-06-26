@@ -6,8 +6,9 @@ import { RTTI_Element, IElement } from './RTTI_Element';
 import { RTTI_code } from '../Scalar/RTTI_code';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_base64Binary } from '../Scalar/RTTI_base64Binary';
+import { IDomainResource } from './IDomainResource';
 
-export interface IBinary {
+export interface IBinary extends IDomainResource {
 	/**
 	 * This is a Binary resource
 	 */

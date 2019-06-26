@@ -33,8 +33,9 @@ export enum PlanDefinitionStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IPlanDefinition {
+export interface IPlanDefinition extends IDomainResource {
 	/**
 	 * This is a PlanDefinition resource
 	 */

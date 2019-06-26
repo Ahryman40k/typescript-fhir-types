@@ -22,8 +22,9 @@ export enum PersonGenderKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IPerson {
+export interface IPerson extends IDomainResource {
 	/**
 	 * This is a Person resource
 	 */

@@ -34,8 +34,9 @@ export enum DeviceStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IDevice {
+export interface IDevice extends IDomainResource {
 	/**
 	 * This is a Device resource
 	 */

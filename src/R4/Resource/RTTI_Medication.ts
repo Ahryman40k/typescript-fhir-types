@@ -19,8 +19,9 @@ import {
 	RTTI_Medication_Batch,
 	IMedication_Batch
 } from './RTTI_Medication_Batch';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedication {
+export interface IMedication extends IDomainResource {
 	/**
 	 * This is a Medication resource
 	 */

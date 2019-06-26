@@ -16,8 +16,9 @@ import {
 	IRiskAssessment_Prediction
 } from './RTTI_RiskAssessment_Prediction';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface IRiskAssessment {
+export interface IRiskAssessment extends IDomainResource {
 	/**
 	 * This is a RiskAssessment resource
 	 */

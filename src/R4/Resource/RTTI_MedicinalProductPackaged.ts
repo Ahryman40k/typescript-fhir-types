@@ -19,8 +19,9 @@ import {
 	RTTI_MedicinalProductPackaged_PackageItem,
 	IMedicinalProductPackaged_PackageItem
 } from './RTTI_MedicinalProductPackaged_PackageItem';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductPackaged {
+export interface IMedicinalProductPackaged extends IDomainResource {
 	/**
 	 * This is a MedicinalProductPackaged resource
 	 */

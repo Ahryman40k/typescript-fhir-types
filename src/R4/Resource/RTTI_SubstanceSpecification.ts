@@ -38,8 +38,9 @@ import {
 	RTTI_SubstanceSpecification_Relationship,
 	ISubstanceSpecification_Relationship
 } from './RTTI_SubstanceSpecification_Relationship';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstanceSpecification {
+export interface ISubstanceSpecification extends IDomainResource {
 	/**
 	 * This is a SubstanceSpecification resource
 	 */

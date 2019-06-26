@@ -21,8 +21,9 @@ import {
 	IClinicalImpression_Finding
 } from './RTTI_ClinicalImpression_Finding';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface IClinicalImpression {
+export interface IClinicalImpression extends IDomainResource {
 	/**
 	 * This is a ClinicalImpression resource
 	 */

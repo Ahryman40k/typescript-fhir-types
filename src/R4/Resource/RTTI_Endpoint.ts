@@ -25,7 +25,9 @@ export enum EndpointStatusKind {
 }
 import { createEnumType } from '../../EnumType';
 
-export interface IEndpoint {
+import { IDomainResource } from './IDomainResource';
+
+export interface IEndpoint extends IDomainResource {
 	/**
 	 * This is a Endpoint resource
 	 */

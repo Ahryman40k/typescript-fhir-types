@@ -39,8 +39,9 @@ export enum BiologicallyDerivedProductStatusKind {
 	_unavailable = 'unavailable'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IBiologicallyDerivedProduct {
+export interface IBiologicallyDerivedProduct extends IDomainResource  {
 	/**
 	 * This is a BiologicallyDerivedProduct resource
 	 */

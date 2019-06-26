@@ -10,8 +10,9 @@ import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Population, IPopulation } from './RTTI_Population';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductUndesirableEffect {
+export interface IMedicinalProductUndesirableEffect extends IDomainResource {
 	/**
 	 * This is a MedicinalProductUndesirableEffect resource
 	 */

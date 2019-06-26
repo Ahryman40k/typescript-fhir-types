@@ -17,8 +17,9 @@ export enum FlagStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IFlag {
+export interface IFlag extends IDomainResource {
 	/**
 	 * This is a Flag resource
 	 */

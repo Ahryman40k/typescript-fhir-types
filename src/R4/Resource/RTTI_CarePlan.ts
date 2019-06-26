@@ -18,8 +18,9 @@ import {
 	ICarePlan_Activity
 } from './RTTI_CarePlan_Activity';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICarePlan {
+export interface ICarePlan extends IDomainResource {
 	/**
 	 * This is a CarePlan resource
 	 */

@@ -13,8 +13,9 @@ import {
 	RTTI_SpecimenDefinition_TypeTested,
 	ISpecimenDefinition_TypeTested
 } from './RTTI_SpecimenDefinition_TypeTested';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISpecimenDefinition {
+export interface ISpecimenDefinition extends IDomainResource {
 	/**
 	 * This is a SpecimenDefinition resource
 	 */

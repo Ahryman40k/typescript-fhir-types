@@ -23,8 +23,9 @@ export enum QuestionnaireResponseStatusKind {
 	_stopped = 'stopped'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IQuestionnaireResponse {
+export interface IQuestionnaireResponse extends IDomainResource {
 	/**
 	 * This is a QuestionnaireResponse resource
 	 */

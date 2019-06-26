@@ -25,8 +25,9 @@ import {
 	RTTI_VerificationResult_Validator,
 	IVerificationResult_Validator
 } from './RTTI_VerificationResult_Validator';
+import { IDomainResource } from './IDomainResource';
 
-export interface IVerificationResult {
+export interface IVerificationResult extends IDomainResource {
 	/**
 	 * This is a VerificationResult resource
 	 */

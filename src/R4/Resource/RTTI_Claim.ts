@@ -31,8 +31,9 @@ export enum ClaimUseKind {
 	_predetermination = 'predetermination'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IClaim {
+export interface IClaim extends IDomainResource {
 	/**
 	 * This is a Claim resource
 	 */

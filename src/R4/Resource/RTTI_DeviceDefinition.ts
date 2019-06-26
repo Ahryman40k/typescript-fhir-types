@@ -46,8 +46,10 @@ import {
 	RTTI_DeviceDefinition_Material,
 	IDeviceDefinition_Material
 } from './RTTI_DeviceDefinition_Material';
+import { IDomainResource } from './IDomainResource';
 
-export interface IDeviceDefinition {
+export interface IDeviceDefinition extends IDomainResource {
+	
 	/**
 	 * This is a DeviceDefinition resource
 	 */

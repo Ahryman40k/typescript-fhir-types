@@ -14,8 +14,9 @@ import {
 	RTTI_VisionPrescription_LensSpecification,
 	IVisionPrescription_LensSpecification
 } from './RTTI_VisionPrescription_LensSpecification';
+import { IDomainResource } from './IDomainResource';
 
-export interface IVisionPrescription {
+export interface IVisionPrescription extends IDomainResource {
 	/**
 	 * This is a VisionPrescription resource
 	 */

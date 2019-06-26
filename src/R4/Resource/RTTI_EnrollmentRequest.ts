@@ -11,7 +11,9 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_dateTime } from '../Scalar/RTTI_dateTime';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 
-export interface IEnrollmentRequest {
+import { IDomainResource } from './IDomainResource';
+
+export interface IEnrollmentRequest extends IDomainResource {
 	/**
 	 * This is a EnrollmentRequest resource
 	 */

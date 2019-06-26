@@ -31,8 +31,9 @@ export enum InsurancePlanStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IInsurancePlan {
+export interface IInsurancePlan extends IDomainResource {
 	/**
 	 * This is a InsurancePlan resource
 	 */

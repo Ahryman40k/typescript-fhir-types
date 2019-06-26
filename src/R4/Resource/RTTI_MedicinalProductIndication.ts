@@ -15,8 +15,9 @@ import {
 	IMedicinalProductIndication_OtherTherapy
 } from './RTTI_MedicinalProductIndication_OtherTherapy';
 import { RTTI_Population, IPopulation } from './RTTI_Population';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductIndication {
+export interface IMedicinalProductIndication extends IDomainResource {
 	/**
 	 * This is a MedicinalProductIndication resource
 	 */

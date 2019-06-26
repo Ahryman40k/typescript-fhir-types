@@ -68,8 +68,9 @@ export enum SearchParameterXpathUsageKind {
 	_other = 'other'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISearchParameter {
+export interface ISearchParameter extends IDomainResource {
 	/**
 	 * This is a SearchParameter resource
 	 */

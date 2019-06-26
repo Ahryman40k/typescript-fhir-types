@@ -11,8 +11,9 @@ import { RTTI_Identifier, IIdentifier } from './RTTI_Identifier';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 import { RTTI_date } from '../Scalar/RTTI_date';
+import { IDomainResource } from './IDomainResource';
 
-export interface IBasic {
+export interface IBasic  extends IDomainResource {
 	/**
 	 * This is a Basic resource
 	 */

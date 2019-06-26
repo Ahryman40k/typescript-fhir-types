@@ -20,8 +20,9 @@ import {
 	RTTI_PractitionerRole_NotAvailable,
 	IPractitionerRole_NotAvailable
 } from './RTTI_PractitionerRole_NotAvailable';
+import { IDomainResource } from './IDomainResource';
 
-export interface IPractitionerRole {
+export interface IPractitionerRole extends IDomainResource {
 	/**
 	 * This is a PractitionerRole resource
 	 */

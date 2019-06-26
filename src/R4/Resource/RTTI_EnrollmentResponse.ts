@@ -18,7 +18,9 @@ export enum EnrollmentResponseOutcomeKind {
 }
 import { createEnumType } from '../../EnumType';
 
-export interface IEnrollmentResponse {
+import { IDomainResource } from './IDomainResource';
+
+export interface IEnrollmentResponse extends IDomainResource {
 	/**
 	 * This is a EnrollmentResponse resource
 	 */

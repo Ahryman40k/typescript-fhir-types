@@ -18,8 +18,9 @@ import { RTTI_Period, IPeriod } from './RTTI_Period';
 import { RTTI_Timing, ITiming } from './RTTI_Timing';
 import { RTTI_dateTime } from '../Scalar/RTTI_dateTime';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface IServiceRequest {
+export interface IServiceRequest extends IDomainResource {
 	/**
 	 * This is a ServiceRequest resource
 	 */

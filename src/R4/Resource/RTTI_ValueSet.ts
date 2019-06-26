@@ -28,8 +28,9 @@ export enum ValueSetStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IValueSet {
+export interface IValueSet extends IDomainResource {
 	/**
 	 * This is a ValueSet resource
 	 */

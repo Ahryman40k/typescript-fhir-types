@@ -37,8 +37,9 @@ export enum TestReportResultKind {
 	_pending = 'pending'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ITestReport {
+export interface ITestReport extends IDomainResource {
 	/**
 	 * This is a TestReport resource
 	 */

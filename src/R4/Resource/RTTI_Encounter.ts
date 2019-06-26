@@ -49,8 +49,9 @@ export enum EncounterStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IEncounter {
+export interface IEncounter extends IDomainResource {
 	/**
 	 * This is a Encounter resource
 	 */

@@ -38,8 +38,9 @@ export enum DeviceMetricCategoryKind {
 	_unspecified = 'unspecified'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IDeviceMetric {
+export interface IDeviceMetric extends IDomainResource {
 	/**
 	 * This is a DeviceMetric resource
 	 */

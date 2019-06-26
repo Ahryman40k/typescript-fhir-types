@@ -17,8 +17,9 @@ import {
 	RTTI_Organization_Contact,
 	IOrganization_Contact
 } from './RTTI_Organization_Contact';
+import { IDomainResource } from './IDomainResource';
 
-export interface IOrganization {
+export interface IOrganization extends IDomainResource {
 	/**
 	 * This is a Organization resource
 	 */

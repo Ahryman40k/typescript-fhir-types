@@ -37,8 +37,9 @@ export enum ObservationStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IObservation {
+export interface IObservation extends IDomainResource {
 	/**
 	 * This is a Observation resource
 	 */

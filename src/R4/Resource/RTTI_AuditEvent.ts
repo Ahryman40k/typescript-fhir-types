@@ -37,8 +37,9 @@ export enum AuditEventOutcomeKind {
 	_majorFailure = 'MajorFailure'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IAuditEvent {
+export interface IAuditEvent  extends IDomainResource {
 	/**
 	 * This is a AuditEvent resource
 	 */

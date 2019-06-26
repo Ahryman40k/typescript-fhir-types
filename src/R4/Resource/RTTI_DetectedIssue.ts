@@ -25,8 +25,9 @@ export enum DetectedIssueSeverityKind {
 	_low = 'low'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IDetectedIssue {
+export interface IDetectedIssue extends IDomainResource {
 	/**
 	 * This is a DetectedIssue resource
 	 */

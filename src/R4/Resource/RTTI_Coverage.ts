@@ -17,8 +17,9 @@ import {
 	RTTI_Coverage_CostToBeneficiary,
 	ICoverage_CostToBeneficiary
 } from './RTTI_Coverage_CostToBeneficiary';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICoverage {
+export interface ICoverage extends IDomainResource {
 	/**
 	 * This is a Coverage resource
 	 */

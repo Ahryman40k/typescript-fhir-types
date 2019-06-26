@@ -26,8 +26,9 @@ import {
 import { RTTI_Contract_Legal, IContract_Legal } from './RTTI_Contract_Legal';
 import { RTTI_Contract_Rule, IContract_Rule } from './RTTI_Contract_Rule';
 import { RTTI_Attachment, IAttachment } from './RTTI_Attachment';
+import { IDomainResource } from './IDomainResource';
 
-export interface IContract {
+export interface IContract extends IDomainResource {
 	/**
 	 * This is a Contract resource
 	 */

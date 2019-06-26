@@ -56,8 +56,9 @@ import {
 	RTTI_MedicationKnowledge_Kinetics,
 	IMedicationKnowledge_Kinetics
 } from './RTTI_MedicationKnowledge_Kinetics';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicationKnowledge {
+export interface IMedicationKnowledge extends IDomainResource {
 	/**
 	 * This is a MedicationKnowledge resource
 	 */

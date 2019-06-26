@@ -22,8 +22,9 @@ import {
 	RTTI_MedicationDispense_Substitution,
 	IMedicationDispense_Substitution
 } from './RTTI_MedicationDispense_Substitution';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicationDispense {
+export interface IMedicationDispense extends IDomainResource {
 	/**
 	 * This is a MedicationDispense resource
 	 */

@@ -25,8 +25,9 @@ import {
 	RTTI_MedicinalProduct_SpecialDesignation,
 	IMedicinalProduct_SpecialDesignation
 } from './RTTI_MedicinalProduct_SpecialDesignation';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProduct {
+export interface IMedicinalProduct extends IDomainResource {
 	/**
 	 * This is a MedicinalProduct resource
 	 */

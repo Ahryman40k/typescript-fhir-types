@@ -32,8 +32,9 @@ export enum AppointmentStatusKind {
 	_waitlist = 'waitlist'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IAppointment {
+export interface IAppointment  extends IDomainResource {
 	/**
 	 * This is a Appointment resource
 	 */

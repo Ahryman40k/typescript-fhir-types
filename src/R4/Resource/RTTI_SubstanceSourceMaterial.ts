@@ -22,8 +22,9 @@ import {
 	RTTI_SubstanceSourceMaterial_PartDescription,
 	ISubstanceSourceMaterial_PartDescription
 } from './RTTI_SubstanceSourceMaterial_PartDescription';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstanceSourceMaterial {
+export interface ISubstanceSourceMaterial extends IDomainResource {
 	/**
 	 * This is a SubstanceSourceMaterial resource
 	 */

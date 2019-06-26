@@ -28,8 +28,9 @@ export enum SupplyRequestStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISupplyRequest {
+export interface ISupplyRequest extends IDomainResource {
 	/**
 	 * This is a SupplyRequest resource
 	 */

@@ -26,8 +26,9 @@ export enum ResearchDefinitionStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IResearchDefinition {
+export interface IResearchDefinition extends IDomainResource {
 	/**
 	 * This is a ResearchDefinition resource
 	 */

@@ -29,8 +29,9 @@ export enum EpisodeOfCareStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IEpisodeOfCare {
+export interface IEpisodeOfCare extends IDomainResource {
 	/**
 	 * This is a EpisodeOfCare resource
 	 */

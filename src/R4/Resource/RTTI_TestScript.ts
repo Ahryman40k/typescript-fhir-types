@@ -50,8 +50,9 @@ export enum TestScriptStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ITestScript {
+export interface ITestScript extends IDomainResource {
 	/**
 	 * This is a TestScript resource
 	 */

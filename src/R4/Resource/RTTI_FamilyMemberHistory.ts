@@ -27,8 +27,9 @@ export enum FamilyMemberHistoryStatusKind {
 	_healthUnknown = 'health-unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IFamilyMemberHistory {
+export interface IFamilyMemberHistory extends IDomainResource {
 	/**
 	 * This is a FamilyMemberHistory resource
 	 */

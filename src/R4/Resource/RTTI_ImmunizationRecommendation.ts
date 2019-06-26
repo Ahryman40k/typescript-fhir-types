@@ -14,8 +14,9 @@ import {
 	RTTI_ImmunizationRecommendation_Recommendation,
 	IImmunizationRecommendation_Recommendation
 } from './RTTI_ImmunizationRecommendation_Recommendation';
+import { IDomainResource } from './IDomainResource';
 
-export interface IImmunizationRecommendation {
+export interface IImmunizationRecommendation extends IDomainResource {
 	/**
 	 * This is a ImmunizationRecommendation resource
 	 */

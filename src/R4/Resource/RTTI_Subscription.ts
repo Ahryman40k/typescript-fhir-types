@@ -20,8 +20,9 @@ export enum SubscriptionStatusKind {
 	_off = 'off'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubscription {
+export interface ISubscription extends IDomainResource {
 	/**
 	 * This is a Subscription resource
 	 */

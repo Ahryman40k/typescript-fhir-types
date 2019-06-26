@@ -13,8 +13,9 @@ import {
 	RTTI_SubstanceNucleicAcid_Subunit,
 	ISubstanceNucleicAcid_Subunit
 } from './RTTI_SubstanceNucleicAcid_Subunit';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISubstanceNucleicAcid {
+export interface ISubstanceNucleicAcid extends IDomainResource {
 	/**
 	 * This is a SubstanceNucleicAcid resource
 	 */

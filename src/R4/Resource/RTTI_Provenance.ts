@@ -20,8 +20,9 @@ import {
 	IProvenance_Entity
 } from './RTTI_Provenance_Entity';
 import { RTTI_Signature, ISignature } from './RTTI_Signature';
+import { IDomainResource } from './IDomainResource';
 
-export interface IProvenance {
+export interface IProvenance extends IDomainResource {
 	/**
 	 * This is a Provenance resource
 	 */

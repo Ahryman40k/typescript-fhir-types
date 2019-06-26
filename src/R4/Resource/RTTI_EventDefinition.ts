@@ -28,8 +28,9 @@ export enum EventDefinitionStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IEventDefinition {
+export interface IEventDefinition extends IDomainResource {
 	/**
 	 * This is a EventDefinition resource
 	 */

@@ -23,8 +23,9 @@ export enum SupplyDeliveryStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ISupplyDelivery {
+export interface ISupplyDelivery extends IDomainResource {
 	/**
 	 * This is a SupplyDelivery resource
 	 */

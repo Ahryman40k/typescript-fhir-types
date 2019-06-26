@@ -22,8 +22,9 @@ export enum BundleTypeKind {
 	_collection = 'collection'
 }
 import { createEnumType } from '../../EnumType';
+import { IResource } from './IResource';
 
-export interface IBundle {
+export interface IBundle extends IResource {
 	/**
 	 * This is a Bundle resource
 	 */

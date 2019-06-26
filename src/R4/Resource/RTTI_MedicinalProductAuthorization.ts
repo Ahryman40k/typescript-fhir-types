@@ -20,8 +20,9 @@ import {
 	RTTI_MedicinalProductAuthorization_Procedure,
 	IMedicinalProductAuthorization_Procedure
 } from './RTTI_MedicinalProductAuthorization_Procedure';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductAuthorization {
+export interface IMedicinalProductAuthorization extends IDomainResource {
 	/**
 	 * This is a MedicinalProductAuthorization resource
 	 */

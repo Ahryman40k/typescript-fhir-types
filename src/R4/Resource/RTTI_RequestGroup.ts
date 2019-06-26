@@ -17,8 +17,9 @@ import {
 	RTTI_RequestGroup_Action,
 	IRequestGroup_Action
 } from './RTTI_RequestGroup_Action';
+import { IDomainResource } from './IDomainResource';
 
-export interface IRequestGroup {
+export interface IRequestGroup extends IDomainResource {
 	/**
 	 * This is a RequestGroup resource
 	 */

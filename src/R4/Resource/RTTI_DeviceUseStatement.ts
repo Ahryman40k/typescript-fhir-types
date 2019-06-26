@@ -23,8 +23,9 @@ export enum DeviceUseStatementStatusKind {
 	_onHold = 'on-hold'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IDeviceUseStatement {
+export interface IDeviceUseStatement extends IDomainResource {
 	/**
 	 * This is a DeviceUseStatement resource
 	 */

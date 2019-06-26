@@ -20,8 +20,9 @@ import {
 	RTTI_MedicationAdministration_Dosage,
 	IMedicationAdministration_Dosage
 } from './RTTI_MedicationAdministration_Dosage';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicationAdministration {
+export interface IMedicationAdministration extends IDomainResource {
 	/**
 	 * This is a MedicationAdministration resource
 	 */

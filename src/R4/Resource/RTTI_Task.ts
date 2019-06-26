@@ -46,8 +46,9 @@ export enum TaskIntentKind {
 	_option = 'option'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ITask {
+export interface ITask extends IDomainResource {
 	/**
 	 * This is a Task resource
 	 */

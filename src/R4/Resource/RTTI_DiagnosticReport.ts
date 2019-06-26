@@ -31,7 +31,9 @@ export enum DiagnosticReportStatusKind {
 }
 import { createEnumType } from '../../EnumType';
 
-export interface IDiagnosticReport {
+import { IDomainResource } from './IDomainResource';
+
+export interface IDiagnosticReport extends IDomainResource {
 	/**
 	 * This is a DiagnosticReport resource
 	 */

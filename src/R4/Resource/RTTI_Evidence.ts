@@ -25,8 +25,9 @@ export enum EvidenceStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IEvidence {
+export interface IEvidence extends IDomainResource {
 	/**
 	 * This is a Evidence resource
 	 */

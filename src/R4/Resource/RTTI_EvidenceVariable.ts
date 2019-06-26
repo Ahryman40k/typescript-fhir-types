@@ -33,8 +33,9 @@ export enum EvidenceVariableTypeKind {
 	_descriptive = 'descriptive'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IEvidenceVariable {
+export interface IEvidenceVariable extends IDomainResource {
 	/**
 	 * This is a EvidenceVariable resource
 	 */

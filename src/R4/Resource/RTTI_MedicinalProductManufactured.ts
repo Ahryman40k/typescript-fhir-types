@@ -14,8 +14,9 @@ import {
 	RTTI_ProdCharacteristic,
 	IProdCharacteristic
 } from './RTTI_ProdCharacteristic';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductManufactured {
+export interface IMedicinalProductManufactured extends IDomainResource {
 	/**
 	 * This is a MedicinalProductManufactured resource
 	 */

@@ -13,8 +13,9 @@ import {
 	IMedicinalProductInteraction_Interactant
 } from './RTTI_MedicinalProductInteraction_Interactant';
 import { RTTI_CodeableConcept, ICodeableConcept } from './RTTI_CodeableConcept';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductInteraction {
+export interface IMedicinalProductInteraction extends IDomainResource {
 	/**
 	 * This is a MedicinalProductInteraction resource
 	 */

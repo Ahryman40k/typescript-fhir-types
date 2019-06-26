@@ -24,8 +24,9 @@ export enum ConceptMapStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IConceptMap {
+export interface IConceptMap extends IDomainResource {
 	/**
 	 * This is a ConceptMap resource
 	 */

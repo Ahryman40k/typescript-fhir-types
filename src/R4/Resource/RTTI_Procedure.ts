@@ -23,8 +23,9 @@ import {
 	RTTI_Procedure_FocalDevice,
 	IProcedure_FocalDevice
 } from './RTTI_Procedure_FocalDevice';
+import { IDomainResource } from './IDomainResource';
 
-export interface IProcedure {
+export interface IProcedure extends IDomainResource {
 	/**
 	 * This is a Procedure resource
 	 */

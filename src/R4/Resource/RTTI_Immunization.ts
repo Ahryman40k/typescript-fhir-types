@@ -30,8 +30,9 @@ import {
 	RTTI_Immunization_ProtocolApplied,
 	IImmunization_ProtocolApplied
 } from './RTTI_Immunization_ProtocolApplied';
+import { IDomainResource } from './IDomainResource';
 
-export interface IImmunization {
+export interface IImmunization extends IDomainResource {
 	/**
 	 * This is a Immunization resource
 	 */

@@ -28,8 +28,9 @@ export enum NamingSystemKindKind {
 	_root = 'root'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface INamingSystem {
+export interface INamingSystem extends IDomainResource {
 	/**
 	 * This is a NamingSystem resource
 	 */

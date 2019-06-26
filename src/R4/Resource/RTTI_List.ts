@@ -24,8 +24,9 @@ export enum ListModeKind {
 	_changes = 'changes'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IList {
+export interface IList extends IDomainResource {
 	/**
 	 * This is a List resource
 	 */

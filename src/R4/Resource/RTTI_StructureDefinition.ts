@@ -72,8 +72,9 @@ export enum StructureDefinitionDerivationKind {
 	_constraint = 'constraint'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IStructureDefinition {
+export interface IStructureDefinition extends IDomainResource {
 	/**
 	 * This is a StructureDefinition resource
 	 */

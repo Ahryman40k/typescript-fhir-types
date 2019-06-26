@@ -20,8 +20,9 @@ import {
 	ICondition_Evidence
 } from './RTTI_Condition_Evidence';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICondition {
+export interface ICondition extends IDomainResource {
 	/**
 	 * This is a Condition resource
 	 */

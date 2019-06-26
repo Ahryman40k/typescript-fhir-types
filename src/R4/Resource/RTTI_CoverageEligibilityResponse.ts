@@ -33,8 +33,9 @@ export enum CoverageEligibilityResponseOutcomeKind {
 	_partial = 'partial'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICoverageEligibilityResponse {
+export interface ICoverageEligibilityResponse extends IDomainResource {
 	/**
 	 * This is a CoverageEligibilityResponse resource
 	 */

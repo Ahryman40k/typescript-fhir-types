@@ -18,8 +18,9 @@ import {
 	RTTI_MedicinalProductPharmaceutical_RouteOfAdministration,
 	IMedicinalProductPharmaceutical_RouteOfAdministration
 } from './RTTI_MedicinalProductPharmaceutical_RouteOfAdministration';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMedicinalProductPharmaceutical {
+export interface IMedicinalProductPharmaceutical extends IDomainResource {
 	/**
 	 * This is a MedicinalProductPharmaceutical resource
 	 */

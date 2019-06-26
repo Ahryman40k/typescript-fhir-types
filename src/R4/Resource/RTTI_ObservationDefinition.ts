@@ -32,8 +32,9 @@ export enum ObservationDefinitionPermittedDataTypeKind {
 	_period = 'Period'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IObservationDefinition {
+export interface IObservationDefinition extends IDomainResource {
 	/**
 	 * This is a ObservationDefinition resource
 	 */

@@ -29,8 +29,9 @@ export enum MeasureReportTypeKind {
 	_dataCollection = 'data-collection'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IMeasureReport {
+export interface IMeasureReport extends IDomainResource {
 	/**
 	 * This is a MeasureReport resource
 	 */

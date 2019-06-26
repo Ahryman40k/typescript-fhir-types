@@ -25,8 +25,9 @@ import {
 	INutritionOrder_EnteralFormula
 } from './RTTI_NutritionOrder_EnteralFormula';
 import { RTTI_Annotation, IAnnotation } from './RTTI_Annotation';
+import { IDomainResource } from './IDomainResource';
 
-export interface INutritionOrder {
+export interface INutritionOrder extends IDomainResource {
 	/**
 	 * This is a NutritionOrder resource
 	 */

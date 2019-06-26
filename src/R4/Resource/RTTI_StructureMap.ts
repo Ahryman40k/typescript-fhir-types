@@ -29,8 +29,9 @@ export enum StructureMapStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IStructureMap {
+export interface IStructureMap extends IDomainResource {
 	/**
 	 * This is a StructureMap resource
 	 */

@@ -40,8 +40,9 @@ export enum ResearchElementDefinitionVariableTypeKind {
 	_descriptive = 'descriptive'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IResearchElementDefinition {
+export interface IResearchElementDefinition extends IDomainResource {
 	/**
 	 * This is a ResearchElementDefinition resource
 	 */

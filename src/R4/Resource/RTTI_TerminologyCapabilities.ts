@@ -51,8 +51,9 @@ export enum TerminologyCapabilitiesCodeSearchKind {
 	_all = 'all'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ITerminologyCapabilities {
+export interface ITerminologyCapabilities extends IDomainResource {
 	/**
 	 * This is a TerminologyCapabilities resource
 	 */

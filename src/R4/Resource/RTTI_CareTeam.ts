@@ -25,8 +25,9 @@ export enum CareTeamStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICareTeam {
+export interface ICareTeam extends IDomainResource {
 	/**
 	 * This is a CareTeam resource
 	 */

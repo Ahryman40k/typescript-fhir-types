@@ -29,8 +29,9 @@ export enum DocumentReferenceStatusKind {
 	_enteredInError = 'entered-in-error'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface IDocumentReference {
+export interface IDocumentReference extends IDomainResource {
 	/**
 	 * This is a DocumentReference resource
 	 */

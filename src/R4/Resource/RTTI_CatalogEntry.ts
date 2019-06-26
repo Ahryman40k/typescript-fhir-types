@@ -23,8 +23,9 @@ export enum CatalogEntryStatusKind {
 	_unknown = 'unknown'
 }
 import { createEnumType } from '../../EnumType';
+import { IDomainResource } from './IDomainResource';
 
-export interface ICatalogEntry {
+export interface ICatalogEntry extends IDomainResource {
 	/**
 	 * This is a CatalogEntry resource
 	 */
