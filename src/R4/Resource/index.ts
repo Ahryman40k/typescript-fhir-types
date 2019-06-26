@@ -1,3 +1,6 @@
+export { IResource } from './IResource';
+export { IDomainResource } from './IDomainResource';
+
 export { RTTI_Account_Coverage, IAccount_Coverage } from './RTTI_Account_Coverage';
 export { RTTI_Account_Guarantor, IAccount_Guarantor } from './RTTI_Account_Guarantor';
 export { RTTI_Account, IAccount, AccountStatusKind } from './RTTI_Account';

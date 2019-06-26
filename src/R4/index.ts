@@ -23,6 +23,7 @@ export {
 
 
 export {
+    IResource, IDomainResource,
 RTTI_Account_Coverage, IAccount_Coverage,
 RTTI_Account_Guarantor, IAccount_Guarantor,
 RTTI_Account, IAccount, AccountStatusKind,
