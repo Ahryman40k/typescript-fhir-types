@@ -102,7 +102,7 @@ There is 2 points:
 
 ```javascript
 // Import requested objects
-import { R4 } from  '@Ahryman40k/ts-fhir-types';
+import { R4 } from  '@ahryman40k/ts-fhir-types';
 
 // validation succeeded
 const  validationResult = R4.RTTI_Observation.decode(/*json response*/) // => Right if good, Left if not
