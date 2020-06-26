@@ -6,12 +6,12 @@ import { RTTI_Quantity, IQuantity } from './RTTI_Quantity';
 import { RTTI_Reference, IReference } from './RTTI_Reference';
 export enum Questionnaire_EnableWhenOperatorKind {
 	_exists = 'exists',
-	_equal = 'Equal',
-	_notEqual = 'NotEqual',
-	_greater = 'Greater',
-	_lower = 'Lower',
-	_greaterOrEqual = 'GreaterOrEqual',
-	_lowerOrEqual = 'LowerOrEqual'
+	_equal = '=',
+	_notEqual = '!=',
+	_greater = '>',
+	_lower = '<',
+	_greaterOrEqual = '>=',
+	_lowerOrEqual = '<='
 }
 import { createEnumType } from '../../EnumType';
 
