@@ -1,5 +1,6 @@
 import "reflect-metadata";
 import * as t from "io-ts";
+import * as E from "fp-ts/lib/Either";
 
 export interface RefType<T> extends Function {
   new (...args: any[]): T;
@@ -7,11 +8,11 @@ export interface RefType<T> extends Function {
 
 export function decode<I, T extends t.Type<I>>(t: T, json: any): I {
   const validResult = t.decode(json);
-  if (validResult.isLeft()) {
+  if (E.isLeft(validResult)) {
     throw 1;
   }
 
-  return <I>validResult.value;
+  return <I>validResult.right;
 }
 
 function FhirGuard4MethodDecorator(
