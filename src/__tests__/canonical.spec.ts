@@ -3,7 +3,7 @@ import { R4 } from "../index";
 const T = R4.RTTI_canonical;
 const value = "http://snomed.info/sct";
 
-describe("Scalar canonocal", () => {
+describe("Scalar canonical", () => {
   test("should decode a valid value", () => {
     expect(T.decode(value)._tag).toBe("Right");
   });
