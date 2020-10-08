@@ -1,6 +1,6 @@
 {
   "name": "@ahryman40k/ts-fhir-types",
-  "version": "4.0.29",
+  "version": "5.0.0",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
