@@ -103,11 +103,11 @@ There is 2 points:
 ```javascript
 // Import requested objects
 import { R4 } from  '@ahryman40k/ts-fhir-types';
+import * as E from "fp-ts/lib/Either";
 
 // validation succeeded
 const  validationResult = R4.RTTI_Observation.decode(/*json response*/) // => Right if good, Left if not
-ThrowReporter.report( validationResult);
-const  obs: R4.IObservation = <R4.IObservation> schemaValidationResult.value;
+const  obs: R4.IObservation = E.isRight(validationResult);
 ```
 
 FHIR resources are also provided as interface, so you can inherit and implement your own object implementation. 
