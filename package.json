@@ -1,6 +1,6 @@
 {
   "name": "@ahryman40k/ts-fhir-types",
-  "version": "4.0.29",
+  "version": "4.0.30",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -19,19 +19,20 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^26.0.0",
-    "@types/node": "^14.0.13",
-    "codecov": "^3.7.0",
-    "jest": "^26.0.1",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.5",
+    "codecov": "^3.8.0",
+    "jest": "^26.5.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.1.0",
-    "typescript": "^3.9.5"
+    "ts-jest": "^26.4.1",
+    "typescript": "^3.9.7"
   },
   "files": [
     "lib"
   ],
   "dependencies": {
-    "io-ts": "<2.0.0",
+    "fp-ts": "^2.8.3",
+    "io-ts": "^2.0.0",
     "reflect-metadata": "^0.1.13"
   }
 }
