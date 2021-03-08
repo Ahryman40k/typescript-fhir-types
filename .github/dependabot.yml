@@ -5,8 +5,12 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
+    commit-message:
+      prefix: "chore(workflows): "
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "chore(deps): "
