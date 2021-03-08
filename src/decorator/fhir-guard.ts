@@ -1,6 +1,6 @@
-import "reflect-metadata";
-import * as t from "io-ts";
-import * as E from "fp-ts/lib/Either";
+import 'reflect-metadata';
+import * as t from 'io-ts';
+import * as E from 'fp-ts/lib/Either';
 
 export interface RefType<T> extends Function {
   new (...args: any[]): T;
@@ -18,14 +18,14 @@ export function decode<I, T extends t.Type<I>>(t: T, json: any): I {
 function FhirGuard4MethodDecorator(
   target: any,
   propertyKey: string,
-  descriptor: PropertyDescriptor
+  descriptor: PropertyDescriptor,
 ) {
   // const returnType = Reflect.getMetadata("design:returntype", target, propertyKey); // should be interface Ixxx
 
   const returnType = new target[propertyKey]();
 
   const originalFunction = descriptor.value; // save original function
-  descriptor.value = function(...args: any[]) {
+  descriptor.value = function (...args: any[]) {
     // replace with this new one
     const result = originalFunction.apply(this, args);
 
@@ -34,17 +34,19 @@ function FhirGuard4MethodDecorator(
 }
 
 function FhirGuard4PropertyDecorator<T>(target: any, key: string) {
+  /* eslint-disable @typescript-eslint/ban-ts-comment */
   // @ts-ignore
-  var _val = this[key];
+  let _val = this[key];
 
   // property getter
-  var getter = function() {
+  const getter = function () {
     return _val;
   };
 
   // property setter
+  /* eslint-disable @typescript-eslint/ban-ts-comment */
   // @ts-ignore
-  var setter = function(newVal) {
+  const setter = function (newVal) {
     console.log(`Set: ${key} => ${newVal}`);
     _val = newVal;
   };
@@ -57,16 +59,17 @@ export function FHIRGuard<T>(...args: any[]) {
             return FhirGuard4ClassDecorator.apply(this, args);
         */
     case 2:
+      /* eslint-disable @typescript-eslint/ban-ts-comment */
       // @ts-ignore
       return FhirGuard4PropertyDecorator.apply(this, args);
     case 3:
       /*if (typeof args[2] === "number") {
               return logParameter.apply(this, args);
             }*/
+      /* eslint-disable @typescript-eslint/ban-ts-comment */
       // @ts-ignore
       return FhirGuard4MethodDecorator.apply(this, args);
     default:
-      throw new Error("Decorators are not valid here!");
+      throw new Error('Decorators are not valid here!');
   }
 }
-

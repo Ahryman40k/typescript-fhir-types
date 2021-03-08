@@ -1,28 +1,49 @@
 {
-  "name": "@ahryman40k/ts-fhir-types",
+  "name": "@imaware/ts-fhir-types",
   "version": "4.0.34",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "prepare": "npm run build",
+    "postinstall": "husky install",
+    "prepare": "npm run clean && npm run build:prod",
     "build": "tsc",
+    "build:prod": "tsc --project ./tsconfig.prod.json",
     "test": "jest",
     "clean": "rimraf lib/*",
-    "publish-me": "npm run clean && npm version patch && tsc -p . && npm publish",
-    "publish-coverage": "codecov --token=50ac9b8a-5b64-40a3-bac5-721272f90c71"
+    "commitlint": "commitlint",
+    "husky:install": "husky install",
+    "lint": "run-s eslint:check prettier:check",
+    "lint:fix": "run-s eslint:fix prettier:fix",
+    "eslint:check": "eslint --report-unused-disable-directives .",
+    "eslint:fix": "yarn eslint:check --fix",
+    "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "prettier \"**/*.ts\" \"**/*.js\" -l",
+    "prettier:fix": "prettier \"**/*.ts\" \"**/*.js\" --write",
+    "mdlint": "markdownlint -c .markdownlint.jsonc -i CHANGELOG.md **.md",
+    "mdlint:fix": "markdownlint -c .markdownlint.jsonc -i CHANGELOG.md -f **.md"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Ahryman40k/typescript-fhir-types.git"
+    "url": "git@github.com:imaware/typescript-fhir-types.git"
   },
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/config-conventional": "^12.0.1",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.5",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
     "codecov": "^3.8.0",
+    "commitlint": "^12.0.1",
+    "eslint": "^7.21.0",
+    "husky": "^5.1.3",
     "jest": "^26.5.2",
+    "lint-staged": "^10.5.4",
+    "markdownlint-cli": "^0.27.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.1",
     "typescript": "^3.9.7"
@@ -30,9 +51,25 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@imaware"
+  },
   "dependencies": {
     "fp-ts": "^2.8.3",
     "io-ts": "^2.0.0",
     "reflect-metadata": "^0.1.13"
+  },
+  "lint-staged": {
+    "src/**.ts": [
+      "yarn eslint:fix",
+      "yarn prettier:fix"
+    ],
+    "src/**/*.ts": [
+      "yarn eslint:fix",
+      "yarn prettier:fix"
+    ],
+    "**.md": [
+      "yarn mdlint:fix"
+    ]
   }
 }
