@@ -5,10 +5,10 @@ import {RTTI_Element, IElement} from './RTTI_Element';
 import {RTTI_uri} from '../Scalar/RTTI_uri';
 import {RTTI_code} from '../Scalar/RTTI_code';
 export enum QuantityComparatorKind {
-  _lower = 'Lower',
-  _lowerOrEqual = 'LowerOrEqual',
-  _greaterOrEqual = 'GreaterOrEqual',
-  _greater = 'Greater',
+  _lower = '<',
+  _lowerOrEqual = '<=',
+  _greaterOrEqual = '>=',
+  _greater = '>',
 }
 import {createEnumType} from '../../EnumType';
 
