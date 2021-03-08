@@ -15,7 +15,7 @@ jobs:
         registry-url: 'https://npm.pkg.github.com'
         scope: '@imaware'
     - id: install
-      run: yarn install
+      run: yarn install --frozen-lockfile
     - name: Semantic Release
       id: semantic
       uses: cycjimmy/semantic-release-action@v2
