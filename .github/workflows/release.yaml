@@ -11,9 +11,8 @@ jobs:
     # Setup .npmrc file to publish to npm
     - uses: actions/setup-node@v2.1.5
       with:
-        node-version: '12.x'
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@imaware'
+        node-version: '14.x'
+        registry-url: 'https://registry.npmjs.org'
     - id: install
       run: yarn install --frozen-lockfile
     - name: Semantic Release
@@ -21,4 +20,4 @@ jobs:
       uses: cycjimmy/semantic-release-action@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
