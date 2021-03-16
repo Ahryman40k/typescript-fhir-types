@@ -50,9 +50,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@imaware"
-  },
   "dependencies": {
     "fp-ts": "^2.8.3",
     "io-ts": "^2.0.0",
