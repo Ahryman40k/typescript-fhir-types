@@ -55,6 +55,9 @@
     "io-ts": "^2.0.0",
     "reflect-metadata": "^0.1.13"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "lint-staged": {
     "src/**.ts": [
       "yarn eslint:fix",
