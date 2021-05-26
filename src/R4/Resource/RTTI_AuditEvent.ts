@@ -135,7 +135,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 	/**
 	 * The time when the event was recorded.
 	 */
-	recorded?: string;
+	recorded: string;
 
 	/**
 	 * Extensions for recorded
@@ -181,7 +181,8 @@ export const RTTI_AuditEvent: t.Type<IAuditEvent> = t.recursion(
 				resourceType: t.literal('AuditEvent'),
 				type: RTTI_Coding,
 				agent: t.array(RTTI_AuditEvent_Agent),
-				source: RTTI_AuditEvent_Source
+				source: RTTI_AuditEvent_Source,
+				recorded: RTTI_instant,
 			}),
 			t.partial({
 				id: RTTI_id,
@@ -201,7 +202,6 @@ export const RTTI_AuditEvent: t.Type<IAuditEvent> = t.recursion(
 				),
 				_action: RTTI_Element,
 				period: RTTI_Period,
-				recorded: RTTI_instant,
 				_recorded: RTTI_Element,
 				outcome: createEnumType<AuditEventOutcomeKind>(
 					AuditEventOutcomeKind,

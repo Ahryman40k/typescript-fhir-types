@@ -26,89 +26,31 @@ yarn install @ahryman40k/ts-fhir-types
 
 ## Examples
 
-let imagine you server or your application is receiving a FHIR Resource like an observation from a server or any external system
+let's imagine your server or your application is receiving a FHIR Resource like an observation from a server or any external system
 
-```json
+```typescript
+import { R4 } from '@ahryman40k/ts-fhir-types'
+import { either as E } from 'fp-ts'
 
-{
-   "resourceType":"Observation",
-   "id":"f001",
-   "text":{
-      "status":"generated"
-   },
-   "identifier":[
-      {
-         "use":"official",
-         "system":"http://www.bmc.nl/zorgportal/identifiers/observations",
-         "value":"6323"
-      }
-   ],
-   "status":"final",
-   "code":{
-      "coding":[
-         {
-            "system":"http://loinc.org",
-            "code":"15074-8",
-            "display":"Glucose [Moles/volume] in Blood"
-         }
-      ]
-   },
-   "subject":{
-      "reference":"Patient/f001",
-      "display":"P. van de Heuvel"
-   },
-   "valueQuantity":{
-      "value":6.3,
-      "unit":"mmol/l",
-      "system":"http://unitsofmeasure.org",
-      "code":"mmol/L"
-   },
-   "interpretation":[
-      {
-         "coding":[
-            {
-               "system":"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-               "code":"H",
-               "display":"High"
-            }
-         ]
-      }
-   ],
-   "referenceRange":[
-      {
-         "low":{
-            "value":3.1,
-            "unit":"mmol/l",
-            "system":"http://unitsofmeasure.org",
-            "code":"mmol/L"
-         },
-         "high":{
-            "value":6.2,
-            "unit":"mmol/l",
-            "system":"http://unitsofmeasure.org",
-            "code":"mmol/L"
-         }
-      }
-   ]
+const json = {
+    "resourceType":"Patient"   
+ };
+
+const  validationResult = R4.RTTI_Patient.decode(json)
+
+if ( E.isLeft( validationResult) ) {
+    console.log(validationResult.left);
+}
+
+if ( E.isRight( validationResult) ) {
+    console.log(validationResult.right);
 }
 ```
-
 
 There is 2 points:
 * You would like to have strongly typed types (__typescript__)
 * You would validate data returned from server and test their validity against FHIR standard
   
- 
-
-```javascript
-// Import requested objects
-import { R4 } from  '@ahryman40k/ts-fhir-types';
-import * as E from "fp-ts/lib/Either";
-
-// validation succeeded
-const  validationResult = R4.RTTI_Observation.decode(/*json response*/) // => Right if good, Left if not
-const  obs: R4.IObservation = E.isRight(validationResult);
-```
 
 FHIR resources are also provided as interface, so you can inherit and implement your own object implementation. 
 
