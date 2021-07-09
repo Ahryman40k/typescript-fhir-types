@@ -206,9 +206,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   operation?: ICapabilityStatement_Operation[];
 }
 
-export const RTTI_CapabilityStatement_Resource: t.Type<ICapabilityStatement_Resource> = t.recursion(
-  'ICapabilityStatement_Resource',
-  () =>
+export const RTTI_CapabilityStatement_Resource: t.Type<ICapabilityStatement_Resource> =
+  t.recursion('ICapabilityStatement_Resource', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -231,17 +230,19 @@ export const RTTI_CapabilityStatement_Resource: t.Type<ICapabilityStatement_Reso
       _updateCreate: RTTI_Element,
       conditionalCreate: t.boolean,
       _conditionalCreate: RTTI_Element,
-      conditionalRead: createEnumType<CapabilityStatement_ResourceConditionalReadKind>(
-        CapabilityStatement_ResourceConditionalReadKind,
-        'CapabilityStatement_ResourceConditionalReadKind',
-      ),
+      conditionalRead:
+        createEnumType<CapabilityStatement_ResourceConditionalReadKind>(
+          CapabilityStatement_ResourceConditionalReadKind,
+          'CapabilityStatement_ResourceConditionalReadKind',
+        ),
       _conditionalRead: RTTI_Element,
       conditionalUpdate: t.boolean,
       _conditionalUpdate: RTTI_Element,
-      conditionalDelete: createEnumType<CapabilityStatement_ResourceConditionalDeleteKind>(
-        CapabilityStatement_ResourceConditionalDeleteKind,
-        'CapabilityStatement_ResourceConditionalDeleteKind',
-      ),
+      conditionalDelete:
+        createEnumType<CapabilityStatement_ResourceConditionalDeleteKind>(
+          CapabilityStatement_ResourceConditionalDeleteKind,
+          'CapabilityStatement_ResourceConditionalDeleteKind',
+        ),
       _conditionalDelete: RTTI_Element,
       referencePolicy: t.array(
         createEnumType<CapabilityStatement_ResourceReferencePolicyKind>(
@@ -257,4 +258,4 @@ export const RTTI_CapabilityStatement_Resource: t.Type<ICapabilityStatement_Reso
       searchParam: t.array(RTTI_CapabilityStatement_SearchParam),
       operation: t.array(RTTI_CapabilityStatement_Operation),
     }),
-);
+  );

@@ -66,9 +66,8 @@ The dosage instructions should reflect the dosage of the medication that was adm
   rateQuantity?: IQuantity;
 }
 
-export const RTTI_MedicationAdministration_Dosage: t.Type<IMedicationAdministration_Dosage> = t.recursion(
-  'IMedicationAdministration_Dosage',
-  () =>
+export const RTTI_MedicationAdministration_Dosage: t.Type<IMedicationAdministration_Dosage> =
+  t.recursion('IMedicationAdministration_Dosage', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -82,4 +81,4 @@ export const RTTI_MedicationAdministration_Dosage: t.Type<IMedicationAdministrat
       rateRatio: RTTI_Ratio,
       rateQuantity: RTTI_Quantity,
     }),
-);
+  );

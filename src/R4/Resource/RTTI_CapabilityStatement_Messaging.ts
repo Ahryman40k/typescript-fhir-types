@@ -61,9 +61,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   supportedMessage?: ICapabilityStatement_SupportedMessage[];
 }
 
-export const RTTI_CapabilityStatement_Messaging: t.Type<ICapabilityStatement_Messaging> = t.recursion(
-  'ICapabilityStatement_Messaging',
-  () =>
+export const RTTI_CapabilityStatement_Messaging: t.Type<ICapabilityStatement_Messaging> =
+  t.recursion('ICapabilityStatement_Messaging', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -75,4 +74,4 @@ export const RTTI_CapabilityStatement_Messaging: t.Type<ICapabilityStatement_Mes
       _documentation: RTTI_Element,
       supportedMessage: t.array(RTTI_CapabilityStatement_SupportedMessage),
     }),
-);
+  );

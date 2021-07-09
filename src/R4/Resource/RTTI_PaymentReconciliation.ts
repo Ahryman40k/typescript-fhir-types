@@ -190,9 +190,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   processNote?: IPaymentReconciliation_ProcessNote[];
 }
 
-export const RTTI_PaymentReconciliation: t.Type<IPaymentReconciliation> = t.recursion(
-  'IPaymentReconciliation',
-  () =>
+export const RTTI_PaymentReconciliation: t.Type<IPaymentReconciliation> =
+  t.recursion('IPaymentReconciliation', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('PaymentReconciliation'),
@@ -233,4 +232,4 @@ export const RTTI_PaymentReconciliation: t.Type<IPaymentReconciliation> = t.recu
         processNote: t.array(RTTI_PaymentReconciliation_ProcessNote),
       }),
     ]),
-);
+  );

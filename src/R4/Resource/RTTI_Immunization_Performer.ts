@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   function?: ICodeableConcept;
 }
 
-export const RTTI_Immunization_Performer: t.Type<IImmunization_Performer> = t.recursion(
-  'IImmunization_Performer',
-  () =>
+export const RTTI_Immunization_Performer: t.Type<IImmunization_Performer> =
+  t.recursion('IImmunization_Performer', () =>
     t.intersection([
       t.type({
         actor: RTTI_Reference,
@@ -46,4 +45,4 @@ export const RTTI_Immunization_Performer: t.Type<IImmunization_Performer> = t.re
         function: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

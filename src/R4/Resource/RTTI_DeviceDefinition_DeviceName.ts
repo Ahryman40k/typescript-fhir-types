@@ -51,9 +51,8 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   _type?: IElement;
 }
 
-export const RTTI_DeviceDefinition_DeviceName: t.Type<IDeviceDefinition_DeviceName> = t.recursion(
-  'IDeviceDefinition_DeviceName',
-  () =>
+export const RTTI_DeviceDefinition_DeviceName: t.Type<IDeviceDefinition_DeviceName> =
+  t.recursion('IDeviceDefinition_DeviceName', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_DeviceDefinition_DeviceName: t.Type<IDeviceDefinition_DeviceNa
       ),
       _type: RTTI_Element,
     }),
-);
+  );

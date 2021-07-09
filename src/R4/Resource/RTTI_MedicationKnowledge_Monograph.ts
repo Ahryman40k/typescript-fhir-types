@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   source?: IReference;
 }
 
-export const RTTI_MedicationKnowledge_Monograph: t.Type<IMedicationKnowledge_Monograph> = t.recursion(
-  'IMedicationKnowledge_Monograph',
-  () =>
+export const RTTI_MedicationKnowledge_Monograph: t.Type<IMedicationKnowledge_Monograph> =
+  t.recursion('IMedicationKnowledge_Monograph', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_MedicationKnowledge_Monograph: t.Type<IMedicationKnowledge_Mon
       type: RTTI_CodeableConcept,
       source: RTTI_Reference,
     }),
-);
+  );

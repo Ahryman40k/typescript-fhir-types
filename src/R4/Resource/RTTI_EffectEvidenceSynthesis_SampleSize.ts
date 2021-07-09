@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _numberOfParticipants?: IElement;
 }
 
-export const RTTI_EffectEvidenceSynthesis_SampleSize: t.Type<IEffectEvidenceSynthesis_SampleSize> = t.recursion(
-  'IEffectEvidenceSynthesis_SampleSize',
-  () =>
+export const RTTI_EffectEvidenceSynthesis_SampleSize: t.Type<IEffectEvidenceSynthesis_SampleSize> =
+  t.recursion('IEffectEvidenceSynthesis_SampleSize', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_EffectEvidenceSynthesis_SampleSize: t.Type<IEffectEvidenceSynt
       numberOfParticipants: RTTI_integer,
       _numberOfParticipants: RTTI_Element,
     }),
-);
+  );

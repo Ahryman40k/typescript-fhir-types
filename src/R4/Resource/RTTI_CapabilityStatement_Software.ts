@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _releaseDate?: IElement;
 }
 
-export const RTTI_CapabilityStatement_Software: t.Type<ICapabilityStatement_Software> = t.recursion(
-  'ICapabilityStatement_Software',
-  () =>
+export const RTTI_CapabilityStatement_Software: t.Type<ICapabilityStatement_Software> =
+  t.recursion('ICapabilityStatement_Software', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_CapabilityStatement_Software: t.Type<ICapabilityStatement_Soft
       releaseDate: RTTI_dateTime,
       _releaseDate: RTTI_Element,
     }),
-);
+  );

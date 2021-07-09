@@ -273,9 +273,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   condition?: IFamilyMemberHistory_Condition[];
 }
 
-export const RTTI_FamilyMemberHistory: t.Type<IFamilyMemberHistory> = t.recursion(
-  'IFamilyMemberHistory',
-  () =>
+export const RTTI_FamilyMemberHistory: t.Type<IFamilyMemberHistory> =
+  t.recursion('IFamilyMemberHistory', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('FamilyMemberHistory'),
@@ -333,4 +332,4 @@ export const RTTI_FamilyMemberHistory: t.Type<IFamilyMemberHistory> = t.recursio
         condition: t.array(RTTI_FamilyMemberHistory_Condition),
       }),
     ]),
-);
+  );

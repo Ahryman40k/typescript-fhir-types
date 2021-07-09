@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   custodian?: IReference;
 }
 
-export const RTTI_CapabilityStatement_Implementation: t.Type<ICapabilityStatement_Implementation> = t.recursion(
-  'ICapabilityStatement_Implementation',
-  () =>
+export const RTTI_CapabilityStatement_Implementation: t.Type<ICapabilityStatement_Implementation> =
+  t.recursion('ICapabilityStatement_Implementation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_CapabilityStatement_Implementation: t.Type<ICapabilityStatemen
       _url: RTTI_Element,
       custodian: RTTI_Reference,
     }),
-);
+  );

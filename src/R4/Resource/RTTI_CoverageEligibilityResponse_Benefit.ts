@@ -78,9 +78,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   usedMoney?: IMoney;
 }
 
-export const RTTI_CoverageEligibilityResponse_Benefit: t.Type<ICoverageEligibilityResponse_Benefit> = t.recursion(
-  'ICoverageEligibilityResponse_Benefit',
-  () =>
+export const RTTI_CoverageEligibilityResponse_Benefit: t.Type<ICoverageEligibilityResponse_Benefit> =
+  t.recursion('ICoverageEligibilityResponse_Benefit', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -101,4 +100,4 @@ export const RTTI_CoverageEligibilityResponse_Benefit: t.Type<ICoverageEligibili
         usedMoney: RTTI_Money,
       }),
     ]),
-);
+  );

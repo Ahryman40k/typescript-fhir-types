@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _sourceId?: IElement;
 }
 
-export const RTTI_OperationDefinition_ReferencedFrom: t.Type<IOperationDefinition_ReferencedFrom> = t.recursion(
-  'IOperationDefinition_ReferencedFrom',
-  () =>
+export const RTTI_OperationDefinition_ReferencedFrom: t.Type<IOperationDefinition_ReferencedFrom> =
+  t.recursion('IOperationDefinition_ReferencedFrom', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -53,4 +52,4 @@ export const RTTI_OperationDefinition_ReferencedFrom: t.Type<IOperationDefinitio
       sourceId: t.string,
       _sourceId: RTTI_Element,
     }),
-);
+  );

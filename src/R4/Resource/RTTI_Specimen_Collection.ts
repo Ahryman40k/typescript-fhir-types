@@ -76,9 +76,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   fastingStatusDuration?: IDuration;
 }
 
-export const RTTI_Specimen_Collection: t.Type<ISpecimen_Collection> = t.recursion(
-  'ISpecimen_Collection',
-  () =>
+export const RTTI_Specimen_Collection: t.Type<ISpecimen_Collection> =
+  t.recursion('ISpecimen_Collection', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -94,4 +93,4 @@ export const RTTI_Specimen_Collection: t.Type<ISpecimen_Collection> = t.recursio
       fastingStatusCodeableConcept: RTTI_CodeableConcept,
       fastingStatusDuration: RTTI_Duration,
     }),
-);
+  );

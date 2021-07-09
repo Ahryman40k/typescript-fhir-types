@@ -90,9 +90,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _readsetId?: IElement;
 }
 
-export const RTTI_MolecularSequence_Repository: t.Type<IMolecularSequence_Repository> = t.recursion(
-  'IMolecularSequence_Repository',
-  () =>
+export const RTTI_MolecularSequence_Repository: t.Type<IMolecularSequence_Repository> =
+  t.recursion('IMolecularSequence_Repository', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -113,4 +112,4 @@ export const RTTI_MolecularSequence_Repository: t.Type<IMolecularSequence_Reposi
       readsetId: t.string,
       _readsetId: RTTI_Element,
     }),
-);
+  );

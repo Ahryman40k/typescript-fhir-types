@@ -103,9 +103,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   reason?: ICoding;
 }
 
-export const RTTI_ExplanationOfBenefit_SupportingInfo: t.Type<IExplanationOfBenefit_SupportingInfo> = t.recursion(
-  'IExplanationOfBenefit_SupportingInfo',
-  () =>
+export const RTTI_ExplanationOfBenefit_SupportingInfo: t.Type<IExplanationOfBenefit_SupportingInfo> =
+  t.recursion('IExplanationOfBenefit_SupportingInfo', () =>
     t.intersection([
       t.type({
         category: RTTI_CodeableConcept,
@@ -130,4 +129,4 @@ export const RTTI_ExplanationOfBenefit_SupportingInfo: t.Type<IExplanationOfBene
         reason: RTTI_Coding,
       }),
     ]),
-);
+  );

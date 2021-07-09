@@ -76,9 +76,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   period?: IPeriod;
 }
 
-export const RTTI_Group_Characteristic: t.Type<IGroup_Characteristic> = t.recursion(
-  'IGroup_Characteristic',
-  () =>
+export const RTTI_Group_Characteristic: t.Type<IGroup_Characteristic> =
+  t.recursion('IGroup_Characteristic', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -98,4 +97,4 @@ export const RTTI_Group_Characteristic: t.Type<IGroup_Characteristic> = t.recurs
         period: RTTI_Period,
       }),
     ]),
-);
+  );

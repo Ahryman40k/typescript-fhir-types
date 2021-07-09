@@ -89,9 +89,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _link?: IElement[];
 }
 
-export const RTTI_TestScript_Capability: t.Type<ITestScript_Capability> = t.recursion(
-  'ITestScript_Capability',
-  () =>
+export const RTTI_TestScript_Capability: t.Type<ITestScript_Capability> =
+  t.recursion('ITestScript_Capability', () =>
     t.intersection([
       t.type({
         capabilities: RTTI_canonical,
@@ -114,4 +113,4 @@ export const RTTI_TestScript_Capability: t.Type<ITestScript_Capability> = t.recu
         _link: t.array(RTTI_Element),
       }),
     ]),
-);
+  );

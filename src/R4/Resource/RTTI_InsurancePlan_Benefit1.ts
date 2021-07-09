@@ -35,9 +35,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   cost?: IInsurancePlan_Cost[];
 }
 
-export const RTTI_InsurancePlan_Benefit1: t.Type<IInsurancePlan_Benefit1> = t.recursion(
-  'IInsurancePlan_Benefit1',
-  () =>
+export const RTTI_InsurancePlan_Benefit1: t.Type<IInsurancePlan_Benefit1> =
+  t.recursion('IInsurancePlan_Benefit1', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -49,4 +48,4 @@ export const RTTI_InsurancePlan_Benefit1: t.Type<IInsurancePlan_Benefit1> = t.re
         cost: t.array(RTTI_InsurancePlan_Cost),
       }),
     ]),
-);
+  );

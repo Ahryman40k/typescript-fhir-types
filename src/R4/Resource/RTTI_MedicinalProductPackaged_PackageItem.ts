@@ -92,9 +92,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   manufacturer?: IReference[];
 }
 
-export const RTTI_MedicinalProductPackaged_PackageItem: t.Type<IMedicinalProductPackaged_PackageItem> = t.recursion(
-  'IMedicinalProductPackaged_PackageItem',
-  () =>
+export const RTTI_MedicinalProductPackaged_PackageItem: t.Type<IMedicinalProductPackaged_PackageItem> =
+  t.recursion('IMedicinalProductPackaged_PackageItem', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -116,4 +115,4 @@ export const RTTI_MedicinalProductPackaged_PackageItem: t.Type<IMedicinalProduct
         manufacturer: t.array(RTTI_Reference),
       }),
     ]),
-);
+  );

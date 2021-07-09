@@ -308,9 +308,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   certainty?: IRiskEvidenceSynthesis_Certainty[];
 }
 
-export const RTTI_RiskEvidenceSynthesis: t.Type<IRiskEvidenceSynthesis> = t.recursion(
-  'IRiskEvidenceSynthesis',
-  () =>
+export const RTTI_RiskEvidenceSynthesis: t.Type<IRiskEvidenceSynthesis> =
+  t.recursion('IRiskEvidenceSynthesis', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('RiskEvidenceSynthesis'),
@@ -373,4 +372,4 @@ export const RTTI_RiskEvidenceSynthesis: t.Type<IRiskEvidenceSynthesis> = t.recu
         certainty: t.array(RTTI_RiskEvidenceSynthesis_Certainty),
       }),
     ]),
-);
+  );

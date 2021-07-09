@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   type?: ICodeableConcept;
 }
 
-export const RTTI_ResearchStudy_Objective: t.Type<IResearchStudy_Objective> = t.recursion(
-  'IResearchStudy_Objective',
-  () =>
+export const RTTI_ResearchStudy_Objective: t.Type<IResearchStudy_Objective> =
+  t.recursion('IResearchStudy_Objective', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_ResearchStudy_Objective: t.Type<IResearchStudy_Objective> = t.
       _name: RTTI_Element,
       type: RTTI_CodeableConcept,
     }),
-);
+  );

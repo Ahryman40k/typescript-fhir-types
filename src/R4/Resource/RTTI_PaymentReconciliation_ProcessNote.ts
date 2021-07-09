@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _text?: IElement;
 }
 
-export const RTTI_PaymentReconciliation_ProcessNote: t.Type<IPaymentReconciliation_ProcessNote> = t.recursion(
-  'IPaymentReconciliation_ProcessNote',
-  () =>
+export const RTTI_PaymentReconciliation_ProcessNote: t.Type<IPaymentReconciliation_ProcessNote> =
+  t.recursion('IPaymentReconciliation_ProcessNote', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_PaymentReconciliation_ProcessNote: t.Type<IPaymentReconciliati
       text: t.string,
       _text: RTTI_Element,
     }),
-);
+  );

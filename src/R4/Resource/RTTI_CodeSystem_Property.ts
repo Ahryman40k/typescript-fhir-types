@@ -73,9 +73,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _type?: IElement;
 }
 
-export const RTTI_CodeSystem_Property: t.Type<ICodeSystem_Property> = t.recursion(
-  'ICodeSystem_Property',
-  () =>
+export const RTTI_CodeSystem_Property: t.Type<ICodeSystem_Property> =
+  t.recursion('ICodeSystem_Property', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -92,4 +91,4 @@ export const RTTI_CodeSystem_Property: t.Type<ICodeSystem_Property> = t.recursio
       ),
       _type: RTTI_Element,
     }),
-);
+  );

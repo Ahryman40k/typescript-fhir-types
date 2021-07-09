@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _type?: IElement;
 }
 
-export const RTTI_ImplementationGuide_Global: t.Type<IImplementationGuide_Global> = t.recursion(
-  'IImplementationGuide_Global',
-  () =>
+export const RTTI_ImplementationGuide_Global: t.Type<IImplementationGuide_Global> =
+  t.recursion('IImplementationGuide_Global', () =>
     t.intersection([
       t.type({
         profile: RTTI_canonical,
@@ -53,4 +52,4 @@ export const RTTI_ImplementationGuide_Global: t.Type<IImplementationGuide_Global
         _type: RTTI_Element,
       }),
     ]),
-);
+  );

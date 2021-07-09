@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _version?: IElement;
 }
 
-export const RTTI_Device_Specialization: t.Type<IDevice_Specialization> = t.recursion(
-  'IDevice_Specialization',
-  () =>
+export const RTTI_Device_Specialization: t.Type<IDevice_Specialization> =
+  t.recursion('IDevice_Specialization', () =>
     t.intersection([
       t.type({
         systemType: RTTI_CodeableConcept,
@@ -52,4 +51,4 @@ export const RTTI_Device_Specialization: t.Type<IDevice_Specialization> = t.recu
         _version: RTTI_Element,
       }),
     ]),
-);
+  );

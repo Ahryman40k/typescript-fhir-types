@@ -50,9 +50,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   locationReference?: IReference;
 }
 
-export const RTTI_ExplanationOfBenefit_Accident: t.Type<IExplanationOfBenefit_Accident> = t.recursion(
-  'IExplanationOfBenefit_Accident',
-  () =>
+export const RTTI_ExplanationOfBenefit_Accident: t.Type<IExplanationOfBenefit_Accident> =
+  t.recursion('IExplanationOfBenefit_Accident', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -63,4 +62,4 @@ export const RTTI_ExplanationOfBenefit_Accident: t.Type<IExplanationOfBenefit_Ac
       locationAddress: RTTI_Address,
       locationReference: RTTI_Reference,
     }),
-);
+  );

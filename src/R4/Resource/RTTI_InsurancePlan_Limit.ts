@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   code?: ICodeableConcept;
 }
 
-export const RTTI_InsurancePlan_Limit: t.Type<IInsurancePlan_Limit> = t.recursion(
-  'IInsurancePlan_Limit',
-  () =>
+export const RTTI_InsurancePlan_Limit: t.Type<IInsurancePlan_Limit> =
+  t.recursion('IInsurancePlan_Limit', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_InsurancePlan_Limit: t.Type<IInsurancePlan_Limit> = t.recursio
       value: RTTI_Quantity,
       code: RTTI_CodeableConcept,
     }),
-);
+  );

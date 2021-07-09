@@ -65,9 +65,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   udi?: IReference[];
 }
 
-export const RTTI_ExplanationOfBenefit_Procedure: t.Type<IExplanationOfBenefit_Procedure> = t.recursion(
-  'IExplanationOfBenefit_Procedure',
-  () =>
+export const RTTI_ExplanationOfBenefit_Procedure: t.Type<IExplanationOfBenefit_Procedure> =
+  t.recursion('IExplanationOfBenefit_Procedure', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -81,4 +80,4 @@ export const RTTI_ExplanationOfBenefit_Procedure: t.Type<IExplanationOfBenefit_P
       procedureReference: RTTI_Reference,
       udi: t.array(RTTI_Reference),
     }),
-);
+  );

@@ -67,9 +67,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   precisionEstimate?: IEffectEvidenceSynthesis_PrecisionEstimate[];
 }
 
-export const RTTI_EffectEvidenceSynthesis_EffectEstimate: t.Type<IEffectEvidenceSynthesis_EffectEstimate> = t.recursion(
-  'IEffectEvidenceSynthesis_EffectEstimate',
-  () =>
+export const RTTI_EffectEvidenceSynthesis_EffectEstimate: t.Type<IEffectEvidenceSynthesis_EffectEstimate> =
+  t.recursion('IEffectEvidenceSynthesis_EffectEstimate', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -85,4 +84,4 @@ export const RTTI_EffectEvidenceSynthesis_EffectEstimate: t.Type<IEffectEvidence
         RTTI_EffectEvidenceSynthesis_PrecisionEstimate,
       ),
     }),
-);
+  );

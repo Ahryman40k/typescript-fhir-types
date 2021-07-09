@@ -98,9 +98,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _valueDecimal?: IElement;
 }
 
-export const RTTI_CodeSystem_Property1: t.Type<ICodeSystem_Property1> = t.recursion(
-  'ICodeSystem_Property1',
-  () =>
+export const RTTI_CodeSystem_Property1: t.Type<ICodeSystem_Property1> =
+  t.recursion('ICodeSystem_Property1', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -121,4 +120,4 @@ export const RTTI_CodeSystem_Property1: t.Type<ICodeSystem_Property1> = t.recurs
       valueDecimal: t.number,
       _valueDecimal: RTTI_Element,
     }),
-);
+  );

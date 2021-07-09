@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   substanceReference?: IReference;
 }
 
-export const RTTI_Substance_Ingredient: t.Type<ISubstance_Ingredient> = t.recursion(
-  'ISubstance_Ingredient',
-  () =>
+export const RTTI_Substance_Ingredient: t.Type<ISubstance_Ingredient> =
+  t.recursion('ISubstance_Ingredient', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -49,4 +48,4 @@ export const RTTI_Substance_Ingredient: t.Type<ISubstance_Ingredient> = t.recurs
       substanceCodeableConcept: RTTI_CodeableConcept,
       substanceReference: RTTI_Reference,
     }),
-);
+  );

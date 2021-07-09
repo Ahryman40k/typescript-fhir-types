@@ -110,9 +110,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   otherCharacteristics?: ICodeableConcept[];
 }
 
-export const RTTI_MedicinalProductManufactured: t.Type<IMedicinalProductManufactured> = t.recursion(
-  'IMedicinalProductManufactured',
-  () =>
+export const RTTI_MedicinalProductManufactured: t.Type<IMedicinalProductManufactured> =
+  t.recursion('IMedicinalProductManufactured', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicinalProductManufactured'),
@@ -137,4 +136,4 @@ export const RTTI_MedicinalProductManufactured: t.Type<IMedicinalProductManufact
         otherCharacteristics: t.array(RTTI_CodeableConcept),
       }),
     ]),
-);
+  );

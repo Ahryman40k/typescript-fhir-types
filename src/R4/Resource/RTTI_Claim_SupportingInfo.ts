@@ -102,9 +102,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   reason?: ICodeableConcept;
 }
 
-export const RTTI_Claim_SupportingInfo: t.Type<IClaim_SupportingInfo> = t.recursion(
-  'IClaim_SupportingInfo',
-  () =>
+export const RTTI_Claim_SupportingInfo: t.Type<IClaim_SupportingInfo> =
+  t.recursion('IClaim_SupportingInfo', () =>
     t.intersection([
       t.type({
         category: RTTI_CodeableConcept,
@@ -129,4 +128,4 @@ export const RTTI_Claim_SupportingInfo: t.Type<IClaim_SupportingInfo> = t.recurs
         reason: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

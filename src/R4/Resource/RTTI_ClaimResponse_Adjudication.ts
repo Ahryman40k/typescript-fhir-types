@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _value?: IElement;
 }
 
-export const RTTI_ClaimResponse_Adjudication: t.Type<IClaimResponse_Adjudication> = t.recursion(
-  'IClaimResponse_Adjudication',
-  () =>
+export const RTTI_ClaimResponse_Adjudication: t.Type<IClaimResponse_Adjudication> =
+  t.recursion('IClaimResponse_Adjudication', () =>
     t.intersection([
       t.type({
         category: RTTI_CodeableConcept,
@@ -66,4 +65,4 @@ export const RTTI_ClaimResponse_Adjudication: t.Type<IClaimResponse_Adjudication
         _value: RTTI_Element,
       }),
     ]),
-);
+  );

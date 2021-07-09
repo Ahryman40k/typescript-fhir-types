@@ -313,9 +313,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   overload?: IOperationDefinition_Overload[];
 }
 
-export const RTTI_OperationDefinition: t.Type<IOperationDefinition> = t.recursion(
-  'IOperationDefinition',
-  () =>
+export const RTTI_OperationDefinition: t.Type<IOperationDefinition> =
+  t.recursion('IOperationDefinition', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('OperationDefinition'),
@@ -383,4 +382,4 @@ export const RTTI_OperationDefinition: t.Type<IOperationDefinition> = t.recursio
         overload: t.array(RTTI_OperationDefinition_Overload),
       }),
     ]),
-);
+  );

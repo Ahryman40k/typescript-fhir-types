@@ -130,9 +130,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   batchIdentifier?: IMedicinalProductPackaged_BatchIdentifier[];
 }
 
-export const RTTI_MedicinalProductPackaged: t.Type<IMedicinalProductPackaged> = t.recursion(
-  'IMedicinalProductPackaged',
-  () =>
+export const RTTI_MedicinalProductPackaged: t.Type<IMedicinalProductPackaged> =
+  t.recursion('IMedicinalProductPackaged', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicinalProductPackaged'),
@@ -160,4 +159,4 @@ export const RTTI_MedicinalProductPackaged: t.Type<IMedicinalProductPackaged> = 
         batchIdentifier: t.array(RTTI_MedicinalProductPackaged_BatchIdentifier),
       }),
     ]),
-);
+  );

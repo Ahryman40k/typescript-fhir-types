@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   amount?: IQuantity;
 }
 
-export const RTTI_SubstanceSpecification_MolecularWeight: t.Type<ISubstanceSpecification_MolecularWeight> = t.recursion(
-  'ISubstanceSpecification_MolecularWeight',
-  () =>
+export const RTTI_SubstanceSpecification_MolecularWeight: t.Type<ISubstanceSpecification_MolecularWeight> =
+  t.recursion('ISubstanceSpecification_MolecularWeight', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_SubstanceSpecification_MolecularWeight: t.Type<ISubstanceSpeci
       type: RTTI_CodeableConcept,
       amount: RTTI_Quantity,
     }),
-);
+  );

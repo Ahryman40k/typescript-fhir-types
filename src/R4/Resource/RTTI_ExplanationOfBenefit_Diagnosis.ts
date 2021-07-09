@@ -59,9 +59,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   packageCode?: ICodeableConcept;
 }
 
-export const RTTI_ExplanationOfBenefit_Diagnosis: t.Type<IExplanationOfBenefit_Diagnosis> = t.recursion(
-  'IExplanationOfBenefit_Diagnosis',
-  () =>
+export const RTTI_ExplanationOfBenefit_Diagnosis: t.Type<IExplanationOfBenefit_Diagnosis> =
+  t.recursion('IExplanationOfBenefit_Diagnosis', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -74,4 +73,4 @@ export const RTTI_ExplanationOfBenefit_Diagnosis: t.Type<IExplanationOfBenefit_D
       onAdmission: RTTI_CodeableConcept,
       packageCode: RTTI_CodeableConcept,
     }),
-);
+  );

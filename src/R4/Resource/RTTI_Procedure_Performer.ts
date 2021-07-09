@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   onBehalfOf?: IReference;
 }
 
-export const RTTI_Procedure_Performer: t.Type<IProcedure_Performer> = t.recursion(
-  'IProcedure_Performer',
-  () =>
+export const RTTI_Procedure_Performer: t.Type<IProcedure_Performer> =
+  t.recursion('IProcedure_Performer', () =>
     t.intersection([
       t.type({
         actor: RTTI_Reference,
@@ -52,4 +51,4 @@ export const RTTI_Procedure_Performer: t.Type<IProcedure_Performer> = t.recursio
         onBehalfOf: RTTI_Reference,
       }),
     ]),
-);
+  );

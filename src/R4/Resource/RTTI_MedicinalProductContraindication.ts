@@ -110,9 +110,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   population?: IPopulation[];
 }
 
-export const RTTI_MedicinalProductContraindication: t.Type<IMedicinalProductContraindication> = t.recursion(
-  'IMedicinalProductContraindication',
-  () =>
+export const RTTI_MedicinalProductContraindication: t.Type<IMedicinalProductContraindication> =
+  t.recursion('IMedicinalProductContraindication', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicinalProductContraindication'),
@@ -139,4 +138,4 @@ export const RTTI_MedicinalProductContraindication: t.Type<IMedicinalProductCont
         population: t.array(RTTI_Population),
       }),
     ]),
-);
+  );

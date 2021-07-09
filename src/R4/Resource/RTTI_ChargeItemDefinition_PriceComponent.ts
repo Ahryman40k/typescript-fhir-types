@@ -55,9 +55,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   amount?: IMoney;
 }
 
-export const RTTI_ChargeItemDefinition_PriceComponent: t.Type<IChargeItemDefinition_PriceComponent> = t.recursion(
-  'IChargeItemDefinition_PriceComponent',
-  () =>
+export const RTTI_ChargeItemDefinition_PriceComponent: t.Type<IChargeItemDefinition_PriceComponent> =
+  t.recursion('IChargeItemDefinition_PriceComponent', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -69,4 +68,4 @@ export const RTTI_ChargeItemDefinition_PriceComponent: t.Type<IChargeItemDefinit
       _factor: RTTI_Element,
       amount: RTTI_Money,
     }),
-);
+  );

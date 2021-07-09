@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _expression?: IElement;
 }
 
-export const RTTI_SearchParameter_Component: t.Type<ISearchParameter_Component> = t.recursion(
-  'ISearchParameter_Component',
-  () =>
+export const RTTI_SearchParameter_Component: t.Type<ISearchParameter_Component> =
+  t.recursion('ISearchParameter_Component', () =>
     t.intersection([
       t.type({
         definition: RTTI_canonical,
@@ -52,4 +51,4 @@ export const RTTI_SearchParameter_Component: t.Type<ISearchParameter_Component> 
         _expression: RTTI_Element,
       }),
     ]),
-);
+  );

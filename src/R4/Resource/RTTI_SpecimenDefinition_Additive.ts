@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   additiveReference?: IReference;
 }
 
-export const RTTI_SpecimenDefinition_Additive: t.Type<ISpecimenDefinition_Additive> = t.recursion(
-  'ISpecimenDefinition_Additive',
-  () =>
+export const RTTI_SpecimenDefinition_Additive: t.Type<ISpecimenDefinition_Additive> =
+  t.recursion('ISpecimenDefinition_Additive', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_SpecimenDefinition_Additive: t.Type<ISpecimenDefinition_Additi
       additiveCodeableConcept: RTTI_CodeableConcept,
       additiveReference: RTTI_Reference,
     }),
-);
+  );

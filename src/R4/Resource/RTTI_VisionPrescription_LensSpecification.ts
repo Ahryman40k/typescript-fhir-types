@@ -155,9 +155,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   note?: IAnnotation[];
 }
 
-export const RTTI_VisionPrescription_LensSpecification: t.Type<IVisionPrescription_LensSpecification> = t.recursion(
-  'IVisionPrescription_LensSpecification',
-  () =>
+export const RTTI_VisionPrescription_LensSpecification: t.Type<IVisionPrescription_LensSpecification> =
+  t.recursion('IVisionPrescription_LensSpecification', () =>
     t.intersection([
       t.type({
         product: RTTI_CodeableConcept,
@@ -194,4 +193,4 @@ export const RTTI_VisionPrescription_LensSpecification: t.Type<IVisionPrescripti
         note: t.array(RTTI_Annotation),
       }),
     ]),
-);
+  );

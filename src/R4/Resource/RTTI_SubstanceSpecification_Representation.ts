@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   attachment?: IAttachment;
 }
 
-export const RTTI_SubstanceSpecification_Representation: t.Type<ISubstanceSpecification_Representation> = t.recursion(
-  'ISubstanceSpecification_Representation',
-  () =>
+export const RTTI_SubstanceSpecification_Representation: t.Type<ISubstanceSpecification_Representation> =
+  t.recursion('ISubstanceSpecification_Representation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_SubstanceSpecification_Representation: t.Type<ISubstanceSpecif
       _representation: RTTI_Element,
       attachment: RTTI_Attachment,
     }),
-);
+  );

@@ -46,9 +46,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   limit?: IInsurancePlan_Limit[];
 }
 
-export const RTTI_InsurancePlan_Benefit: t.Type<IInsurancePlan_Benefit> = t.recursion(
-  'IInsurancePlan_Benefit',
-  () =>
+export const RTTI_InsurancePlan_Benefit: t.Type<IInsurancePlan_Benefit> =
+  t.recursion('IInsurancePlan_Benefit', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -62,4 +61,4 @@ export const RTTI_InsurancePlan_Benefit: t.Type<IInsurancePlan_Benefit> = t.recu
         limit: t.array(RTTI_InsurancePlan_Limit),
       }),
     ]),
-);
+  );

@@ -68,9 +68,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   dischargeDisposition?: ICodeableConcept;
 }
 
-export const RTTI_Encounter_Hospitalization: t.Type<IEncounter_Hospitalization> = t.recursion(
-  'IEncounter_Hospitalization',
-  () =>
+export const RTTI_Encounter_Hospitalization: t.Type<IEncounter_Hospitalization> =
+  t.recursion('IEncounter_Hospitalization', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -85,4 +84,4 @@ export const RTTI_Encounter_Hospitalization: t.Type<IEncounter_Hospitalization> 
       destination: RTTI_Reference,
       dischargeDisposition: RTTI_CodeableConcept,
     }),
-);
+  );

@@ -72,9 +72,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _header?: IElement[];
 }
 
-export const RTTI_Subscription_Channel: t.Type<ISubscription_Channel> = t.recursion(
-  'ISubscription_Channel',
-  () =>
+export const RTTI_Subscription_Channel: t.Type<ISubscription_Channel> =
+  t.recursion('ISubscription_Channel', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -91,4 +90,4 @@ export const RTTI_Subscription_Channel: t.Type<ISubscription_Channel> = t.recurs
       header: t.array(t.string),
       _header: t.array(RTTI_Element),
     }),
-);
+  );

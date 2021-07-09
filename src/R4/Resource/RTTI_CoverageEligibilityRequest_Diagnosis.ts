@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   diagnosisReference?: IReference;
 }
 
-export const RTTI_CoverageEligibilityRequest_Diagnosis: t.Type<ICoverageEligibilityRequest_Diagnosis> = t.recursion(
-  'ICoverageEligibilityRequest_Diagnosis',
-  () =>
+export const RTTI_CoverageEligibilityRequest_Diagnosis: t.Type<ICoverageEligibilityRequest_Diagnosis> =
+  t.recursion('ICoverageEligibilityRequest_Diagnosis', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_CoverageEligibilityRequest_Diagnosis: t.Type<ICoverageEligibil
       diagnosisCodeableConcept: RTTI_CodeableConcept,
       diagnosisReference: RTTI_Reference,
     }),
-);
+  );

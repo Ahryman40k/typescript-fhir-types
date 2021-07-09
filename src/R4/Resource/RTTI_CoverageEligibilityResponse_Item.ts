@@ -123,9 +123,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _authorizationUrl?: IElement;
 }
 
-export const RTTI_CoverageEligibilityResponse_Item: t.Type<ICoverageEligibilityResponse_Item> = t.recursion(
-  'ICoverageEligibilityResponse_Item',
-  () =>
+export const RTTI_CoverageEligibilityResponse_Item: t.Type<ICoverageEligibilityResponse_Item> =
+  t.recursion('ICoverageEligibilityResponse_Item', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -150,4 +149,4 @@ export const RTTI_CoverageEligibilityResponse_Item: t.Type<ICoverageEligibilityR
       authorizationUrl: RTTI_uri,
       _authorizationUrl: RTTI_Element,
     }),
-);
+  );

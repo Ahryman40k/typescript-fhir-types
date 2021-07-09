@@ -199,9 +199,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _url?: IElement;
 }
 
-export const RTTI_TestScript_Operation: t.Type<ITestScript_Operation> = t.recursion(
-  'ITestScript_Operation',
-  () =>
+export const RTTI_TestScript_Operation: t.Type<ITestScript_Operation> =
+  t.recursion('ITestScript_Operation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -242,4 +241,4 @@ export const RTTI_TestScript_Operation: t.Type<ITestScript_Operation> = t.recurs
       url: t.string,
       _url: RTTI_Element,
     }),
-);
+  );

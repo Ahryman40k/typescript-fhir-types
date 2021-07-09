@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _documentation?: IElement;
 }
 
-export const RTTI_CompartmentDefinition_Resource: t.Type<ICompartmentDefinition_Resource> = t.recursion(
-  'ICompartmentDefinition_Resource',
-  () =>
+export const RTTI_CompartmentDefinition_Resource: t.Type<ICompartmentDefinition_Resource> =
+  t.recursion('ICompartmentDefinition_Resource', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_CompartmentDefinition_Resource: t.Type<ICompartmentDefinition_
       documentation: t.string,
       _documentation: RTTI_Element,
     }),
-);
+  );

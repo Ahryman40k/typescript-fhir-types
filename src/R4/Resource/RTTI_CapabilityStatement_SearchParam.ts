@@ -70,9 +70,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _documentation?: IElement;
 }
 
-export const RTTI_CapabilityStatement_SearchParam: t.Type<ICapabilityStatement_SearchParam> = t.recursion(
-  'ICapabilityStatement_SearchParam',
-  () =>
+export const RTTI_CapabilityStatement_SearchParam: t.Type<ICapabilityStatement_SearchParam> =
+  t.recursion('ICapabilityStatement_SearchParam', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -88,4 +87,4 @@ export const RTTI_CapabilityStatement_SearchParam: t.Type<ICapabilityStatement_S
       documentation: RTTI_markdown,
       _documentation: RTTI_Element,
     }),
-);
+  );

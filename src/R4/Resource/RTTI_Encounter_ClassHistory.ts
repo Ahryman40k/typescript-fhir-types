@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   modifierExtension?: IExtension[];
 }
 
-export const RTTI_Encounter_ClassHistory: t.Type<IEncounter_ClassHistory> = t.recursion(
-  'IEncounter_ClassHistory',
-  () =>
+export const RTTI_Encounter_ClassHistory: t.Type<IEncounter_ClassHistory> =
+  t.recursion('IEncounter_ClassHistory', () =>
     t.intersection([
       t.type({
         class: RTTI_Coding,
@@ -46,4 +45,4 @@ export const RTTI_Encounter_ClassHistory: t.Type<IEncounter_ClassHistory> = t.re
         modifierExtension: t.array(RTTI_Extension),
       }),
     ]),
-);
+  );

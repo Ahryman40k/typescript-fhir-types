@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   control?: ICoding[];
 }
 
-export const RTTI_Contract_SecurityLabel: t.Type<IContract_SecurityLabel> = t.recursion(
-  'IContract_SecurityLabel',
-  () =>
+export const RTTI_Contract_SecurityLabel: t.Type<IContract_SecurityLabel> =
+  t.recursion('IContract_SecurityLabel', () =>
     t.intersection([
       t.type({
         classification: RTTI_Coding,
@@ -65,4 +64,4 @@ export const RTTI_Contract_SecurityLabel: t.Type<IContract_SecurityLabel> = t.re
         control: t.array(RTTI_Coding),
       }),
     ]),
-);
+  );

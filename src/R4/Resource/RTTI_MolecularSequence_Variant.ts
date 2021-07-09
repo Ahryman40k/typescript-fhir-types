@@ -78,9 +78,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   variantPointer?: IReference;
 }
 
-export const RTTI_MolecularSequence_Variant: t.Type<IMolecularSequence_Variant> = t.recursion(
-  'IMolecularSequence_Variant',
-  () =>
+export const RTTI_MolecularSequence_Variant: t.Type<IMolecularSequence_Variant> =
+  t.recursion('IMolecularSequence_Variant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -97,4 +96,4 @@ export const RTTI_MolecularSequence_Variant: t.Type<IMolecularSequence_Variant> 
       _cigar: RTTI_Element,
       variantPointer: RTTI_Reference,
     }),
-);
+  );

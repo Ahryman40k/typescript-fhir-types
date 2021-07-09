@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _date?: IElement;
 }
 
-export const RTTI_SubstanceSpecification_Official: t.Type<ISubstanceSpecification_Official> = t.recursion(
-  'ISubstanceSpecification_Official',
-  () =>
+export const RTTI_SubstanceSpecification_Official: t.Type<ISubstanceSpecification_Official> =
+  t.recursion('ISubstanceSpecification_Official', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_SubstanceSpecification_Official: t.Type<ISubstanceSpecificatio
       date: RTTI_dateTime,
       _date: RTTI_Element,
     }),
-);
+  );

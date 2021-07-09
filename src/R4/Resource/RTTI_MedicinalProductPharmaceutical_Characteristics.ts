@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   status?: ICodeableConcept;
 }
 
-export const RTTI_MedicinalProductPharmaceutical_Characteristics: t.Type<IMedicinalProductPharmaceutical_Characteristics> = t.recursion(
-  'IMedicinalProductPharmaceutical_Characteristics',
-  () =>
+export const RTTI_MedicinalProductPharmaceutical_Characteristics: t.Type<IMedicinalProductPharmaceutical_Characteristics> =
+  t.recursion('IMedicinalProductPharmaceutical_Characteristics', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -45,4 +44,4 @@ export const RTTI_MedicinalProductPharmaceutical_Characteristics: t.Type<IMedici
         status: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

@@ -64,9 +64,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   pushTypeAvailable?: ICodeableConcept[];
 }
 
-export const RTTI_VerificationResult_PrimarySource: t.Type<IVerificationResult_PrimarySource> = t.recursion(
-  'IVerificationResult_PrimarySource',
-  () =>
+export const RTTI_VerificationResult_PrimarySource: t.Type<IVerificationResult_PrimarySource> =
+  t.recursion('IVerificationResult_PrimarySource', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -80,4 +79,4 @@ export const RTTI_VerificationResult_PrimarySource: t.Type<IVerificationResult_P
       canPushUpdates: RTTI_CodeableConcept,
       pushTypeAvailable: t.array(RTTI_CodeableConcept),
     }),
-);
+  );

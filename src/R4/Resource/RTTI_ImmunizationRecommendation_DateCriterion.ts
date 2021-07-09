@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _value?: IElement;
 }
 
-export const RTTI_ImmunizationRecommendation_DateCriterion: t.Type<IImmunizationRecommendation_DateCriterion> = t.recursion(
-  'IImmunizationRecommendation_DateCriterion',
-  () =>
+export const RTTI_ImmunizationRecommendation_DateCriterion: t.Type<IImmunizationRecommendation_DateCriterion> =
+  t.recursion('IImmunizationRecommendation_DateCriterion', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -53,4 +52,4 @@ export const RTTI_ImmunizationRecommendation_DateCriterion: t.Type<IImmunization
         _value: RTTI_Element,
       }),
     ]),
-);
+  );

@@ -55,9 +55,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   party?: IReference;
 }
 
-export const RTTI_Composition_Attester: t.Type<IComposition_Attester> = t.recursion(
-  'IComposition_Attester',
-  () =>
+export const RTTI_Composition_Attester: t.Type<IComposition_Attester> =
+  t.recursion('IComposition_Attester', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -71,4 +70,4 @@ export const RTTI_Composition_Attester: t.Type<IComposition_Attester> = t.recurs
       _time: RTTI_Element,
       party: RTTI_Reference,
     }),
-);
+  );

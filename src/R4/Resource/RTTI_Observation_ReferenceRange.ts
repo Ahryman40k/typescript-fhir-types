@@ -59,9 +59,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _text?: IElement;
 }
 
-export const RTTI_Observation_ReferenceRange: t.Type<IObservation_ReferenceRange> = t.recursion(
-  'IObservation_ReferenceRange',
-  () =>
+export const RTTI_Observation_ReferenceRange: t.Type<IObservation_ReferenceRange> =
+  t.recursion('IObservation_ReferenceRange', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -74,4 +73,4 @@ export const RTTI_Observation_ReferenceRange: t.Type<IObservation_ReferenceRange
       text: t.string,
       _text: RTTI_Element,
     }),
-);
+  );

@@ -105,9 +105,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   authority?: IReference;
 }
 
-export const RTTI_ImmunizationRecommendation: t.Type<IImmunizationRecommendation> = t.recursion(
-  'IImmunizationRecommendation',
-  () =>
+export const RTTI_ImmunizationRecommendation: t.Type<IImmunizationRecommendation> =
+  t.recursion('IImmunizationRecommendation', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ImmunizationRecommendation'),
@@ -131,4 +130,4 @@ export const RTTI_ImmunizationRecommendation: t.Type<IImmunizationRecommendation
         authority: RTTI_Reference,
       }),
     ]),
-);
+  );

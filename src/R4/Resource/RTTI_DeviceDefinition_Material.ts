@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _allergenicIndicator?: IElement;
 }
 
-export const RTTI_DeviceDefinition_Material: t.Type<IDeviceDefinition_Material> = t.recursion(
-  'IDeviceDefinition_Material',
-  () =>
+export const RTTI_DeviceDefinition_Material: t.Type<IDeviceDefinition_Material> =
+  t.recursion('IDeviceDefinition_Material', () =>
     t.intersection([
       t.type({
         substance: RTTI_CodeableConcept,
@@ -64,4 +63,4 @@ export const RTTI_DeviceDefinition_Material: t.Type<IDeviceDefinition_Material> 
         _allergenicIndicator: RTTI_Element,
       }),
     ]),
-);
+  );

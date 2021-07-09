@@ -46,9 +46,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _subsumption?: IElement;
 }
 
-export const RTTI_TerminologyCapabilities_CodeSystem: t.Type<ITerminologyCapabilities_CodeSystem> = t.recursion(
-  'ITerminologyCapabilities_CodeSystem',
-  () =>
+export const RTTI_TerminologyCapabilities_CodeSystem: t.Type<ITerminologyCapabilities_CodeSystem> =
+  t.recursion('ITerminologyCapabilities_CodeSystem', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -58,4 +57,4 @@ export const RTTI_TerminologyCapabilities_CodeSystem: t.Type<ITerminologyCapabil
       subsumption: t.boolean,
       _subsumption: RTTI_Element,
     }),
-);
+  );

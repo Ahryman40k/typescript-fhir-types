@@ -4,7 +4,8 @@ import {Type, success, failure, identity} from 'io-ts';
  * A time during the day, with no date specified
  */
 export class RTTI_timeType extends Type<string> {
-  private static regexExp = /^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$/;
+  private static regexExp =
+    /^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$/;
 
   // readonly _tag: 'RTTI_timeType' = 'RTTI_timeType';
 

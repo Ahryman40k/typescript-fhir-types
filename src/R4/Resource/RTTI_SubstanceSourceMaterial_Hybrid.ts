@@ -67,9 +67,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   hybridType?: ICodeableConcept;
 }
 
-export const RTTI_SubstanceSourceMaterial_Hybrid: t.Type<ISubstanceSourceMaterial_Hybrid> = t.recursion(
-  'ISubstanceSourceMaterial_Hybrid',
-  () =>
+export const RTTI_SubstanceSourceMaterial_Hybrid: t.Type<ISubstanceSourceMaterial_Hybrid> =
+  t.recursion('ISubstanceSourceMaterial_Hybrid', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -84,4 +83,4 @@ export const RTTI_SubstanceSourceMaterial_Hybrid: t.Type<ISubstanceSourceMateria
       _paternalOrganismName: RTTI_Element,
       hybridType: RTTI_CodeableConcept,
     }),
-);
+  );

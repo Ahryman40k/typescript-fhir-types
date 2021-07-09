@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   alternative?: IExampleScenario_Alternative[];
 }
 
-export const RTTI_ExampleScenario_Step: t.Type<IExampleScenario_Step> = t.recursion(
-  'IExampleScenario_Step',
-  () =>
+export const RTTI_ExampleScenario_Step: t.Type<IExampleScenario_Step> =
+  t.recursion('IExampleScenario_Step', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -71,4 +70,4 @@ export const RTTI_ExampleScenario_Step: t.Type<IExampleScenario_Step> = t.recurs
       operation: RTTI_ExampleScenario_Operation,
       alternative: t.array(RTTI_ExampleScenario_Alternative),
     }),
-);
+  );

@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _code?: IElement;
 }
 
-export const RTTI_DocumentReference_RelatesTo: t.Type<IDocumentReference_RelatesTo> = t.recursion(
-  'IDocumentReference_RelatesTo',
-  () =>
+export const RTTI_DocumentReference_RelatesTo: t.Type<IDocumentReference_RelatesTo> =
+  t.recursion('IDocumentReference_RelatesTo', () =>
     t.intersection([
       t.type({
         target: RTTI_Reference,
@@ -62,4 +61,4 @@ export const RTTI_DocumentReference_RelatesTo: t.Type<IDocumentReference_Relates
         _code: RTTI_Element,
       }),
     ]),
-);
+  );

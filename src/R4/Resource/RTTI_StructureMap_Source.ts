@@ -507,9 +507,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _logMessage?: IElement;
 }
 
-export const RTTI_StructureMap_Source: t.Type<IStructureMap_Source> = t.recursion(
-  'IStructureMap_Source',
-  () =>
+export const RTTI_StructureMap_Source: t.Type<IStructureMap_Source> =
+  t.recursion('IStructureMap_Source', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -606,4 +605,4 @@ export const RTTI_StructureMap_Source: t.Type<IStructureMap_Source> = t.recursio
       logMessage: t.string,
       _logMessage: RTTI_Element,
     }),
-);
+  );

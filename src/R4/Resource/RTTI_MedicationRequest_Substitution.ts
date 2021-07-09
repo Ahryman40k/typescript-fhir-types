@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   reason?: ICodeableConcept;
 }
 
-export const RTTI_MedicationRequest_Substitution: t.Type<IMedicationRequest_Substitution> = t.recursion(
-  'IMedicationRequest_Substitution',
-  () =>
+export const RTTI_MedicationRequest_Substitution: t.Type<IMedicationRequest_Substitution> =
+  t.recursion('IMedicationRequest_Substitution', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_MedicationRequest_Substitution: t.Type<IMedicationRequest_Subs
       allowedCodeableConcept: RTTI_CodeableConcept,
       reason: RTTI_CodeableConcept,
     }),
-);
+  );

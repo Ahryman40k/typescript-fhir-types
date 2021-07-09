@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _preAuthRef?: IElement[];
 }
 
-export const RTTI_ExplanationOfBenefit_Insurance: t.Type<IExplanationOfBenefit_Insurance> = t.recursion(
-  'IExplanationOfBenefit_Insurance',
-  () =>
+export const RTTI_ExplanationOfBenefit_Insurance: t.Type<IExplanationOfBenefit_Insurance> =
+  t.recursion('IExplanationOfBenefit_Insurance', () =>
     t.intersection([
       t.type({
         coverage: RTTI_Reference,
@@ -64,4 +63,4 @@ export const RTTI_ExplanationOfBenefit_Insurance: t.Type<IExplanationOfBenefit_I
         _preAuthRef: t.array(RTTI_Element),
       }),
     ]),
-);
+  );

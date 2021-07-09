@@ -35,9 +35,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   stratum?: IMeasureReport_Stratum[];
 }
 
-export const RTTI_MeasureReport_Stratifier: t.Type<IMeasureReport_Stratifier> = t.recursion(
-  'IMeasureReport_Stratifier',
-  () =>
+export const RTTI_MeasureReport_Stratifier: t.Type<IMeasureReport_Stratifier> =
+  t.recursion('IMeasureReport_Stratifier', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -45,4 +44,4 @@ export const RTTI_MeasureReport_Stratifier: t.Type<IMeasureReport_Stratifier> = 
       code: t.array(RTTI_CodeableConcept),
       stratum: t.array(RTTI_MeasureReport_Stratum),
     }),
-);
+  );

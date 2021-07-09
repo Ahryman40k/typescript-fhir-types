@@ -187,9 +187,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _seriesDosesString?: IElement;
 }
 
-export const RTTI_ImmunizationEvaluation: t.Type<IImmunizationEvaluation> = t.recursion(
-  'IImmunizationEvaluation',
-  () =>
+export const RTTI_ImmunizationEvaluation: t.Type<IImmunizationEvaluation> =
+  t.recursion('IImmunizationEvaluation', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ImmunizationEvaluation'),
@@ -230,4 +229,4 @@ export const RTTI_ImmunizationEvaluation: t.Type<IImmunizationEvaluation> = t.re
         _seriesDosesString: RTTI_Element,
       }),
     ]),
-);
+  );

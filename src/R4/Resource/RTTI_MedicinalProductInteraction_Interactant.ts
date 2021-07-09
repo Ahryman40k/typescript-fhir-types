@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   itemCodeableConcept?: ICodeableConcept;
 }
 
-export const RTTI_MedicinalProductInteraction_Interactant: t.Type<IMedicinalProductInteraction_Interactant> = t.recursion(
-  'IMedicinalProductInteraction_Interactant',
-  () =>
+export const RTTI_MedicinalProductInteraction_Interactant: t.Type<IMedicinalProductInteraction_Interactant> =
+  t.recursion('IMedicinalProductInteraction_Interactant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_MedicinalProductInteraction_Interactant: t.Type<IMedicinalProd
       itemReference: RTTI_Reference,
       itemCodeableConcept: RTTI_CodeableConcept,
     }),
-);
+  );

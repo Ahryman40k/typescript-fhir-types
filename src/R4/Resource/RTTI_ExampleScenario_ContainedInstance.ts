@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _versionId?: IElement;
 }
 
-export const RTTI_ExampleScenario_ContainedInstance: t.Type<IExampleScenario_ContainedInstance> = t.recursion(
-  'IExampleScenario_ContainedInstance',
-  () =>
+export const RTTI_ExampleScenario_ContainedInstance: t.Type<IExampleScenario_ContainedInstance> =
+  t.recursion('IExampleScenario_ContainedInstance', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -53,4 +52,4 @@ export const RTTI_ExampleScenario_ContainedInstance: t.Type<IExampleScenario_Con
       versionId: t.string,
       _versionId: RTTI_Element,
     }),
-);
+  );

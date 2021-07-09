@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _status?: IElement;
 }
 
-export const RTTI_EpisodeOfCare_StatusHistory: t.Type<IEpisodeOfCare_StatusHistory> = t.recursion(
-  'IEpisodeOfCare_StatusHistory',
-  () =>
+export const RTTI_EpisodeOfCare_StatusHistory: t.Type<IEpisodeOfCare_StatusHistory> =
+  t.recursion('IEpisodeOfCare_StatusHistory', () =>
     t.intersection([
       t.type({
         period: RTTI_Period,
@@ -65,4 +64,4 @@ export const RTTI_EpisodeOfCare_StatusHistory: t.Type<IEpisodeOfCare_StatusHisto
         _status: RTTI_Element,
       }),
     ]),
-);
+  );

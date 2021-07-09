@@ -54,9 +54,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   valueSet?: string;
 }
 
-export const RTTI_ElementDefinition_Binding: t.Type<IElementDefinition_Binding> = t.recursion(
-  'IElementDefinition_Binding',
-  () =>
+export const RTTI_ElementDefinition_Binding: t.Type<IElementDefinition_Binding> =
+  t.recursion('IElementDefinition_Binding', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -70,4 +69,4 @@ export const RTTI_ElementDefinition_Binding: t.Type<IElementDefinition_Binding> 
       _description: RTTI_Element,
       valueSet: RTTI_canonical,
     }),
-);
+  );

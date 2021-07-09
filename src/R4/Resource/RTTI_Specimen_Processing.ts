@@ -59,9 +59,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   timePeriod?: IPeriod;
 }
 
-export const RTTI_Specimen_Processing: t.Type<ISpecimen_Processing> = t.recursion(
-  'ISpecimen_Processing',
-  () =>
+export const RTTI_Specimen_Processing: t.Type<ISpecimen_Processing> =
+  t.recursion('ISpecimen_Processing', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -74,4 +73,4 @@ export const RTTI_Specimen_Processing: t.Type<ISpecimen_Processing> = t.recursio
       _timeDateTime: RTTI_Element,
       timePeriod: RTTI_Period,
     }),
-);
+  );

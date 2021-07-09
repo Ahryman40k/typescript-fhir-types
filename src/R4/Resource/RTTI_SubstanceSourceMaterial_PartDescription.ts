@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   partLocation?: ICodeableConcept;
 }
 
-export const RTTI_SubstanceSourceMaterial_PartDescription: t.Type<ISubstanceSourceMaterial_PartDescription> = t.recursion(
-  'ISubstanceSourceMaterial_PartDescription',
-  () =>
+export const RTTI_SubstanceSourceMaterial_PartDescription: t.Type<ISubstanceSourceMaterial_PartDescription> =
+  t.recursion('ISubstanceSourceMaterial_PartDescription', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -41,4 +40,4 @@ export const RTTI_SubstanceSourceMaterial_PartDescription: t.Type<ISubstanceSour
       part: RTTI_CodeableConcept,
       partLocation: RTTI_CodeableConcept,
     }),
-);
+  );

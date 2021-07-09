@@ -81,9 +81,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   source?: IReference[];
 }
 
-export const RTTI_SubstanceReferenceInformation_Target: t.Type<ISubstanceReferenceInformation_Target> = t.recursion(
-  'ISubstanceReferenceInformation_Target',
-  () =>
+export const RTTI_SubstanceReferenceInformation_Target: t.Type<ISubstanceReferenceInformation_Target> =
+  t.recursion('ISubstanceReferenceInformation_Target', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -100,4 +99,4 @@ export const RTTI_SubstanceReferenceInformation_Target: t.Type<ISubstanceReferen
       amountType: RTTI_CodeableConcept,
       source: t.array(RTTI_Reference),
     }),
-);
+  );

@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   contentReference?: IReference;
 }
 
-export const RTTI_Communication_Payload: t.Type<ICommunication_Payload> = t.recursion(
-  'ICommunication_Payload',
-  () =>
+export const RTTI_Communication_Payload: t.Type<ICommunication_Payload> =
+  t.recursion('ICommunication_Payload', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_Communication_Payload: t.Type<ICommunication_Payload> = t.recu
       contentAttachment: RTTI_Attachment,
       contentReference: RTTI_Reference,
     }),
-);
+  );

@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _name?: IElement;
 }
 
-export const RTTI_MedicationKnowledge_MonitoringProgram: t.Type<IMedicationKnowledge_MonitoringProgram> = t.recursion(
-  'IMedicationKnowledge_MonitoringProgram',
-  () =>
+export const RTTI_MedicationKnowledge_MonitoringProgram: t.Type<IMedicationKnowledge_MonitoringProgram> =
+  t.recursion('IMedicationKnowledge_MonitoringProgram', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_MedicationKnowledge_MonitoringProgram: t.Type<IMedicationKnowl
       name: t.string,
       _name: RTTI_Element,
     }),
-);
+  );

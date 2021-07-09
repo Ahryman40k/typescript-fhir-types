@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _preferred?: IElement;
 }
 
-export const RTTI_RelatedPerson_Communication: t.Type<IRelatedPerson_Communication> = t.recursion(
-  'IRelatedPerson_Communication',
-  () =>
+export const RTTI_RelatedPerson_Communication: t.Type<IRelatedPerson_Communication> =
+  t.recursion('IRelatedPerson_Communication', () =>
     t.intersection([
       t.type({
         language: RTTI_CodeableConcept,
@@ -52,4 +51,4 @@ export const RTTI_RelatedPerson_Communication: t.Type<IRelatedPerson_Communicati
         _preferred: RTTI_Element,
       }),
     ]),
-);
+  );

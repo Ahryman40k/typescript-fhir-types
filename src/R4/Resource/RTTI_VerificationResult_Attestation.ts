@@ -80,9 +80,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   sourceSignature?: ISignature;
 }
 
-export const RTTI_VerificationResult_Attestation: t.Type<IVerificationResult_Attestation> = t.recursion(
-  'IVerificationResult_Attestation',
-  () =>
+export const RTTI_VerificationResult_Attestation: t.Type<IVerificationResult_Attestation> =
+  t.recursion('IVerificationResult_Attestation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -99,4 +98,4 @@ export const RTTI_VerificationResult_Attestation: t.Type<IVerificationResult_Att
       proxySignature: RTTI_Signature,
       sourceSignature: RTTI_Signature,
     }),
-);
+  );

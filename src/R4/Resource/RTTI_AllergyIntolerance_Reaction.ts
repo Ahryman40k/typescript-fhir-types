@@ -80,9 +80,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   note?: IAnnotation[];
 }
 
-export const RTTI_AllergyIntolerance_Reaction: t.Type<IAllergyIntolerance_Reaction> = t.recursion(
-  'IAllergyIntolerance_Reaction',
-  () =>
+export const RTTI_AllergyIntolerance_Reaction: t.Type<IAllergyIntolerance_Reaction> =
+  t.recursion('IAllergyIntolerance_Reaction', () =>
     t.intersection([
       t.type({
         manifestation: t.array(RTTI_CodeableConcept),
@@ -105,4 +104,4 @@ export const RTTI_AllergyIntolerance_Reaction: t.Type<IAllergyIntolerance_Reacti
         note: t.array(RTTI_Annotation),
       }),
     ]),
-);
+  );

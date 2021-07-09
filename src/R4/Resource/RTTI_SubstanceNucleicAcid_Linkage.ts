@@ -57,9 +57,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _residueSite?: IElement;
 }
 
-export const RTTI_SubstanceNucleicAcid_Linkage: t.Type<ISubstanceNucleicAcid_Linkage> = t.recursion(
-  'ISubstanceNucleicAcid_Linkage',
-  () =>
+export const RTTI_SubstanceNucleicAcid_Linkage: t.Type<ISubstanceNucleicAcid_Linkage> =
+  t.recursion('ISubstanceNucleicAcid_Linkage', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -72,4 +71,4 @@ export const RTTI_SubstanceNucleicAcid_Linkage: t.Type<ISubstanceNucleicAcid_Lin
       residueSite: t.string,
       _residueSite: RTTI_Element,
     }),
-);
+  );

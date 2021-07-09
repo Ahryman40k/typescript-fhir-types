@@ -366,9 +366,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _variableType?: IElement;
 }
 
-export const RTTI_ResearchElementDefinition: t.Type<IResearchElementDefinition> = t.recursion(
-  'IResearchElementDefinition',
-  () =>
+export const RTTI_ResearchElementDefinition: t.Type<IResearchElementDefinition> =
+  t.recursion('IResearchElementDefinition', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ResearchElementDefinition'),
@@ -448,4 +447,4 @@ export const RTTI_ResearchElementDefinition: t.Type<IResearchElementDefinition> 
         _variableType: RTTI_Element,
       }),
     ]),
-);
+  );

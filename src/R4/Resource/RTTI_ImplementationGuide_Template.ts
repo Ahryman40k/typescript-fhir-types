@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _scope?: IElement;
 }
 
-export const RTTI_ImplementationGuide_Template: t.Type<IImplementationGuide_Template> = t.recursion(
-  'IImplementationGuide_Template',
-  () =>
+export const RTTI_ImplementationGuide_Template: t.Type<IImplementationGuide_Template> =
+  t.recursion('IImplementationGuide_Template', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_ImplementationGuide_Template: t.Type<IImplementationGuide_Temp
       scope: t.string,
       _scope: RTTI_Element,
     }),
-);
+  );

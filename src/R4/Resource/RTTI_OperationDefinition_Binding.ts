@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _strength?: IElement;
 }
 
-export const RTTI_OperationDefinition_Binding: t.Type<IOperationDefinition_Binding> = t.recursion(
-  'IOperationDefinition_Binding',
-  () =>
+export const RTTI_OperationDefinition_Binding: t.Type<IOperationDefinition_Binding> =
+  t.recursion('IOperationDefinition_Binding', () =>
     t.intersection([
       t.type({
         valueSet: RTTI_canonical,
@@ -62,4 +61,4 @@ export const RTTI_OperationDefinition_Binding: t.Type<IOperationDefinition_Bindi
         _strength: RTTI_Element,
       }),
     ]),
-);
+  );

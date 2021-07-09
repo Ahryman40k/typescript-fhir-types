@@ -418,9 +418,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   part?: IParameters_Parameter[];
 }
 
-export const RTTI_Parameters_Parameter: t.Type<IParameters_Parameter> = t.recursion(
-  'IParameters_Parameter',
-  () =>
+export const RTTI_Parameters_Parameter: t.Type<IParameters_Parameter> =
+  t.recursion('IParameters_Parameter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -498,4 +497,4 @@ export const RTTI_Parameters_Parameter: t.Type<IParameters_Parameter> = t.recurs
       resource: RTTI_ResourceList,
       part: t.array(RTTI_Parameters_Parameter),
     }),
-);
+  );

@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   certaintySubcomponent?: IRiskEvidenceSynthesis_CertaintySubcomponent[];
 }
 
-export const RTTI_RiskEvidenceSynthesis_Certainty: t.Type<IRiskEvidenceSynthesis_Certainty> = t.recursion(
-  'IRiskEvidenceSynthesis_Certainty',
-  () =>
+export const RTTI_RiskEvidenceSynthesis_Certainty: t.Type<IRiskEvidenceSynthesis_Certainty> =
+  t.recursion('IRiskEvidenceSynthesis_Certainty', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_RiskEvidenceSynthesis_Certainty: t.Type<IRiskEvidenceSynthesis
         RTTI_RiskEvidenceSynthesis_CertaintySubcomponent,
       ),
     }),
-);
+  );

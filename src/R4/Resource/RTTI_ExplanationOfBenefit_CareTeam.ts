@@ -59,9 +59,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   qualification?: ICodeableConcept;
 }
 
-export const RTTI_ExplanationOfBenefit_CareTeam: t.Type<IExplanationOfBenefit_CareTeam> = t.recursion(
-  'IExplanationOfBenefit_CareTeam',
-  () =>
+export const RTTI_ExplanationOfBenefit_CareTeam: t.Type<IExplanationOfBenefit_CareTeam> =
+  t.recursion('IExplanationOfBenefit_CareTeam', () =>
     t.intersection([
       t.type({
         provider: RTTI_Reference,
@@ -78,4 +77,4 @@ export const RTTI_ExplanationOfBenefit_CareTeam: t.Type<IExplanationOfBenefit_Ca
         qualification: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

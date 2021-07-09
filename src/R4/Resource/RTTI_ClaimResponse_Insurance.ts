@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   claimResponse?: IReference;
 }
 
-export const RTTI_ClaimResponse_Insurance: t.Type<IClaimResponse_Insurance> = t.recursion(
-  'IClaimResponse_Insurance',
-  () =>
+export const RTTI_ClaimResponse_Insurance: t.Type<IClaimResponse_Insurance> =
+  t.recursion('IClaimResponse_Insurance', () =>
     t.intersection([
       t.type({
         coverage: RTTI_Reference,
@@ -83,4 +82,4 @@ export const RTTI_ClaimResponse_Insurance: t.Type<IClaimResponse_Insurance> = t.
         claimResponse: RTTI_Reference,
       }),
     ]),
-);
+  );

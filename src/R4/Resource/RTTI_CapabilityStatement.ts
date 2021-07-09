@@ -334,9 +334,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   document?: ICapabilityStatement_Document[];
 }
 
-export const RTTI_CapabilityStatement: t.Type<ICapabilityStatement> = t.recursion(
-  'ICapabilityStatement',
-  () =>
+export const RTTI_CapabilityStatement: t.Type<ICapabilityStatement> =
+  t.recursion('ICapabilityStatement', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('CapabilityStatement'),
@@ -404,4 +403,4 @@ export const RTTI_CapabilityStatement: t.Type<ICapabilityStatement> = t.recursio
         document: t.array(RTTI_CapabilityStatement_Document),
       }),
     ]),
-);
+  );

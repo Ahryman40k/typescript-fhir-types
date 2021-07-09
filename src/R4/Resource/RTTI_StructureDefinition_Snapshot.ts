@@ -29,9 +29,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   modifierExtension?: IExtension[];
 }
 
-export const RTTI_StructureDefinition_Snapshot: t.Type<IStructureDefinition_Snapshot> = t.recursion(
-  'IStructureDefinition_Snapshot',
-  () =>
+export const RTTI_StructureDefinition_Snapshot: t.Type<IStructureDefinition_Snapshot> =
+  t.recursion('IStructureDefinition_Snapshot', () =>
     t.intersection([
       t.type({
         element: t.array(RTTI_ElementDefinition),
@@ -42,4 +41,4 @@ export const RTTI_StructureDefinition_Snapshot: t.Type<IStructureDefinition_Snap
         modifierExtension: t.array(RTTI_Extension),
       }),
     ]),
-);
+  );

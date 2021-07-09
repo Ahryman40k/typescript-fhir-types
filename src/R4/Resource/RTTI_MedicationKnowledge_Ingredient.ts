@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   strength?: IRatio;
 }
 
-export const RTTI_MedicationKnowledge_Ingredient: t.Type<IMedicationKnowledge_Ingredient> = t.recursion(
-  'IMedicationKnowledge_Ingredient',
-  () =>
+export const RTTI_MedicationKnowledge_Ingredient: t.Type<IMedicationKnowledge_Ingredient> =
+  t.recursion('IMedicationKnowledge_Ingredient', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_MedicationKnowledge_Ingredient: t.Type<IMedicationKnowledge_In
       _isActive: RTTI_Element,
       strength: RTTI_Ratio,
     }),
-);
+  );

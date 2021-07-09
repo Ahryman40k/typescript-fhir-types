@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   network?: IReference[];
 }
 
-export const RTTI_InsurancePlan_Coverage: t.Type<IInsurancePlan_Coverage> = t.recursion(
-  'IInsurancePlan_Coverage',
-  () =>
+export const RTTI_InsurancePlan_Coverage: t.Type<IInsurancePlan_Coverage> =
+  t.recursion('IInsurancePlan_Coverage', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -56,4 +55,4 @@ export const RTTI_InsurancePlan_Coverage: t.Type<IInsurancePlan_Coverage> = t.re
         network: t.array(RTTI_Reference),
       }),
     ]),
-);
+  );

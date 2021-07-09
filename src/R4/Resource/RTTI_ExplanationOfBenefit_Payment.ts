@@ -60,9 +60,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   identifier?: IIdentifier;
 }
 
-export const RTTI_ExplanationOfBenefit_Payment: t.Type<IExplanationOfBenefit_Payment> = t.recursion(
-  'IExplanationOfBenefit_Payment',
-  () =>
+export const RTTI_ExplanationOfBenefit_Payment: t.Type<IExplanationOfBenefit_Payment> =
+  t.recursion('IExplanationOfBenefit_Payment', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -75,4 +74,4 @@ export const RTTI_ExplanationOfBenefit_Payment: t.Type<IExplanationOfBenefit_Pay
       amount: RTTI_Money,
       identifier: RTTI_Identifier,
     }),
-);
+  );

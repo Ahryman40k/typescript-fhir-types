@@ -53,9 +53,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   maxDispense?: IMedicationKnowledge_MaxDispense;
 }
 
-export const RTTI_MedicationKnowledge_Regulatory: t.Type<IMedicationKnowledge_Regulatory> = t.recursion(
-  'IMedicationKnowledge_Regulatory',
-  () =>
+export const RTTI_MedicationKnowledge_Regulatory: t.Type<IMedicationKnowledge_Regulatory> =
+  t.recursion('IMedicationKnowledge_Regulatory', () =>
     t.intersection([
       t.type({
         regulatoryAuthority: RTTI_Reference,
@@ -69,4 +68,4 @@ export const RTTI_MedicationKnowledge_Regulatory: t.Type<IMedicationKnowledge_Re
         maxDispense: RTTI_MedicationKnowledge_MaxDispense,
       }),
     ]),
-);
+  );

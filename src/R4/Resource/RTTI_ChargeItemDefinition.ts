@@ -268,9 +268,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   propertyGroup?: IChargeItemDefinition_PropertyGroup[];
 }
 
-export const RTTI_ChargeItemDefinition: t.Type<IChargeItemDefinition> = t.recursion(
-  'IChargeItemDefinition',
-  () =>
+export const RTTI_ChargeItemDefinition: t.Type<IChargeItemDefinition> =
+  t.recursion('IChargeItemDefinition', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ChargeItemDefinition'),
@@ -326,4 +325,4 @@ export const RTTI_ChargeItemDefinition: t.Type<IChargeItemDefinition> = t.recurs
         propertyGroup: t.array(RTTI_ChargeItemDefinition_PropertyGroup),
       }),
     ]),
-);
+  );

@@ -53,9 +53,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   code?: ICoding[];
 }
 
-export const RTTI_DataRequirement_CodeFilter: t.Type<IDataRequirement_CodeFilter> = t.recursion(
-  'IDataRequirement_CodeFilter',
-  () =>
+export const RTTI_DataRequirement_CodeFilter: t.Type<IDataRequirement_CodeFilter> =
+  t.recursion('IDataRequirement_CodeFilter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -67,4 +66,4 @@ export const RTTI_DataRequirement_CodeFilter: t.Type<IDataRequirement_CodeFilter
       valueSet: RTTI_canonical,
       code: t.array(RTTI_Coding),
     }),
-);
+  );

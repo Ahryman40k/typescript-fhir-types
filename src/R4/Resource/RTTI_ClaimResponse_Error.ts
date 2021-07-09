@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _subDetailSequence?: IElement;
 }
 
-export const RTTI_ClaimResponse_Error: t.Type<IClaimResponse_Error> = t.recursion(
-  'IClaimResponse_Error',
-  () =>
+export const RTTI_ClaimResponse_Error: t.Type<IClaimResponse_Error> =
+  t.recursion('IClaimResponse_Error', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -77,4 +76,4 @@ export const RTTI_ClaimResponse_Error: t.Type<IClaimResponse_Error> = t.recursio
         _subDetailSequence: RTTI_Element,
       }),
     ]),
-);
+  );

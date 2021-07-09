@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _availableEndTime?: IElement;
 }
 
-export const RTTI_PractitionerRole_AvailableTime: t.Type<IPractitionerRole_AvailableTime> = t.recursion(
-  'IPractitionerRole_AvailableTime',
-  () =>
+export const RTTI_PractitionerRole_AvailableTime: t.Type<IPractitionerRole_AvailableTime> =
+  t.recursion('IPractitionerRole_AvailableTime', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -79,4 +78,4 @@ export const RTTI_PractitionerRole_AvailableTime: t.Type<IPractitionerRole_Avail
       availableEndTime: RTTI_time,
       _availableEndTime: RTTI_Element,
     }),
-);
+  );

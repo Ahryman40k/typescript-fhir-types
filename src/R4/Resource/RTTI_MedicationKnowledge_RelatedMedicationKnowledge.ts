@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   modifierExtension?: IExtension[];
 }
 
-export const RTTI_MedicationKnowledge_RelatedMedicationKnowledge: t.Type<IMedicationKnowledge_RelatedMedicationKnowledge> = t.recursion(
-  'IMedicationKnowledge_RelatedMedicationKnowledge',
-  () =>
+export const RTTI_MedicationKnowledge_RelatedMedicationKnowledge: t.Type<IMedicationKnowledge_RelatedMedicationKnowledge> =
+  t.recursion('IMedicationKnowledge_RelatedMedicationKnowledge', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -46,4 +45,4 @@ export const RTTI_MedicationKnowledge_RelatedMedicationKnowledge: t.Type<IMedica
         modifierExtension: t.array(RTTI_Extension),
       }),
     ]),
-);
+  );

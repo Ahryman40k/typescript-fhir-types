@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   collectedPeriod?: IPeriod;
 }
 
-export const RTTI_BiologicallyDerivedProduct_Collection: t.Type<IBiologicallyDerivedProduct_Collection> = t.recursion(
-  'IBiologicallyDerivedProduct_Collection',
-  () =>
+export const RTTI_BiologicallyDerivedProduct_Collection: t.Type<IBiologicallyDerivedProduct_Collection> =
+  t.recursion('IBiologicallyDerivedProduct_Collection', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_BiologicallyDerivedProduct_Collection: t.Type<IBiologicallyDer
       _collectedDateTime: RTTI_Element,
       collectedPeriod: RTTI_Period,
     }),
-);
+  );

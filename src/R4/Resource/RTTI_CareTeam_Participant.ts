@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   period?: IPeriod;
 }
 
-export const RTTI_CareTeam_Participant: t.Type<ICareTeam_Participant> = t.recursion(
-  'ICareTeam_Participant',
-  () =>
+export const RTTI_CareTeam_Participant: t.Type<ICareTeam_Participant> =
+  t.recursion('ICareTeam_Participant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_CareTeam_Participant: t.Type<ICareTeam_Participant> = t.recurs
       onBehalfOf: RTTI_Reference,
       period: RTTI_Period,
     }),
-);
+  );

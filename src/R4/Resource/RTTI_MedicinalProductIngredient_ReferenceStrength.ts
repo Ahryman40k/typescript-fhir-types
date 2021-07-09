@@ -53,9 +53,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   country?: ICodeableConcept[];
 }
 
-export const RTTI_MedicinalProductIngredient_ReferenceStrength: t.Type<IMedicinalProductIngredient_ReferenceStrength> = t.recursion(
-  'IMedicinalProductIngredient_ReferenceStrength',
-  () =>
+export const RTTI_MedicinalProductIngredient_ReferenceStrength: t.Type<IMedicinalProductIngredient_ReferenceStrength> =
+  t.recursion('IMedicinalProductIngredient_ReferenceStrength', () =>
     t.intersection([
       t.type({
         strength: RTTI_Ratio,
@@ -71,4 +70,4 @@ export const RTTI_MedicinalProductIngredient_ReferenceStrength: t.Type<IMedicina
         country: t.array(RTTI_CodeableConcept),
       }),
     ]),
-);
+  );

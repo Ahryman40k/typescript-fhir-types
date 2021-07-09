@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   certaintySubcomponent?: IEffectEvidenceSynthesis_CertaintySubcomponent[];
 }
 
-export const RTTI_EffectEvidenceSynthesis_Certainty: t.Type<IEffectEvidenceSynthesis_Certainty> = t.recursion(
-  'IEffectEvidenceSynthesis_Certainty',
-  () =>
+export const RTTI_EffectEvidenceSynthesis_Certainty: t.Type<IEffectEvidenceSynthesis_Certainty> =
+  t.recursion('IEffectEvidenceSynthesis_Certainty', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_EffectEvidenceSynthesis_Certainty: t.Type<IEffectEvidenceSynth
         RTTI_EffectEvidenceSynthesis_CertaintySubcomponent,
       ),
     }),
-);
+  );

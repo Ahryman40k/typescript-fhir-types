@@ -54,9 +54,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _valueBoolean?: IElement;
 }
 
-export const RTTI_DeviceRequest_Parameter: t.Type<IDeviceRequest_Parameter> = t.recursion(
-  'IDeviceRequest_Parameter',
-  () =>
+export const RTTI_DeviceRequest_Parameter: t.Type<IDeviceRequest_Parameter> =
+  t.recursion('IDeviceRequest_Parameter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -68,4 +67,4 @@ export const RTTI_DeviceRequest_Parameter: t.Type<IDeviceRequest_Parameter> = t.
       valueBoolean: t.boolean,
       _valueBoolean: RTTI_Element,
     }),
-);
+  );

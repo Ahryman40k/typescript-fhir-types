@@ -66,9 +66,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _rules?: IElement;
 }
 
-export const RTTI_ElementDefinition_Slicing: t.Type<IElementDefinition_Slicing> = t.recursion(
-  'IElementDefinition_Slicing',
-  () =>
+export const RTTI_ElementDefinition_Slicing: t.Type<IElementDefinition_Slicing> =
+  t.recursion('IElementDefinition_Slicing', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -84,4 +83,4 @@ export const RTTI_ElementDefinition_Slicing: t.Type<IElementDefinition_Slicing> 
       ),
       _rules: RTTI_Element,
     }),
-);
+  );

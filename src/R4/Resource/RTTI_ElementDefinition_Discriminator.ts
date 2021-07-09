@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _path?: IElement;
 }
 
-export const RTTI_ElementDefinition_Discriminator: t.Type<IElementDefinition_Discriminator> = t.recursion(
-  'IElementDefinition_Discriminator',
-  () =>
+export const RTTI_ElementDefinition_Discriminator: t.Type<IElementDefinition_Discriminator> =
+  t.recursion('IElementDefinition_Discriminator', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -64,4 +63,4 @@ export const RTTI_ElementDefinition_Discriminator: t.Type<IElementDefinition_Dis
       path: t.string,
       _path: RTTI_Element,
     }),
-);
+  );

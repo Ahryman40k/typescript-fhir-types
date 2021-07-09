@@ -45,9 +45,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   strength?: IMedicinalProductIngredient_Strength[];
 }
 
-export const RTTI_MedicinalProductIngredient_SpecifiedSubstance: t.Type<IMedicinalProductIngredient_SpecifiedSubstance> = t.recursion(
-  'IMedicinalProductIngredient_SpecifiedSubstance',
-  () =>
+export const RTTI_MedicinalProductIngredient_SpecifiedSubstance: t.Type<IMedicinalProductIngredient_SpecifiedSubstance> =
+  t.recursion('IMedicinalProductIngredient_SpecifiedSubstance', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -61,4 +60,4 @@ export const RTTI_MedicinalProductIngredient_SpecifiedSubstance: t.Type<IMedicin
         strength: t.array(RTTI_MedicinalProductIngredient_Strength),
       }),
     ]),
-);
+  );

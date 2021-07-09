@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   quantity?: IQuantity;
 }
 
-export const RTTI_MedicationKnowledge_Packaging: t.Type<IMedicationKnowledge_Packaging> = t.recursion(
-  'IMedicationKnowledge_Packaging',
-  () =>
+export const RTTI_MedicationKnowledge_Packaging: t.Type<IMedicationKnowledge_Packaging> =
+  t.recursion('IMedicationKnowledge_Packaging', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_MedicationKnowledge_Packaging: t.Type<IMedicationKnowledge_Pac
       type: RTTI_CodeableConcept,
       quantity: RTTI_Quantity,
     }),
-);
+  );

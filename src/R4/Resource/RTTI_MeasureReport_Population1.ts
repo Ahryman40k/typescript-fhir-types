@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   subjectResults?: IReference;
 }
 
-export const RTTI_MeasureReport_Population1: t.Type<IMeasureReport_Population1> = t.recursion(
-  'IMeasureReport_Population1',
-  () =>
+export const RTTI_MeasureReport_Population1: t.Type<IMeasureReport_Population1> =
+  t.recursion('IMeasureReport_Population1', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -56,4 +55,4 @@ export const RTTI_MeasureReport_Population1: t.Type<IMeasureReport_Population1> 
       _count: RTTI_Element,
       subjectResults: RTTI_Reference,
     }),
-);
+  );

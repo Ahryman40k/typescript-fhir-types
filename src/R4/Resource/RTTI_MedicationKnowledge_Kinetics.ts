@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   halfLifePeriod?: IDuration;
 }
 
-export const RTTI_MedicationKnowledge_Kinetics: t.Type<IMedicationKnowledge_Kinetics> = t.recursion(
-  'IMedicationKnowledge_Kinetics',
-  () =>
+export const RTTI_MedicationKnowledge_Kinetics: t.Type<IMedicationKnowledge_Kinetics> =
+  t.recursion('IMedicationKnowledge_Kinetics', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_MedicationKnowledge_Kinetics: t.Type<IMedicationKnowledge_Kine
       lethalDose50: t.array(RTTI_Quantity),
       halfLifePeriod: RTTI_Duration,
     }),
-);
+  );

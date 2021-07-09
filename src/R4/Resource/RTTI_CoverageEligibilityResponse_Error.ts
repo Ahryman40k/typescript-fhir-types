@@ -26,9 +26,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   modifierExtension?: IExtension[];
 }
 
-export const RTTI_CoverageEligibilityResponse_Error: t.Type<ICoverageEligibilityResponse_Error> = t.recursion(
-  'ICoverageEligibilityResponse_Error',
-  () =>
+export const RTTI_CoverageEligibilityResponse_Error: t.Type<ICoverageEligibilityResponse_Error> =
+  t.recursion('ICoverageEligibilityResponse_Error', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -39,4 +38,4 @@ export const RTTI_CoverageEligibilityResponse_Error: t.Type<ICoverageEligibility
         modifierExtension: t.array(RTTI_Extension),
       }),
     ]),
-);
+  );

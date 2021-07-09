@@ -66,21 +66,21 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   offsetRange?: IRange;
 }
 
-export const RTTI_PlanDefinition_RelatedAction: t.Type<IPlanDefinition_RelatedAction> = t.recursion(
-  'IPlanDefinition_RelatedAction',
-  () =>
+export const RTTI_PlanDefinition_RelatedAction: t.Type<IPlanDefinition_RelatedAction> =
+  t.recursion('IPlanDefinition_RelatedAction', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
       modifierExtension: t.array(RTTI_Extension),
       actionId: RTTI_id,
       _actionId: RTTI_Element,
-      relationship: createEnumType<PlanDefinition_RelatedActionRelationshipKind>(
-        PlanDefinition_RelatedActionRelationshipKind,
-        'PlanDefinition_RelatedActionRelationshipKind',
-      ),
+      relationship:
+        createEnumType<PlanDefinition_RelatedActionRelationshipKind>(
+          PlanDefinition_RelatedActionRelationshipKind,
+          'PlanDefinition_RelatedActionRelationshipKind',
+        ),
       _relationship: RTTI_Element,
       offsetDuration: RTTI_Duration,
       offsetRange: RTTI_Range,
     }),
-);
+  );

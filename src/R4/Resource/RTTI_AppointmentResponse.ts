@@ -132,9 +132,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _comment?: IElement;
 }
 
-export const RTTI_AppointmentResponse: t.Type<IAppointmentResponse> = t.recursion(
-  'IAppointmentResponse',
-  () =>
+export const RTTI_AppointmentResponse: t.Type<IAppointmentResponse> =
+  t.recursion('IAppointmentResponse', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('AppointmentResponse'),
@@ -164,4 +163,4 @@ export const RTTI_AppointmentResponse: t.Type<IAppointmentResponse> = t.recursio
         _comment: RTTI_Element,
       }),
     ]),
-);
+  );

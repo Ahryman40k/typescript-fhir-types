@@ -108,9 +108,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _windowEnd?: IElement;
 }
 
-export const RTTI_MolecularSequence_ReferenceSeq: t.Type<IMolecularSequence_ReferenceSeq> = t.recursion(
-  'IMolecularSequence_ReferenceSeq',
-  () =>
+export const RTTI_MolecularSequence_ReferenceSeq: t.Type<IMolecularSequence_ReferenceSeq> =
+  t.recursion('IMolecularSequence_ReferenceSeq', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -118,10 +117,11 @@ export const RTTI_MolecularSequence_ReferenceSeq: t.Type<IMolecularSequence_Refe
       chromosome: RTTI_CodeableConcept,
       genomeBuild: t.string,
       _genomeBuild: RTTI_Element,
-      orientation: createEnumType<MolecularSequence_ReferenceSeqOrientationKind>(
-        MolecularSequence_ReferenceSeqOrientationKind,
-        'MolecularSequence_ReferenceSeqOrientationKind',
-      ),
+      orientation:
+        createEnumType<MolecularSequence_ReferenceSeqOrientationKind>(
+          MolecularSequence_ReferenceSeqOrientationKind,
+          'MolecularSequence_ReferenceSeqOrientationKind',
+        ),
       _orientation: RTTI_Element,
       referenceSeqId: RTTI_CodeableConcept,
       referenceSeqPointer: RTTI_Reference,
@@ -137,4 +137,4 @@ export const RTTI_MolecularSequence_ReferenceSeq: t.Type<IMolecularSequence_Refe
       windowEnd: RTTI_integer,
       _windowEnd: RTTI_Element,
     }),
-);
+  );

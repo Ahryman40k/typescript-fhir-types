@@ -218,9 +218,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   note?: IAnnotation[];
 }
 
-export const RTTI_CommunicationRequest: t.Type<ICommunicationRequest> = t.recursion(
-  'ICommunicationRequest',
-  () =>
+export const RTTI_CommunicationRequest: t.Type<ICommunicationRequest> =
+  t.recursion('ICommunicationRequest', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('CommunicationRequest'),
@@ -266,4 +265,4 @@ export const RTTI_CommunicationRequest: t.Type<ICommunicationRequest> = t.recurs
         note: t.array(RTTI_Annotation),
       }),
     ]),
-);
+  );

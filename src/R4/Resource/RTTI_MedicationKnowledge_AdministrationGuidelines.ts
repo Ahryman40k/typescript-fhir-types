@@ -50,9 +50,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   patientCharacteristics?: IMedicationKnowledge_PatientCharacteristics[];
 }
 
-export const RTTI_MedicationKnowledge_AdministrationGuidelines: t.Type<IMedicationKnowledge_AdministrationGuidelines> = t.recursion(
-  'IMedicationKnowledge_AdministrationGuidelines',
-  () =>
+export const RTTI_MedicationKnowledge_AdministrationGuidelines: t.Type<IMedicationKnowledge_AdministrationGuidelines> =
+  t.recursion('IMedicationKnowledge_AdministrationGuidelines', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -64,4 +63,4 @@ export const RTTI_MedicationKnowledge_AdministrationGuidelines: t.Type<IMedicati
         RTTI_MedicationKnowledge_PatientCharacteristics,
       ),
     }),
-);
+  );

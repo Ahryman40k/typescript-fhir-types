@@ -81,9 +81,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   financial?: IExplanationOfBenefit_Financial[];
 }
 
-export const RTTI_ExplanationOfBenefit_BenefitBalance: t.Type<IExplanationOfBenefit_BenefitBalance> = t.recursion(
-  'IExplanationOfBenefit_BenefitBalance',
-  () =>
+export const RTTI_ExplanationOfBenefit_BenefitBalance: t.Type<IExplanationOfBenefit_BenefitBalance> =
+  t.recursion('IExplanationOfBenefit_BenefitBalance', () =>
     t.intersection([
       t.type({
         category: RTTI_CodeableConcept,
@@ -104,4 +103,4 @@ export const RTTI_ExplanationOfBenefit_BenefitBalance: t.Type<IExplanationOfBene
         financial: t.array(RTTI_ExplanationOfBenefit_Financial),
       }),
     ]),
-);
+  );

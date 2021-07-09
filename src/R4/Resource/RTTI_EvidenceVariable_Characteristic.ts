@@ -142,9 +142,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _groupMeasure?: IElement;
 }
 
-export const RTTI_EvidenceVariable_Characteristic: t.Type<IEvidenceVariable_Characteristic> = t.recursion(
-  'IEvidenceVariable_Characteristic',
-  () =>
+export const RTTI_EvidenceVariable_Characteristic: t.Type<IEvidenceVariable_Characteristic> =
+  t.recursion('IEvidenceVariable_Characteristic', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -167,10 +166,11 @@ export const RTTI_EvidenceVariable_Characteristic: t.Type<IEvidenceVariable_Char
       participantEffectiveDuration: RTTI_Duration,
       participantEffectiveTiming: RTTI_Timing,
       timeFromStart: RTTI_Duration,
-      groupMeasure: createEnumType<EvidenceVariable_CharacteristicGroupMeasureKind>(
-        EvidenceVariable_CharacteristicGroupMeasureKind,
-        'EvidenceVariable_CharacteristicGroupMeasureKind',
-      ),
+      groupMeasure:
+        createEnumType<EvidenceVariable_CharacteristicGroupMeasureKind>(
+          EvidenceVariable_CharacteristicGroupMeasureKind,
+          'EvidenceVariable_CharacteristicGroupMeasureKind',
+        ),
       _groupMeasure: RTTI_Element,
     }),
-);
+  );

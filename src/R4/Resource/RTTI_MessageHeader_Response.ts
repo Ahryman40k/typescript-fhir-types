@@ -54,9 +54,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   details?: IReference;
 }
 
-export const RTTI_MessageHeader_Response: t.Type<IMessageHeader_Response> = t.recursion(
-  'IMessageHeader_Response',
-  () =>
+export const RTTI_MessageHeader_Response: t.Type<IMessageHeader_Response> =
+  t.recursion('IMessageHeader_Response', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -70,4 +69,4 @@ export const RTTI_MessageHeader_Response: t.Type<IMessageHeader_Response> = t.re
       _code: RTTI_Element,
       details: RTTI_Reference,
     }),
-);
+  );

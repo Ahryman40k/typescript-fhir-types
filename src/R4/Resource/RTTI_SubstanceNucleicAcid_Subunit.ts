@@ -87,9 +87,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   sugar?: ISubstanceNucleicAcid_Sugar[];
 }
 
-export const RTTI_SubstanceNucleicAcid_Subunit: t.Type<ISubstanceNucleicAcid_Subunit> = t.recursion(
-  'ISubstanceNucleicAcid_Subunit',
-  () =>
+export const RTTI_SubstanceNucleicAcid_Subunit: t.Type<ISubstanceNucleicAcid_Subunit> =
+  t.recursion('ISubstanceNucleicAcid_Subunit', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -106,4 +105,4 @@ export const RTTI_SubstanceNucleicAcid_Subunit: t.Type<ISubstanceNucleicAcid_Sub
       linkage: t.array(RTTI_SubstanceNucleicAcid_Linkage),
       sugar: t.array(RTTI_SubstanceNucleicAcid_Sugar),
     }),
-);
+  );

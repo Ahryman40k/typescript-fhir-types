@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _jurisdiction?: IElement;
 }
 
-export const RTTI_DeviceDefinition_UdiDeviceIdentifier: t.Type<IDeviceDefinition_UdiDeviceIdentifier> = t.recursion(
-  'IDeviceDefinition_UdiDeviceIdentifier',
-  () =>
+export const RTTI_DeviceDefinition_UdiDeviceIdentifier: t.Type<IDeviceDefinition_UdiDeviceIdentifier> =
+  t.recursion('IDeviceDefinition_UdiDeviceIdentifier', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_DeviceDefinition_UdiDeviceIdentifier: t.Type<IDeviceDefinition
       jurisdiction: RTTI_uri,
       _jurisdiction: RTTI_Element,
     }),
-);
+  );

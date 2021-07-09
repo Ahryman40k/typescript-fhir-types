@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _description?: IElement;
 }
 
-export const RTTI_Measure_SupplementalData: t.Type<IMeasure_SupplementalData> = t.recursion(
-  'IMeasure_SupplementalData',
-  () =>
+export const RTTI_Measure_SupplementalData: t.Type<IMeasure_SupplementalData> =
+  t.recursion('IMeasure_SupplementalData', () =>
     t.intersection([
       t.type({
         criteria: RTTI_Expression,
@@ -65,4 +64,4 @@ export const RTTI_Measure_SupplementalData: t.Type<IMeasure_SupplementalData> = 
         _description: RTTI_Element,
       }),
     ]),
-);
+  );

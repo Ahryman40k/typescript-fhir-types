@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   duration?: IDuration;
 }
 
-export const RTTI_MedicationRequest_InitialFill: t.Type<IMedicationRequest_InitialFill> = t.recursion(
-  'IMedicationRequest_InitialFill',
-  () =>
+export const RTTI_MedicationRequest_InitialFill: t.Type<IMedicationRequest_InitialFill> =
+  t.recursion('IMedicationRequest_InitialFill', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_MedicationRequest_InitialFill: t.Type<IMedicationRequest_Initi
       quantity: RTTI_Quantity,
       duration: RTTI_Duration,
     }),
-);
+  );

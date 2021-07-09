@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   amount?: IQuantity;
 }
 
-export const RTTI_NutritionOrder_Nutrient: t.Type<INutritionOrder_Nutrient> = t.recursion(
-  'INutritionOrder_Nutrient',
-  () =>
+export const RTTI_NutritionOrder_Nutrient: t.Type<INutritionOrder_Nutrient> =
+  t.recursion('INutritionOrder_Nutrient', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_NutritionOrder_Nutrient: t.Type<INutritionOrder_Nutrient> = t.
       modifier: RTTI_CodeableConcept,
       amount: RTTI_Quantity,
     }),
-);
+  );

@@ -353,9 +353,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   differential?: IStructureDefinition_Differential;
 }
 
-export const RTTI_StructureDefinition: t.Type<IStructureDefinition> = t.recursion(
-  'IStructureDefinition',
-  () =>
+export const RTTI_StructureDefinition: t.Type<IStructureDefinition> =
+  t.recursion('IStructureDefinition', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('StructureDefinition'),
@@ -429,4 +428,4 @@ export const RTTI_StructureDefinition: t.Type<IStructureDefinition> = t.recursio
         differential: RTTI_StructureDefinition_Differential,
       }),
     ]),
-);
+  );

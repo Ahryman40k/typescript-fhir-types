@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   method?: ICodeableConcept;
 }
 
-export const RTTI_AdverseEvent_Causality: t.Type<IAdverseEvent_Causality> = t.recursion(
-  'IAdverseEvent_Causality',
-  () =>
+export const RTTI_AdverseEvent_Causality: t.Type<IAdverseEvent_Causality> =
+  t.recursion('IAdverseEvent_Causality', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_AdverseEvent_Causality: t.Type<IAdverseEvent_Causality> = t.re
       author: RTTI_Reference,
       method: RTTI_CodeableConcept,
     }),
-);
+  );

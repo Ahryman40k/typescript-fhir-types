@@ -131,9 +131,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   parameter?: IStructureMap_Parameter[];
 }
 
-export const RTTI_StructureMap_Target: t.Type<IStructureMap_Target> = t.recursion(
-  'IStructureMap_Target',
-  () =>
+export const RTTI_StructureMap_Target: t.Type<IStructureMap_Target> =
+  t.recursion('IStructureMap_Target', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -165,4 +164,4 @@ export const RTTI_StructureMap_Target: t.Type<IStructureMap_Target> = t.recursio
       _transform: RTTI_Element,
       parameter: t.array(RTTI_StructureMap_Parameter),
     }),
-);
+  );

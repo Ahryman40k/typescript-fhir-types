@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _rank?: IElement;
 }
 
-export const RTTI_EpisodeOfCare_Diagnosis: t.Type<IEpisodeOfCare_Diagnosis> = t.recursion(
-  'IEpisodeOfCare_Diagnosis',
-  () =>
+export const RTTI_EpisodeOfCare_Diagnosis: t.Type<IEpisodeOfCare_Diagnosis> =
+  t.recursion('IEpisodeOfCare_Diagnosis', () =>
     t.intersection([
       t.type({
         condition: RTTI_Reference,
@@ -60,4 +59,4 @@ export const RTTI_EpisodeOfCare_Diagnosis: t.Type<IEpisodeOfCare_Diagnosis> = t.
         _rank: RTTI_Element,
       }),
     ]),
-);
+  );

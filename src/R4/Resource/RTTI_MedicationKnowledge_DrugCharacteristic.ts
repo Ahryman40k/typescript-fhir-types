@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _valueBase64Binary?: IElement;
 }
 
-export const RTTI_MedicationKnowledge_DrugCharacteristic: t.Type<IMedicationKnowledge_DrugCharacteristic> = t.recursion(
-  'IMedicationKnowledge_DrugCharacteristic',
-  () =>
+export const RTTI_MedicationKnowledge_DrugCharacteristic: t.Type<IMedicationKnowledge_DrugCharacteristic> =
+  t.recursion('IMedicationKnowledge_DrugCharacteristic', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -73,4 +72,4 @@ export const RTTI_MedicationKnowledge_DrugCharacteristic: t.Type<IMedicationKnow
       valueBase64Binary: t.string,
       _valueBase64Binary: RTTI_Element,
     }),
-);
+  );

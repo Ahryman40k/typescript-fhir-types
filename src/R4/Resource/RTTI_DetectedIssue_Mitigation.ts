@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   author?: IReference;
 }
 
-export const RTTI_DetectedIssue_Mitigation: t.Type<IDetectedIssue_Mitigation> = t.recursion(
-  'IDetectedIssue_Mitigation',
-  () =>
+export const RTTI_DetectedIssue_Mitigation: t.Type<IDetectedIssue_Mitigation> =
+  t.recursion('IDetectedIssue_Mitigation', () =>
     t.intersection([
       t.type({
         action: RTTI_CodeableConcept,
@@ -60,4 +59,4 @@ export const RTTI_DetectedIssue_Mitigation: t.Type<IDetectedIssue_Mitigation> = 
         author: RTTI_Reference,
       }),
     ]),
-);
+  );

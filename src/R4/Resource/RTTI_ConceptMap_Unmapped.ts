@@ -64,9 +64,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   url?: string;
 }
 
-export const RTTI_ConceptMap_Unmapped: t.Type<IConceptMap_Unmapped> = t.recursion(
-  'IConceptMap_Unmapped',
-  () =>
+export const RTTI_ConceptMap_Unmapped: t.Type<IConceptMap_Unmapped> =
+  t.recursion('IConceptMap_Unmapped', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -82,4 +81,4 @@ export const RTTI_ConceptMap_Unmapped: t.Type<IConceptMap_Unmapped> = t.recursio
       _display: RTTI_Element,
       url: RTTI_canonical,
     }),
-);
+  );

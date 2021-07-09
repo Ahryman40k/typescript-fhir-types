@@ -187,9 +187,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   item?: ICoverageEligibilityRequest_Item[];
 }
 
-export const RTTI_CoverageEligibilityRequest: t.Type<ICoverageEligibilityRequest> = t.recursion(
-  'ICoverageEligibilityRequest',
-  () =>
+export const RTTI_CoverageEligibilityRequest: t.Type<ICoverageEligibilityRequest> =
+  t.recursion('ICoverageEligibilityRequest', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('CoverageEligibilityRequest'),
@@ -231,4 +230,4 @@ export const RTTI_CoverageEligibilityRequest: t.Type<ICoverageEligibilityRequest
         item: t.array(RTTI_CoverageEligibilityRequest_Item),
       }),
     ]),
-);
+  );

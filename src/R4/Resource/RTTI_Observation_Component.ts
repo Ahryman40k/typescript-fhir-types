@@ -131,9 +131,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   referenceRange?: IObservation_ReferenceRange[];
 }
 
-export const RTTI_Observation_Component: t.Type<IObservation_Component> = t.recursion(
-  'IObservation_Component',
-  () =>
+export const RTTI_Observation_Component: t.Type<IObservation_Component> =
+  t.recursion('IObservation_Component', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -163,4 +162,4 @@ export const RTTI_Observation_Component: t.Type<IObservation_Component> = t.recu
         referenceRange: t.array(RTTI_Observation_ReferenceRange),
       }),
     ]),
-);
+  );

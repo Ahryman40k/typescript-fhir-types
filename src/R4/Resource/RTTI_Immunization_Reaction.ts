@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _reported?: IElement;
 }
 
-export const RTTI_Immunization_Reaction: t.Type<IImmunization_Reaction> = t.recursion(
-  'IImmunization_Reaction',
-  () =>
+export const RTTI_Immunization_Reaction: t.Type<IImmunization_Reaction> =
+  t.recursion('IImmunization_Reaction', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_Immunization_Reaction: t.Type<IImmunization_Reaction> = t.recu
       reported: t.boolean,
       _reported: RTTI_Element,
     }),
-);
+  );

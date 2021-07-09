@@ -93,9 +93,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   source?: string;
 }
 
-export const RTTI_ElementDefinition_Constraint: t.Type<IElementDefinition_Constraint> = t.recursion(
-  'IElementDefinition_Constraint',
-  () =>
+export const RTTI_ElementDefinition_Constraint: t.Type<IElementDefinition_Constraint> =
+  t.recursion('IElementDefinition_Constraint', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -117,4 +116,4 @@ export const RTTI_ElementDefinition_Constraint: t.Type<IElementDefinition_Constr
       _xpath: RTTI_Element,
       source: RTTI_canonical,
     }),
-);
+  );

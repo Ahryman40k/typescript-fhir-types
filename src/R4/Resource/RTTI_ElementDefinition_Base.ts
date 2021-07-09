@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _max?: IElement;
 }
 
-export const RTTI_ElementDefinition_Base: t.Type<IElementDefinition_Base> = t.recursion(
-  'IElementDefinition_Base',
-  () =>
+export const RTTI_ElementDefinition_Base: t.Type<IElementDefinition_Base> =
+  t.recursion('IElementDefinition_Base', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -66,4 +65,4 @@ export const RTTI_ElementDefinition_Base: t.Type<IElementDefinition_Base> = t.re
       max: t.string,
       _max: RTTI_Element,
     }),
-);
+  );

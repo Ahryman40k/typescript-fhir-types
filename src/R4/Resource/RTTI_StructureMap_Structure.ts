@@ -64,9 +64,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _documentation?: IElement;
 }
 
-export const RTTI_StructureMap_Structure: t.Type<IStructureMap_Structure> = t.recursion(
-  'IStructureMap_Structure',
-  () =>
+export const RTTI_StructureMap_Structure: t.Type<IStructureMap_Structure> =
+  t.recursion('IStructureMap_Structure', () =>
     t.intersection([
       t.type({
         url: RTTI_canonical,
@@ -86,4 +85,4 @@ export const RTTI_StructureMap_Structure: t.Type<IStructureMap_Structure> = t.re
         _documentation: RTTI_Element,
       }),
     ]),
-);
+  );

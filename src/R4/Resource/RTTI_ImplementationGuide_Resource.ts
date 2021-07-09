@@ -112,9 +112,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _groupingId?: IElement;
 }
 
-export const RTTI_ImplementationGuide_Resource: t.Type<IImplementationGuide_Resource> = t.recursion(
-  'IImplementationGuide_Resource',
-  () =>
+export const RTTI_ImplementationGuide_Resource: t.Type<IImplementationGuide_Resource> =
+  t.recursion('IImplementationGuide_Resource', () =>
     t.intersection([
       t.type({
         reference: RTTI_Reference,
@@ -142,4 +141,4 @@ export const RTTI_ImplementationGuide_Resource: t.Type<IImplementationGuide_Reso
         _groupingId: RTTI_Element,
       }),
     ]),
-);
+  );

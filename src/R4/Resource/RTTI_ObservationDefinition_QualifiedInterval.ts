@@ -90,17 +90,17 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _condition?: IElement;
 }
 
-export const RTTI_ObservationDefinition_QualifiedInterval: t.Type<IObservationDefinition_QualifiedInterval> = t.recursion(
-  'IObservationDefinition_QualifiedInterval',
-  () =>
+export const RTTI_ObservationDefinition_QualifiedInterval: t.Type<IObservationDefinition_QualifiedInterval> =
+  t.recursion('IObservationDefinition_QualifiedInterval', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
       modifierExtension: t.array(RTTI_Extension),
-      category: createEnumType<ObservationDefinition_QualifiedIntervalCategoryKind>(
-        ObservationDefinition_QualifiedIntervalCategoryKind,
-        'ObservationDefinition_QualifiedIntervalCategoryKind',
-      ),
+      category:
+        createEnumType<ObservationDefinition_QualifiedIntervalCategoryKind>(
+          ObservationDefinition_QualifiedIntervalCategoryKind,
+          'ObservationDefinition_QualifiedIntervalCategoryKind',
+        ),
       _category: RTTI_Element,
       range: RTTI_Range,
       context: RTTI_CodeableConcept,
@@ -115,4 +115,4 @@ export const RTTI_ObservationDefinition_QualifiedInterval: t.Type<IObservationDe
       condition: t.string,
       _condition: RTTI_Element,
     }),
-);
+  );

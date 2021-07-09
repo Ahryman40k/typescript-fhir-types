@@ -114,9 +114,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   characteristics?: IMedicinalProductPharmaceutical_Characteristics[];
 }
 
-export const RTTI_MedicinalProductPharmaceutical: t.Type<IMedicinalProductPharmaceutical> = t.recursion(
-  'IMedicinalProductPharmaceutical',
-  () =>
+export const RTTI_MedicinalProductPharmaceutical: t.Type<IMedicinalProductPharmaceutical> =
+  t.recursion('IMedicinalProductPharmaceutical', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicinalProductPharmaceutical'),
@@ -145,4 +144,4 @@ export const RTTI_MedicinalProductPharmaceutical: t.Type<IMedicinalProductPharma
         ),
       }),
     ]),
-);
+  );

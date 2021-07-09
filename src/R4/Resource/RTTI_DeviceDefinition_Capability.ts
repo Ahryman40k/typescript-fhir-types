@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   description?: ICodeableConcept[];
 }
 
-export const RTTI_DeviceDefinition_Capability: t.Type<IDeviceDefinition_Capability> = t.recursion(
-  'IDeviceDefinition_Capability',
-  () =>
+export const RTTI_DeviceDefinition_Capability: t.Type<IDeviceDefinition_Capability> =
+  t.recursion('IDeviceDefinition_Capability', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -45,4 +44,4 @@ export const RTTI_DeviceDefinition_Capability: t.Type<IDeviceDefinition_Capabili
         description: t.array(RTTI_CodeableConcept),
       }),
     ]),
-);
+  );

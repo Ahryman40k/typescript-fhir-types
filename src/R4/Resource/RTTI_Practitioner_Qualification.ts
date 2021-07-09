@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   issuer?: IReference;
 }
 
-export const RTTI_Practitioner_Qualification: t.Type<IPractitioner_Qualification> = t.recursion(
-  'IPractitioner_Qualification',
-  () =>
+export const RTTI_Practitioner_Qualification: t.Type<IPractitioner_Qualification> =
+  t.recursion('IPractitioner_Qualification', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -60,4 +59,4 @@ export const RTTI_Practitioner_Qualification: t.Type<IPractitioner_Qualification
         issuer: RTTI_Reference,
       }),
     ]),
-);
+  );

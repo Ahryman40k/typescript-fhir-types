@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   targetSpecies?: IMedicinalProductPharmaceutical_TargetSpecies[];
 }
 
-export const RTTI_MedicinalProductPharmaceutical_RouteOfAdministration: t.Type<IMedicinalProductPharmaceutical_RouteOfAdministration> = t.recursion(
-  'IMedicinalProductPharmaceutical_RouteOfAdministration',
-  () =>
+export const RTTI_MedicinalProductPharmaceutical_RouteOfAdministration: t.Type<IMedicinalProductPharmaceutical_RouteOfAdministration> =
+  t.recursion('IMedicinalProductPharmaceutical_RouteOfAdministration', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -84,4 +83,4 @@ export const RTTI_MedicinalProductPharmaceutical_RouteOfAdministration: t.Type<I
         ),
       }),
     ]),
-);
+  );

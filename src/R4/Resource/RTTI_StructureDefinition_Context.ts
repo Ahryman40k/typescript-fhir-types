@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _expression?: IElement;
 }
 
-export const RTTI_StructureDefinition_Context: t.Type<IStructureDefinition_Context> = t.recursion(
-  'IStructureDefinition_Context',
-  () =>
+export const RTTI_StructureDefinition_Context: t.Type<IStructureDefinition_Context> =
+  t.recursion('IStructureDefinition_Context', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_StructureDefinition_Context: t.Type<IStructureDefinition_Conte
       expression: t.string,
       _expression: RTTI_Element,
     }),
-);
+  );

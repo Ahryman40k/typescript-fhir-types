@@ -138,9 +138,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   part?: IOperationDefinition_Parameter[];
 }
 
-export const RTTI_OperationDefinition_Parameter: t.Type<IOperationDefinition_Parameter> = t.recursion(
-  'IOperationDefinition_Parameter',
-  () =>
+export const RTTI_OperationDefinition_Parameter: t.Type<IOperationDefinition_Parameter> =
+  t.recursion('IOperationDefinition_Parameter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -170,4 +169,4 @@ export const RTTI_OperationDefinition_Parameter: t.Type<IOperationDefinition_Par
       referencedFrom: t.array(RTTI_OperationDefinition_ReferencedFrom),
       part: t.array(RTTI_OperationDefinition_Parameter),
     }),
-);
+  );

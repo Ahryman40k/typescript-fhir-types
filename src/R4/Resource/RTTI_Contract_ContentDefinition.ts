@@ -71,9 +71,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _copyright?: IElement;
 }
 
-export const RTTI_Contract_ContentDefinition: t.Type<IContract_ContentDefinition> = t.recursion(
-  'IContract_ContentDefinition',
-  () =>
+export const RTTI_Contract_ContentDefinition: t.Type<IContract_ContentDefinition> =
+  t.recursion('IContract_ContentDefinition', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -92,4 +91,4 @@ export const RTTI_Contract_ContentDefinition: t.Type<IContract_ContentDefinition
         _copyright: RTTI_Element,
       }),
     ]),
-);
+  );

@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   exception?: ICoverage_Exception[];
 }
 
-export const RTTI_Coverage_CostToBeneficiary: t.Type<ICoverage_CostToBeneficiary> = t.recursion(
-  'ICoverage_CostToBeneficiary',
-  () =>
+export const RTTI_Coverage_CostToBeneficiary: t.Type<ICoverage_CostToBeneficiary> =
+  t.recursion('ICoverage_CostToBeneficiary', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -59,4 +58,4 @@ export const RTTI_Coverage_CostToBeneficiary: t.Type<ICoverage_CostToBeneficiary
       valueMoney: RTTI_Money,
       exception: t.array(RTTI_Coverage_Exception),
     }),
-);
+  );

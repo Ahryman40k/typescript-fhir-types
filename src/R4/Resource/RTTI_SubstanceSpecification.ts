@@ -204,9 +204,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   sourceMaterial?: IReference;
 }
 
-export const RTTI_SubstanceSpecification: t.Type<ISubstanceSpecification> = t.recursion(
-  'ISubstanceSpecification',
-  () =>
+export const RTTI_SubstanceSpecification: t.Type<ISubstanceSpecification> =
+  t.recursion('ISubstanceSpecification', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('SubstanceSpecification'),
@@ -245,4 +244,4 @@ export const RTTI_SubstanceSpecification: t.Type<ISubstanceSpecification> = t.re
         sourceMaterial: RTTI_Reference,
       }),
     ]),
-);
+  );

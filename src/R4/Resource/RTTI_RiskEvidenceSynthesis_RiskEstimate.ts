@@ -83,9 +83,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   precisionEstimate?: IRiskEvidenceSynthesis_PrecisionEstimate[];
 }
 
-export const RTTI_RiskEvidenceSynthesis_RiskEstimate: t.Type<IRiskEvidenceSynthesis_RiskEstimate> = t.recursion(
-  'IRiskEvidenceSynthesis_RiskEstimate',
-  () =>
+export const RTTI_RiskEvidenceSynthesis_RiskEstimate: t.Type<IRiskEvidenceSynthesis_RiskEstimate> =
+  t.recursion('IRiskEvidenceSynthesis_RiskEstimate', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -102,4 +101,4 @@ export const RTTI_RiskEvidenceSynthesis_RiskEstimate: t.Type<IRiskEvidenceSynthe
       _numeratorCount: RTTI_Element,
       precisionEstimate: t.array(RTTI_RiskEvidenceSynthesis_PrecisionEstimate),
     }),
-);
+  );

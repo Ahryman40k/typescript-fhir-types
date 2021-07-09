@@ -201,9 +201,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   eventHistory?: IReference[];
 }
 
-export const RTTI_MedicationAdministration: t.Type<IMedicationAdministration> = t.recursion(
-  'IMedicationAdministration',
-  () =>
+export const RTTI_MedicationAdministration: t.Type<IMedicationAdministration> =
+  t.recursion('IMedicationAdministration', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicationAdministration'),
@@ -245,4 +244,4 @@ export const RTTI_MedicationAdministration: t.Type<IMedicationAdministration> = 
         eventHistory: t.array(RTTI_Reference),
       }),
     ]),
-);
+  );

@@ -632,9 +632,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   manifest?: IImplementationGuide_Manifest;
 }
 
-export const RTTI_ImplementationGuide: t.Type<IImplementationGuide> = t.recursion(
-  'IImplementationGuide',
-  () =>
+export const RTTI_ImplementationGuide: t.Type<IImplementationGuide> =
+  t.recursion('IImplementationGuide', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ImplementationGuide'),
@@ -696,4 +695,4 @@ export const RTTI_ImplementationGuide: t.Type<IImplementationGuide> = t.recursio
         manifest: RTTI_ImplementationGuide_Manifest,
       }),
     ]),
-);
+  );

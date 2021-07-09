@@ -68,9 +68,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _endpoint?: IElement;
 }
 
-export const RTTI_MessageHeader_Source: t.Type<IMessageHeader_Source> = t.recursion(
-  'IMessageHeader_Source',
-  () =>
+export const RTTI_MessageHeader_Source: t.Type<IMessageHeader_Source> =
+  t.recursion('IMessageHeader_Source', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -85,4 +84,4 @@ export const RTTI_MessageHeader_Source: t.Type<IMessageHeader_Source> = t.recurs
       endpoint: RTTI_url,
       _endpoint: RTTI_Element,
     }),
-);
+  );

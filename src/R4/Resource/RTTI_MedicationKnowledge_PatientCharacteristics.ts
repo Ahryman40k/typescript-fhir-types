@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _value?: IElement[];
 }
 
-export const RTTI_MedicationKnowledge_PatientCharacteristics: t.Type<IMedicationKnowledge_PatientCharacteristics> = t.recursion(
-  'IMedicationKnowledge_PatientCharacteristics',
-  () =>
+export const RTTI_MedicationKnowledge_PatientCharacteristics: t.Type<IMedicationKnowledge_PatientCharacteristics> =
+  t.recursion('IMedicationKnowledge_PatientCharacteristics', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -56,4 +55,4 @@ export const RTTI_MedicationKnowledge_PatientCharacteristics: t.Type<IMedication
       value: t.array(t.string),
       _value: t.array(RTTI_Element),
     }),
-);
+  );

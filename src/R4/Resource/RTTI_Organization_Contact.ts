@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   address?: IAddress;
 }
 
-export const RTTI_Organization_Contact: t.Type<IOrganization_Contact> = t.recursion(
-  'IOrganization_Contact',
-  () =>
+export const RTTI_Organization_Contact: t.Type<IOrganization_Contact> =
+  t.recursion('IOrganization_Contact', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -56,4 +55,4 @@ export const RTTI_Organization_Contact: t.Type<IOrganization_Contact> = t.recurs
       telecom: t.array(RTTI_ContactPoint),
       address: RTTI_Address,
     }),
-);
+  );

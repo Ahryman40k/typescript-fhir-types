@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _display?: IElement;
 }
 
-export const RTTI_TestReport_Participant: t.Type<ITestReport_Participant> = t.recursion(
-  'ITestReport_Participant',
-  () =>
+export const RTTI_TestReport_Participant: t.Type<ITestReport_Participant> =
+  t.recursion('ITestReport_Participant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -75,4 +74,4 @@ export const RTTI_TestReport_Participant: t.Type<ITestReport_Participant> = t.re
       display: t.string,
       _display: RTTI_Element,
     }),
-);
+  );

@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   party?: IReference;
 }
 
-export const RTTI_ExplanationOfBenefit_Payee: t.Type<IExplanationOfBenefit_Payee> = t.recursion(
-  'IExplanationOfBenefit_Payee',
-  () =>
+export const RTTI_ExplanationOfBenefit_Payee: t.Type<IExplanationOfBenefit_Payee> =
+  t.recursion('IExplanationOfBenefit_Payee', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_ExplanationOfBenefit_Payee: t.Type<IExplanationOfBenefit_Payee
       type: RTTI_CodeableConcept,
       party: RTTI_Reference,
     }),
-);
+  );

@@ -51,9 +51,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _expression?: IElement;
 }
 
-export const RTTI_ChargeItemDefinition_Applicability: t.Type<IChargeItemDefinition_Applicability> = t.recursion(
-  'IChargeItemDefinition_Applicability',
-  () =>
+export const RTTI_ChargeItemDefinition_Applicability: t.Type<IChargeItemDefinition_Applicability> =
+  t.recursion('IChargeItemDefinition_Applicability', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -65,4 +64,4 @@ export const RTTI_ChargeItemDefinition_Applicability: t.Type<IChargeItemDefiniti
       expression: t.string,
       _expression: RTTI_Element,
     }),
-);
+  );

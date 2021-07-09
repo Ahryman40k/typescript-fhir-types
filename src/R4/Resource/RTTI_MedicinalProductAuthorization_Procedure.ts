@@ -54,9 +54,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   application?: IMedicinalProductAuthorization_Procedure[];
 }
 
-export const RTTI_MedicinalProductAuthorization_Procedure: t.Type<IMedicinalProductAuthorization_Procedure> = t.recursion(
-  'IMedicinalProductAuthorization_Procedure',
-  () =>
+export const RTTI_MedicinalProductAuthorization_Procedure: t.Type<IMedicinalProductAuthorization_Procedure> =
+  t.recursion('IMedicinalProductAuthorization_Procedure', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -72,4 +71,4 @@ export const RTTI_MedicinalProductAuthorization_Procedure: t.Type<IMedicinalProd
         application: t.array(RTTI_MedicinalProductAuthorization_Procedure),
       }),
     ]),
-);
+  );

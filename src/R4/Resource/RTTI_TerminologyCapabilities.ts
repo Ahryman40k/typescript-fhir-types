@@ -302,9 +302,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   closure?: ITerminologyCapabilities_Closure;
 }
 
-export const RTTI_TerminologyCapabilities: t.Type<ITerminologyCapabilities> = t.recursion(
-  'ITerminologyCapabilities',
-  () =>
+export const RTTI_TerminologyCapabilities: t.Type<ITerminologyCapabilities> =
+  t.recursion('ITerminologyCapabilities', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('TerminologyCapabilities'),
@@ -366,4 +365,4 @@ export const RTTI_TerminologyCapabilities: t.Type<ITerminologyCapabilities> = t.
         closure: RTTI_TerminologyCapabilities_Closure,
       }),
     ]),
-);
+  );

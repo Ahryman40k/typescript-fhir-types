@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   variantState?: ICodeableConcept;
 }
 
-export const RTTI_EffectEvidenceSynthesis_ResultsByExposure: t.Type<IEffectEvidenceSynthesis_ResultsByExposure> = t.recursion(
-  'IEffectEvidenceSynthesis_ResultsByExposure',
-  () =>
+export const RTTI_EffectEvidenceSynthesis_ResultsByExposure: t.Type<IEffectEvidenceSynthesis_ResultsByExposure> =
+  t.recursion('IEffectEvidenceSynthesis_ResultsByExposure', () =>
     t.intersection([
       t.type({
         riskEvidenceSynthesis: RTTI_Reference,
@@ -71,12 +70,13 @@ export const RTTI_EffectEvidenceSynthesis_ResultsByExposure: t.Type<IEffectEvide
         modifierExtension: t.array(RTTI_Extension),
         description: t.string,
         _description: RTTI_Element,
-        exposureState: createEnumType<EffectEvidenceSynthesis_ResultsByExposureExposureStateKind>(
-          EffectEvidenceSynthesis_ResultsByExposureExposureStateKind,
-          'EffectEvidenceSynthesis_ResultsByExposureExposureStateKind',
-        ),
+        exposureState:
+          createEnumType<EffectEvidenceSynthesis_ResultsByExposureExposureStateKind>(
+            EffectEvidenceSynthesis_ResultsByExposureExposureStateKind,
+            'EffectEvidenceSynthesis_ResultsByExposureExposureStateKind',
+          ),
         _exposureState: RTTI_Element,
         variantState: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

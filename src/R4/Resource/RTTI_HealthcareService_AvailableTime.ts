@@ -72,9 +72,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _availableEndTime?: IElement;
 }
 
-export const RTTI_HealthcareService_AvailableTime: t.Type<IHealthcareService_AvailableTime> = t.recursion(
-  'IHealthcareService_AvailableTime',
-  () =>
+export const RTTI_HealthcareService_AvailableTime: t.Type<IHealthcareService_AvailableTime> =
+  t.recursion('IHealthcareService_AvailableTime', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -93,4 +92,4 @@ export const RTTI_HealthcareService_AvailableTime: t.Type<IHealthcareService_Ava
       availableEndTime: RTTI_time,
       _availableEndTime: RTTI_Element,
     }),
-);
+  );

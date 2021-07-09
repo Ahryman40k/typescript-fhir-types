@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   due?: IDuration;
 }
 
-export const RTTI_PlanDefinition_Target: t.Type<IPlanDefinition_Target> = t.recursion(
-  'IPlanDefinition_Target',
-  () =>
+export const RTTI_PlanDefinition_Target: t.Type<IPlanDefinition_Target> =
+  t.recursion('IPlanDefinition_Target', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_PlanDefinition_Target: t.Type<IPlanDefinition_Target> = t.recu
       detailCodeableConcept: RTTI_CodeableConcept,
       due: RTTI_Duration,
     }),
-);
+  );

@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   item?: IReference[];
 }
 
-export const RTTI_ClinicalImpression_Investigation: t.Type<IClinicalImpression_Investigation> = t.recursion(
-  'IClinicalImpression_Investigation',
-  () =>
+export const RTTI_ClinicalImpression_Investigation: t.Type<IClinicalImpression_Investigation> =
+  t.recursion('IClinicalImpression_Investigation', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -46,4 +45,4 @@ export const RTTI_ClinicalImpression_Investigation: t.Type<IClinicalImpression_I
         item: t.array(RTTI_Reference),
       }),
     ]),
-);
+  );

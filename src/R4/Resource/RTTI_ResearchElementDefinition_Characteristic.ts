@@ -190,9 +190,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _participantEffectiveGroupMeasure?: IElement;
 }
 
-export const RTTI_ResearchElementDefinition_Characteristic: t.Type<IResearchElementDefinition_Characteristic> = t.recursion(
-  'IResearchElementDefinition_Characteristic',
-  () =>
+export const RTTI_ResearchElementDefinition_Characteristic: t.Type<IResearchElementDefinition_Characteristic> =
+  t.recursion('IResearchElementDefinition_Characteristic', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -214,10 +213,11 @@ export const RTTI_ResearchElementDefinition_Characteristic: t.Type<IResearchElem
       studyEffectiveDuration: RTTI_Duration,
       studyEffectiveTiming: RTTI_Timing,
       studyEffectiveTimeFromStart: RTTI_Duration,
-      studyEffectiveGroupMeasure: createEnumType<ResearchElementDefinition_CharacteristicStudyEffectiveGroupMeasureKind>(
-        ResearchElementDefinition_CharacteristicStudyEffectiveGroupMeasureKind,
-        'ResearchElementDefinition_CharacteristicStudyEffectiveGroupMeasureKind',
-      ),
+      studyEffectiveGroupMeasure:
+        createEnumType<ResearchElementDefinition_CharacteristicStudyEffectiveGroupMeasureKind>(
+          ResearchElementDefinition_CharacteristicStudyEffectiveGroupMeasureKind,
+          'ResearchElementDefinition_CharacteristicStudyEffectiveGroupMeasureKind',
+        ),
       _studyEffectiveGroupMeasure: RTTI_Element,
       participantEffectiveDescription: t.string,
       _participantEffectiveDescription: RTTI_Element,
@@ -227,10 +227,11 @@ export const RTTI_ResearchElementDefinition_Characteristic: t.Type<IResearchElem
       participantEffectiveDuration: RTTI_Duration,
       participantEffectiveTiming: RTTI_Timing,
       participantEffectiveTimeFromStart: RTTI_Duration,
-      participantEffectiveGroupMeasure: createEnumType<ResearchElementDefinition_CharacteristicParticipantEffectiveGroupMeasureKind>(
-        ResearchElementDefinition_CharacteristicParticipantEffectiveGroupMeasureKind,
-        'ResearchElementDefinition_CharacteristicParticipantEffectiveGroupMeasureKind',
-      ),
+      participantEffectiveGroupMeasure:
+        createEnumType<ResearchElementDefinition_CharacteristicParticipantEffectiveGroupMeasureKind>(
+          ResearchElementDefinition_CharacteristicParticipantEffectiveGroupMeasureKind,
+          'ResearchElementDefinition_CharacteristicParticipantEffectiveGroupMeasureKind',
+        ),
       _participantEffectiveGroupMeasure: RTTI_Element,
     }),
-);
+  );

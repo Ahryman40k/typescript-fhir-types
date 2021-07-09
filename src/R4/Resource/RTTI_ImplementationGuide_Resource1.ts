@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _relativePath?: IElement;
 }
 
-export const RTTI_ImplementationGuide_Resource1: t.Type<IImplementationGuide_Resource1> = t.recursion(
-  'IImplementationGuide_Resource1',
-  () =>
+export const RTTI_ImplementationGuide_Resource1: t.Type<IImplementationGuide_Resource1> =
+  t.recursion('IImplementationGuide_Resource1', () =>
     t.intersection([
       t.type({
         reference: RTTI_Reference,
@@ -77,4 +76,4 @@ export const RTTI_ImplementationGuide_Resource1: t.Type<IImplementationGuide_Res
         _relativePath: RTTI_Element,
       }),
     ]),
-);
+  );

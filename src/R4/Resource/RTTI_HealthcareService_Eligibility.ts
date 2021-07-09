@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _comment?: IElement;
 }
 
-export const RTTI_HealthcareService_Eligibility: t.Type<IHealthcareService_Eligibility> = t.recursion(
-  'IHealthcareService_Eligibility',
-  () =>
+export const RTTI_HealthcareService_Eligibility: t.Type<IHealthcareService_Eligibility> =
+  t.recursion('IHealthcareService_Eligibility', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -49,4 +48,4 @@ export const RTTI_HealthcareService_Eligibility: t.Type<IHealthcareService_Eligi
       comment: RTTI_markdown,
       _comment: RTTI_Element,
     }),
-);
+  );

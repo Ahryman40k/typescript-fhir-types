@@ -139,9 +139,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   answerReference?: IReference;
 }
 
-export const RTTI_Questionnaire_EnableWhen: t.Type<IQuestionnaire_EnableWhen> = t.recursion(
-  'IQuestionnaire_EnableWhen',
-  () =>
+export const RTTI_Questionnaire_EnableWhen: t.Type<IQuestionnaire_EnableWhen> =
+  t.recursion('IQuestionnaire_EnableWhen', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -171,4 +170,4 @@ export const RTTI_Questionnaire_EnableWhen: t.Type<IQuestionnaire_EnableWhen> = 
       answerQuantity: RTTI_Quantity,
       answerReference: RTTI_Reference,
     }),
-);
+  );

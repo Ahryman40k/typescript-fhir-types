@@ -83,9 +83,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _seriesDosesString?: IElement;
 }
 
-export const RTTI_Immunization_ProtocolApplied: t.Type<IImmunization_ProtocolApplied> = t.recursion(
-  'IImmunization_ProtocolApplied',
-  () =>
+export const RTTI_Immunization_ProtocolApplied: t.Type<IImmunization_ProtocolApplied> =
+  t.recursion('IImmunization_ProtocolApplied', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -103,4 +102,4 @@ export const RTTI_Immunization_ProtocolApplied: t.Type<IImmunization_ProtocolApp
       seriesDosesString: t.string,
       _seriesDosesString: RTTI_Element,
     }),
-);
+  );

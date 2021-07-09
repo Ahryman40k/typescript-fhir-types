@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _documentation?: IElement;
 }
 
-export const RTTI_CapabilityStatement_Interaction1: t.Type<ICapabilityStatement_Interaction1> = t.recursion(
-  'ICapabilityStatement_Interaction1',
-  () =>
+export const RTTI_CapabilityStatement_Interaction1: t.Type<ICapabilityStatement_Interaction1> =
+  t.recursion('ICapabilityStatement_Interaction1', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -64,4 +63,4 @@ export const RTTI_CapabilityStatement_Interaction1: t.Type<ICapabilityStatement_
       documentation: RTTI_markdown,
       _documentation: RTTI_Element,
     }),
-);
+  );

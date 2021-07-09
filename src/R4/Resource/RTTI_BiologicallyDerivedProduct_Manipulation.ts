@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   timePeriod?: IPeriod;
 }
 
-export const RTTI_BiologicallyDerivedProduct_Manipulation: t.Type<IBiologicallyDerivedProduct_Manipulation> = t.recursion(
-  'IBiologicallyDerivedProduct_Manipulation',
-  () =>
+export const RTTI_BiologicallyDerivedProduct_Manipulation: t.Type<IBiologicallyDerivedProduct_Manipulation> =
+  t.recursion('IBiologicallyDerivedProduct_Manipulation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -60,4 +59,4 @@ export const RTTI_BiologicallyDerivedProduct_Manipulation: t.Type<IBiologicallyD
       _timeDateTime: RTTI_Element,
       timePeriod: RTTI_Period,
     }),
-);
+  );

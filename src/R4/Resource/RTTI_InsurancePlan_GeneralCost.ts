@@ -54,9 +54,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _comment?: IElement;
 }
 
-export const RTTI_InsurancePlan_GeneralCost: t.Type<IInsurancePlan_GeneralCost> = t.recursion(
-  'IInsurancePlan_GeneralCost',
-  () =>
+export const RTTI_InsurancePlan_GeneralCost: t.Type<IInsurancePlan_GeneralCost> =
+  t.recursion('IInsurancePlan_GeneralCost', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -68,4 +67,4 @@ export const RTTI_InsurancePlan_GeneralCost: t.Type<IInsurancePlan_GeneralCost> 
       comment: t.string,
       _comment: RTTI_Element,
     }),
-);
+  );

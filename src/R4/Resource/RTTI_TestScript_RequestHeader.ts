@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _value?: IElement;
 }
 
-export const RTTI_TestScript_RequestHeader: t.Type<ITestScript_RequestHeader> = t.recursion(
-  'ITestScript_RequestHeader',
-  () =>
+export const RTTI_TestScript_RequestHeader: t.Type<ITestScript_RequestHeader> =
+  t.recursion('ITestScript_RequestHeader', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -53,4 +52,4 @@ export const RTTI_TestScript_RequestHeader: t.Type<ITestScript_RequestHeader> = 
       value: t.string,
       _value: RTTI_Element,
     }),
-);
+  );

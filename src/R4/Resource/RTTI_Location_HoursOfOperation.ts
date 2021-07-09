@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _closingTime?: IElement;
 }
 
-export const RTTI_Location_HoursOfOperation: t.Type<ILocation_HoursOfOperation> = t.recursion(
-  'ILocation_HoursOfOperation',
-  () =>
+export const RTTI_Location_HoursOfOperation: t.Type<ILocation_HoursOfOperation> =
+  t.recursion('ILocation_HoursOfOperation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -79,4 +78,4 @@ export const RTTI_Location_HoursOfOperation: t.Type<ILocation_HoursOfOperation> 
       closingTime: RTTI_time,
       _closingTime: RTTI_Element,
     }),
-);
+  );

@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _version?: IElement;
 }
 
-export const RTTI_DeviceDefinition_Specialization: t.Type<IDeviceDefinition_Specialization> = t.recursion(
-  'IDeviceDefinition_Specialization',
-  () =>
+export const RTTI_DeviceDefinition_Specialization: t.Type<IDeviceDefinition_Specialization> =
+  t.recursion('IDeviceDefinition_Specialization', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -53,4 +52,4 @@ export const RTTI_DeviceDefinition_Specialization: t.Type<IDeviceDefinition_Spec
       version: t.string,
       _version: RTTI_Element,
     }),
-);
+  );

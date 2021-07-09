@@ -69,9 +69,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   page?: IImplementationGuide_Page[];
 }
 
-export const RTTI_ImplementationGuide_Page: t.Type<IImplementationGuide_Page> = t.recursion(
-  'IImplementationGuide_Page',
-  () =>
+export const RTTI_ImplementationGuide_Page: t.Type<IImplementationGuide_Page> =
+  t.recursion('IImplementationGuide_Page', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -88,4 +87,4 @@ export const RTTI_ImplementationGuide_Page: t.Type<IImplementationGuide_Page> = 
       _generation: RTTI_Element,
       page: t.array(RTTI_ImplementationGuide_Page),
     }),
-);
+  );

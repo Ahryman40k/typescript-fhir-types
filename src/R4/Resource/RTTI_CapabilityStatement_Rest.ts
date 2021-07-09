@@ -98,9 +98,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   compartment?: string[];
 }
 
-export const RTTI_CapabilityStatement_Rest: t.Type<ICapabilityStatement_Rest> = t.recursion(
-  'ICapabilityStatement_Rest',
-  () =>
+export const RTTI_CapabilityStatement_Rest: t.Type<ICapabilityStatement_Rest> =
+  t.recursion('ICapabilityStatement_Rest', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -119,4 +118,4 @@ export const RTTI_CapabilityStatement_Rest: t.Type<ICapabilityStatement_Rest> = 
       operation: t.array(RTTI_CapabilityStatement_Operation),
       compartment: t.array(RTTI_canonical),
     }),
-);
+  );

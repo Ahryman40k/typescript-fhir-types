@@ -70,9 +70,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   performer?: IReference;
 }
 
-export const RTTI_MedicationRequest_DispenseRequest: t.Type<IMedicationRequest_DispenseRequest> = t.recursion(
-  'IMedicationRequest_DispenseRequest',
-  () =>
+export const RTTI_MedicationRequest_DispenseRequest: t.Type<IMedicationRequest_DispenseRequest> =
+  t.recursion('IMedicationRequest_DispenseRequest', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -86,4 +85,4 @@ export const RTTI_MedicationRequest_DispenseRequest: t.Type<IMedicationRequest_D
       expectedSupplyDuration: RTTI_Duration,
       performer: RTTI_Reference,
     }),
-);
+  );

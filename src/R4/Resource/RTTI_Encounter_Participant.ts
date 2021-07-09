@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   individual?: IReference;
 }
 
-export const RTTI_Encounter_Participant: t.Type<IEncounter_Participant> = t.recursion(
-  'IEncounter_Participant',
-  () =>
+export const RTTI_Encounter_Participant: t.Type<IEncounter_Participant> =
+  t.recursion('IEncounter_Participant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -49,4 +48,4 @@ export const RTTI_Encounter_Participant: t.Type<IEncounter_Participant> = t.recu
       period: RTTI_Period,
       individual: RTTI_Reference,
     }),
-);
+  );

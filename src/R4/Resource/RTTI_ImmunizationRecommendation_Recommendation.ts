@@ -127,9 +127,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   supportingPatientInformation?: IReference[];
 }
 
-export const RTTI_ImmunizationRecommendation_Recommendation: t.Type<IImmunizationRecommendation_Recommendation> = t.recursion(
-  'IImmunizationRecommendation_Recommendation',
-  () =>
+export const RTTI_ImmunizationRecommendation_Recommendation: t.Type<IImmunizationRecommendation_Recommendation> =
+  t.recursion('IImmunizationRecommendation_Recommendation', () =>
     t.intersection([
       t.type({
         forecastStatus: RTTI_CodeableConcept,
@@ -159,4 +158,4 @@ export const RTTI_ImmunizationRecommendation_Recommendation: t.Type<IImmunizatio
         supportingPatientInformation: t.array(RTTI_Reference),
       }),
     ]),
-);
+  );

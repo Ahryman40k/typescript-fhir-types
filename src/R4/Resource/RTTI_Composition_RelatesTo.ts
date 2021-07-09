@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   targetReference?: IReference;
 }
 
-export const RTTI_Composition_RelatesTo: t.Type<IComposition_RelatesTo> = t.recursion(
-  'IComposition_RelatesTo',
-  () =>
+export const RTTI_Composition_RelatesTo: t.Type<IComposition_RelatesTo> =
+  t.recursion('IComposition_RelatesTo', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -56,4 +55,4 @@ export const RTTI_Composition_RelatesTo: t.Type<IComposition_RelatesTo> = t.recu
       targetIdentifier: RTTI_Identifier,
       targetReference: RTTI_Reference,
     }),
-);
+  );

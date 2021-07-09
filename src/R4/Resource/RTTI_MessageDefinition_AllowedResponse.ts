@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _situation?: IElement;
 }
 
-export const RTTI_MessageDefinition_AllowedResponse: t.Type<IMessageDefinition_AllowedResponse> = t.recursion(
-  'IMessageDefinition_AllowedResponse',
-  () =>
+export const RTTI_MessageDefinition_AllowedResponse: t.Type<IMessageDefinition_AllowedResponse> =
+  t.recursion('IMessageDefinition_AllowedResponse', () =>
     t.intersection([
       t.type({
         message: RTTI_canonical,
@@ -53,4 +52,4 @@ export const RTTI_MessageDefinition_AllowedResponse: t.Type<IMessageDefinition_A
         _situation: RTTI_Element,
       }),
     ]),
-);
+  );

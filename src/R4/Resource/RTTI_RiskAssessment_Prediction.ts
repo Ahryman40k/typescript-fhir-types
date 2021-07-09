@@ -80,9 +80,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _rationale?: IElement;
 }
 
-export const RTTI_RiskAssessment_Prediction: t.Type<IRiskAssessment_Prediction> = t.recursion(
-  'IRiskAssessment_Prediction',
-  () =>
+export const RTTI_RiskAssessment_Prediction: t.Type<IRiskAssessment_Prediction> =
+  t.recursion('IRiskAssessment_Prediction', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -99,4 +98,4 @@ export const RTTI_RiskAssessment_Prediction: t.Type<IRiskAssessment_Prediction> 
       rationale: t.string,
       _rationale: RTTI_Element,
     }),
-);
+  );

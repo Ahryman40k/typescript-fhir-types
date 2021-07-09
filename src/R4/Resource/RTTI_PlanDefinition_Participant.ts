@@ -44,9 +44,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   role?: ICodeableConcept;
 }
 
-export const RTTI_PlanDefinition_Participant: t.Type<IPlanDefinition_Participant> = t.recursion(
-  'IPlanDefinition_Participant',
-  () =>
+export const RTTI_PlanDefinition_Participant: t.Type<IPlanDefinition_Participant> =
+  t.recursion('IPlanDefinition_Participant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -58,4 +57,4 @@ export const RTTI_PlanDefinition_Participant: t.Type<IPlanDefinition_Participant
       _type: RTTI_Element,
       role: RTTI_CodeableConcept,
     }),
-);
+  );

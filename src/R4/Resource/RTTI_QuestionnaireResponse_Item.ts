@@ -66,9 +66,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   item?: IQuestionnaireResponse_Item[];
 }
 
-export const RTTI_QuestionnaireResponse_Item: t.Type<IQuestionnaireResponse_Item> = t.recursion(
-  'IQuestionnaireResponse_Item',
-  () =>
+export const RTTI_QuestionnaireResponse_Item: t.Type<IQuestionnaireResponse_Item> =
+  t.recursion('IQuestionnaireResponse_Item', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -82,4 +81,4 @@ export const RTTI_QuestionnaireResponse_Item: t.Type<IQuestionnaireResponse_Item
       answer: t.array(RTTI_QuestionnaireResponse_Answer),
       item: t.array(RTTI_QuestionnaireResponse_Item),
     }),
-);
+  );

@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _source?: IElement;
 }
 
-export const RTTI_MedicationKnowledge_Cost: t.Type<IMedicationKnowledge_Cost> = t.recursion(
-  'IMedicationKnowledge_Cost',
-  () =>
+export const RTTI_MedicationKnowledge_Cost: t.Type<IMedicationKnowledge_Cost> =
+  t.recursion('IMedicationKnowledge_Cost', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -59,4 +58,4 @@ export const RTTI_MedicationKnowledge_Cost: t.Type<IMedicationKnowledge_Cost> = 
         _source: RTTI_Element,
       }),
     ]),
-);
+  );

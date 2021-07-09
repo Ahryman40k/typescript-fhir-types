@@ -185,9 +185,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   dosage?: IDosage[];
 }
 
-export const RTTI_MedicationStatement: t.Type<IMedicationStatement> = t.recursion(
-  'IMedicationStatement',
-  () =>
+export const RTTI_MedicationStatement: t.Type<IMedicationStatement> =
+  t.recursion('IMedicationStatement', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicationStatement'),
@@ -227,4 +226,4 @@ export const RTTI_MedicationStatement: t.Type<IMedicationStatement> = t.recursio
         dosage: t.array(RTTI_Dosage),
       }),
     ]),
-);
+  );

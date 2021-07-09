@@ -81,9 +81,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   target?: IGraphDefinition_Target[];
 }
 
-export const RTTI_GraphDefinition_Link: t.Type<IGraphDefinition_Link> = t.recursion(
-  'IGraphDefinition_Link',
-  () =>
+export const RTTI_GraphDefinition_Link: t.Type<IGraphDefinition_Link> =
+  t.recursion('IGraphDefinition_Link', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -100,4 +99,4 @@ export const RTTI_GraphDefinition_Link: t.Type<IGraphDefinition_Link> = t.recurs
       _description: RTTI_Element,
       target: t.array(RTTI_GraphDefinition_Target),
     }),
-);
+  );

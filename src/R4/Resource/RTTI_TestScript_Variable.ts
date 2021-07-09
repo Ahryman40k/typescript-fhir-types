@@ -102,9 +102,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _sourceId?: IElement;
 }
 
-export const RTTI_TestScript_Variable: t.Type<ITestScript_Variable> = t.recursion(
-  'ITestScript_Variable',
-  () =>
+export const RTTI_TestScript_Variable: t.Type<ITestScript_Variable> =
+  t.recursion('ITestScript_Variable', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -126,4 +125,4 @@ export const RTTI_TestScript_Variable: t.Type<ITestScript_Variable> = t.recursio
       sourceId: RTTI_id,
       _sourceId: RTTI_Element,
     }),
-);
+  );

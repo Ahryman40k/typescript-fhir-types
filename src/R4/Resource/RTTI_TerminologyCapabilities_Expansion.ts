@@ -71,9 +71,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _textFilter?: IElement;
 }
 
-export const RTTI_TerminologyCapabilities_Expansion: t.Type<ITerminologyCapabilities_Expansion> = t.recursion(
-  'ITerminologyCapabilities_Expansion',
-  () =>
+export const RTTI_TerminologyCapabilities_Expansion: t.Type<ITerminologyCapabilities_Expansion> =
+  t.recursion('ITerminologyCapabilities_Expansion', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -88,4 +87,4 @@ export const RTTI_TerminologyCapabilities_Expansion: t.Type<ITerminologyCapabili
       textFilter: RTTI_markdown,
       _textFilter: RTTI_Element,
     }),
-);
+  );

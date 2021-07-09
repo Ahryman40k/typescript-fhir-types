@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _presentationDate?: IElement;
 }
 
-export const RTTI_Immunization_Education: t.Type<IImmunization_Education> = t.recursion(
-  'IImmunization_Education',
-  () =>
+export const RTTI_Immunization_Education: t.Type<IImmunization_Education> =
+  t.recursion('IImmunization_Education', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -79,4 +78,4 @@ export const RTTI_Immunization_Education: t.Type<IImmunization_Education> = t.re
       presentationDate: RTTI_dateTime,
       _presentationDate: RTTI_Element,
     }),
-);
+  );

@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _instruction?: IElement;
 }
 
-export const RTTI_SpecimenDefinition_Handling: t.Type<ISpecimenDefinition_Handling> = t.recursion(
-  'ISpecimenDefinition_Handling',
-  () =>
+export const RTTI_SpecimenDefinition_Handling: t.Type<ISpecimenDefinition_Handling> =
+  t.recursion('ISpecimenDefinition_Handling', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_SpecimenDefinition_Handling: t.Type<ISpecimenDefinition_Handli
       instruction: t.string,
       _instruction: RTTI_Element,
     }),
-);
+  );

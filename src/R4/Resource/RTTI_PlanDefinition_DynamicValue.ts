@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   expression?: IExpression;
 }
 
-export const RTTI_PlanDefinition_DynamicValue: t.Type<IPlanDefinition_DynamicValue> = t.recursion(
-  'IPlanDefinition_DynamicValue',
-  () =>
+export const RTTI_PlanDefinition_DynamicValue: t.Type<IPlanDefinition_DynamicValue> =
+  t.recursion('IPlanDefinition_DynamicValue', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_PlanDefinition_DynamicValue: t.Type<IPlanDefinition_DynamicVal
       _path: RTTI_Element,
       expression: RTTI_Expression,
     }),
-);
+  );

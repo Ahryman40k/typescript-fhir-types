@@ -407,9 +407,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   valueDosage?: IDosage;
 }
 
-export const RTTI_ElementDefinition_Example: t.Type<IElementDefinition_Example> = t.recursion(
-  'IElementDefinition_Example',
-  () =>
+export const RTTI_ElementDefinition_Example: t.Type<IElementDefinition_Example> =
+  t.recursion('IElementDefinition_Example', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -485,4 +484,4 @@ export const RTTI_ElementDefinition_Example: t.Type<IElementDefinition_Example> 
       valueUsageContext: RTTI_UsageContext,
       valueDosage: RTTI_Dosage,
     }),
-);
+  );

@@ -109,9 +109,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   subunit?: ISubstanceNucleicAcid_Subunit[];
 }
 
-export const RTTI_SubstanceNucleicAcid: t.Type<ISubstanceNucleicAcid> = t.recursion(
-  'ISubstanceNucleicAcid',
-  () =>
+export const RTTI_SubstanceNucleicAcid: t.Type<ISubstanceNucleicAcid> =
+  t.recursion('ISubstanceNucleicAcid', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('SubstanceNucleicAcid'),
@@ -136,4 +135,4 @@ export const RTTI_SubstanceNucleicAcid: t.Type<ISubstanceNucleicAcid> = t.recurs
         subunit: t.array(RTTI_SubstanceNucleicAcid_Subunit),
       }),
     ]),
-);
+  );

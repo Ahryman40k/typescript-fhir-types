@@ -83,9 +83,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _description?: IElement;
 }
 
-export const RTTI_GraphDefinition_Compartment: t.Type<IGraphDefinition_Compartment> = t.recursion(
-  'IGraphDefinition_Compartment',
-  () =>
+export const RTTI_GraphDefinition_Compartment: t.Type<IGraphDefinition_Compartment> =
+  t.recursion('IGraphDefinition_Compartment', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -107,4 +106,4 @@ export const RTTI_GraphDefinition_Compartment: t.Type<IGraphDefinition_Compartme
       description: t.string,
       _description: RTTI_Element,
     }),
-);
+  );

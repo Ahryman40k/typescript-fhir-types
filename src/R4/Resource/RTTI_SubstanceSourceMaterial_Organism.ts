@@ -79,9 +79,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   organismGeneral?: ISubstanceSourceMaterial_OrganismGeneral;
 }
 
-export const RTTI_SubstanceSourceMaterial_Organism: t.Type<ISubstanceSourceMaterial_Organism> = t.recursion(
-  'ISubstanceSourceMaterial_Organism',
-  () =>
+export const RTTI_SubstanceSourceMaterial_Organism: t.Type<ISubstanceSourceMaterial_Organism> =
+  t.recursion('ISubstanceSourceMaterial_Organism', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -96,4 +95,4 @@ export const RTTI_SubstanceSourceMaterial_Organism: t.Type<ISubstanceSourceMater
       hybrid: RTTI_SubstanceSourceMaterial_Hybrid,
       organismGeneral: RTTI_SubstanceSourceMaterial_OrganismGeneral,
     }),
-);
+  );

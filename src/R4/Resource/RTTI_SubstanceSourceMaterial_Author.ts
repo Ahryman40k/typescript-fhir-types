@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _authorDescription?: IElement;
 }
 
-export const RTTI_SubstanceSourceMaterial_Author: t.Type<ISubstanceSourceMaterial_Author> = t.recursion(
-  'ISubstanceSourceMaterial_Author',
-  () =>
+export const RTTI_SubstanceSourceMaterial_Author: t.Type<ISubstanceSourceMaterial_Author> =
+  t.recursion('ISubstanceSourceMaterial_Author', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_SubstanceSourceMaterial_Author: t.Type<ISubstanceSourceMateria
       authorDescription: t.string,
       _authorDescription: RTTI_Element,
     }),
-);
+  );

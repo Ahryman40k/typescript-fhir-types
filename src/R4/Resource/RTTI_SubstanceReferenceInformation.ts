@@ -114,9 +114,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   target?: ISubstanceReferenceInformation_Target[];
 }
 
-export const RTTI_SubstanceReferenceInformation: t.Type<ISubstanceReferenceInformation> = t.recursion(
-  'ISubstanceReferenceInformation',
-  () =>
+export const RTTI_SubstanceReferenceInformation: t.Type<ISubstanceReferenceInformation> =
+  t.recursion('ISubstanceReferenceInformation', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('SubstanceReferenceInformation'),
@@ -142,4 +141,4 @@ export const RTTI_SubstanceReferenceInformation: t.Type<ISubstanceReferenceInfor
         target: t.array(RTTI_SubstanceReferenceInformation_Target),
       }),
     ]),
-);
+  );

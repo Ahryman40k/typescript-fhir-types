@@ -47,9 +47,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _residueSite?: IElement;
 }
 
-export const RTTI_SubstanceNucleicAcid_Sugar: t.Type<ISubstanceNucleicAcid_Sugar> = t.recursion(
-  'ISubstanceNucleicAcid_Sugar',
-  () =>
+export const RTTI_SubstanceNucleicAcid_Sugar: t.Type<ISubstanceNucleicAcid_Sugar> =
+  t.recursion('ISubstanceNucleicAcid_Sugar', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -60,4 +59,4 @@ export const RTTI_SubstanceNucleicAcid_Sugar: t.Type<ISubstanceNucleicAcid_Sugar
       residueSite: t.string,
       _residueSite: RTTI_Element,
     }),
-);
+  );

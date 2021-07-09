@@ -51,9 +51,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _anchor?: IElement[];
 }
 
-export const RTTI_ImplementationGuide_Page1: t.Type<IImplementationGuide_Page1> = t.recursion(
-  'IImplementationGuide_Page1',
-  () =>
+export const RTTI_ImplementationGuide_Page1: t.Type<IImplementationGuide_Page1> =
+  t.recursion('IImplementationGuide_Page1', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -65,4 +64,4 @@ export const RTTI_ImplementationGuide_Page1: t.Type<IImplementationGuide_Page1> 
       anchor: t.array(t.string),
       _anchor: t.array(RTTI_Element),
     }),
-);
+  );

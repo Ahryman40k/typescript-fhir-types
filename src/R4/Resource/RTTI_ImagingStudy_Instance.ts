@@ -59,9 +59,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _title?: IElement;
 }
 
-export const RTTI_ImagingStudy_Instance: t.Type<IImagingStudy_Instance> = t.recursion(
-  'IImagingStudy_Instance',
-  () =>
+export const RTTI_ImagingStudy_Instance: t.Type<IImagingStudy_Instance> =
+  t.recursion('IImagingStudy_Instance', () =>
     t.intersection([
       t.type({
         sopClass: RTTI_Coding,
@@ -78,4 +77,4 @@ export const RTTI_ImagingStudy_Instance: t.Type<IImagingStudy_Instance> = t.recu
         _title: RTTI_Element,
       }),
     ]),
-);
+  );

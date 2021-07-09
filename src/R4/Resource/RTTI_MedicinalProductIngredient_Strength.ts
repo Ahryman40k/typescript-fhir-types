@@ -67,9 +67,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   referenceStrength?: IMedicinalProductIngredient_ReferenceStrength[];
 }
 
-export const RTTI_MedicinalProductIngredient_Strength: t.Type<IMedicinalProductIngredient_Strength> = t.recursion(
-  'IMedicinalProductIngredient_Strength',
-  () =>
+export const RTTI_MedicinalProductIngredient_Strength: t.Type<IMedicinalProductIngredient_Strength> =
+  t.recursion('IMedicinalProductIngredient_Strength', () =>
     t.intersection([
       t.type({
         presentation: RTTI_Ratio,
@@ -89,4 +88,4 @@ export const RTTI_MedicinalProductIngredient_Strength: t.Type<IMedicinalProductI
         ),
       }),
     ]),
-);
+  );

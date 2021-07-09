@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   note?: IAnnotation[];
 }
 
-export const RTTI_EffectEvidenceSynthesis_CertaintySubcomponent: t.Type<IEffectEvidenceSynthesis_CertaintySubcomponent> = t.recursion(
-  'IEffectEvidenceSynthesis_CertaintySubcomponent',
-  () =>
+export const RTTI_EffectEvidenceSynthesis_CertaintySubcomponent: t.Type<IEffectEvidenceSynthesis_CertaintySubcomponent> =
+  t.recursion('IEffectEvidenceSynthesis_CertaintySubcomponent', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_EffectEvidenceSynthesis_CertaintySubcomponent: t.Type<IEffectE
       rating: t.array(RTTI_CodeableConcept),
       note: t.array(RTTI_Annotation),
     }),
-);
+  );

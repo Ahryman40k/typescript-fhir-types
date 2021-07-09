@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _mode?: IElement;
 }
 
-export const RTTI_CapabilityStatement_SupportedMessage: t.Type<ICapabilityStatement_SupportedMessage> = t.recursion(
-  'ICapabilityStatement_SupportedMessage',
-  () =>
+export const RTTI_CapabilityStatement_SupportedMessage: t.Type<ICapabilityStatement_SupportedMessage> =
+  t.recursion('ICapabilityStatement_SupportedMessage', () =>
     t.intersection([
       t.type({
         definition: RTTI_canonical,
@@ -60,4 +59,4 @@ export const RTTI_CapabilityStatement_SupportedMessage: t.Type<ICapabilityStatem
         _mode: RTTI_Element,
       }),
     ]),
-);
+  );

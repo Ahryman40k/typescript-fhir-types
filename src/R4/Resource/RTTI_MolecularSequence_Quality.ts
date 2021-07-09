@@ -165,9 +165,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   roc?: IMolecularSequence_Roc;
 }
 
-export const RTTI_MolecularSequence_Quality: t.Type<IMolecularSequence_Quality> = t.recursion(
-  'IMolecularSequence_Quality',
-  () =>
+export const RTTI_MolecularSequence_Quality: t.Type<IMolecularSequence_Quality> =
+  t.recursion('IMolecularSequence_Quality', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -202,4 +201,4 @@ export const RTTI_MolecularSequence_Quality: t.Type<IMolecularSequence_Quality> 
       _fScore: RTTI_Element,
       roc: RTTI_MolecularSequence_Roc,
     }),
-);
+  );

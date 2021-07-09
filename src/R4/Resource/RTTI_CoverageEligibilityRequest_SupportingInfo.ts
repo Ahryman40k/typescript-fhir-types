@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _appliesToAll?: IElement;
 }
 
-export const RTTI_CoverageEligibilityRequest_SupportingInfo: t.Type<ICoverageEligibilityRequest_SupportingInfo> = t.recursion(
-  'ICoverageEligibilityRequest_SupportingInfo',
-  () =>
+export const RTTI_CoverageEligibilityRequest_SupportingInfo: t.Type<ICoverageEligibilityRequest_SupportingInfo> =
+  t.recursion('ICoverageEligibilityRequest_SupportingInfo', () =>
     t.intersection([
       t.type({
         information: RTTI_Reference,
@@ -65,4 +64,4 @@ export const RTTI_CoverageEligibilityRequest_SupportingInfo: t.Type<ICoverageEli
         _appliesToAll: RTTI_Element,
       }),
     ]),
-);
+  );

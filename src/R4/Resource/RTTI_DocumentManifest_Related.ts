@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   ref?: IReference;
 }
 
-export const RTTI_DocumentManifest_Related: t.Type<IDocumentManifest_Related> = t.recursion(
-  'IDocumentManifest_Related',
-  () =>
+export const RTTI_DocumentManifest_Related: t.Type<IDocumentManifest_Related> =
+  t.recursion('IDocumentManifest_Related', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_DocumentManifest_Related: t.Type<IDocumentManifest_Related> = 
       identifier: RTTI_Identifier,
       ref: RTTI_Reference,
     }),
-);
+  );

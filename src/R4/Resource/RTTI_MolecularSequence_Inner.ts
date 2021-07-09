@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _end?: IElement;
 }
 
-export const RTTI_MolecularSequence_Inner: t.Type<IMolecularSequence_Inner> = t.recursion(
-  'IMolecularSequence_Inner',
-  () =>
+export const RTTI_MolecularSequence_Inner: t.Type<IMolecularSequence_Inner> =
+  t.recursion('IMolecularSequence_Inner', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_MolecularSequence_Inner: t.Type<IMolecularSequence_Inner> = t.
       end: RTTI_integer,
       _end: RTTI_Element,
     }),
-);
+  );

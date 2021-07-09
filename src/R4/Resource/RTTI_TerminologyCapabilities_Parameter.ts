@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _documentation?: IElement;
 }
 
-export const RTTI_TerminologyCapabilities_Parameter: t.Type<ITerminologyCapabilities_Parameter> = t.recursion(
-  'ITerminologyCapabilities_Parameter',
-  () =>
+export const RTTI_TerminologyCapabilities_Parameter: t.Type<ITerminologyCapabilities_Parameter> =
+  t.recursion('ITerminologyCapabilities_Parameter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_TerminologyCapabilities_Parameter: t.Type<ITerminologyCapabili
       documentation: t.string,
       _documentation: RTTI_Element,
     }),
-);
+  );

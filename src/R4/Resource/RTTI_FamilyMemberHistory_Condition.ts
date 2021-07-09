@@ -76,9 +76,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   note?: IAnnotation[];
 }
 
-export const RTTI_FamilyMemberHistory_Condition: t.Type<IFamilyMemberHistory_Condition> = t.recursion(
-  'IFamilyMemberHistory_Condition',
-  () =>
+export const RTTI_FamilyMemberHistory_Condition: t.Type<IFamilyMemberHistory_Condition> =
+  t.recursion('IFamilyMemberHistory_Condition', () =>
     t.intersection([
       t.type({
         code: RTTI_CodeableConcept,
@@ -98,4 +97,4 @@ export const RTTI_FamilyMemberHistory_Condition: t.Type<IFamilyMemberHistory_Con
         note: t.array(RTTI_Annotation),
       }),
     ]),
-);
+  );

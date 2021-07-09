@@ -119,9 +119,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   instance?: IImagingStudy_Instance[];
 }
 
-export const RTTI_ImagingStudy_Series: t.Type<IImagingStudy_Series> = t.recursion(
-  'IImagingStudy_Series',
-  () =>
+export const RTTI_ImagingStudy_Series: t.Type<IImagingStudy_Series> =
+  t.recursion('IImagingStudy_Series', () =>
     t.intersection([
       t.type({
         modality: RTTI_Coding,
@@ -148,4 +147,4 @@ export const RTTI_ImagingStudy_Series: t.Type<IImagingStudy_Series> = t.recursio
         instance: t.array(RTTI_ImagingStudy_Instance),
       }),
     ]),
-);
+  );

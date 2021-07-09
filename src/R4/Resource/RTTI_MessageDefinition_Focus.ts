@@ -59,9 +59,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _max?: IElement;
 }
 
-export const RTTI_MessageDefinition_Focus: t.Type<IMessageDefinition_Focus> = t.recursion(
-  'IMessageDefinition_Focus',
-  () =>
+export const RTTI_MessageDefinition_Focus: t.Type<IMessageDefinition_Focus> =
+  t.recursion('IMessageDefinition_Focus', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -74,4 +73,4 @@ export const RTTI_MessageDefinition_Focus: t.Type<IMessageDefinition_Focus> = t.
       max: t.string,
       _max: RTTI_Element,
     }),
-);
+  );

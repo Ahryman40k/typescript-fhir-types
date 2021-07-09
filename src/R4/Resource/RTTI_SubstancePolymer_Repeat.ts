@@ -57,9 +57,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   repeatUnit?: ISubstancePolymer_RepeatUnit[];
 }
 
-export const RTTI_SubstancePolymer_Repeat: t.Type<ISubstancePolymer_Repeat> = t.recursion(
-  'ISubstancePolymer_Repeat',
-  () =>
+export const RTTI_SubstancePolymer_Repeat: t.Type<ISubstancePolymer_Repeat> =
+  t.recursion('ISubstancePolymer_Repeat', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -71,4 +70,4 @@ export const RTTI_SubstancePolymer_Repeat: t.Type<ISubstancePolymer_Repeat> = t.
       repeatUnitAmountType: RTTI_CodeableConcept,
       repeatUnit: t.array(RTTI_SubstancePolymer_RepeatUnit),
     }),
-);
+  );

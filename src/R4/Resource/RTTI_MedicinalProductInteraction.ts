@@ -114,9 +114,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   management?: ICodeableConcept;
 }
 
-export const RTTI_MedicinalProductInteraction: t.Type<IMedicinalProductInteraction> = t.recursion(
-  'IMedicinalProductInteraction',
-  () =>
+export const RTTI_MedicinalProductInteraction: t.Type<IMedicinalProductInteraction> =
+  t.recursion('IMedicinalProductInteraction', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicinalProductInteraction'),
@@ -142,4 +141,4 @@ export const RTTI_MedicinalProductInteraction: t.Type<IMedicinalProductInteracti
         management: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

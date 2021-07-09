@@ -83,9 +83,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _initialSelected?: IElement;
 }
 
-export const RTTI_Questionnaire_AnswerOption: t.Type<IQuestionnaire_AnswerOption> = t.recursion(
-  'IQuestionnaire_AnswerOption',
-  () =>
+export const RTTI_Questionnaire_AnswerOption: t.Type<IQuestionnaire_AnswerOption> =
+  t.recursion('IQuestionnaire_AnswerOption', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -103,4 +102,4 @@ export const RTTI_Questionnaire_AnswerOption: t.Type<IQuestionnaire_AnswerOption
       initialSelected: t.boolean,
       _initialSelected: RTTI_Element,
     }),
-);
+  );

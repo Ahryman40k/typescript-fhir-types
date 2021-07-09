@@ -89,9 +89,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   subDetail?: IExplanationOfBenefit_SubDetail1[];
 }
 
-export const RTTI_ExplanationOfBenefit_Detail1: t.Type<IExplanationOfBenefit_Detail1> = t.recursion(
-  'IExplanationOfBenefit_Detail1',
-  () =>
+export const RTTI_ExplanationOfBenefit_Detail1: t.Type<IExplanationOfBenefit_Detail1> =
+  t.recursion('IExplanationOfBenefit_Detail1', () =>
     t.intersection([
       t.type({
         productOrService: RTTI_CodeableConcept,
@@ -112,4 +111,4 @@ export const RTTI_ExplanationOfBenefit_Detail1: t.Type<IExplanationOfBenefit_Det
         subDetail: t.array(RTTI_ExplanationOfBenefit_SubDetail1),
       }),
     ]),
-);
+  );

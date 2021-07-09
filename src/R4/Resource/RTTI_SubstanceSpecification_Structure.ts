@@ -85,9 +85,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   representation?: ISubstanceSpecification_Representation[];
 }
 
-export const RTTI_SubstanceSpecification_Structure: t.Type<ISubstanceSpecification_Structure> = t.recursion(
-  'ISubstanceSpecification_Structure',
-  () =>
+export const RTTI_SubstanceSpecification_Structure: t.Type<ISubstanceSpecification_Structure> =
+  t.recursion('ISubstanceSpecification_Structure', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -103,4 +102,4 @@ export const RTTI_SubstanceSpecification_Structure: t.Type<ISubstanceSpecificati
       source: t.array(RTTI_Reference),
       representation: t.array(RTTI_SubstanceSpecification_Representation),
     }),
-);
+  );

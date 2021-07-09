@@ -71,9 +71,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _valueDecimal?: IElement;
 }
 
-export const RTTI_StructureMap_Parameter: t.Type<IStructureMap_Parameter> = t.recursion(
-  'IStructureMap_Parameter',
-  () =>
+export const RTTI_StructureMap_Parameter: t.Type<IStructureMap_Parameter> =
+  t.recursion('IStructureMap_Parameter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -89,4 +88,4 @@ export const RTTI_StructureMap_Parameter: t.Type<IStructureMap_Parameter> = t.re
       valueDecimal: t.number,
       _valueDecimal: RTTI_Element,
     }),
-);
+  );

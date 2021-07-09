@@ -51,9 +51,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   adjudication?: IClaimResponse_Adjudication[];
 }
 
-export const RTTI_ClaimResponse_SubDetail: t.Type<IClaimResponse_SubDetail> = t.recursion(
-  'IClaimResponse_SubDetail',
-  () =>
+export const RTTI_ClaimResponse_SubDetail: t.Type<IClaimResponse_SubDetail> =
+  t.recursion('IClaimResponse_SubDetail', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -64,4 +63,4 @@ export const RTTI_ClaimResponse_SubDetail: t.Type<IClaimResponse_SubDetail> = t.
       _noteNumber: t.array(RTTI_Element),
       adjudication: t.array(RTTI_ClaimResponse_Adjudication),
     }),
-);
+  );

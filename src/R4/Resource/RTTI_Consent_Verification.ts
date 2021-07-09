@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _verificationDate?: IElement;
 }
 
-export const RTTI_Consent_Verification: t.Type<IConsent_Verification> = t.recursion(
-  'IConsent_Verification',
-  () =>
+export const RTTI_Consent_Verification: t.Type<IConsent_Verification> =
+  t.recursion('IConsent_Verification', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_Consent_Verification: t.Type<IConsent_Verification> = t.recurs
       verificationDate: RTTI_dateTime,
       _verificationDate: RTTI_Element,
     }),
-);
+  );

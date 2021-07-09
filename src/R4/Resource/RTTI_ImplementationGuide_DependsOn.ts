@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _version?: IElement;
 }
 
-export const RTTI_ImplementationGuide_DependsOn: t.Type<IImplementationGuide_DependsOn> = t.recursion(
-  'IImplementationGuide_DependsOn',
-  () =>
+export const RTTI_ImplementationGuide_DependsOn: t.Type<IImplementationGuide_DependsOn> =
+  t.recursion('IImplementationGuide_DependsOn', () =>
     t.intersection([
       t.type({
         uri: RTTI_canonical,
@@ -65,4 +64,4 @@ export const RTTI_ImplementationGuide_DependsOn: t.Type<IImplementationGuide_Dep
         _version: RTTI_Element,
       }),
     ]),
-);
+  );

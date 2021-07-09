@@ -81,9 +81,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _property?: IElement[];
 }
 
-export const RTTI_TerminologyCapabilities_Version: t.Type<ITerminologyCapabilities_Version> = t.recursion(
-  'ITerminologyCapabilities_Version',
-  () =>
+export const RTTI_TerminologyCapabilities_Version: t.Type<ITerminologyCapabilities_Version> =
+  t.recursion('ITerminologyCapabilities_Version', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -100,4 +99,4 @@ export const RTTI_TerminologyCapabilities_Version: t.Type<ITerminologyCapabiliti
       property: t.array(RTTI_code),
       _property: t.array(RTTI_Element),
     }),
-);
+  );

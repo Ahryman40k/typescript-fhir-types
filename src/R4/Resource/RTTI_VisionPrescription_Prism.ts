@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _base?: IElement;
 }
 
-export const RTTI_VisionPrescription_Prism: t.Type<IVisionPrescription_Prism> = t.recursion(
-  'IVisionPrescription_Prism',
-  () =>
+export const RTTI_VisionPrescription_Prism: t.Type<IVisionPrescription_Prism> =
+  t.recursion('IVisionPrescription_Prism', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -64,4 +63,4 @@ export const RTTI_VisionPrescription_Prism: t.Type<IVisionPrescription_Prism> = 
       ),
       _base: RTTI_Element,
     }),
-);
+  );

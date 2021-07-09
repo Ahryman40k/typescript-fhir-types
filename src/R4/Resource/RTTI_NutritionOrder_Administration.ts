@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   rateRatio?: IRatio;
 }
 
-export const RTTI_NutritionOrder_Administration: t.Type<INutritionOrder_Administration> = t.recursion(
-  'INutritionOrder_Administration',
-  () =>
+export const RTTI_NutritionOrder_Administration: t.Type<INutritionOrder_Administration> =
+  t.recursion('INutritionOrder_Administration', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_NutritionOrder_Administration: t.Type<INutritionOrder_Administ
       rateQuantity: RTTI_Quantity,
       rateRatio: RTTI_Ratio,
     }),
-);
+  );

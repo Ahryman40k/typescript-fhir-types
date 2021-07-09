@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _comment?: IElement;
 }
 
-export const RTTI_OperationDefinition_Overload: t.Type<IOperationDefinition_Overload> = t.recursion(
-  'IOperationDefinition_Overload',
-  () =>
+export const RTTI_OperationDefinition_Overload: t.Type<IOperationDefinition_Overload> =
+  t.recursion('IOperationDefinition_Overload', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_OperationDefinition_Overload: t.Type<IOperationDefinition_Over
       comment: t.string,
       _comment: RTTI_Element,
     }),
-);
+  );

@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   priceComponent?: IChargeItemDefinition_PriceComponent[];
 }
 
-export const RTTI_ChargeItemDefinition_PropertyGroup: t.Type<IChargeItemDefinition_PropertyGroup> = t.recursion(
-  'IChargeItemDefinition_PropertyGroup',
-  () =>
+export const RTTI_ChargeItemDefinition_PropertyGroup: t.Type<IChargeItemDefinition_PropertyGroup> =
+  t.recursion('IChargeItemDefinition_PropertyGroup', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -48,4 +47,4 @@ export const RTTI_ChargeItemDefinition_PropertyGroup: t.Type<IChargeItemDefiniti
       applicability: t.array(RTTI_ChargeItemDefinition_Applicability),
       priceComponent: t.array(RTTI_ChargeItemDefinition_PriceComponent),
     }),
-);
+  );

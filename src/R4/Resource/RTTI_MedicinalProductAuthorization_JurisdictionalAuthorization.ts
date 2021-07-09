@@ -48,17 +48,18 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   validityPeriod?: IPeriod;
 }
 
-export const RTTI_MedicinalProductAuthorization_JurisdictionalAuthorization: t.Type<IMedicinalProductAuthorization_JurisdictionalAuthorization> = t.recursion(
-  'IMedicinalProductAuthorization_JurisdictionalAuthorization',
-  () =>
-    t.partial({
-      id: t.string,
-      extension: t.array(RTTI_Extension),
-      modifierExtension: t.array(RTTI_Extension),
-      identifier: t.array(RTTI_Identifier),
-      country: RTTI_CodeableConcept,
-      jurisdiction: t.array(RTTI_CodeableConcept),
-      legalStatusOfSupply: RTTI_CodeableConcept,
-      validityPeriod: RTTI_Period,
-    }),
-);
+export const RTTI_MedicinalProductAuthorization_JurisdictionalAuthorization: t.Type<IMedicinalProductAuthorization_JurisdictionalAuthorization> =
+  t.recursion(
+    'IMedicinalProductAuthorization_JurisdictionalAuthorization',
+    () =>
+      t.partial({
+        id: t.string,
+        extension: t.array(RTTI_Extension),
+        modifierExtension: t.array(RTTI_Extension),
+        identifier: t.array(RTTI_Identifier),
+        country: RTTI_CodeableConcept,
+        jurisdiction: t.array(RTTI_CodeableConcept),
+        legalStatusOfSupply: RTTI_CodeableConcept,
+        validityPeriod: RTTI_Period,
+      }),
+  );

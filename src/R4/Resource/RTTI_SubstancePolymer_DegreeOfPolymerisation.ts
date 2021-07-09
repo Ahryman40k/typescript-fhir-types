@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   amount?: ISubstanceAmount;
 }
 
-export const RTTI_SubstancePolymer_DegreeOfPolymerisation: t.Type<ISubstancePolymer_DegreeOfPolymerisation> = t.recursion(
-  'ISubstancePolymer_DegreeOfPolymerisation',
-  () =>
+export const RTTI_SubstancePolymer_DegreeOfPolymerisation: t.Type<ISubstancePolymer_DegreeOfPolymerisation> =
+  t.recursion('ISubstancePolymer_DegreeOfPolymerisation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -42,4 +41,4 @@ export const RTTI_SubstancePolymer_DegreeOfPolymerisation: t.Type<ISubstancePoly
       degree: RTTI_CodeableConcept,
       amount: RTTI_SubstanceAmount,
     }),
-);
+  );

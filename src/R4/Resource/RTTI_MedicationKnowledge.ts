@@ -242,9 +242,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   kinetics?: IMedicationKnowledge_Kinetics[];
 }
 
-export const RTTI_MedicationKnowledge: t.Type<IMedicationKnowledge> = t.recursion(
-  'IMedicationKnowledge',
-  () =>
+export const RTTI_MedicationKnowledge: t.Type<IMedicationKnowledge> =
+  t.recursion('IMedicationKnowledge', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicationKnowledge'),
@@ -295,4 +294,4 @@ export const RTTI_MedicationKnowledge: t.Type<IMedicationKnowledge> = t.recursio
         kinetics: t.array(RTTI_MedicationKnowledge_Kinetics),
       }),
     ]),
-);
+  );

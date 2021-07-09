@@ -125,9 +125,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   valueReference?: IReference;
 }
 
-export const RTTI_Questionnaire_Initial: t.Type<IQuestionnaire_Initial> = t.recursion(
-  'IQuestionnaire_Initial',
-  () =>
+export const RTTI_Questionnaire_Initial: t.Type<IQuestionnaire_Initial> =
+  t.recursion('IQuestionnaire_Initial', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -153,4 +152,4 @@ export const RTTI_Questionnaire_Initial: t.Type<IQuestionnaire_Initial> = t.recu
       valueQuantity: RTTI_Quantity,
       valueReference: RTTI_Reference,
     }),
-);
+  );

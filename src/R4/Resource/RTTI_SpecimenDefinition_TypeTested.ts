@@ -91,9 +91,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   handling?: ISpecimenDefinition_Handling[];
 }
 
-export const RTTI_SpecimenDefinition_TypeTested: t.Type<ISpecimenDefinition_TypeTested> = t.recursion(
-  'ISpecimenDefinition_TypeTested',
-  () =>
+export const RTTI_SpecimenDefinition_TypeTested: t.Type<ISpecimenDefinition_TypeTested> =
+  t.recursion('ISpecimenDefinition_TypeTested', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -113,4 +112,4 @@ export const RTTI_SpecimenDefinition_TypeTested: t.Type<ISpecimenDefinition_Type
       rejectionCriterion: t.array(RTTI_CodeableConcept),
       handling: t.array(RTTI_SpecimenDefinition_Handling),
     }),
-);
+  );

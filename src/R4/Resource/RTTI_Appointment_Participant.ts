@@ -71,9 +71,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   period?: IPeriod;
 }
 
-export const RTTI_Appointment_Participant: t.Type<IAppointment_Participant> = t.recursion(
-  'IAppointment_Participant',
-  () =>
+export const RTTI_Appointment_Participant: t.Type<IAppointment_Participant> =
+  t.recursion('IAppointment_Participant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -92,4 +91,4 @@ export const RTTI_Appointment_Participant: t.Type<IAppointment_Participant> = t.
       _status: RTTI_Element,
       period: RTTI_Period,
     }),
-);
+  );

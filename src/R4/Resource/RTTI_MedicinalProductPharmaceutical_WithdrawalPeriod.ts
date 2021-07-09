@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _supportingInformation?: IElement;
 }
 
-export const RTTI_MedicinalProductPharmaceutical_WithdrawalPeriod: t.Type<IMedicinalProductPharmaceutical_WithdrawalPeriod> = t.recursion(
-  'IMedicinalProductPharmaceutical_WithdrawalPeriod',
-  () =>
+export const RTTI_MedicinalProductPharmaceutical_WithdrawalPeriod: t.Type<IMedicinalProductPharmaceutical_WithdrawalPeriod> =
+  t.recursion('IMedicinalProductPharmaceutical_WithdrawalPeriod', () =>
     t.intersection([
       t.type({
         tissue: RTTI_CodeableConcept,
@@ -59,4 +58,4 @@ export const RTTI_MedicinalProductPharmaceutical_WithdrawalPeriod: t.Type<IMedic
         _supportingInformation: RTTI_Element,
       }),
     ]),
-);
+  );

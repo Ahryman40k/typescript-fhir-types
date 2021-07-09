@@ -65,9 +65,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _time?: IElement;
 }
 
-export const RTTI_DeviceMetric_Calibration: t.Type<IDeviceMetric_Calibration> = t.recursion(
-  'IDeviceMetric_Calibration',
-  () =>
+export const RTTI_DeviceMetric_Calibration: t.Type<IDeviceMetric_Calibration> =
+  t.recursion('IDeviceMetric_Calibration', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -85,4 +84,4 @@ export const RTTI_DeviceMetric_Calibration: t.Type<IDeviceMetric_Calibration> = 
       time: RTTI_instant,
       _time: RTTI_Element,
     }),
-);
+  );

@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   medicationReference?: IReference;
 }
 
-export const RTTI_MedicinalProductIndication_OtherTherapy: t.Type<IMedicinalProductIndication_OtherTherapy> = t.recursion(
-  'IMedicinalProductIndication_OtherTherapy',
-  () =>
+export const RTTI_MedicinalProductIndication_OtherTherapy: t.Type<IMedicinalProductIndication_OtherTherapy> =
+  t.recursion('IMedicinalProductIndication_OtherTherapy', () =>
     t.intersection([
       t.type({
         therapyRelationshipType: RTTI_CodeableConcept,
@@ -52,4 +51,4 @@ export const RTTI_MedicinalProductIndication_OtherTherapy: t.Type<IMedicinalProd
         medicationReference: RTTI_Reference,
       }),
     ]),
-);
+  );

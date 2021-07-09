@@ -80,9 +80,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _noteNumber?: IElement[];
 }
 
-export const RTTI_ClaimResponse_SubDetail1: t.Type<IClaimResponse_SubDetail1> = t.recursion(
-  'IClaimResponse_SubDetail1',
-  () =>
+export const RTTI_ClaimResponse_SubDetail1: t.Type<IClaimResponse_SubDetail1> =
+  t.recursion('IClaimResponse_SubDetail1', () =>
     t.intersection([
       t.type({
         productOrService: RTTI_CodeableConcept,
@@ -102,4 +101,4 @@ export const RTTI_ClaimResponse_SubDetail1: t.Type<IClaimResponse_SubDetail1> = 
         _noteNumber: t.array(RTTI_Element),
       }),
     ]),
-);
+  );

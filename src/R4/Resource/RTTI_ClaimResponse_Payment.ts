@@ -60,9 +60,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   identifier?: IIdentifier;
 }
 
-export const RTTI_ClaimResponse_Payment: t.Type<IClaimResponse_Payment> = t.recursion(
-  'IClaimResponse_Payment',
-  () =>
+export const RTTI_ClaimResponse_Payment: t.Type<IClaimResponse_Payment> =
+  t.recursion('IClaimResponse_Payment', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -79,4 +78,4 @@ export const RTTI_ClaimResponse_Payment: t.Type<IClaimResponse_Payment> = t.recu
         identifier: RTTI_Identifier,
       }),
     ]),
-);
+  );

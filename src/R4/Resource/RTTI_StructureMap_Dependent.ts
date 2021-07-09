@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _variable?: IElement[];
 }
 
-export const RTTI_StructureMap_Dependent: t.Type<IStructureMap_Dependent> = t.recursion(
-  'IStructureMap_Dependent',
-  () =>
+export const RTTI_StructureMap_Dependent: t.Type<IStructureMap_Dependent> =
+  t.recursion('IStructureMap_Dependent', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -54,4 +53,4 @@ export const RTTI_StructureMap_Dependent: t.Type<IStructureMap_Dependent> = t.re
       variable: t.array(t.string),
       _variable: t.array(RTTI_Element),
     }),
-);
+  );

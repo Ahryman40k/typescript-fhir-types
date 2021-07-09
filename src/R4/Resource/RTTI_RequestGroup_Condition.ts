@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   expression?: IExpression;
 }
 
-export const RTTI_RequestGroup_Condition: t.Type<IRequestGroup_Condition> = t.recursion(
-  'IRequestGroup_Condition',
-  () =>
+export const RTTI_RequestGroup_Condition: t.Type<IRequestGroup_Condition> =
+  t.recursion('IRequestGroup_Condition', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -49,4 +48,4 @@ export const RTTI_RequestGroup_Condition: t.Type<IRequestGroup_Condition> = t.re
       _kind: RTTI_Element,
       expression: RTTI_Expression,
     }),
-);
+  );

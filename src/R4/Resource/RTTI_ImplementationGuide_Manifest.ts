@@ -70,9 +70,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _other?: IElement[];
 }
 
-export const RTTI_ImplementationGuide_Manifest: t.Type<IImplementationGuide_Manifest> = t.recursion(
-  'IImplementationGuide_Manifest',
-  () =>
+export const RTTI_ImplementationGuide_Manifest: t.Type<IImplementationGuide_Manifest> =
+  t.recursion('IImplementationGuide_Manifest', () =>
     t.intersection([
       t.type({
         resource: t.array(RTTI_ImplementationGuide_Resource1),
@@ -90,4 +89,4 @@ export const RTTI_ImplementationGuide_Manifest: t.Type<IImplementationGuide_Mani
         _other: t.array(RTTI_Element),
       }),
     ]),
-);
+  );

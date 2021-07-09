@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   attestationSignature?: ISignature;
 }
 
-export const RTTI_VerificationResult_Validator: t.Type<IVerificationResult_Validator> = t.recursion(
-  'IVerificationResult_Validator',
-  () =>
+export const RTTI_VerificationResult_Validator: t.Type<IVerificationResult_Validator> =
+  t.recursion('IVerificationResult_Validator', () =>
     t.intersection([
       t.type({
         organization: RTTI_Reference,
@@ -59,4 +58,4 @@ export const RTTI_VerificationResult_Validator: t.Type<IVerificationResult_Valid
         attestationSignature: RTTI_Signature,
       }),
     ]),
-);
+  );

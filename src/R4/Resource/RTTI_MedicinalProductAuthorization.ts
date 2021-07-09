@@ -181,9 +181,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   procedure?: IMedicinalProductAuthorization_Procedure;
 }
 
-export const RTTI_MedicinalProductAuthorization: t.Type<IMedicinalProductAuthorization> = t.recursion(
-  'IMedicinalProductAuthorization',
-  () =>
+export const RTTI_MedicinalProductAuthorization: t.Type<IMedicinalProductAuthorization> =
+  t.recursion('IMedicinalProductAuthorization', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('MedicinalProductAuthorization'),
@@ -223,4 +222,4 @@ export const RTTI_MedicinalProductAuthorization: t.Type<IMedicinalProductAuthori
         procedure: RTTI_MedicinalProductAuthorization_Procedure,
       }),
     ]),
-);
+  );

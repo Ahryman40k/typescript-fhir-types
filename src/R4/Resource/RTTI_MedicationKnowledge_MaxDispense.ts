@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   period?: IDuration;
 }
 
-export const RTTI_MedicationKnowledge_MaxDispense: t.Type<IMedicationKnowledge_MaxDispense> = t.recursion(
-  'IMedicationKnowledge_MaxDispense',
-  () =>
+export const RTTI_MedicationKnowledge_MaxDispense: t.Type<IMedicationKnowledge_MaxDispense> =
+  t.recursion('IMedicationKnowledge_MaxDispense', () =>
     t.intersection([
       t.type({
         quantity: RTTI_Quantity,
@@ -46,4 +45,4 @@ export const RTTI_MedicationKnowledge_MaxDispense: t.Type<IMedicationKnowledge_M
         period: RTTI_Duration,
       }),
     ]),
-);
+  );

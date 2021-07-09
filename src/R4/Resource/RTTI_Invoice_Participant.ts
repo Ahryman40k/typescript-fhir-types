@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   role?: ICodeableConcept;
 }
 
-export const RTTI_Invoice_Participant: t.Type<IInvoice_Participant> = t.recursion(
-  'IInvoice_Participant',
-  () =>
+export const RTTI_Invoice_Participant: t.Type<IInvoice_Participant> =
+  t.recursion('IInvoice_Participant', () =>
     t.intersection([
       t.type({
         actor: RTTI_Reference,
@@ -46,4 +45,4 @@ export const RTTI_Invoice_Participant: t.Type<IInvoice_Participant> = t.recursio
         role: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

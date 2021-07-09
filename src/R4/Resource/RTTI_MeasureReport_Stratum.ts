@@ -50,9 +50,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   measureScore?: IQuantity;
 }
 
-export const RTTI_MeasureReport_Stratum: t.Type<IMeasureReport_Stratum> = t.recursion(
-  'IMeasureReport_Stratum',
-  () =>
+export const RTTI_MeasureReport_Stratum: t.Type<IMeasureReport_Stratum> =
+  t.recursion('IMeasureReport_Stratum', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_MeasureReport_Stratum: t.Type<IMeasureReport_Stratum> = t.recu
       population: t.array(RTTI_MeasureReport_Population1),
       measureScore: RTTI_Quantity,
     }),
-);
+  );

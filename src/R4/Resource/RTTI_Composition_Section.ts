@@ -85,9 +85,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   section?: IComposition_Section[];
 }
 
-export const RTTI_Composition_Section: t.Type<IComposition_Section> = t.recursion(
-  'IComposition_Section',
-  () =>
+export const RTTI_Composition_Section: t.Type<IComposition_Section> =
+  t.recursion('IComposition_Section', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -105,4 +104,4 @@ export const RTTI_Composition_Section: t.Type<IComposition_Section> = t.recursio
       emptyReason: RTTI_CodeableConcept,
       section: t.array(RTTI_Composition_Section),
     }),
-);
+  );

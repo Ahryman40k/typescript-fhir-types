@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   responsibleParty?: IReference[];
 }
 
-export const RTTI_MedicationDispense_Substitution: t.Type<IMedicationDispense_Substitution> = t.recursion(
-  'IMedicationDispense_Substitution',
-  () =>
+export const RTTI_MedicationDispense_Substitution: t.Type<IMedicationDispense_Substitution> =
+  t.recursion('IMedicationDispense_Substitution', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_MedicationDispense_Substitution: t.Type<IMedicationDispense_Su
       reason: t.array(RTTI_CodeableConcept),
       responsibleParty: t.array(RTTI_Reference),
     }),
-);
+  );

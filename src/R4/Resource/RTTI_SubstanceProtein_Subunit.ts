@@ -89,9 +89,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _cTerminalModification?: IElement;
 }
 
-export const RTTI_SubstanceProtein_Subunit: t.Type<ISubstanceProtein_Subunit> = t.recursion(
-  'ISubstanceProtein_Subunit',
-  () =>
+export const RTTI_SubstanceProtein_Subunit: t.Type<ISubstanceProtein_Subunit> =
+  t.recursion('ISubstanceProtein_Subunit', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -110,4 +109,4 @@ export const RTTI_SubstanceProtein_Subunit: t.Type<ISubstanceProtein_Subunit> = 
       cTerminalModification: t.string,
       _cTerminalModification: RTTI_Element,
     }),
-);
+  );

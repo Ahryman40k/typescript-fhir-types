@@ -93,9 +93,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _fMeasure?: IElement[];
 }
 
-export const RTTI_MolecularSequence_Roc: t.Type<IMolecularSequence_Roc> = t.recursion(
-  'IMolecularSequence_Roc',
-  () =>
+export const RTTI_MolecularSequence_Roc: t.Type<IMolecularSequence_Roc> =
+  t.recursion('IMolecularSequence_Roc', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -115,4 +114,4 @@ export const RTTI_MolecularSequence_Roc: t.Type<IMolecularSequence_Roc> = t.recu
       fMeasure: t.array(RTTI_decimal),
       _fMeasure: t.array(RTTI_Element),
     }),
-);
+  );

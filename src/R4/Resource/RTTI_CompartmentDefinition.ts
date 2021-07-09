@@ -215,9 +215,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   resource?: ICompartmentDefinition_Resource[];
 }
 
-export const RTTI_CompartmentDefinition: t.Type<ICompartmentDefinition> = t.recursion(
-  'ICompartmentDefinition',
-  () =>
+export const RTTI_CompartmentDefinition: t.Type<ICompartmentDefinition> =
+  t.recursion('ICompartmentDefinition', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('CompartmentDefinition'),
@@ -266,4 +265,4 @@ export const RTTI_CompartmentDefinition: t.Type<ICompartmentDefinition> = t.recu
         resource: t.array(RTTI_CompartmentDefinition_Resource),
       }),
     ]),
-);
+  );

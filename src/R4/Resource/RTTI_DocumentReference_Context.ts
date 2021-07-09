@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   related?: IReference[];
 }
 
-export const RTTI_DocumentReference_Context: t.Type<IDocumentReference_Context> = t.recursion(
-  'IDocumentReference_Context',
-  () =>
+export const RTTI_DocumentReference_Context: t.Type<IDocumentReference_Context> =
+  t.recursion('IDocumentReference_Context', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -73,4 +72,4 @@ export const RTTI_DocumentReference_Context: t.Type<IDocumentReference_Context> 
       sourcePatientInfo: RTTI_Reference,
       related: t.array(RTTI_Reference),
     }),
-);
+  );

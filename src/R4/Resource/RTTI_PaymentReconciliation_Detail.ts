@@ -81,9 +81,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   amount?: IMoney;
 }
 
-export const RTTI_PaymentReconciliation_Detail: t.Type<IPaymentReconciliation_Detail> = t.recursion(
-  'IPaymentReconciliation_Detail',
-  () =>
+export const RTTI_PaymentReconciliation_Detail: t.Type<IPaymentReconciliation_Detail> =
+  t.recursion('IPaymentReconciliation_Detail', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -104,4 +103,4 @@ export const RTTI_PaymentReconciliation_Detail: t.Type<IPaymentReconciliation_De
         amount: RTTI_Money,
       }),
     ]),
-);
+  );

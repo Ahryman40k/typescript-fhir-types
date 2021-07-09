@@ -393,9 +393,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   benefitBalance?: IExplanationOfBenefit_BenefitBalance[];
 }
 
-export const RTTI_ExplanationOfBenefit: t.Type<IExplanationOfBenefit> = t.recursion(
-  'IExplanationOfBenefit',
-  () =>
+export const RTTI_ExplanationOfBenefit: t.Type<IExplanationOfBenefit> =
+  t.recursion('IExplanationOfBenefit', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ExplanationOfBenefit'),
@@ -466,4 +465,4 @@ export const RTTI_ExplanationOfBenefit: t.Type<IExplanationOfBenefit> = t.recurs
         benefitBalance: t.array(RTTI_ExplanationOfBenefit_BenefitBalance),
       }),
     ]),
-);
+  );

@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _address?: IElement;
 }
 
-export const RTTI_CapabilityStatement_Endpoint: t.Type<ICapabilityStatement_Endpoint> = t.recursion(
-  'ICapabilityStatement_Endpoint',
-  () =>
+export const RTTI_CapabilityStatement_Endpoint: t.Type<ICapabilityStatement_Endpoint> =
+  t.recursion('ICapabilityStatement_Endpoint', () =>
     t.intersection([
       t.type({
         protocol: RTTI_Coding,
@@ -53,4 +52,4 @@ export const RTTI_CapabilityStatement_Endpoint: t.Type<ICapabilityStatement_Endp
         _address: RTTI_Element,
       }),
     ]),
-);
+  );

@@ -213,9 +213,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   action?: IRequestGroup_Action[];
 }
 
-export const RTTI_RequestGroup_Action: t.Type<IRequestGroup_Action> = t.recursion(
-  'IRequestGroup_Action',
-  () =>
+export const RTTI_RequestGroup_Action: t.Type<IRequestGroup_Action> =
+  t.recursion('IRequestGroup_Action', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -256,4 +255,4 @@ export const RTTI_RequestGroup_Action: t.Type<IRequestGroup_Action> = t.recursio
       resource: RTTI_Reference,
       action: t.array(RTTI_RequestGroup_Action),
     }),
-);
+  );

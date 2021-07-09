@@ -74,9 +74,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   period?: IPeriod;
 }
 
-export const RTTI_NamingSystem_UniqueId: t.Type<INamingSystem_UniqueId> = t.recursion(
-  'INamingSystem_UniqueId',
-  () =>
+export const RTTI_NamingSystem_UniqueId: t.Type<INamingSystem_UniqueId> =
+  t.recursion('INamingSystem_UniqueId', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -94,4 +93,4 @@ export const RTTI_NamingSystem_UniqueId: t.Type<INamingSystem_UniqueId> = t.recu
       _comment: RTTI_Element,
       period: RTTI_Period,
     }),
-);
+  );

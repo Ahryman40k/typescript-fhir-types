@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _path?: IElement;
 }
 
-export const RTTI_ActivityDefinition_DynamicValue: t.Type<IActivityDefinition_DynamicValue> = t.recursion(
-  'IActivityDefinition_DynamicValue',
-  () =>
+export const RTTI_ActivityDefinition_DynamicValue: t.Type<IActivityDefinition_DynamicValue> =
+  t.recursion('IActivityDefinition_DynamicValue', () =>
     t.intersection([
       t.type({
         expression: RTTI_Expression,
@@ -52,4 +51,4 @@ export const RTTI_ActivityDefinition_DynamicValue: t.Type<IActivityDefinition_Dy
         _path: RTTI_Element,
       }),
     ]),
-);
+  );

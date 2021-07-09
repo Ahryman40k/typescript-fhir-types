@@ -170,9 +170,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   storage?: IBiologicallyDerivedProduct_Storage[];
 }
 
-export const RTTI_BiologicallyDerivedProduct: t.Type<IBiologicallyDerivedProduct> = t.recursion(
-  'IBiologicallyDerivedProduct',
-  () =>
+export const RTTI_BiologicallyDerivedProduct: t.Type<IBiologicallyDerivedProduct> =
+  t.recursion('IBiologicallyDerivedProduct', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('BiologicallyDerivedProduct'),
@@ -189,10 +188,11 @@ export const RTTI_BiologicallyDerivedProduct: t.Type<IBiologicallyDerivedProduct
         extension: t.array(RTTI_Extension),
         modifierExtension: t.array(RTTI_Extension),
         identifier: t.array(RTTI_Identifier),
-        productCategory: createEnumType<BiologicallyDerivedProductProductCategoryKind>(
-          BiologicallyDerivedProductProductCategoryKind,
-          'BiologicallyDerivedProductProductCategoryKind',
-        ),
+        productCategory:
+          createEnumType<BiologicallyDerivedProductProductCategoryKind>(
+            BiologicallyDerivedProductProductCategoryKind,
+            'BiologicallyDerivedProductProductCategoryKind',
+          ),
         _productCategory: RTTI_Element,
         productCode: RTTI_CodeableConcept,
         status: createEnumType<BiologicallyDerivedProductStatusKind>(
@@ -210,4 +210,4 @@ export const RTTI_BiologicallyDerivedProduct: t.Type<IBiologicallyDerivedProduct
         storage: t.array(RTTI_BiologicallyDerivedProduct_Storage),
       }),
     ]),
-);
+  );

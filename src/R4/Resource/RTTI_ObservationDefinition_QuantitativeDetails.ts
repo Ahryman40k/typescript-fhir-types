@@ -54,9 +54,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _decimalPrecision?: IElement;
 }
 
-export const RTTI_ObservationDefinition_QuantitativeDetails: t.Type<IObservationDefinition_QuantitativeDetails> = t.recursion(
-  'IObservationDefinition_QuantitativeDetails',
-  () =>
+export const RTTI_ObservationDefinition_QuantitativeDetails: t.Type<IObservationDefinition_QuantitativeDetails> =
+  t.recursion('IObservationDefinition_QuantitativeDetails', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -68,4 +67,4 @@ export const RTTI_ObservationDefinition_QuantitativeDetails: t.Type<IObservation
       decimalPrecision: RTTI_integer,
       _decimalPrecision: RTTI_Element,
     }),
-);
+  );

@@ -85,9 +85,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   detail?: IReference[];
 }
 
-export const RTTI_CoverageEligibilityRequest_Item: t.Type<ICoverageEligibilityRequest_Item> = t.recursion(
-  'ICoverageEligibilityRequest_Item',
-  () =>
+export const RTTI_CoverageEligibilityRequest_Item: t.Type<ICoverageEligibilityRequest_Item> =
+  t.recursion('ICoverageEligibilityRequest_Item', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -104,4 +103,4 @@ export const RTTI_CoverageEligibilityRequest_Item: t.Type<ICoverageEligibilityRe
       diagnosis: t.array(RTTI_CoverageEligibilityRequest_Diagnosis),
       detail: t.array(RTTI_Reference),
     }),
-);
+  );

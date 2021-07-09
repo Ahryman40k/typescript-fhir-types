@@ -64,9 +64,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   duration?: IPeriod;
 }
 
-export const RTTI_BiologicallyDerivedProduct_Storage: t.Type<IBiologicallyDerivedProduct_Storage> = t.recursion(
-  'IBiologicallyDerivedProduct_Storage',
-  () =>
+export const RTTI_BiologicallyDerivedProduct_Storage: t.Type<IBiologicallyDerivedProduct_Storage> =
+  t.recursion('IBiologicallyDerivedProduct_Storage', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -82,4 +81,4 @@ export const RTTI_BiologicallyDerivedProduct_Storage: t.Type<IBiologicallyDerive
       _scale: RTTI_Element,
       duration: RTTI_Period,
     }),
-);
+  );

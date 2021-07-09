@@ -70,9 +70,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   species?: ICodeableConcept;
 }
 
-export const RTTI_MedicinalProduct_SpecialDesignation: t.Type<IMedicinalProduct_SpecialDesignation> = t.recursion(
-  'IMedicinalProduct_SpecialDesignation',
-  () =>
+export const RTTI_MedicinalProduct_SpecialDesignation: t.Type<IMedicinalProduct_SpecialDesignation> =
+  t.recursion('IMedicinalProduct_SpecialDesignation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -87,4 +86,4 @@ export const RTTI_MedicinalProduct_SpecialDesignation: t.Type<IMedicinalProduct_
       _date: RTTI_Element,
       species: RTTI_CodeableConcept,
     }),
-);
+  );

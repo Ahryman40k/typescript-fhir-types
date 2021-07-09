@@ -46,9 +46,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _direction?: IElement;
 }
 
-export const RTTI_DataRequirement_Sort: t.Type<IDataRequirement_Sort> = t.recursion(
-  'IDataRequirement_Sort',
-  () =>
+export const RTTI_DataRequirement_Sort: t.Type<IDataRequirement_Sort> =
+  t.recursion('IDataRequirement_Sort', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_DataRequirement_Sort: t.Type<IDataRequirement_Sort> = t.recurs
       ),
       _direction: RTTI_Element,
     }),
-);
+  );

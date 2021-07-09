@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   foodType?: ICodeableConcept;
 }
 
-export const RTTI_NutritionOrder_Texture: t.Type<INutritionOrder_Texture> = t.recursion(
-  'INutritionOrder_Texture',
-  () =>
+export const RTTI_NutritionOrder_Texture: t.Type<INutritionOrder_Texture> =
+  t.recursion('INutritionOrder_Texture', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -41,4 +40,4 @@ export const RTTI_NutritionOrder_Texture: t.Type<INutritionOrder_Texture> = t.re
       modifier: RTTI_CodeableConcept,
       foodType: RTTI_CodeableConcept,
     }),
-);
+  );

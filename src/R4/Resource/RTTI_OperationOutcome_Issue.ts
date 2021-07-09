@@ -120,9 +120,8 @@ For resource issues, this will be a simple XPath limited to element names, repet
   _expression?: IElement[];
 }
 
-export const RTTI_OperationOutcome_Issue: t.Type<IOperationOutcome_Issue> = t.recursion(
-  'IOperationOutcome_Issue',
-  () =>
+export const RTTI_OperationOutcome_Issue: t.Type<IOperationOutcome_Issue> =
+  t.recursion('IOperationOutcome_Issue', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -145,4 +144,4 @@ export const RTTI_OperationOutcome_Issue: t.Type<IOperationOutcome_Issue> = t.re
       expression: t.array(t.string),
       _expression: t.array(RTTI_Element),
     }),
-);
+  );

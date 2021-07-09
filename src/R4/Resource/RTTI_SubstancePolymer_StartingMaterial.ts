@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   amount?: ISubstanceAmount;
 }
 
-export const RTTI_SubstancePolymer_StartingMaterial: t.Type<ISubstancePolymer_StartingMaterial> = t.recursion(
-  'ISubstancePolymer_StartingMaterial',
-  () =>
+export const RTTI_SubstancePolymer_StartingMaterial: t.Type<ISubstancePolymer_StartingMaterial> =
+  t.recursion('ISubstancePolymer_StartingMaterial', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_SubstancePolymer_StartingMaterial: t.Type<ISubstancePolymer_St
       _isDefining: RTTI_Element,
       amount: RTTI_SubstanceAmount,
     }),
-);
+  );

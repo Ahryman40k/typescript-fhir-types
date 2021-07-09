@@ -173,9 +173,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   criticalCodedValueSet?: IReference;
 }
 
-export const RTTI_ObservationDefinition: t.Type<IObservationDefinition> = t.recursion(
-  'IObservationDefinition',
-  () =>
+export const RTTI_ObservationDefinition: t.Type<IObservationDefinition> =
+  t.recursion('IObservationDefinition', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('ObservationDefinition'),
@@ -216,4 +215,4 @@ export const RTTI_ObservationDefinition: t.Type<IObservationDefinition> = t.recu
         criticalCodedValueSet: RTTI_Reference,
       }),
     ]),
-);
+  );

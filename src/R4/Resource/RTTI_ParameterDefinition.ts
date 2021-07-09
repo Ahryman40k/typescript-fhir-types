@@ -82,9 +82,8 @@ export interface IParameterDefinition {
   profile?: string;
 }
 
-export const RTTI_ParameterDefinition: t.Type<IParameterDefinition> = t.recursion(
-  'IParameterDefinition',
-  () =>
+export const RTTI_ParameterDefinition: t.Type<IParameterDefinition> =
+  t.recursion('IParameterDefinition', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -102,4 +101,4 @@ export const RTTI_ParameterDefinition: t.Type<IParameterDefinition> = t.recursio
       _type: RTTI_Element,
       profile: RTTI_canonical,
     }),
-);
+  );

@@ -149,9 +149,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   item?: IQuestionnaireResponse_Item[];
 }
 
-export const RTTI_QuestionnaireResponse: t.Type<IQuestionnaireResponse> = t.recursion(
-  'IQuestionnaireResponse',
-  () =>
+export const RTTI_QuestionnaireResponse: t.Type<IQuestionnaireResponse> =
+  t.recursion('IQuestionnaireResponse', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('QuestionnaireResponse'),
@@ -185,4 +184,4 @@ export const RTTI_QuestionnaireResponse: t.Type<IQuestionnaireResponse> = t.recu
         item: t.array(RTTI_QuestionnaireResponse_Item),
       }),
     ]),
-);
+  );

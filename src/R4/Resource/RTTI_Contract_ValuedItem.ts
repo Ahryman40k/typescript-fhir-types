@@ -139,9 +139,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _securityLabelNumber?: IElement[];
 }
 
-export const RTTI_Contract_ValuedItem: t.Type<IContract_ValuedItem> = t.recursion(
-  'IContract_ValuedItem',
-  () =>
+export const RTTI_Contract_ValuedItem: t.Type<IContract_ValuedItem> =
+  t.recursion('IContract_ValuedItem', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -169,4 +168,4 @@ export const RTTI_Contract_ValuedItem: t.Type<IContract_ValuedItem> = t.recursio
       securityLabelNumber: t.array(RTTI_unsignedInt),
       _securityLabelNumber: t.array(RTTI_Element),
     }),
-);
+  );

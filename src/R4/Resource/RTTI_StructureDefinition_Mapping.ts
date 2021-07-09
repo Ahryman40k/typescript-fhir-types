@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _comment?: IElement;
 }
 
-export const RTTI_StructureDefinition_Mapping: t.Type<IStructureDefinition_Mapping> = t.recursion(
-  'IStructureDefinition_Mapping',
-  () =>
+export const RTTI_StructureDefinition_Mapping: t.Type<IStructureDefinition_Mapping> =
+  t.recursion('IStructureDefinition_Mapping', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -79,4 +78,4 @@ export const RTTI_StructureDefinition_Mapping: t.Type<IStructureDefinition_Mappi
       comment: t.string,
       _comment: RTTI_Element,
     }),
-);
+  );

@@ -61,9 +61,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   structuralRepresentation?: ISubstancePolymer_StructuralRepresentation[];
 }
 
-export const RTTI_SubstancePolymer_RepeatUnit: t.Type<ISubstancePolymer_RepeatUnit> = t.recursion(
-  'ISubstancePolymer_RepeatUnit',
-  () =>
+export const RTTI_SubstancePolymer_RepeatUnit: t.Type<ISubstancePolymer_RepeatUnit> =
+  t.recursion('ISubstancePolymer_RepeatUnit', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -79,4 +78,4 @@ export const RTTI_SubstancePolymer_RepeatUnit: t.Type<ISubstancePolymer_RepeatUn
         RTTI_SubstancePolymer_StructuralRepresentation,
       ),
     }),
-);
+  );

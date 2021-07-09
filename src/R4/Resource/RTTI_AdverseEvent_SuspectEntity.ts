@@ -35,9 +35,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   causality?: IAdverseEvent_Causality[];
 }
 
-export const RTTI_AdverseEvent_SuspectEntity: t.Type<IAdverseEvent_SuspectEntity> = t.recursion(
-  'IAdverseEvent_SuspectEntity',
-  () =>
+export const RTTI_AdverseEvent_SuspectEntity: t.Type<IAdverseEvent_SuspectEntity> =
+  t.recursion('IAdverseEvent_SuspectEntity', () =>
     t.intersection([
       t.type({
         instance: RTTI_Reference,
@@ -49,4 +48,4 @@ export const RTTI_AdverseEvent_SuspectEntity: t.Type<IAdverseEvent_SuspectEntity
         causality: t.array(RTTI_AdverseEvent_Causality),
       }),
     ]),
-);
+  );

@@ -50,9 +50,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   stratifier?: IMeasureReport_Stratifier[];
 }
 
-export const RTTI_MeasureReport_Group: t.Type<IMeasureReport_Group> = t.recursion(
-  'IMeasureReport_Group',
-  () =>
+export const RTTI_MeasureReport_Group: t.Type<IMeasureReport_Group> =
+  t.recursion('IMeasureReport_Group', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -62,4 +61,4 @@ export const RTTI_MeasureReport_Group: t.Type<IMeasureReport_Group> = t.recursio
       measureScore: RTTI_Quantity,
       stratifier: t.array(RTTI_MeasureReport_Stratifier),
     }),
-);
+  );

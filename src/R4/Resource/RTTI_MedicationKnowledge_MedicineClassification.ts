@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   classification?: ICodeableConcept[];
 }
 
-export const RTTI_MedicationKnowledge_MedicineClassification: t.Type<IMedicationKnowledge_MedicineClassification> = t.recursion(
-  'IMedicationKnowledge_MedicineClassification',
-  () =>
+export const RTTI_MedicationKnowledge_MedicineClassification: t.Type<IMedicationKnowledge_MedicineClassification> =
+  t.recursion('IMedicationKnowledge_MedicineClassification', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -45,4 +44,4 @@ export const RTTI_MedicationKnowledge_MedicineClassification: t.Type<IMedication
         classification: t.array(RTTI_CodeableConcept),
       }),
     ]),
-);
+  );

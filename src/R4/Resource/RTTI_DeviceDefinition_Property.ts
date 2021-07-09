@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   valueCode?: ICodeableConcept[];
 }
 
-export const RTTI_DeviceDefinition_Property: t.Type<IDeviceDefinition_Property> = t.recursion(
-  'IDeviceDefinition_Property',
-  () =>
+export const RTTI_DeviceDefinition_Property: t.Type<IDeviceDefinition_Property> =
+  t.recursion('IDeviceDefinition_Property', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -52,4 +51,4 @@ export const RTTI_DeviceDefinition_Property: t.Type<IDeviceDefinition_Property> 
         valueCode: t.array(RTTI_CodeableConcept),
       }),
     ]),
-);
+  );

@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _part?: IElement;
 }
 
-export const RTTI_MedicinalProduct_NamePart: t.Type<IMedicinalProduct_NamePart> = t.recursion(
-  'IMedicinalProduct_NamePart',
-  () =>
+export const RTTI_MedicinalProduct_NamePart: t.Type<IMedicinalProduct_NamePart> =
+  t.recursion('IMedicinalProduct_NamePart', () =>
     t.intersection([
       t.type({
         type: RTTI_Coding,
@@ -52,4 +51,4 @@ export const RTTI_MedicinalProduct_NamePart: t.Type<IMedicinalProduct_NamePart> 
         _part: RTTI_Element,
       }),
     ]),
-);
+  );

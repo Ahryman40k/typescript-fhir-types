@@ -52,9 +52,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   molecularWeight?: ISubstanceSpecification_MolecularWeight;
 }
 
-export const RTTI_SubstanceSpecification_Isotope: t.Type<ISubstanceSpecification_Isotope> = t.recursion(
-  'ISubstanceSpecification_Isotope',
-  () =>
+export const RTTI_SubstanceSpecification_Isotope: t.Type<ISubstanceSpecification_Isotope> =
+  t.recursion('ISubstanceSpecification_Isotope', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -65,4 +64,4 @@ export const RTTI_SubstanceSpecification_Isotope: t.Type<ISubstanceSpecification
       halfLife: RTTI_Quantity,
       molecularWeight: RTTI_SubstanceSpecification_MolecularWeight,
     }),
-);
+  );

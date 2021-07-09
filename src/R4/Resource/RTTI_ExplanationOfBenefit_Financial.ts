@@ -68,9 +68,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   usedMoney?: IMoney;
 }
 
-export const RTTI_ExplanationOfBenefit_Financial: t.Type<IExplanationOfBenefit_Financial> = t.recursion(
-  'IExplanationOfBenefit_Financial',
-  () =>
+export const RTTI_ExplanationOfBenefit_Financial: t.Type<IExplanationOfBenefit_Financial> =
+  t.recursion('IExplanationOfBenefit_Financial', () =>
     t.intersection([
       t.type({
         type: RTTI_CodeableConcept,
@@ -89,4 +88,4 @@ export const RTTI_ExplanationOfBenefit_Financial: t.Type<IExplanationOfBenefit_F
         usedMoney: RTTI_Money,
       }),
     ]),
-);
+  );

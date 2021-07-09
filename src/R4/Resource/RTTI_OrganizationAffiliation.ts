@@ -138,9 +138,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   endpoint?: IReference[];
 }
 
-export const RTTI_OrganizationAffiliation: t.Type<IOrganizationAffiliation> = t.recursion(
-  'IOrganizationAffiliation',
-  () =>
+export const RTTI_OrganizationAffiliation: t.Type<IOrganizationAffiliation> =
+  t.recursion('IOrganizationAffiliation', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('OrganizationAffiliation'),
@@ -171,4 +170,4 @@ export const RTTI_OrganizationAffiliation: t.Type<IOrganizationAffiliation> = t.
         endpoint: t.array(RTTI_Reference),
       }),
     ]),
-);
+  );

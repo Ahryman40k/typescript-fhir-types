@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   format?: ICoding;
 }
 
-export const RTTI_DocumentReference_Content: t.Type<IDocumentReference_Content> = t.recursion(
-  'IDocumentReference_Content',
-  () =>
+export const RTTI_DocumentReference_Content: t.Type<IDocumentReference_Content> =
+  t.recursion('IDocumentReference_Content', () =>
     t.intersection([
       t.type({
         attachment: RTTI_Attachment,
@@ -46,4 +45,4 @@ export const RTTI_DocumentReference_Content: t.Type<IDocumentReference_Content> 
         format: RTTI_Coding,
       }),
     ]),
-);
+  );

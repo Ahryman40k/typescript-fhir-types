@@ -66,9 +66,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   inner?: IMolecularSequence_Inner;
 }
 
-export const RTTI_MolecularSequence_StructureVariant: t.Type<IMolecularSequence_StructureVariant> = t.recursion(
-  'IMolecularSequence_StructureVariant',
-  () =>
+export const RTTI_MolecularSequence_StructureVariant: t.Type<IMolecularSequence_StructureVariant> =
+  t.recursion('IMolecularSequence_StructureVariant', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -81,4 +80,4 @@ export const RTTI_MolecularSequence_StructureVariant: t.Type<IMolecularSequence_
       outer: RTTI_MolecularSequence_Outer,
       inner: RTTI_MolecularSequence_Inner,
     }),
-);
+  );

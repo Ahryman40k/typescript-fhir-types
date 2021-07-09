@@ -55,9 +55,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   offsetRange?: IRange;
 }
 
-export const RTTI_RequestGroup_RelatedAction: t.Type<IRequestGroup_RelatedAction> = t.recursion(
-  'IRequestGroup_RelatedAction',
-  () =>
+export const RTTI_RequestGroup_RelatedAction: t.Type<IRequestGroup_RelatedAction> =
+  t.recursion('IRequestGroup_RelatedAction', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -69,4 +68,4 @@ export const RTTI_RequestGroup_RelatedAction: t.Type<IRequestGroup_RelatedAction
       offsetDuration: RTTI_Duration,
       offsetRange: RTTI_Range,
     }),
-);
+  );

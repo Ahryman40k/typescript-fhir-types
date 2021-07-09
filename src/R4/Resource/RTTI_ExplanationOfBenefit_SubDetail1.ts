@@ -80,9 +80,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   adjudication?: IExplanationOfBenefit_Adjudication[];
 }
 
-export const RTTI_ExplanationOfBenefit_SubDetail1: t.Type<IExplanationOfBenefit_SubDetail1> = t.recursion(
-  'IExplanationOfBenefit_SubDetail1',
-  () =>
+export const RTTI_ExplanationOfBenefit_SubDetail1: t.Type<IExplanationOfBenefit_SubDetail1> =
+  t.recursion('IExplanationOfBenefit_SubDetail1', () =>
     t.intersection([
       t.type({
         productOrService: RTTI_CodeableConcept,
@@ -102,4 +101,4 @@ export const RTTI_ExplanationOfBenefit_SubDetail1: t.Type<IExplanationOfBenefit_
         adjudication: t.array(RTTI_ExplanationOfBenefit_Adjudication),
       }),
     ]),
-);
+  );

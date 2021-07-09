@@ -35,9 +35,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   link?: ITestScript_Link[];
 }
 
-export const RTTI_TestScript_Metadata: t.Type<ITestScript_Metadata> = t.recursion(
-  'ITestScript_Metadata',
-  () =>
+export const RTTI_TestScript_Metadata: t.Type<ITestScript_Metadata> =
+  t.recursion('ITestScript_Metadata', () =>
     t.intersection([
       t.type({
         capability: t.array(RTTI_TestScript_Capability),
@@ -49,4 +48,4 @@ export const RTTI_TestScript_Metadata: t.Type<ITestScript_Metadata> = t.recursio
         link: t.array(RTTI_TestScript_Link),
       }),
     ]),
-);
+  );

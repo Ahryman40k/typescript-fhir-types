@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _index?: IElement;
 }
 
-export const RTTI_TestScript_Destination: t.Type<ITestScript_Destination> = t.recursion(
-  'ITestScript_Destination',
-  () =>
+export const RTTI_TestScript_Destination: t.Type<ITestScript_Destination> =
+  t.recursion('ITestScript_Destination', () =>
     t.intersection([
       t.type({
         profile: RTTI_Coding,
@@ -53,4 +52,4 @@ export const RTTI_TestScript_Destination: t.Type<ITestScript_Destination> = t.re
         _index: RTTI_Element,
       }),
     ]),
-);
+  );

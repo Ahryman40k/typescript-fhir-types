@@ -66,9 +66,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _instruction?: IElement;
 }
 
-export const RTTI_NutritionOrder_OralDiet: t.Type<INutritionOrder_OralDiet> = t.recursion(
-  'INutritionOrder_OralDiet',
-  () =>
+export const RTTI_NutritionOrder_OralDiet: t.Type<INutritionOrder_OralDiet> =
+  t.recursion('INutritionOrder_OralDiet', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -81,4 +80,4 @@ export const RTTI_NutritionOrder_OralDiet: t.Type<INutritionOrder_OralDiet> = t.
       instruction: t.string,
       _instruction: RTTI_Element,
     }),
-);
+  );

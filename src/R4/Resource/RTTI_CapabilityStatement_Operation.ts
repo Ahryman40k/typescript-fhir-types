@@ -48,9 +48,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _documentation?: IElement;
 }
 
-export const RTTI_CapabilityStatement_Operation: t.Type<ICapabilityStatement_Operation> = t.recursion(
-  'ICapabilityStatement_Operation',
-  () =>
+export const RTTI_CapabilityStatement_Operation: t.Type<ICapabilityStatement_Operation> =
+  t.recursion('ICapabilityStatement_Operation', () =>
     t.intersection([
       t.type({
         definition: RTTI_canonical,
@@ -65,4 +64,4 @@ export const RTTI_CapabilityStatement_Operation: t.Type<ICapabilityStatement_Ope
         _documentation: RTTI_Element,
       }),
     ]),
-);
+  );

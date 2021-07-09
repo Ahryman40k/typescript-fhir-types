@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   countryLanguage?: IMedicinalProduct_CountryLanguage[];
 }
 
-export const RTTI_MedicinalProduct_Name: t.Type<IMedicinalProduct_Name> = t.recursion(
-  'IMedicinalProduct_Name',
-  () =>
+export const RTTI_MedicinalProduct_Name: t.Type<IMedicinalProduct_Name> =
+  t.recursion('IMedicinalProduct_Name', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -61,4 +60,4 @@ export const RTTI_MedicinalProduct_Name: t.Type<IMedicinalProduct_Name> = t.recu
       namePart: t.array(RTTI_MedicinalProduct_NamePart),
       countryLanguage: t.array(RTTI_MedicinalProduct_CountryLanguage),
     }),
-);
+  );

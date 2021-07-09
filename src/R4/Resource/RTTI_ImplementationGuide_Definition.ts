@@ -65,9 +65,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   template?: IImplementationGuide_Template[];
 }
 
-export const RTTI_ImplementationGuide_Definition: t.Type<IImplementationGuide_Definition> = t.recursion(
-  'IImplementationGuide_Definition',
-  () =>
+export const RTTI_ImplementationGuide_Definition: t.Type<IImplementationGuide_Definition> =
+  t.recursion('IImplementationGuide_Definition', () =>
     t.intersection([
       t.type({
         resource: t.array(RTTI_ImplementationGuide_Resource),
@@ -82,4 +81,4 @@ export const RTTI_ImplementationGuide_Definition: t.Type<IImplementationGuide_De
         template: t.array(RTTI_ImplementationGuide_Template),
       }),
     ]),
-);
+  );

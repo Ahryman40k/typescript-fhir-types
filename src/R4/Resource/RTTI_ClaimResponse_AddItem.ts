@@ -172,9 +172,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   detail?: IClaimResponse_Detail1[];
 }
 
-export const RTTI_ClaimResponse_AddItem: t.Type<IClaimResponse_AddItem> = t.recursion(
-  'IClaimResponse_AddItem',
-  () =>
+export const RTTI_ClaimResponse_AddItem: t.Type<IClaimResponse_AddItem> =
+  t.recursion('IClaimResponse_AddItem', () =>
     t.intersection([
       t.type({
         productOrService: RTTI_CodeableConcept,
@@ -211,4 +210,4 @@ export const RTTI_ClaimResponse_AddItem: t.Type<IClaimResponse_AddItem> = t.recu
         detail: t.array(RTTI_ClaimResponse_Detail1),
       }),
     ]),
-);
+  );

@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   attachment?: IAttachment;
 }
 
-export const RTTI_SubstancePolymer_StructuralRepresentation: t.Type<ISubstancePolymer_StructuralRepresentation> = t.recursion(
-  'ISubstancePolymer_StructuralRepresentation',
-  () =>
+export const RTTI_SubstancePolymer_StructuralRepresentation: t.Type<ISubstancePolymer_StructuralRepresentation> =
+  t.recursion('ISubstancePolymer_StructuralRepresentation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_SubstancePolymer_StructuralRepresentation: t.Type<ISubstancePo
       _representation: RTTI_Element,
       attachment: RTTI_Attachment,
     }),
-);
+  );

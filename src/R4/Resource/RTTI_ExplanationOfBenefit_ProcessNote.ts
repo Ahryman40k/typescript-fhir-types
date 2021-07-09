@@ -64,9 +64,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   language?: ICodeableConcept;
 }
 
-export const RTTI_ExplanationOfBenefit_ProcessNote: t.Type<IExplanationOfBenefit_ProcessNote> = t.recursion(
-  'IExplanationOfBenefit_ProcessNote',
-  () =>
+export const RTTI_ExplanationOfBenefit_ProcessNote: t.Type<IExplanationOfBenefit_ProcessNote> =
+  t.recursion('IExplanationOfBenefit_ProcessNote', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -82,4 +81,4 @@ export const RTTI_ExplanationOfBenefit_ProcessNote: t.Type<IExplanationOfBenefit
       _text: RTTI_Element,
       language: RTTI_CodeableConcept,
     }),
-);
+  );

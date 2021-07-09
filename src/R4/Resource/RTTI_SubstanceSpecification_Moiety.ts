@@ -79,9 +79,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _amountString?: IElement;
 }
 
-export const RTTI_SubstanceSpecification_Moiety: t.Type<ISubstanceSpecification_Moiety> = t.recursion(
-  'ISubstanceSpecification_Moiety',
-  () =>
+export const RTTI_SubstanceSpecification_Moiety: t.Type<ISubstanceSpecification_Moiety> =
+  t.recursion('ISubstanceSpecification_Moiety', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -98,4 +97,4 @@ export const RTTI_SubstanceSpecification_Moiety: t.Type<ISubstanceSpecification_
       amountString: t.string,
       _amountString: RTTI_Element,
     }),
-);
+  );

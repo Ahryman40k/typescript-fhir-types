@@ -36,9 +36,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   jurisdiction?: ICodeableConcept;
 }
 
-export const RTTI_MedicinalProduct_CountryLanguage: t.Type<IMedicinalProduct_CountryLanguage> = t.recursion(
-  'IMedicinalProduct_CountryLanguage',
-  () =>
+export const RTTI_MedicinalProduct_CountryLanguage: t.Type<IMedicinalProduct_CountryLanguage> =
+  t.recursion('IMedicinalProduct_CountryLanguage', () =>
     t.intersection([
       t.type({
         country: RTTI_CodeableConcept,
@@ -51,4 +50,4 @@ export const RTTI_MedicinalProduct_CountryLanguage: t.Type<IMedicinalProduct_Cou
         jurisdiction: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

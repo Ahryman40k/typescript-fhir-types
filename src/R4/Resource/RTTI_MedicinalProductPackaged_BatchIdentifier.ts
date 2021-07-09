@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   immediatePackaging?: IIdentifier;
 }
 
-export const RTTI_MedicinalProductPackaged_BatchIdentifier: t.Type<IMedicinalProductPackaged_BatchIdentifier> = t.recursion(
-  'IMedicinalProductPackaged_BatchIdentifier',
-  () =>
+export const RTTI_MedicinalProductPackaged_BatchIdentifier: t.Type<IMedicinalProductPackaged_BatchIdentifier> =
+  t.recursion('IMedicinalProductPackaged_BatchIdentifier', () =>
     t.intersection([
       t.type({
         outerPackaging: RTTI_Identifier,
@@ -45,4 +44,4 @@ export const RTTI_MedicinalProductPackaged_BatchIdentifier: t.Type<IMedicinalPro
         immediatePackaging: RTTI_Identifier,
       }),
     ]),
-);
+  );

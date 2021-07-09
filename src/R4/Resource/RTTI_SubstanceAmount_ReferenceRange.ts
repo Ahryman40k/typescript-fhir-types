@@ -31,9 +31,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   highLimit?: IQuantity;
 }
 
-export const RTTI_SubstanceAmount_ReferenceRange: t.Type<ISubstanceAmount_ReferenceRange> = t.recursion(
-  'ISubstanceAmount_ReferenceRange',
-  () =>
+export const RTTI_SubstanceAmount_ReferenceRange: t.Type<ISubstanceAmount_ReferenceRange> =
+  t.recursion('ISubstanceAmount_ReferenceRange', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -41,4 +40,4 @@ export const RTTI_SubstanceAmount_ReferenceRange: t.Type<ISubstanceAmount_Refere
       lowLimit: RTTI_Quantity,
       highLimit: RTTI_Quantity,
     }),
-);
+  );

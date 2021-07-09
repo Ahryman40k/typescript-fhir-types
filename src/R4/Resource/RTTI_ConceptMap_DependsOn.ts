@@ -58,9 +58,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _display?: IElement;
 }
 
-export const RTTI_ConceptMap_DependsOn: t.Type<IConceptMap_DependsOn> = t.recursion(
-  'IConceptMap_DependsOn',
-  () =>
+export const RTTI_ConceptMap_DependsOn: t.Type<IConceptMap_DependsOn> =
+  t.recursion('IConceptMap_DependsOn', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -73,4 +72,4 @@ export const RTTI_ConceptMap_DependsOn: t.Type<IConceptMap_DependsOn> = t.recurs
       display: t.string,
       _display: RTTI_Element,
     }),
-);
+  );

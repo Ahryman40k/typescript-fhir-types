@@ -41,9 +41,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   order?: ICodeableConcept;
 }
 
-export const RTTI_SubstanceSourceMaterial_OrganismGeneral: t.Type<ISubstanceSourceMaterial_OrganismGeneral> = t.recursion(
-  'ISubstanceSourceMaterial_OrganismGeneral',
-  () =>
+export const RTTI_SubstanceSourceMaterial_OrganismGeneral: t.Type<ISubstanceSourceMaterial_OrganismGeneral> =
+  t.recursion('ISubstanceSourceMaterial_OrganismGeneral', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -53,4 +52,4 @@ export const RTTI_SubstanceSourceMaterial_OrganismGeneral: t.Type<ISubstanceSour
       class: RTTI_CodeableConcept,
       order: RTTI_CodeableConcept,
     }),
-);
+  );

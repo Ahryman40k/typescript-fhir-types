@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   action?: ICodeableConcept;
 }
 
-export const RTTI_Procedure_FocalDevice: t.Type<IProcedure_FocalDevice> = t.recursion(
-  'IProcedure_FocalDevice',
-  () =>
+export const RTTI_Procedure_FocalDevice: t.Type<IProcedure_FocalDevice> =
+  t.recursion('IProcedure_FocalDevice', () =>
     t.intersection([
       t.type({
         manipulated: RTTI_Reference,
@@ -46,4 +45,4 @@ export const RTTI_Procedure_FocalDevice: t.Type<IProcedure_FocalDevice> = t.recu
         action: RTTI_CodeableConcept,
       }),
     ]),
-);
+  );

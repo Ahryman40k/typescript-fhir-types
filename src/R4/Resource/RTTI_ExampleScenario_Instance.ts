@@ -81,9 +81,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   containedInstance?: IExampleScenario_ContainedInstance[];
 }
 
-export const RTTI_ExampleScenario_Instance: t.Type<IExampleScenario_Instance> = t.recursion(
-  'IExampleScenario_Instance',
-  () =>
+export const RTTI_ExampleScenario_Instance: t.Type<IExampleScenario_Instance> =
+  t.recursion('IExampleScenario_Instance', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -99,4 +98,4 @@ export const RTTI_ExampleScenario_Instance: t.Type<IExampleScenario_Instance> = 
       version: t.array(RTTI_ExampleScenario_Version),
       containedInstance: t.array(RTTI_ExampleScenario_ContainedInstance),
     }),
-);
+  );

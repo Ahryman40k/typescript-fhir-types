@@ -42,9 +42,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _relationtype?: IElement;
 }
 
-export const RTTI_CatalogEntry_RelatedEntry: t.Type<ICatalogEntry_RelatedEntry> = t.recursion(
-  'ICatalogEntry_RelatedEntry',
-  () =>
+export const RTTI_CatalogEntry_RelatedEntry: t.Type<ICatalogEntry_RelatedEntry> =
+  t.recursion('ICatalogEntry_RelatedEntry', () =>
     t.intersection([
       t.type({
         item: RTTI_Reference,
@@ -60,4 +59,4 @@ export const RTTI_CatalogEntry_RelatedEntry: t.Type<ICatalogEntry_RelatedEntry> 
         _relationtype: RTTI_Element,
       }),
     ]),
-);
+  );

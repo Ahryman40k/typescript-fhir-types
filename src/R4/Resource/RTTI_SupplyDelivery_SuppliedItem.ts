@@ -38,9 +38,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   itemReference?: IReference;
 }
 
-export const RTTI_SupplyDelivery_SuppliedItem: t.Type<ISupplyDelivery_SuppliedItem> = t.recursion(
-  'ISupplyDelivery_SuppliedItem',
-  () =>
+export const RTTI_SupplyDelivery_SuppliedItem: t.Type<ISupplyDelivery_SuppliedItem> =
+  t.recursion('ISupplyDelivery_SuppliedItem', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -49,4 +48,4 @@ export const RTTI_SupplyDelivery_SuppliedItem: t.Type<ISupplyDelivery_SuppliedIt
       itemCodeableConcept: RTTI_CodeableConcept,
       itemReference: RTTI_Reference,
     }),
-);
+  );

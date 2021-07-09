@@ -32,9 +32,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   modifierExtension?: IExtension[];
 }
 
-export const RTTI_ClaimResponse_Total: t.Type<IClaimResponse_Total> = t.recursion(
-  'IClaimResponse_Total',
-  () =>
+export const RTTI_ClaimResponse_Total: t.Type<IClaimResponse_Total> =
+  t.recursion('IClaimResponse_Total', () =>
     t.intersection([
       t.type({
         category: RTTI_CodeableConcept,
@@ -46,4 +45,4 @@ export const RTTI_ClaimResponse_Total: t.Type<IClaimResponse_Total> = t.recursio
         modifierExtension: t.array(RTTI_Extension),
       }),
     ]),
-);
+  );

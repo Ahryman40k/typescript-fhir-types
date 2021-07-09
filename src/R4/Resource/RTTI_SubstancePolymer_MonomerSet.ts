@@ -35,9 +35,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   startingMaterial?: ISubstancePolymer_StartingMaterial[];
 }
 
-export const RTTI_SubstancePolymer_MonomerSet: t.Type<ISubstancePolymer_MonomerSet> = t.recursion(
-  'ISubstancePolymer_MonomerSet',
-  () =>
+export const RTTI_SubstancePolymer_MonomerSet: t.Type<ISubstancePolymer_MonomerSet> =
+  t.recursion('ISubstancePolymer_MonomerSet', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -45,4 +44,4 @@ export const RTTI_SubstancePolymer_MonomerSet: t.Type<ISubstancePolymer_MonomerS
       ratioType: RTTI_CodeableConcept,
       startingMaterial: t.array(RTTI_SubstancePolymer_StartingMaterial),
     }),
-);
+  );

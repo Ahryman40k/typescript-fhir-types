@@ -37,9 +37,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _comment?: IElement;
 }
 
-export const RTTI_DiagnosticReport_Media: t.Type<IDiagnosticReport_Media> = t.recursion(
-  'IDiagnosticReport_Media',
-  () =>
+export const RTTI_DiagnosticReport_Media: t.Type<IDiagnosticReport_Media> =
+  t.recursion('IDiagnosticReport_Media', () =>
     t.intersection([
       t.type({
         link: RTTI_Reference,
@@ -52,4 +51,4 @@ export const RTTI_DiagnosticReport_Media: t.Type<IDiagnosticReport_Media> = t.re
         _comment: RTTI_Element,
       }),
     ]),
-);
+  );

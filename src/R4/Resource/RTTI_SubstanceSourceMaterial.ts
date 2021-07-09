@@ -163,9 +163,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   partDescription?: ISubstanceSourceMaterial_PartDescription[];
 }
 
-export const RTTI_SubstanceSourceMaterial: t.Type<ISubstanceSourceMaterial> = t.recursion(
-  'ISubstanceSourceMaterial',
-  () =>
+export const RTTI_SubstanceSourceMaterial: t.Type<ISubstanceSourceMaterial> =
+  t.recursion('ISubstanceSourceMaterial', () =>
     t.intersection([
       t.type({
         resourceType: t.literal('SubstanceSourceMaterial'),
@@ -201,4 +200,4 @@ export const RTTI_SubstanceSourceMaterial: t.Type<ISubstanceSourceMaterial> = t.
         partDescription: t.array(RTTI_SubstanceSourceMaterial_PartDescription),
       }),
     ]),
-);
+  );

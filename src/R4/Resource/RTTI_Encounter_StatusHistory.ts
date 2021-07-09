@@ -49,9 +49,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _status?: IElement;
 }
 
-export const RTTI_Encounter_StatusHistory: t.Type<IEncounter_StatusHistory> = t.recursion(
-  'IEncounter_StatusHistory',
-  () =>
+export const RTTI_Encounter_StatusHistory: t.Type<IEncounter_StatusHistory> =
+  t.recursion('IEncounter_StatusHistory', () =>
     t.intersection([
       t.type({
         period: RTTI_Period,
@@ -67,4 +66,4 @@ export const RTTI_Encounter_StatusHistory: t.Type<IEncounter_StatusHistory> = t.
         _status: RTTI_Element,
       }),
     ]),
-);
+  );

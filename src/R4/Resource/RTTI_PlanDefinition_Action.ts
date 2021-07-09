@@ -320,9 +320,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   action?: IPlanDefinition_Action[];
 }
 
-export const RTTI_PlanDefinition_Action: t.Type<IPlanDefinition_Action> = t.recursion(
-  'IPlanDefinition_Action',
-  () =>
+export const RTTI_PlanDefinition_Action: t.Type<IPlanDefinition_Action> =
+  t.recursion('IPlanDefinition_Action', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -358,30 +357,35 @@ export const RTTI_PlanDefinition_Action: t.Type<IPlanDefinition_Action> = t.recu
       timingTiming: RTTI_Timing,
       participant: t.array(RTTI_PlanDefinition_Participant),
       type: RTTI_CodeableConcept,
-      groupingBehavior: createEnumType<PlanDefinition_ActionGroupingBehaviorKind>(
-        PlanDefinition_ActionGroupingBehaviorKind,
-        'PlanDefinition_ActionGroupingBehaviorKind',
-      ),
+      groupingBehavior:
+        createEnumType<PlanDefinition_ActionGroupingBehaviorKind>(
+          PlanDefinition_ActionGroupingBehaviorKind,
+          'PlanDefinition_ActionGroupingBehaviorKind',
+        ),
       _groupingBehavior: RTTI_Element,
-      selectionBehavior: createEnumType<PlanDefinition_ActionSelectionBehaviorKind>(
-        PlanDefinition_ActionSelectionBehaviorKind,
-        'PlanDefinition_ActionSelectionBehaviorKind',
-      ),
+      selectionBehavior:
+        createEnumType<PlanDefinition_ActionSelectionBehaviorKind>(
+          PlanDefinition_ActionSelectionBehaviorKind,
+          'PlanDefinition_ActionSelectionBehaviorKind',
+        ),
       _selectionBehavior: RTTI_Element,
-      requiredBehavior: createEnumType<PlanDefinition_ActionRequiredBehaviorKind>(
-        PlanDefinition_ActionRequiredBehaviorKind,
-        'PlanDefinition_ActionRequiredBehaviorKind',
-      ),
+      requiredBehavior:
+        createEnumType<PlanDefinition_ActionRequiredBehaviorKind>(
+          PlanDefinition_ActionRequiredBehaviorKind,
+          'PlanDefinition_ActionRequiredBehaviorKind',
+        ),
       _requiredBehavior: RTTI_Element,
-      precheckBehavior: createEnumType<PlanDefinition_ActionPrecheckBehaviorKind>(
-        PlanDefinition_ActionPrecheckBehaviorKind,
-        'PlanDefinition_ActionPrecheckBehaviorKind',
-      ),
+      precheckBehavior:
+        createEnumType<PlanDefinition_ActionPrecheckBehaviorKind>(
+          PlanDefinition_ActionPrecheckBehaviorKind,
+          'PlanDefinition_ActionPrecheckBehaviorKind',
+        ),
       _precheckBehavior: RTTI_Element,
-      cardinalityBehavior: createEnumType<PlanDefinition_ActionCardinalityBehaviorKind>(
-        PlanDefinition_ActionCardinalityBehaviorKind,
-        'PlanDefinition_ActionCardinalityBehaviorKind',
-      ),
+      cardinalityBehavior:
+        createEnumType<PlanDefinition_ActionCardinalityBehaviorKind>(
+          PlanDefinition_ActionCardinalityBehaviorKind,
+          'PlanDefinition_ActionCardinalityBehaviorKind',
+        ),
       _cardinalityBehavior: RTTI_Element,
       definitionCanonical: t.string,
       _definitionCanonical: RTTI_Element,
@@ -391,4 +395,4 @@ export const RTTI_PlanDefinition_Action: t.Type<IPlanDefinition_Action> = t.recu
       dynamicValue: t.array(RTTI_PlanDefinition_DynamicValue),
       action: t.array(RTTI_PlanDefinition_Action),
     }),
-);
+  );

@@ -61,9 +61,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   target?: IPlanDefinition_Target[];
 }
 
-export const RTTI_PlanDefinition_Goal: t.Type<IPlanDefinition_Goal> = t.recursion(
-  'IPlanDefinition_Goal',
-  () =>
+export const RTTI_PlanDefinition_Goal: t.Type<IPlanDefinition_Goal> =
+  t.recursion('IPlanDefinition_Goal', () =>
     t.intersection([
       t.type({
         description: RTTI_CodeableConcept,
@@ -80,4 +79,4 @@ export const RTTI_PlanDefinition_Goal: t.Type<IPlanDefinition_Goal> = t.recursio
         target: t.array(RTTI_PlanDefinition_Target),
       }),
     ]),
-);
+  );

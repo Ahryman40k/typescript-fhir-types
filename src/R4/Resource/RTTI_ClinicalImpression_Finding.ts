@@ -43,9 +43,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _basis?: IElement;
 }
 
-export const RTTI_ClinicalImpression_Finding: t.Type<IClinicalImpression_Finding> = t.recursion(
-  'IClinicalImpression_Finding',
-  () =>
+export const RTTI_ClinicalImpression_Finding: t.Type<IClinicalImpression_Finding> =
+  t.recursion('IClinicalImpression_Finding', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -55,4 +54,4 @@ export const RTTI_ClinicalImpression_Finding: t.Type<IClinicalImpression_Finding
       basis: t.string,
       _basis: RTTI_Element,
     }),
-);
+  );

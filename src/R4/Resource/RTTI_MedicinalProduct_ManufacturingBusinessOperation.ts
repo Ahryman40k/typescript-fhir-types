@@ -60,9 +60,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   regulator?: IReference;
 }
 
-export const RTTI_MedicinalProduct_ManufacturingBusinessOperation: t.Type<IMedicinalProduct_ManufacturingBusinessOperation> = t.recursion(
-  'IMedicinalProduct_ManufacturingBusinessOperation',
-  () =>
+export const RTTI_MedicinalProduct_ManufacturingBusinessOperation: t.Type<IMedicinalProduct_ManufacturingBusinessOperation> =
+  t.recursion('IMedicinalProduct_ManufacturingBusinessOperation', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -75,4 +74,4 @@ export const RTTI_MedicinalProduct_ManufacturingBusinessOperation: t.Type<IMedic
       manufacturer: t.array(RTTI_Reference),
       regulator: RTTI_Reference,
     }),
-);
+  );

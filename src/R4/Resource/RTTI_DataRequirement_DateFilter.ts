@@ -63,9 +63,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   valueDuration?: IDuration;
 }
 
-export const RTTI_DataRequirement_DateFilter: t.Type<IDataRequirement_DateFilter> = t.recursion(
-  'IDataRequirement_DateFilter',
-  () =>
+export const RTTI_DataRequirement_DateFilter: t.Type<IDataRequirement_DateFilter> =
+  t.recursion('IDataRequirement_DateFilter', () =>
     t.partial({
       id: t.string,
       extension: t.array(RTTI_Extension),
@@ -79,4 +78,4 @@ export const RTTI_DataRequirement_DateFilter: t.Type<IDataRequirement_DateFilter
       valuePeriod: RTTI_Period,
       valueDuration: RTTI_Duration,
     }),
-);
+  );
