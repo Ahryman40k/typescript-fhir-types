@@ -281,6 +281,7 @@ export {
   ICommunicationRequest,
   RTTI_Communication,
   ICommunication,
+  CommunicationStatusKind,
   RTTI_CompartmentDefinition_Resource,
   ICompartmentDefinition_Resource,
   RTTI_CompartmentDefinition,

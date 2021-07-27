@@ -16,6 +16,17 @@ import {
   RTTI_Communication_Payload,
   ICommunication_Payload,
 } from './RTTI_Communication_Payload';
+export enum CommunicationStatusKind {
+  _preparation = 'preparation',
+  _inProgress = 'in-progress',
+  _notDone = 'not-done',
+  _onHold = 'on-hold',
+  _stopped = 'stopped',
+  _completed = 'completed',
+  _enteredInError = 'entered-in-error',
+  _unknown = 'unknown',
+}
+import {createEnumType} from '../../EnumType';
 import {RTTI_Annotation, IAnnotation} from './RTTI_Annotation';
 import {IDomainResource} from './IDomainResource';
 
@@ -24,6 +35,11 @@ export interface ICommunication extends IDomainResource {
    * This is a Communication resource
    */
   resourceType: 'Communication';
+
+  /**
+   * The status of the transmission.
+   */
+  status: CommunicationStatusKind;
 
   /**
    * The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
@@ -111,11 +127,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
    * Prior communication that this communication is in response to.
    */
   inResponseTo?: IReference[];
-
-  /**
-   * The status of the transmission.
-   */
-  status?: string;
 
   /**
    * Extensions for status
@@ -224,6 +235,10 @@ export const RTTI_Communication: t.Type<ICommunication> = t.recursion(
     t.intersection([
       t.type({
         resourceType: t.literal('Communication'),
+        status: createEnumType<CommunicationStatusKind>(
+          CommunicationStatusKind,
+          'CommunicationStatusKind',
+        ),
       }),
       t.partial({
         id: RTTI_id,
@@ -243,7 +258,6 @@ export const RTTI_Communication: t.Type<ICommunication> = t.recursion(
         basedOn: t.array(RTTI_Reference),
         partOf: t.array(RTTI_Reference),
         inResponseTo: t.array(RTTI_Reference),
-        status: RTTI_code,
         _status: RTTI_Element,
         statusReason: RTTI_CodeableConcept,
         category: t.array(RTTI_CodeableConcept),

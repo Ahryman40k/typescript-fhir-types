@@ -29,6 +29,21 @@ export interface ISubscription extends IDomainResource {
   resourceType: 'Subscription';
 
   /**
+   * The status of the subscription, which marks the server state for managing the subscription.
+   */
+  status: SubscriptionStatusKind;
+
+  /**
+   * A description of why this subscription is defined.
+   */
+  reason: string;
+
+  /**
+   * The rules that the server should use to determine when to generate notifications for this subscription.
+   */
+  criteria: string;
+
+  /**
    * Details where to send notifications when resources are received that meet the criteria.
    */
   channel: ISubscription_Channel;
@@ -86,11 +101,6 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   modifierExtension?: IExtension[];
 
   /**
-   * The status of the subscription, which marks the server state for managing the subscription.
-   */
-  status?: SubscriptionStatusKind;
-
-  /**
    * Extensions for status
    */
   _status?: IElement;
@@ -111,19 +121,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   _end?: IElement;
 
   /**
-   * A description of why this subscription is defined.
-   */
-  reason?: string;
-
-  /**
    * Extensions for reason
    */
   _reason?: IElement;
-
-  /**
-   * The rules that the server should use to determine when to generate notifications for this subscription.
-   */
-  criteria?: string;
 
   /**
    * Extensions for criteria
@@ -147,6 +147,12 @@ export const RTTI_Subscription: t.Type<ISubscription> = t.recursion(
     t.intersection([
       t.type({
         resourceType: t.literal('Subscription'),
+        status: createEnumType<SubscriptionStatusKind>(
+          SubscriptionStatusKind,
+          'SubscriptionStatusKind',
+        ),
+        reason: t.string,
+        criteria: t.string,
         channel: RTTI_Subscription_Channel,
       }),
       t.partial({
@@ -160,17 +166,11 @@ export const RTTI_Subscription: t.Type<ISubscription> = t.recursion(
         contained: t.array(RTTI_ResourceList),
         extension: t.array(RTTI_Extension),
         modifierExtension: t.array(RTTI_Extension),
-        status: createEnumType<SubscriptionStatusKind>(
-          SubscriptionStatusKind,
-          'SubscriptionStatusKind',
-        ),
         _status: RTTI_Element,
         contact: t.array(RTTI_ContactPoint),
         end: RTTI_instant,
         _end: RTTI_Element,
-        reason: t.string,
         _reason: RTTI_Element,
-        criteria: t.string,
         _criteria: RTTI_Element,
         error: t.string,
         _error: RTTI_Element,

@@ -378,7 +378,11 @@ export {
   RTTI_CommunicationRequest,
   ICommunicationRequest,
 } from './RTTI_CommunicationRequest';
-export {RTTI_Communication, ICommunication} from './RTTI_Communication';
+export {
+  RTTI_Communication,
+  ICommunication,
+  CommunicationStatusKind,
+} from './RTTI_Communication';
 export {
   RTTI_CompartmentDefinition_Resource,
   ICompartmentDefinition_Resource,

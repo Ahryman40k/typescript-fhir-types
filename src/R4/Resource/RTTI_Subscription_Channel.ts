@@ -15,6 +15,11 @@ import {createEnumType} from '../../EnumType';
 
 export interface ISubscription_Channel {
   /**
+   * The type of channel to send notifications on.
+   */
+  type: Subscription_ChannelTypeKind;
+
+  /**
    * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
    */
   id?: string;
@@ -30,11 +35,6 @@ export interface ISubscription_Channel {
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
                      */
   modifierExtension?: IExtension[];
-
-  /**
-   * The type of channel to send notifications on.
-   */
-  type?: Subscription_ChannelTypeKind;
 
   /**
    * Extensions for type
@@ -74,20 +74,24 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
 export const RTTI_Subscription_Channel: t.Type<ISubscription_Channel> =
   t.recursion('ISubscription_Channel', () =>
-    t.partial({
-      id: t.string,
-      extension: t.array(RTTI_Extension),
-      modifierExtension: t.array(RTTI_Extension),
-      type: createEnumType<Subscription_ChannelTypeKind>(
-        Subscription_ChannelTypeKind,
-        'Subscription_ChannelTypeKind',
-      ),
-      _type: RTTI_Element,
-      endpoint: RTTI_url,
-      _endpoint: RTTI_Element,
-      payload: RTTI_code,
-      _payload: RTTI_Element,
-      header: t.array(t.string),
-      _header: t.array(RTTI_Element),
-    }),
+    t.intersection([
+      t.type({
+        type: createEnumType<Subscription_ChannelTypeKind>(
+          Subscription_ChannelTypeKind,
+          'Subscription_ChannelTypeKind',
+        ),
+      }),
+      t.partial({
+        id: t.string,
+        extension: t.array(RTTI_Extension),
+        modifierExtension: t.array(RTTI_Extension),
+        _type: RTTI_Element,
+        endpoint: RTTI_url,
+        _endpoint: RTTI_Element,
+        payload: RTTI_code,
+        _payload: RTTI_Element,
+        header: t.array(t.string),
+        _header: t.array(RTTI_Element),
+      }),
+    ]),
   );
