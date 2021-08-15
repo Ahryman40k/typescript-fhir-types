@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-depth: 0
       - id: commit-lint
-        uses: wagoid/commitlint-github-action@v3
+        uses: wagoid/commitlint-github-action@v4.1.1
   test:
     runs-on: ubuntu-latest
     steps:
