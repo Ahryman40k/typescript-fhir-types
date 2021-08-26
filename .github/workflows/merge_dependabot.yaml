@@ -14,3 +14,4 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           merge-minor: true
           merge-patch: true
+          merge-major: true
