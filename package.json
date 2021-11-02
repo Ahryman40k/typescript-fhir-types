@@ -35,7 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "codecov": "^3.8.0",
-    "commitlint": "^13.1.0",
+    "commitlint": "^14.1.0",
     "eslint": "^7.22.0",
     "husky": "^7.0.1",
     "jest": "^26.5.2",
