@@ -55,6 +55,9 @@
     "io-ts": "^2.0.0",
     "reflect-metadata": "^0.1.13"
   },
+  "resolutions": {
+    "json-schema": "^0.4.0"
+  },
   "publishConfig": {
     "access": "public"
   },
