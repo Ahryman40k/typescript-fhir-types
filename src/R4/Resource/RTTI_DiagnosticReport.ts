@@ -28,6 +28,7 @@ export enum DiagnosticReportStatusKind {
   _cancelled = 'cancelled',
   _enteredInError = 'entered-in-error',
   _unknown = 'unknown',
+  _rejected = 'rejected',
 }
 import {createEnumType} from '../../EnumType';
 
