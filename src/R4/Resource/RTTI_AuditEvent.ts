@@ -31,10 +31,10 @@ export enum AuditEventActionKind {
 	_e = 'E'
 }
 export enum AuditEventOutcomeKind {
-	_success = 'Success',
-	_minorFailure = 'MinorFailure',
-	_seriousFailure = 'SeriousFailure',
-	_majorFailure = 'MajorFailure'
+	_success = '0',
+	_minorFailure = '4',
+	_seriousFailure = '8',
+	_majorFailure = '12'
 }
 import { createEnumType } from '../../EnumType';
 import { IDomainResource } from './IDomainResource';
