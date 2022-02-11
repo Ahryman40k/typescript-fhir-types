@@ -2,11 +2,11 @@ import * as t from 'io-ts';
 import { RTTI_Extension, IExtension } from './RTTI_Extension';
 import { RTTI_Element, IElement } from './RTTI_Element';
 export enum AuditEvent_NetworkTypeKind {
-	_machineName = 'MachineName',
-	_ipAddress = 'IPAddress',
-	_telephoneNumber = 'TelephoneNumber',
-	_emailAddress = 'EmailAddress',
-	_uri = 'Uri'
+	_machineName = '1',
+	_ipAddress = '2',
+	_telephoneNumber = '3',
+	_emailAddress = '4',
+	_uri = '5'
 }
 import { createEnumType } from '../../EnumType';
 
